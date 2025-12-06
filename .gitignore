@@ -1,5 +1,15 @@
+# Ignorer les fichiers liés à MacOS et les fichiers inutiles de Python
 .DS_Store
 __pycache__/
 *.pyc
 .env
 venv/
+
+# Ignorer les fichiers de données brutes
+data/*.csv
+data/*.xlsx
+data/raw/*.csv
+data/raw/*.xlsx
+
+# Mais garder les fichiers .gitkeep !
+!data/**/.gitkeep
