@@ -3,3 +3,12 @@ __pycache__/
 *.pyc
 .env
 venv/
+
+# Ignorer les fichiers de données brutes
+data/*.csv
+data/*.xlsx
+data/raw/*.csv
+data/raw/*.xlsx
+
+# Mais garder les fichiers .gitkeep !
+!data/**/.gitkeep
