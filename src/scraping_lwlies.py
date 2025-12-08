@@ -7,8 +7,8 @@ import re
 
 INDEX_URL = "https://lwlies.com/reviews"
 BASE_URL = "https://lwlies.com"
-OUTPUT_FILE_CSV = 'data/raw/testArthur.csv'
-OUTPUT_FILE_XLSX = 'data/raw/testArthur.xlsx'
+OUTPUT_FILE_CSV = 'data/raw/Arthur.csv'
+OUTPUT_FILE_XLSX = 'data/raw/Arthur.xlsx'
 URL_BLACKLIST = ["https://lwlies.com/reviews/p2"]
 
 def extract_text_by_label(soup, label_text):
@@ -97,7 +97,7 @@ def get_review_links(start_url, target_count):
             next_btn = soup.find('a', attrs={'data-nova-track-data-label': 'pagination_next'})
             if next_btn and 'href' in next_btn.attrs:
                 current_url = next_btn['href'] if next_btn['href'].startswith('http') else BASE_URL + next_btn['href']
-                time.sleep(0.5)
+                time.sleep(0.1)
                 page_count += 1
             else:
                 print("      -> No more 'Next Button', that's it!")
@@ -238,4 +238,4 @@ def launch_scraping_arthur(limit = 300):
 
 # --- EXÉCUTION  ---
 if __name__ == "__main__":
-    launch_scraping_arthur(limit=10)
+    launch_scraping_arthur(limit=300)
