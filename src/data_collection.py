@@ -3,7 +3,7 @@ import os
 import time
 
 # --- IMPORT ---
-from scraping_lwlies import launch_scraping_arthur
+from scraping.scraping_lwlies import launch_scraping_arthur
 
 # Configuration
 OUTPUT_RAW_PATH = 'data/raw/corpus_global_raw.csv'
