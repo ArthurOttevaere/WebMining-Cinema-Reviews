@@ -7,8 +7,8 @@ import re
 
 INDEX_URL = "https://lwlies.com/reviews"
 BASE_URL = "https://lwlies.com"
-OUTPUT_FILE_CSV = 'data/raw/Arthur.csv'
-OUTPUT_FILE_XLSX = 'data/raw/Arthur.xlsx'
+OUTPUT_FILE_CSV = 'data/raw/testArthur.csv'
+OUTPUT_FILE_XLSX = 'data/raw/testArthur.xlsx'
 URL_BLACKLIST = ["https://lwlies.com/reviews/p2"]
 
 def extract_text_by_label(soup, label_text):
@@ -42,6 +42,12 @@ def extract_score(soup):
         return round(avg, 2)
     return None
 
+def extract_article_title(soup):
+    h1 = soup.find('h1')
+    if not h1: return None
+    article_title = h1.get_text(strip=True)
+    return article_title
+
 def extract_title(soup):
     """Extraction of the title (spaces and dashes excluded)."""
     h1 = soup.find('h1')
@@ -57,6 +63,7 @@ def extract_title(soup):
     if match_space: return full_title[:match_space.start()].strip()
     
     return full_title
+
 
 # --- FONCTIONS PRINCIPALES ---
 
@@ -115,6 +122,7 @@ def scrape_review_page(url):
         data = {
             'review_id': str(uuid.uuid4()),
             'site_name': 'Little White Lies',
+            'article_title': None,
             'article_url': url,
             'article_author': None,
             'article_date': None,
@@ -125,20 +133,18 @@ def scrape_review_page(url):
             'film_genre': None,      # Empty for this site
             'film_duration': None,
             'article_text_full': None,
-            'article_subtitles': None, # Empty for this site
             'main_image_url': None,
-            'all_image_urls': None,    # Empty for this site
             'image_alt': None,
             'word_count': None,
-            'image_count': 1,
             'review_score': None,
             'links_to_other_reviews': None, # Empty for this site (maybe Trailer Link)
-            'cited_works_list': []
+            #'cited_works_list': [] #Not in our plan but could be very important
         }
 
         # --- FILLING ---
 
         # Title and Author
+        data['article_title']= extract_article_title(soup)
         data['film_title'] = extract_title(soup)
         author_tag = soup.find('a', href=lambda x: x and '/contributor/' in x, class_=lambda x: x and 'font-bold' in x)
         data['article_author'] = author_tag.get_text(strip=True) if author_tag else 'N/A'
@@ -230,7 +236,6 @@ def launch_scraping_arthur(limit = 300):
     else:
         print("\n❌ No data has been collected.")
 
-# --- EXÉCUTION (Si tu lances ce fichier tout seul) ---
+# --- EXÉCUTION  ---
 if __name__ == "__main__":
-    # Si tu lances ce fichier directement, on appelle la fonction avec une valeur par défaut
-    launch_scraping_arthur(limit=300)
+    launch_scraping_arthur(limit=10)
