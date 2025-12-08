@@ -233,9 +233,12 @@ def launch_scraping_arthur(limit = 300):
         df.to_csv(OUTPUT_FILE_CSV, index=False)
         df.to_excel(OUTPUT_FILE_XLSX, index=False)
         print(f"\n✅ Finished ! {len(df)} reviews backed up in {OUTPUT_FILE_CSV} and in {OUTPUT_FILE_XLSX}")
+
+        return df #To avoid any problems with the global function
     else:
         print("\n❌ No data has been collected.")
+        return pd.DataFrame()
 
-# --- EXÉCUTION  ---
+# --- RUNNING  ---
 if __name__ == "__main__":
     launch_scraping_arthur(limit=300)
