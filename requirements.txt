@@ -4,6 +4,7 @@ beautifulsoup4
 pandas
 openpyxl
 numpy
+urljoin
 
 # Librairies de Text Mining & NLP 
 scikit-learn
