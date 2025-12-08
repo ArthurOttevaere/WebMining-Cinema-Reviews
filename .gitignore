@@ -1,3 +1,4 @@
+# Ignorer les fichiers liés à MacOS et les fichiers inutiles de Python
 .DS_Store
 __pycache__/
 *.pyc

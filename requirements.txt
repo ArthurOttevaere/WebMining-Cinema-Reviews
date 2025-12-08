@@ -4,6 +4,9 @@ beautifulsoup4
 pandas
 openpyxl
 numpy
+time
+uuid
+re
 
 # Librairies de Text Mining & NLP 
 scikit-learn
