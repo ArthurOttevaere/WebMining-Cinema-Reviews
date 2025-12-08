@@ -59,7 +59,7 @@ def main():
         
         # Repartition of the scraping
         print("\nRépartition par source :")
-        print(final_df['source_site'].value_counts())
+        print(final_df['source_site'].value_counts().to_string())
         
     else:
         print("❌ Aucune donnée récupérée. Vérifiez les scrapers individuels.")
