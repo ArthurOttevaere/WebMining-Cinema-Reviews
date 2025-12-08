@@ -60,14 +60,14 @@ def extract_title(soup):
 
 # --- FONCTIONS PRINCIPALES ---
 
-def get_review_links(start_url):
+def get_review_links(start_url, target_count):
     """Navigation through the pages, collecting the review links."""
-    print("-> Crawling is starting on index pages.")
+    print(f"-> Recherche de {target_count} liens de critiques...")    
     links = set()
     current_url = start_url
     page_count = 1
     
-    while current_url:
+    while current_url and len(links) < target_count:
         print(f"   Scraping Page {page_count}: {current_url}")
         try:
             response = requests.get(current_url, timeout=10)
@@ -90,11 +90,8 @@ def get_review_links(start_url):
             next_btn = soup.find('a', attrs={'data-nova-track-data-label': 'pagination_next'})
             if next_btn and 'href' in next_btn.attrs:
                 current_url = next_btn['href'] if next_btn['href'].startswith('http') else BASE_URL + next_btn['href']
-                time.sleep(0.01)
+                time.sleep(0.5)
                 page_count += 1
-                if page_count > 30: # Limit (can be modified depending the purpose)
-                    print("      -> The page limit has been reached. Stop.")
-                    break 
             else:
                 print("      -> No more 'Next Button', that's it!")
                 break
@@ -203,12 +200,13 @@ def scrape_review_page(url):
         print(f"⚠️ Erreur Scraping {url}: {e}")
         return None
 
-# --- RUNNING ---
-if __name__ == "__main__":
-    links = get_review_links(INDEX_URL)
+# --- FONCTION DE LANCEMENT ---
+def launch_scraping_arthur(limit = 300):
+    print(f"--- Lancement du scraping Arthur (Little White Lies) pour {limit} critiques ---")
+    links = get_review_links(INDEX_URL, target_count=limit)
     
     # Number of links needed
-    links_to_scrape = links[:300] 
+    links_to_scrape = links[:limit] 
     
     print(f"\n Treating {len(links_to_scrape)} reviews...")
     results = []
@@ -222,7 +220,7 @@ if __name__ == "__main__":
             results.append(review)
         elif review:
             print(f" (⚠️ Missing title: {link})")
-        time.sleep(0.01)
+        time.sleep(0.1)
 
     if results:
         df = pd.DataFrame(results)
@@ -231,3 +229,8 @@ if __name__ == "__main__":
         print(f"\n✅ Finished ! {len(df)} reviews backed up in {OUTPUT_FILE_CSV} and in {OUTPUT_FILE_XLSX}")
     else:
         print("\n❌ No data has been collected.")
+
+# --- EXÉCUTION (Si tu lances ce fichier tout seul) ---
+if __name__ == "__main__":
+    # Si tu lances ce fichier directement, on appelle la fonction avec une valeur par défaut
+    launch_scraping_arthur(limit=300)
