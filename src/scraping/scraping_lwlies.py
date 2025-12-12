@@ -30,7 +30,7 @@ def extract_score(soup):
     scores = [int(t.get_text(strip=True)) for t in score_spans if t.get_text(strip=True).isdigit()]
     
     if not scores:
-        # 2. Via the black bubbles
+        # 2. Via the black bubbles (on the website)
         rating_divs = soup.find_all('div', class_=lambda x: x and 'w-14 h-14 rounded-full bg-black' in x)
         for div in rating_divs:
             span = div.find('span')
@@ -65,7 +65,7 @@ def extract_title(soup):
     return full_title
 
 
-# --- FONCTIONS PRINCIPALES ---
+# --- MAIN FUNCTIONS ---
 
 def get_review_links(start_url, target_count):
     """Navigation through the pages, collecting the review links."""
@@ -93,7 +93,7 @@ def get_review_links(start_url, target_count):
             
             print(f"      -> {len(links) - count_before} new links found.")
 
-            # 2. "Next Button"
+            # 2. "Next Button, specific to this website"
             next_btn = soup.find('a', attrs={'data-nova-track-data-label': 'pagination_next'})
             if next_btn and 'href' in next_btn.attrs:
                 current_url = next_btn['href'] if next_btn['href'].startswith('http') else BASE_URL + next_btn['href']
@@ -138,7 +138,7 @@ def scrape_review_page(url):
             'word_count': None,
             'review_score': None,
             'links_to_other_reviews': None, # Empty for this site (maybe Trailer Link)
-            #'cited_works_list': [] #Not in our plan but could be very important
+            #'cited_works_list': [] #Not in our plan but could be very important for the next parts
         }
 
         # --- FILLING ---
@@ -206,7 +206,7 @@ def scrape_review_page(url):
         print(f"⚠️ Erreur Scraping {url}: {e}")
         return None
 
-# --- FONCTION DE LANCEMENT ---
+# --- LAUNCHING FUNCTION ---
 def launch_scraping_arthur(limit = 300):
     print(f"--- Lancement du scraping Arthur (Little White Lies) pour {limit} critiques ---")
     links = get_review_links(INDEX_URL, target_count=limit)
