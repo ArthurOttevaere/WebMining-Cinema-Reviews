@@ -10,7 +10,7 @@ import os
 BASE = "https://www.rogerebert.com"
 START = BASE + "/reviews"
 # Nom du fichier qui sera créé (à modifier si besoin)
-NOM_FICHIER = "Scrap_Amine.xlsx" 
+NOM_FICHIER = "data/raw/Amine.xlsx" 
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
