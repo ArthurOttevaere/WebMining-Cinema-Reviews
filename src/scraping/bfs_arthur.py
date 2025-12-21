@@ -259,4 +259,4 @@ def launch_scraping_lenny(limit=100):
         return pd.DataFrame()
 
 if __name__ == "__main__":
-    launch_scraping_lenny(limit=300)
+    launch_scraping_lenny(limit=900)
