@@ -260,9 +260,10 @@ def launch_scraping_lenny(limit=100):
         os.makedirs("data/raw", exist_ok=True)
         df.to_csv("data/raw/roger_ebert_debug.csv", index=False)
         df.to_excel("data/raw/roger_ebert_debug.xlsx", index = False)
+        df.to_json("data/raw/roger_ebert_debug.json", index = False)
         return df
     else:
         return pd.DataFrame()
 
 if __name__ == "__main__":
-    launch_scraping_lenny(limit=900)
+    launch_scraping_lenny(limit=25)
