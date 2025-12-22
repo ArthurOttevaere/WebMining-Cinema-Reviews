@@ -1,0 +1,97 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.cluster import KMeans
+from sklearn.decomposition import PCA
+from sklearn.preprocessing import Normalizer  # <--- L'outil magique qu'il manquait
+import os
+import numpy as np
+
+# ==============================================================================
+# 1. CONFIGURATION ET CHARGEMENT
+# ==============================================================================
+dossier = r"C:\Users\33778\Desktop\WM (Amine)"
+chemin_entree = os.path.join(dossier, "matrice_vectorielle_tf-idf.csv")
+chemin_sortie = os.path.join(dossier, "resultats_clustering.csv")
+
+print(f"Lecture du fichier : {chemin_entree}")
+if not os.path.exists(chemin_entree):
+    print("❌ ERREUR : Fichier introuvable.")
+    exit()
+
+try:
+    df = pd.read_csv(chemin_entree, sep=';', index_col=0, encoding='utf-8-sig')
+except:
+    df = pd.read_csv(chemin_entree, sep=';', index_col=0, encoding='cp1252')
+
+print(f"--> Matrice chargée : {df.shape}")
+
+# ==============================================================================
+# 2. PRÉTRAITEMENT CRUCIAL : NORMALISATION
+# ==============================================================================
+print("\nNormalisation des données (Pour éviter le problème du groupe géant)...")
+# On transforme les données pour que K-Means compare les SUJETS et non la LONGUEUR
+scaler = Normalizer()
+df_scaled_array = scaler.fit_transform(df)
+
+# On remet ça dans un DataFrame propre pour garder les noms de colonnes (mots)
+df_scaled = pd.DataFrame(df_scaled_array, index=df.index, columns=df.columns)
+
+# ==============================================================================
+# 3. APPLICATION DU K-MEANS
+# ==============================================================================
+NOMBRE_DE_GROUPES = 5
+print(f"Lancement du K-Means sur données normalisées ({NOMBRE_DE_GROUPES} groupes)...")
+
+kmeans = KMeans(n_clusters=NOMBRE_DE_GROUPES, random_state=42, n_init=10)
+clusters = kmeans.fit_predict(df_scaled)
+
+# On ajoute le résultat au DataFrame
+df['Groupe'] = clusters  # On l'ajoute au DF original pour l'analyse
+
+# Sauvegarde
+df[['Groupe']].to_csv(chemin_sortie, sep=';', encoding='utf-8-sig')
+print(f"✅ Résultats sauvegardés dans : {chemin_sortie}")
+
+# ==============================================================================
+# 4. ANALYSE DES GROUPES (Mots Clés)
+# ==============================================================================
+print("\n--- ANALYSE THÉMATIQUE DES GROUPES ---")
+
+# On récupère les centres mathématiques des clusters
+centres = kmeans.cluster_centers_
+mots = df.columns[:-1]  # Liste des mots (on enlève la colonne 'Groupe' qu'on vient d'ajouter)
+
+for i in range(NOMBRE_DE_GROUPES):
+    # On trouve les mots qui ont les scores les plus élevés dans ce centre
+    # argsort trie du plus petit au plus grand, on prend les 10 derniers ([::-1] pour inverser)
+    top_indices = centres[i].argsort()[-10:][::-1]
+    top_mots = [mots[ind] for ind in top_indices]
+
+    nb_films = len(df[df['Groupe'] == i])
+    print(f"Groupe {i} ({nb_films} films) : {', '.join(top_mots)}")
+
+# ==============================================================================
+# 5. VISUALISATION PCA
+# ==============================================================================
+print("\nGénération du graphique 2D...")
+
+pca = PCA(n_components=2)
+# On visualise les données normalisées (df_scaled) car c'est là-dessus qu'on a fait le clustering
+coords = pca.fit_transform(df_scaled)
+
+plt.figure(figsize=(12, 8))
+scatter = plt.scatter(coords[:, 0], coords[:, 1], c=clusters, cmap='tab10', alpha=0.7, s=50)
+
+plt.title(f'Clustering des Films (Normalisé) - {NOMBRE_DE_GROUPES} Groupes')
+plt.xlabel('Axe Principal 1 (PCA)')
+plt.ylabel('Axe Principal 2 (PCA)')
+plt.colorbar(scatter, label='Groupe')
+plt.grid(True, linestyle='--', alpha=0.3)
+
+# Affichage de quelques titres pour se repérer
+indices_hasard = np.random.choice(len(df), size=10, replace=False)
+for i in indices_hasard:
+    plt.text(coords[i, 0], coords[i, 1], df.index[i], fontsize=8, alpha=0.8)
+
+plt.tight_layout()
+plt.show()
