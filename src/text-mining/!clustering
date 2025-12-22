@@ -1,97 +1,153 @@
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
+from sklearn.preprocessing import Normalizer
 from sklearn.decomposition import PCA
-from sklearn.preprocessing import Normalizer  # <--- L'outil magique qu'il manquait
+from sklearn.metrics import silhouette_score
 import os
-import numpy as np
 
 # ==============================================================================
 # 1. CONFIGURATION ET CHARGEMENT
 # ==============================================================================
 dossier = r"C:\Users\33778\Desktop\WM (Amine)"
 chemin_entree = os.path.join(dossier, "matrice_vectorielle_tf-idf.csv")
-chemin_sortie = os.path.join(dossier, "resultats_clustering.csv")
+chemin_sortie = os.path.join(dossier, "resultats_clustering excellent.csv")
 
 print(f"Lecture du fichier : {chemin_entree}")
 if not os.path.exists(chemin_entree):
-    print("❌ ERREUR : Fichier introuvable.")
-    exit()
+    raise FileNotFoundError("Fichier TF-IDF introuvable")
 
-try:
-    df = pd.read_csv(chemin_entree, sep=';', index_col=0, encoding='utf-8-sig')
-except:
-    df = pd.read_csv(chemin_entree, sep=';', index_col=0, encoding='cp1252')
-
-print(f"--> Matrice chargée : {df.shape}")
+df = pd.read_csv(chemin_entree, sep=';', index_col=0, encoding='utf-8-sig')
+print(f"Matrice chargée : {df.shape}")
 
 # ==============================================================================
-# 2. PRÉTRAITEMENT CRUCIAL : NORMALISATION
+# 2. NORMALISATION (L2)
 # ==============================================================================
-print("\nNormalisation des données (Pour éviter le problème du groupe géant)...")
-# On transforme les données pour que K-Means compare les SUJETS et non la LONGUEUR
 scaler = Normalizer()
 df_scaled_array = scaler.fit_transform(df)
-
-# On remet ça dans un DataFrame propre pour garder les noms de colonnes (mots)
 df_scaled = pd.DataFrame(df_scaled_array, index=df.index, columns=df.columns)
 
 # ==============================================================================
-# 3. APPLICATION DU K-MEANS
+# 3. CHOIX DU NOMBRE DE CLUSTERS (ELBOW + SILHOUETTE)
 # ==============================================================================
-NOMBRE_DE_GROUPES = 5
-print(f"Lancement du K-Means sur données normalisées ({NOMBRE_DE_GROUPES} groupes)...")
+K_range = range(2, 11)
+inerties = []
+silhouettes = []
 
-kmeans = KMeans(n_clusters=NOMBRE_DE_GROUPES, random_state=42, n_init=10)
+print("\nCalcul Elbow & Silhouette...")
+for k in K_range:
+    km = KMeans(n_clusters=k, random_state=42, n_init=10)
+    labels = km.fit_predict(df_scaled)
+
+    inerties.append(km.inertia_)
+    silhouettes.append(silhouette_score(df_scaled, labels, metric='cosine'))
+
+# Tableau récapitulatif
+evaluation = pd.DataFrame({
+    "K": list(K_range),
+    "Inertie": inerties,
+    "Silhouette": silhouettes
+})
+print("\nÉvaluation des K :")
+print(evaluation)
+
+# ==============================================================================
+# 4. GRAPHIQUES ELBOW & SILHOUETTE
+# ==============================================================================
+plt.figure(figsize=(12, 5))
+
+plt.subplot(1, 2, 1)
+plt.plot(K_range, inerties, marker='o')
+plt.xlabel("Nombre de clusters (K)")
+plt.ylabel("Inertie")
+plt.title("Méthode du coude")
+
+plt.subplot(1, 2, 2)
+plt.plot(K_range, silhouettes, marker='o')
+plt.xlabel("Nombre de clusters (K)")
+plt.ylabel("Score de silhouette")
+plt.title("Silhouette (distance cosinus)")
+
+plt.tight_layout()
+plt.show()
+# ==============================================================================
+# 4bis. TEST EXPLICITE COMPARATIF DES K (ANALYSE THÉMATIQUE)
+# ==============================================================================
+
+print("\n=== TEST COMPARATIF DES CLUSTERS (K = 4, 5, 6) ===")
+
+K_TEST = [4, 5, 6]
+
+for k in K_TEST:
+    print(f"\n--- K = {k} ---")
+
+    kmeans_test = KMeans(n_clusters=k, random_state=42, n_init=10)
+    labels_test = kmeans_test.fit_predict(df_scaled)
+    centres_test = kmeans_test.cluster_centers_
+
+    mots = df.columns  # mots TF-IDF
+
+    for i in range(k):
+        top_indices = centres_test[i].argsort()[-10:][::-1]
+        top_mots = [mots[j] for j in top_indices]
+        taille = (labels_test == i).sum()
+
+        print(f"Groupe {i} ({taille} films) : {', '.join(top_mots)}")
+
+# ==============================================================================
+# 5. K-MEANS FINAL (K OPTIMAL)
+# ==============================================================================
+K_OPTIMAL = 5
+print(f"\nClustering final avec K = {K_OPTIMAL}")
+
+kmeans = KMeans(n_clusters=K_OPTIMAL, random_state=42, n_init=10)
 clusters = kmeans.fit_predict(df_scaled)
 
-# On ajoute le résultat au DataFrame
-df['Groupe'] = clusters  # On l'ajoute au DF original pour l'analyse
-
-# Sauvegarde
+df['Groupe'] = clusters
 df[['Groupe']].to_csv(chemin_sortie, sep=';', encoding='utf-8-sig')
-print(f"✅ Résultats sauvegardés dans : {chemin_sortie}")
+print(f"Résultats sauvegardés : {chemin_sortie}")
 
 # ==============================================================================
-# 4. ANALYSE DES GROUPES (Mots Clés)
+# 6. ANALYSE THÉMATIQUE DES CLUSTERS
 # ==============================================================================
-print("\n--- ANALYSE THÉMATIQUE DES GROUPES ---")
-
-# On récupère les centres mathématiques des clusters
+print("\n--- Analyse thématique ---")
 centres = kmeans.cluster_centers_
-mots = df.columns[:-1]  # Liste des mots (on enlève la colonne 'Groupe' qu'on vient d'ajouter)
+mots = df.columns[:-1]
 
-for i in range(NOMBRE_DE_GROUPES):
-    # On trouve les mots qui ont les scores les plus élevés dans ce centre
-    # argsort trie du plus petit au plus grand, on prend les 10 derniers ([::-1] pour inverser)
-    top_indices = centres[i].argsort()[-10:][::-1]
-    top_mots = [mots[ind] for ind in top_indices]
-
-    nb_films = len(df[df['Groupe'] == i])
-    print(f"Groupe {i} ({nb_films} films) : {', '.join(top_mots)}")
+for i in range(K_OPTIMAL):
+    indices_top = centres[i].argsort()[-10:][::-1]
+    top_mots = [mots[j] for j in indices_top]
+    taille = (df['Groupe'] == i).sum()
+    print(f"Groupe {i} ({taille} films) : {', '.join(top_mots)}")
 
 # ==============================================================================
-# 5. VISUALISATION PCA
+# 7. VISUALISATION PCA 2D
 # ==============================================================================
-print("\nGénération du graphique 2D...")
-
 pca = PCA(n_components=2)
-# On visualise les données normalisées (df_scaled) car c'est là-dessus qu'on a fait le clustering
 coords = pca.fit_transform(df_scaled)
 
 plt.figure(figsize=(12, 8))
-scatter = plt.scatter(coords[:, 0], coords[:, 1], c=clusters, cmap='tab10', alpha=0.7, s=50)
+scatter = plt.scatter(
+    coords[:, 0],
+    coords[:, 1],
+    c=clusters,
+    cmap='tab10',
+    alpha=0.7,
+    s=50
+)
 
-plt.title(f'Clustering des Films (Normalisé) - {NOMBRE_DE_GROUPES} Groupes')
-plt.xlabel('Axe Principal 1 (PCA)')
-plt.ylabel('Axe Principal 2 (PCA)')
+plt.title(f'Clustering des Films (TF-IDF normalisé) – K={K_OPTIMAL}')
+plt.xlabel('Composante principale 1')
+plt.ylabel('Composante principale 2')
 plt.colorbar(scatter, label='Groupe')
-plt.grid(True, linestyle='--', alpha=0.3)
+plt.grid(alpha=0.3)
 
-# Affichage de quelques titres pour se repérer
-indices_hasard = np.random.choice(len(df), size=10, replace=False)
-for i in indices_hasard:
-    plt.text(coords[i, 0], coords[i, 1], df.index[i], fontsize=8, alpha=0.8)
+# Affichage de quelques titres
+np.random.seed(42)
+indices = np.random.choice(len(df), size=10, replace=False)
+for i in indices:
+    plt.text(coords[i, 0], coords[i, 1], df.index[i], fontsize=8)
 
 plt.tight_layout()
 plt.show()
