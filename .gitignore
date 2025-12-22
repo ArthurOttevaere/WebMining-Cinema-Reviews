@@ -10,6 +10,8 @@ data/*.csv
 data/*.xlsx
 data/raw/*.csv
 data/raw/*.xlsx
+data/raw/*.json
+data/*.json
 
 # Mais garder les fichiers .gitkeep !
 !data/**/.gitkeep
