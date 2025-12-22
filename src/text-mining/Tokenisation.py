@@ -37,13 +37,23 @@ def extract_tokens(text):
     return mots_propres
 
 # CHARGEMENT
-dossier = r"C:\Users\33778\Desktop\WM (Amine)"
-fichier_entree = os.path.join(dossier, "roger_ebert_debug.csv")
-fichier_sortie = os.path.join(dossier, "resultat_avec_tokens.csv")
+#dossier = r"C:\Users\33778\Desktop\WM (Amine)"
+#fichier_entree = os.path.join(dossier, "roger_ebert_debug.csv")
+#fichier_sortie = os.path.join(dossier, "resultat_avec_tokens.csv")
+
+# We go up to the file root 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+fichier_entree = os.path.join(BASE_DIR, "data", "processed", "reviews_final_900.csv")
+fichier_sortie = os.path.join(BASE_DIR, "data", "raw", "results_with_tokens.csv")
+
+print(f"📂 Lecture de : {fichier_entree}")
+print(f"💾 Sauvegarde prévue dans : {fichier_sortie}")
 
 print(f"Lecture du fichier : {fichier_entree}")
 
-df = pd.read_csv(fichier_entree, sep=';', encoding='utf-8-sig', engine='python')
+#df = pd.read_csv(fichier_entree, sep=';', encoding='utf-8-sig', engine='python')
+df = pd.read_csv(fichier_entree, sep=',', encoding='utf-8-sig', engine='python', on_bad_lines='warn')
 
 # --- 4. CORRECTION FORMAT ANNÉE (NOUVEAU !) ---
 if 'film_year' in df.columns:

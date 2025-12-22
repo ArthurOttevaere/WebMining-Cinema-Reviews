@@ -10,9 +10,20 @@ import os
 # ==============================================================================
 # 1. CONFIGURATION ET CHARGEMENT
 # ==============================================================================
-dossier = r"C:\Users\33778\Desktop\WM (Amine)"
-chemin_entree = os.path.join(dossier, "matrice_vectorielle_tf-idf.csv")
-chemin_sortie = os.path.join(dossier, "resultats_clustering excellent.csv")
+#dossier = r"C:\Users\33778\Desktop\WM (Amine)"
+#chemin_entree = os.path.join(dossier, "matrice_vectorielle_tf-idf.csv")
+#chemin_sortie = os.path.join(dossier, "resultats_clustering excellent.csv")
+
+# We go up to the file root 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+chemin_entree = os.path.join(BASE_DIR, "data", "raw", "vector_matrix_tf-idf.csv")
+chemin_sortie = os.path.join(BASE_DIR, "data", "raw", "results_clustering_excellent.csv")
+
+print(f"📂 Lecture de : {chemin_entree}")
+print(f"💾 Sauvegarde prévue dans : {chemin_sortie}")
+
+print(f"Lecture du fichier : {chemin_entree}")
 
 print(f"Lecture du fichier : {chemin_entree}")
 if not os.path.exists(chemin_entree):

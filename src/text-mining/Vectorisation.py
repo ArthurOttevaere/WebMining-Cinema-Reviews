@@ -4,9 +4,20 @@ import ast
 import os
 
 # --- CONFIGURATION ---
-dossier = r"C:\Users\33778\Desktop\WM (Amine)"
-chemin_entree = os.path.join(dossier, "resultat_avec_tokens.csv")
-chemin_sortie = os.path.join(dossier, "matrice_vectorielle.csv")
+#dossier = r"C:\Users\33778\Desktop\WM (Amine)"
+#chemin_entree = os.path.join(dossier, "resultat_avec_tokens.csv")
+#chemin_sortie = os.path.join(dossier, "matrice_vectorielle.csv")
+
+# We go up to the file root 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+chemin_entree = os.path.join(BASE_DIR, "data", "raw", "results_with_tokens.csv")
+chemin_sortie = os.path.join(BASE_DIR, "data", "raw", "vector_matrix.csv")
+
+print(f"📂 Lecture de : {chemin_entree}")
+print(f"💾 Sauvegarde prévue dans : {chemin_sortie}")
+
+print(f"Lecture du fichier : {chemin_entree}")
 
 # 1. CHARGEMENT SIMPLE
 print(f"Lecture du fichier : {chemin_entree}")

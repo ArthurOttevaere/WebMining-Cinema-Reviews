@@ -5,9 +5,20 @@ import os
 
 
 # CONFIGURATION
-dossier = r"C:\Users\33778\Desktop\WM (Amine)"
-chemin_entree = os.path.join(dossier, "matrice_vectorielle_tf-idf.csv")  # Ta matrice TF-IDF
-chemin_sortie = os.path.join(dossier, "matrice_similarite.csv")
+#dossier = r"C:\Users\33778\Desktop\WM (Amine)"
+#chemin_entree = os.path.join(dossier, "matrice_vectorielle_tf-idf.csv")  # Ta matrice TF-IDF
+#chemin_sortie = os.path.join(dossier, "matrice_similarite.csv")
+
+# We go up to the file root 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+chemin_entree = os.path.join(BASE_DIR, "data", "raw", "vector_matrix_tf-idf.csv")
+chemin_sortie = os.path.join(BASE_DIR, "data", "raw", "similarity_matrix.csv")
+
+print(f"📂 Lecture de : {chemin_entree}")
+print(f"💾 Sauvegarde prévue dans : {chemin_sortie}")
+
+print(f"Lecture du fichier : {chemin_entree}")
 
 # 1. CHARGEMENT DE LA MATRICE TF-IDF
 print(f"Lecture de la matrice : {chemin_entree}")
