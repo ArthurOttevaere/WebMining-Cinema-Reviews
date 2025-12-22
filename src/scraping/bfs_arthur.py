@@ -174,13 +174,19 @@ def launch_scraping_lenny(limit=100):
                     directors = [a.get_text(strip=True) for a in ul_list.find_all("a")]
                     row['film_director'] = ", ".join(directors)
 
-            # 5. GENRE
-            genres_found = []
-            for a in soup.find_all("a", href=True):
-                if "/genre/" in a['href']:
-                    genre_text = a.get_text(strip=True)
-                    if genre_text: genres_found.append(genre_text)
-            if genres_found: row['film_genre'] = ", ".join(list(set(genres_found)))
+            # 5. GENRE 
+            # We look for <a> 
+            genre_tags = soup.find_all("a", class_="border-primary-gold")
+            
+            # We only collect the genre, nothing else
+            genres_list = [tag.get_text(strip=True) for tag in genre_tags]
+            
+            # We check to have zero duplicates 
+            if genres_list:
+                row['film_genre'] = ", ".join(sorted(list(set(genres_list))))
+            else:
+                row['film_genre'] = "N/A"
+
 
             # 6. AUTHOR
             author_tag = soup.find("a", href=lambda x: x and "/contributors/" in x)
