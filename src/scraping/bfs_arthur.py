@@ -60,7 +60,7 @@ def get_ajax_review_links(paged=1):
 # ----------------------------
 # 2. MAIN FUNCTION (Stock of seeds)
 # ----------------------------
-def launch_scraping_lenny(limit=100):
+def launch_scraping_roger_ebert(limit=100):
     print(f"--- 🕵️‍♂️ Launching Roger Ebert Scraping : {limit} articles ---")
 
     to_scrape = [] 
@@ -266,4 +266,4 @@ def launch_scraping_lenny(limit=100):
         return pd.DataFrame()
 
 if __name__ == "__main__":
-    launch_scraping_lenny(limit=900)
+    launch_scraping_roger_ebert(limit=900)
