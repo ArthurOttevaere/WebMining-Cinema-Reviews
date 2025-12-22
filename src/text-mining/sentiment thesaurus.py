@@ -55,13 +55,38 @@ df["tokens_tagged"] = texts.apply(preprocess_and_tokenize)
 # -------------------------------------------------------------------
 sia = SentimentIntensityAnalyzer()
 lexicon = sia.lexicon
-
 eval_tags = {"JJ","JJR","JJS","RB","RBR","RBS","VB","VBD","VBG","VBN","VBP","VBZ","NN","NNS"}
 
 def extract_eval_words(tokens_tagged):
     return [t for t, tag in tokens_tagged if t.lower() in lexicon and tag in eval_tags]
 
 df["eval_words"] = df["tokens_tagged"].apply(extract_eval_words)
+
+# -------------------------------------------------------------------
+# 4b) Filtrage automatique des termes trop rares ou trop fréquents
+# -------------------------------------------------------------------
+all_eval_words = [w.lower() for sublist in df["eval_words"] for w in sublist]
+eval_counter = Counter(all_eval_words)
+n_docs = len(df)
+
+# Seuils
+min_doc_freq = 2           # mot doit apparaître au moins dans 2 documents
+max_doc_frac = 0.7         # mot ne doit pas apparaître dans plus de 70% des documents
+
+# calculer fréquence par documents
+doc_freq = Counter()
+for words in df["eval_words"]:
+    for w in set([t.lower() for t in words]):
+        doc_freq[w] += 1
+
+# filtrage
+filtered_words = {w for w, dfreq in doc_freq.items() if dfreq >= min_doc_freq and dfreq/n_docs <= max_doc_frac}
+print(f"Nombre de mots évaluatifs après filtre : {len(filtered_words)} (sur {len(eval_counter)})")
+
+def filter_eval_words(words):
+    return [w for w in words if w.lower() in filtered_words]
+
+df["eval_words_filtered"] = df["eval_words"].apply(filter_eval_words)
 
 # -------------------------------------------------------------------
 # 5) Positifs / négatifs + correction des négations
@@ -80,13 +105,13 @@ def filter_sentiment_words(tokens):
                 neg_words.append(token)
     return pos_words, neg_words
 
-df["pos_words"], df["neg_words"] = zip(*df["eval_words"].apply(filter_sentiment_words))
+df["pos_words"], df["neg_words"] = zip(*df["eval_words_filtered"].apply(filter_sentiment_words))
 
 # -------------------------------------------------------------------
 # 6) Calculs essentiels : densité & ratio pos/neg
 # -------------------------------------------------------------------
 df["review_word_count"] = texts.apply(lambda x: len(x.split()))
-df["eval_count"] = df["eval_words"].apply(len)
+df["eval_count"] = df["eval_words_filtered"].apply(len)
 
 df["eval_density"] = df["eval_count"] / df["review_word_count"]
 df["eval_density"] = df["eval_density"].fillna(0)
@@ -121,7 +146,7 @@ plt.show()
 # -------------------------------------------------------------------
 # 8) Compound
 # -------------------------------------------------------------------
-df["compound"] = df["eval_words"].apply(lambda toks: sia.polarity_scores(" ".join(toks))["compound"])
+df["compound"] = df["eval_words_filtered"].apply(lambda toks: sia.polarity_scores(" ".join(toks))["compound"])
 
 plt.figure(figsize=(8,6))
 sns.scatterplot(x=df["review_score"], y=df["compound"])
@@ -133,9 +158,9 @@ plt.show()
 # -------------------------------------------------------------------
 # 9) Top 20 mots évaluatifs fiables
 # -------------------------------------------------------------------
-all_eval_words_strict = [t for sublist in df["eval_words"] for t in sublist]
-freq_counter_strict = Counter(all_eval_words_strict)
-print("20 mots évaluatifs stricts les plus fréquents :", freq_counter_strict.most_common(20))
+all_eval_words_filtered = [t for sublist in df["eval_words_filtered"] for t in sublist]
+freq_counter_filtered = Counter(all_eval_words_filtered)
+print("20 mots évaluatifs filtrés les plus fréquents :", freq_counter_filtered.most_common(20))
 
 # -------------------------------------------------------------------
 # 10) Analyse (3) : Relation vocabulaire ↔ note
@@ -161,7 +186,7 @@ if "film_genre" in df.columns:
     print("Analyse par genre en cours...")
 
     for genre, subdf in df.groupby("film_genre"):
-        words = [w for lst in subdf["eval_words"] for w in lst]
+        words = [w for lst in subdf["eval_words_filtered"] for w in lst]
         counter = Counter(words).most_common(20)
         top_df = pd.DataFrame(counter, columns=["word", "freq"])
 
@@ -172,6 +197,5 @@ if "film_genre" in df.columns:
         plt.ylabel("Mot évaluatif")
         plt.tight_layout()
         plt.show()
-
 else:
     print("⚠ Aucun champ 'film_genre' détecté dans votre dataset. Analyse ignorée.")
