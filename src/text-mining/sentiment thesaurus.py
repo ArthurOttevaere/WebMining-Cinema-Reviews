@@ -12,14 +12,14 @@ from wordcloud import WordCloud
 import seaborn as sns
 
 # -------------------------------------------------------------------
-# 1) Chargement du CSV
+# 1) Load CSV
 # -------------------------------------------------------------------
 df = pd.read_csv("roger_ebert_debug.csv")
 texts = df["article_text_full"].astype(str)
 scores = df["review_score"].astype(float)
 
 # -------------------------------------------------------------------
-# 2) NLTK
+# 2) NLTK setup
 # -------------------------------------------------------------------
 nltk.download("punkt")
 nltk.download("stopwords")
@@ -33,7 +33,7 @@ stop_words = set(stopwords.words("english"))
 negations = {"not","no","never","hardly","none"}
 
 # -------------------------------------------------------------------
-# 3) Prétraitement + tokenisation + POS + lemmatisation
+# 3) Preprocessing + tokenization + POS tagging + lemmatization
 # -------------------------------------------------------------------
 def preprocess_and_tokenize(text):
     text = re.sub(r"[^A-Za-z0-9\s]", " ", text)
@@ -51,7 +51,7 @@ def preprocess_and_tokenize(text):
 df["tokens_tagged"] = texts.apply(preprocess_and_tokenize)
 
 # -------------------------------------------------------------------
-# 4) Extraire mots évaluatifs
+# 4) Extract evaluative words
 # -------------------------------------------------------------------
 sia = SentimentIntensityAnalyzer()
 lexicon = sia.lexicon
@@ -63,25 +63,25 @@ def extract_eval_words(tokens_tagged):
 df["eval_words"] = df["tokens_tagged"].apply(extract_eval_words)
 
 # -------------------------------------------------------------------
-# 4b) Filtrage automatique des termes trop rares ou trop fréquents
+# 4b) Automatic filtering of too rare or too frequent terms
 # -------------------------------------------------------------------
 all_eval_words = [w.lower() for sublist in df["eval_words"] for w in sublist]
 eval_counter = Counter(all_eval_words)
 n_docs = len(df)
 
-# Seuils
-min_doc_freq = 2           # mot doit apparaître au moins dans 2 documents
-max_doc_frac = 0.7         # mot ne doit pas apparaître dans plus de 70% des documents
+# Thresholds
+min_doc_freq = 2       # must appear in at least 2 documents
+max_doc_frac = 0.8     # must appear in at most 80% of documents
 
-# calculer fréquence par documents
+# Compute document frequency
 doc_freq = Counter()
 for words in df["eval_words"]:
     for w in set([t.lower() for t in words]):
         doc_freq[w] += 1
 
-# filtrage
+# Apply filtering
 filtered_words = {w for w, dfreq in doc_freq.items() if dfreq >= min_doc_freq and dfreq/n_docs <= max_doc_frac}
-print(f"Nombre de mots évaluatifs après filtre : {len(filtered_words)} (sur {len(eval_counter)})")
+print(f"Number of evaluative words after filtering: {len(filtered_words)} (out of {len(eval_counter)})")
 
 def filter_eval_words(words):
     return [w for w in words if w.lower() in filtered_words]
@@ -89,7 +89,7 @@ def filter_eval_words(words):
 df["eval_words_filtered"] = df["eval_words"].apply(filter_eval_words)
 
 # -------------------------------------------------------------------
-# 5) Positifs / négatifs + correction des négations
+# 5) Positive / negative words + negation handling
 # -------------------------------------------------------------------
 def filter_sentiment_words(tokens):
     pos_words, neg_words = [], []
@@ -99,16 +99,16 @@ def filter_sentiment_words(tokens):
         if score != 0:
             if prev_neg:
                 score = -score
-            if score>0:
+            if score > 0:
                 pos_words.append(token)
-            elif score<0:
+            elif score < 0:
                 neg_words.append(token)
     return pos_words, neg_words
 
 df["pos_words"], df["neg_words"] = zip(*df["eval_words_filtered"].apply(filter_sentiment_words))
 
 # -------------------------------------------------------------------
-# 6) Calculs essentiels : densité & ratio pos/neg
+# 6) Essential calculations: density & pos/neg ratio
 # -------------------------------------------------------------------
 df["review_word_count"] = texts.apply(lambda x: len(x.split()))
 df["eval_count"] = df["eval_words_filtered"].apply(len)
@@ -123,7 +123,7 @@ df["pos_neg_ratio"] = df["pos_count"] / (df["neg_count"] + 1)
 df["pos_neg_ratio"] = df["pos_neg_ratio"].fillna(0)
 
 # -------------------------------------------------------------------
-# 7) Nuages de mots
+# 7) Word clouds
 # -------------------------------------------------------------------
 pos_counter = Counter([w for sublist in df["pos_words"] for w in sublist])
 neg_counter = Counter([w for sublist in df["neg_words"] for w in sublist])
@@ -134,56 +134,56 @@ wc_neg = WordCloud(width=800, height=400, background_color="black").generate_fro
 plt.figure(figsize=(10,5))
 plt.imshow(wc_pos, interpolation="bilinear")
 plt.axis("off")
-plt.title("Nuage de mots positifs")
+plt.title("Positive Words Word Cloud")
 plt.show()
 
 plt.figure(figsize=(10,5))
 plt.imshow(wc_neg, interpolation="bilinear")
 plt.axis("off")
-plt.title("Nuage de mots négatifs")
+plt.title("Negative Words Word Cloud")
 plt.show()
 
 # -------------------------------------------------------------------
-# 8) Compound
+# 8) Compound sentiment score
 # -------------------------------------------------------------------
 df["compound"] = df["eval_words_filtered"].apply(lambda toks: sia.polarity_scores(" ".join(toks))["compound"])
 
 plt.figure(figsize=(8,6))
 sns.scatterplot(x=df["review_score"], y=df["compound"])
-plt.title("Review Score vs Compound")
+plt.title("Review Score vs Compound Sentiment")
 plt.xlabel("Review Score")
 plt.ylabel("Compound Score")
 plt.show()
 
 # -------------------------------------------------------------------
-# 9) Top 20 mots évaluatifs fiables
+# 9) Top 20 reliable evaluative words
 # -------------------------------------------------------------------
 all_eval_words_filtered = [t for sublist in df["eval_words_filtered"] for t in sublist]
 freq_counter_filtered = Counter(all_eval_words_filtered)
-print("20 mots évaluatifs filtrés les plus fréquents :", freq_counter_filtered.most_common(20))
+print("Top 20 filtered evaluative words:", freq_counter_filtered.most_common(20))
 
 # -------------------------------------------------------------------
-# 10) Analyse (3) : Relation vocabulaire ↔ note
+# 10) Analysis: Vocabulary vs Score
 # -------------------------------------------------------------------
 plt.figure(figsize=(8,6))
 sns.regplot(x=df["review_score"], y=df["eval_density"])
-plt.title("Densité évaluative vs Note")
+plt.title("Evaluative Word Density vs Review Score")
 plt.xlabel("Review Score")
-plt.ylabel("Densité évaluative")
+plt.ylabel("Evaluative Density")
 plt.show()
 
 plt.figure(figsize=(8,6))
 sns.regplot(x=df["review_score"], y=df["pos_neg_ratio"])
-plt.title("Ratio mots positifs / négatifs vs Note")
+plt.title("Positive/Negative Word Ratio vs Review Score")
 plt.xlabel("Review Score")
-plt.ylabel("Ratio pos/neg")
+plt.ylabel("Pos/Neg Ratio")
 plt.show()
 
 # -------------------------------------------------------------------
-# 11) Analyse par genres
+# 11) Analysis by genres
 # -------------------------------------------------------------------
 if "film_genre" in df.columns:
-    print("Analyse par genre en cours...")
+    print("Analyzing by genre...")
 
     for genre, subdf in df.groupby("film_genre"):
         words = [w for lst in subdf["eval_words_filtered"] for w in lst]
@@ -192,10 +192,10 @@ if "film_genre" in df.columns:
 
         plt.figure(figsize=(10, 6))
         sns.barplot(data=top_df, x="freq", y="word", palette="viridis")
-        plt.title(f"Top 20 mots évaluatifs — {genre}")
-        plt.xlabel("Fréquence")
-        plt.ylabel("Mot évaluatif")
+        plt.title(f"Top 20 Evaluative Words — Genre: {genre}")
+        plt.xlabel("Frequency")
+        plt.ylabel("Evaluative Word")
         plt.tight_layout()
         plt.show()
 else:
-    print("⚠ Aucun champ 'film_genre' détecté dans votre dataset. Analyse ignorée.")
+    print("⚠ No 'film_genre' field detected in dataset. Skipping genre analysis.")
