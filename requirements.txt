@@ -1,22 +1,21 @@
-# Librairies de base et scraping
+# --- Scraping & Web ---
 requests
 beautifulsoup4
-pandas
-openpyxl
-numpy
-time
-uuid
-re
-json
-os
 
-# Librairies de Text Mining & NLP 
-scikit-learn
-nltk
+# --- Analyse de données & Calcul ---
+pandas
+numpy
+openpyxl
 scipy
 
-# Librairies de Link Analysis (pour la création et l'analyse de graphes)
-networkx
+# --- Machine Learning & NLP ---
+scikit-learn
+nltk
+wordcloud
 
-# Librairies de visualisation 
+# --- Visualisation ---
 matplotlib
+seaborn
+
+# --- Link Analysis ---
+networkx

@@ -14,7 +14,7 @@ import seaborn as sns
 # -------------------------------------------------------------------
 # 1) Load CSV
 # -------------------------------------------------------------------
-df = pd.read_csv("roger_ebert_debug.csv")
+df = pd.read_csv("data/processed/reviews_final_900.csv")
 texts = df["article_text_full"].astype(str)
 scores = df["review_score"].astype(float)
 
@@ -25,7 +25,7 @@ nltk.download("punkt")
 nltk.download("stopwords")
 nltk.download("wordnet")
 nltk.download("omw-1.4")
-nltk.download("averaged_perceptron_tagger")
+nltk.download("averaged_perceptron_tagger_eng")
 nltk.download("vader_lexicon")
 
 lemmatizer = WordNetLemmatizer()
