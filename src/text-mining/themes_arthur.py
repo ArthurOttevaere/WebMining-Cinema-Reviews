@@ -102,9 +102,9 @@ def get_smart_keywords(texts, n_top=3):
 # 3. PIPELINE
 # ==========================================
 
-def main():
-    print(f"📂 Reading : {INPUT_FILE}")
-    if not os.path.exists(INPUT_FILE):
+def main(num_themes = NUM_THEMES, input_path = INPUT_FILE):
+    print(f"📂 Reading : {input_path}")
+    if not os.path.exists(input_path):
         # Fallback au cas où le chemin est différent
         print("⚠️ Unlocated file, trying local path... ")
         INPUT_FILE_LOCAL = "reviews_final_900.csv" 
@@ -114,7 +114,7 @@ def main():
             print("❌ Error : No CSV file.")
             return
     else:
-        df = pd.read_csv(INPUT_FILE)
+        df = pd.read_csv(input_path)
     
     # --- REMOVING DUPLICATES ---
     initial_len = len(df)
@@ -133,14 +133,14 @@ def main():
     
     # --- CLUSTERING ---
     print("🎨 Clustering...")
-    kmeans = KMeans(n_clusters=NUM_THEMES, random_state=42, n_init=10)
+    kmeans = KMeans(n_clusters=num_themes, random_state=42, n_init=10)
     clusters = kmeans.fit_predict(embeddings)
     df['cluster_id'] = clusters
     
     # --- NAMING ---
     print("🏷️  Naming...")
     cluster_names = {}
-    for cid in range(NUM_THEMES):
+    for cid in range(num_themes):
         texts = df[df['cluster_id'] == cid]['article_text_full'].fillna("")
         keywords = get_smart_keywords(texts)
         cluster_names[cid] = keywords
@@ -191,5 +191,6 @@ def main():
     pd.DataFrame(edges_list).to_csv(EDGES_OUTPUT, index=False)
     print(f"✅ TERMINÉ ! Nodes: {NODES_OUTPUT} | Edges: {EDGES_OUTPUT}")
 
+# RUNNING LOCALLY
 if __name__ == "__main__":
     main()
