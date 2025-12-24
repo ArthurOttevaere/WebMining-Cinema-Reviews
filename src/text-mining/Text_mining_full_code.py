@@ -4,7 +4,7 @@ import nltk
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-
+import os
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
@@ -15,7 +15,7 @@ from collections import Counter
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.decomposition import TruncatedSVD, PCA
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import Normalizer
 from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
 
@@ -28,13 +28,14 @@ df = pd.read_csv("roger_ebert_debug.csv")
 df["article_text_full"] = df["article_text_full"].astype(str)
 total_docs = len(df)
 
+
 # -------------------------------------------------------------------
 # 2) NLTK setup
 # -------------------------------------------------------------------
-nltk.download("punkt")
-nltk.download("stopwords")
-nltk.download("wordnet")
-nltk.download("averaged_perceptron_tagger")
+nltk.download("punkt", quiet=True)
+nltk.download("stopwords", quiet=True)
+nltk.download("wordnet", quiet=True)
+nltk.download("averaged_perceptron_tagger", quiet=True)
 
 lemmatizer = WordNetLemmatizer()
 stop_words = set(stopwords.words("english"))
@@ -97,8 +98,8 @@ print(f"Total tokens after filtering: {sum(len(t) for t in df['tokens'])}")
 # -------------------------------------------------------------------
 tfidf_vectorizer = TfidfVectorizer(
     ngram_range=(1, 2),
-    min_df=5,
-    max_df=0.7
+    min_df=2,
+    max_df=0.5
 )
 
 X_tfidf = tfidf_vectorizer.fit_transform(df["clean_text"])
@@ -110,10 +111,48 @@ print(f"TF-IDF dimensions (raw): {X_tfidf.shape}")
 svd = TruncatedSVD(n_components=150, random_state=42)
 X_tfidf_svd = svd.fit_transform(X_tfidf)
 
-scaler = StandardScaler()
-X_tfidf_final = scaler.fit_transform(X_tfidf_svd)
+X_tfidf_final = Normalizer(norm="l2").fit_transform(X_tfidf_svd)
 
-print(f"TF-IDF dimensions after SVD: {X_tfidf_final.shape}")
+from sklearn.metrics.pairwise import cosine_similarity
+S = cosine_similarity(X_tfidf_final)
+
+# -------------------------------------------------------------------
+# Similarity matrix (cosine) — visualisation
+# -------------------------------------------------------------------
+n_docs = 20
+S_sub = S[:n_docs, :n_docs]
+labels = df["film_title"].iloc[:n_docs]
+
+plt.figure(figsize=(10,8))
+sns.heatmap(S_sub, cmap="viridis",
+            xticklabels=labels,
+            yticklabels=labels,
+            annot=True,
+            fmt=".2f",
+            annot_kws={"size": 7})
+
+plt.xticks(rotation=90, fontsize=8)
+plt.yticks(fontsize=8)
+plt.title("Cosine Similarity Matrix (first 20 documents)")
+plt.tight_layout()
+plt.show()
+
+
+# -------------------------------------------------------------------
+# Top-k most similar films (cosine similarity) — with titles
+# -------------------------------------------------------------------
+top_k = 5
+
+titles = df["film_title"].values
+
+for i in range(3):  # afficher pour 3 films
+    sims = S[i]
+    idx = np.argsort(sims)[::-1][1:top_k+1]  # exclure lui-même
+
+    print(f"\nFilm : {titles[i]}")
+    for j in idx:
+        print(f"  → {titles[j]} | similarity = {sims[j]:.3f}")
+
 
 # -------------------------------------------------------------------
 # 7) Silhouette-based choice of K
@@ -123,7 +162,8 @@ def best_k_silhouette(X, k_min=2, k_max=12):
     for k in range(k_min, k_max + 1):
         km = KMeans(n_clusters=k, random_state=42, n_init=20)
         labels = km.fit_predict(X)
-        scores[k] = silhouette_score(X, labels)
+        scores[k] = silhouette_score(X, labels, metric="cosine")
+
     return scores
 
 tfidf_scores = best_k_silhouette(X_tfidf_final)
@@ -137,8 +177,27 @@ print(f"\nBest K TF-IDF: {best_k} | silhouette = {tfidf_scores[best_k]:.4f}")
 kmeans = KMeans(n_clusters=best_k, random_state=42, n_init=20)
 df["cluster"] = kmeans.fit_predict(X_tfidf_final)
 
+# -------------------------------------------------------------------
+# 8bis) Dominant words per cluster
+# -------------------------------------------------------------------
+
+# Transform back from the SVD space to the TF-IDF space
+centroids_tfidf = svd.inverse_transform(kmeans.cluster_centers_)
+
+terms = tfidf_vectorizer.get_feature_names_out()
+
+top_n = 10  # number of dominant words per cluster
+
+for i in range(best_k):
+    top_idx = centroids_tfidf[i].argsort()[-top_n:][::-1]
+    top_terms = [terms[j] for j in top_idx]
+
+    print(f"\nCluster {i} ({(df['cluster']==i).sum()} documents)")
+    print("Dominant words:", ", ".join(top_terms))
+
 sil_final = silhouette_score(X_tfidf_final, df["cluster"])
 print(f"\nFinal silhouette score: {sil_final:.4f}")
+
 
 # -------------------------------------------------------------------
 # 9) PCA visualization
@@ -173,6 +232,7 @@ plt.figure(figsize=(12,6))
 plt.imshow(wc, interpolation="bilinear")
 plt.axis("off")
 plt.title("Word Cloud")
+plt.tight_layout()
 plt.show()
 
 # -------------------------------------------------------------------
@@ -199,28 +259,71 @@ if "review_score" in df.columns:
     plt.show()
 
 # -------------------------------------------------------------------
-# Boxplot: Review score distribution by genre
+# Robust Boxplot: Review score distribution by genre
 # -------------------------------------------------------------------
 if "film_genre" in df.columns and "review_score" in df.columns:
+    df_filtered = df.groupby("film_genre").filter(lambda x: len(x) >= 5)
 
     plt.figure(figsize=(14,6))
     sns.boxplot(
-        data=df,
+        data=df_filtered,
         x="film_genre",
         y="review_score",
-        showfliers=True
+        showfliers=True,
+        medianprops=dict(color="red", linewidth=2)
     )
-
     plt.title("Distribution of Review Scores by Film Genre")
     plt.xlabel("Film genre")
     plt.ylabel("Review score")
     plt.xticks(rotation=45, ha="right")
     plt.tight_layout()
     plt.show()
-
 else:
     print("⚠ 'film_genre' or 'review_score' not found. Skipping genre boxplot.")
 
+# -------------------------------------------------------------------
+# Boxplot: Review length (word_count) by review score
+# -------------------------------------------------------------------
+if "review_score" in df.columns and "word_count" in df.columns:
+    plt.figure(figsize=(12,6))
+    sns.boxplot(
+        data=df,
+        x="review_score",
+        y="word_count",
+        showfliers=True
+    )
+    plt.title("Review Length Distribution by Review Score")
+    plt.xlabel("Review score")
+    plt.ylabel("Number of words in review")
+    plt.tight_layout()
+    plt.show()
+else:
+    print("⚠ 'review_score' or 'word_count' not found. Skipping boxplot.")
+
+# -------------------------------------------------------------------
+# Top words for each individual review score
+# -------------------------------------------------------------------
+if "review_score" in df.columns:
+    unique_scores = sorted(df["review_score"].dropna().unique())
+
+    for score in unique_scores:
+        tokens_score = [t for sublist in df[df["review_score"] == score]["tokens"] for t in sublist]
+        counter = Counter(tokens_score)
+        top10 = counter.most_common(10)
+        
+        if not top10:
+            continue
+
+        words, freqs = zip(*top10)
+        plt.figure(figsize=(8,5))
+        sns.barplot(x=list(freqs), y=list(words), palette="coolwarm")
+        plt.title(f"Top 10 words for reviews with score {score}")
+        plt.xlabel("Frequency")
+        plt.ylabel("Word")
+        plt.tight_layout()
+        plt.show()
+else:
+    print("⚠ 'review_score' not found. Skipping top words per score.")
 
 # -------------------------------------------------------------------
 # 12) N-grams analysis
