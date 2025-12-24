@@ -13,8 +13,6 @@ from nltk import ngrams, pos_tag
 from itertools import combinations
 from collections import Counter
 
-from gensim.models.doc2vec import Doc2Vec, TaggedDocument
-
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.decomposition import TruncatedSVD, PCA
 from sklearn.preprocessing import StandardScaler
@@ -72,7 +70,7 @@ df["tokens"] = df["article_text_full"].apply(preprocess_and_tokenize)
 # -------------------------------------------------------------------
 # 4) Automatic filtering (document frequency)
 # -------------------------------------------------------------------
-min_doc_freq = 10
+min_doc_freq = 2
 max_doc_frac = 0.5
 
 doc_freq = Counter()
@@ -97,10 +95,9 @@ print(f"Total tokens after filtering: {sum(len(t) for t in df['tokens'])}")
 # -------------------------------------------------------------------
 # 5) TF-IDF vectorization
 # -------------------------------------------------------------------
-
 tfidf_vectorizer = TfidfVectorizer(
     ngram_range=(1, 2),
-    min_df=10,
+    min_df=5,
     max_df=0.7
 )
 
@@ -119,100 +116,44 @@ X_tfidf_final = scaler.fit_transform(X_tfidf_svd)
 print(f"TF-IDF dimensions after SVD: {X_tfidf_final.shape}")
 
 # -------------------------------------------------------------------
-# 7) Doc2Vec vectorization
-# -------------------------------------------------------------------
-tagged_docs = [
-    TaggedDocument(words=toks, tags=[str(i)])
-    for i, toks in enumerate(df["tokens"])
-]
-
-d2v_model = Doc2Vec(
-    dm=0,                # PV-DBOW
-    vector_size=200,
-    window=8,
-    min_count=5,
-    epochs=60,
-    workers=4,
-    seed=42
-)
-
-d2v_model.build_vocab(tagged_docs)
-d2v_model.train(
-    tagged_docs,
-    total_examples=d2v_model.corpus_count,
-    epochs=d2v_model.epochs
-)
-
-X_d2v = np.array([d2v_model.dv[str(i)] for i in range(total_docs)])
-X_d2v = StandardScaler().fit_transform(X_d2v)
-
-print(f"Doc2Vec dimensions: {X_d2v.shape}")
-
-# -------------------------------------------------------------------
-# 8) Silhouette-based choice of K
+# 7) Silhouette-based choice of K
 # -------------------------------------------------------------------
 def best_k_silhouette(X, k_min=2, k_max=12):
     scores = {}
     for k in range(k_min, k_max + 1):
         km = KMeans(n_clusters=k, random_state=42, n_init=20)
         labels = km.fit_predict(X)
-        score = silhouette_score(X, labels)
-        scores[k] = score
+        scores[k] = silhouette_score(X, labels)
     return scores
 
 tfidf_scores = best_k_silhouette(X_tfidf_final)
-d2v_scores = best_k_silhouette(X_d2v)
+best_k = max(tfidf_scores, key=tfidf_scores.get)
 
-best_k_tfidf = max(tfidf_scores, key=tfidf_scores.get)
-best_k_d2v = max(d2v_scores, key=d2v_scores.get)
-
-print(f"\nBest K TF-IDF: {best_k_tfidf} | silhouette = {tfidf_scores[best_k_tfidf]:.4f}")
-print(f"Best K Doc2Vec: {best_k_d2v} | silhouette = {d2v_scores[best_k_d2v]:.4f}")
+print(f"\nBest K TF-IDF: {best_k} | silhouette = {tfidf_scores[best_k]:.4f}")
 
 # -------------------------------------------------------------------
-# 9) Final clustering
+# 8) Final clustering
 # -------------------------------------------------------------------
-kmeans_tfidf = KMeans(n_clusters=best_k_tfidf, random_state=42, n_init=20)
-labels_tfidf = kmeans_tfidf.fit_predict(X_tfidf_final)
+kmeans = KMeans(n_clusters=best_k, random_state=42, n_init=20)
+df["cluster"] = kmeans.fit_predict(X_tfidf_final)
 
-kmeans_d2v = KMeans(n_clusters=best_k_d2v, random_state=42, n_init=20)
-labels_d2v = kmeans_d2v.fit_predict(X_d2v)
-
-df["cluster_tfidf"] = labels_tfidf
-df["cluster_d2v"] = labels_d2v
+sil_final = silhouette_score(X_tfidf_final, df["cluster"])
+print(f"\nFinal silhouette score: {sil_final:.4f}")
 
 # -------------------------------------------------------------------
-# 10) FINAL SILHOUETTE SCORES
-# -------------------------------------------------------------------
-sil_tfidf_final = silhouette_score(X_tfidf_final, labels_tfidf)
-sil_d2v_final = silhouette_score(X_d2v, labels_d2v)
-
-print("\n===== FINAL SILHOUETTE SCORES =====")
-print(f"TF-IDF Silhouette score : {sil_tfidf_final:.4f}")
-print(f"Doc2Vec Silhouette score: {sil_d2v_final:.4f}")
-
-# -------------------------------------------------------------------
-# 11) PCA visualization
+# 9) PCA visualization
 # -------------------------------------------------------------------
 pca = PCA(n_components=2, random_state=42)
-
-X_tfidf_2d = pca.fit_transform(X_tfidf_final)
-X_d2v_2d = pca.fit_transform(X_d2v)
+X_2d = pca.fit_transform(X_tfidf_final)
 
 plt.figure(figsize=(8,6))
-sns.scatterplot(x=X_tfidf_2d[:,0], y=X_tfidf_2d[:,1],
-                hue=labels_tfidf, palette="tab10")
+sns.scatterplot(x=X_2d[:,0], y=X_2d[:,1], hue=df["cluster"], palette="tab10")
 plt.title("TF-IDF + SVD Clustering (PCA)")
-plt.show()
-
-plt.figure(figsize=(8,6))
-sns.scatterplot(x=X_d2v_2d[:,0], y=X_d2v_2d[:,1],
-                hue=labels_d2v, palette="tab10")
-plt.title("Doc2Vec Clustering (PCA)")
+plt.tight_layout()
 plt.show()
 
 # -------------------------------------------------------------------
-# 12) Descriptive analysis (word frequency + word cloud)
+# 10) Descriptive analysis (word frequency + word cloud)
 # -------------------------------------------------------------------
 token_counter = Counter([t for sublist in df["tokens"] for t in sublist])
 
@@ -235,71 +176,98 @@ plt.title("Word Cloud")
 plt.show()
 
 # -------------------------------------------------------------------
-# 13) N-grams analysis (bigrams and trigrams)
+# 11) Distribution of movie scores
 # -------------------------------------------------------------------
-all_tokens_flat = [t for sublist in df["tokens"] for t in sublist]
-bigram_counter = Counter(ngrams(all_tokens_flat, 2))
-trigram_counter = Counter(ngrams(all_tokens_flat, 3))
+if "review_score" in df.columns:
+    score_counts = df["review_score"].value_counts().sort_index()
+    percentages = score_counts / len(df) * 100
 
-top10_bigrams = bigram_counter.most_common(10)
-bigram_labels = [" ".join(bg) for bg, _ in top10_bigrams]
-bigram_values = [freq for _, freq in top10_bigrams]
+    x_pos = np.arange(len(score_counts)) * 1.2
 
-plt.figure(figsize=(10,6))
-sns.barplot(x=bigram_values, y=bigram_labels, dodge=False)
-plt.title("Top 10 Bigrams")
-plt.xlabel("Frequency")
-plt.ylabel("Bigram")
-plt.show()
+    plt.figure(figsize=(12,6))
+    bars = plt.bar(x_pos, percentages, width=1.0, edgecolor="black")
 
-top10_trigrams = trigram_counter.most_common(10)
-trigram_labels = [" ".join(tg) for tg, _ in top10_trigrams]
-trigram_values = [freq for _, freq in top10_trigrams]
+    for bar, pct in zip(bars, percentages):
+        plt.text(bar.get_x() + bar.get_width()/2, pct + 0.5,
+                 f"{pct:.1f}%", ha="center", va="bottom")
 
-plt.figure(figsize=(10,6))
-sns.barplot(x=trigram_values, y=trigram_labels, dodge=False)
-plt.title("Top 10 Trigrams")
-plt.xlabel("Frequency")
-plt.ylabel("Trigram")
-plt.show()
+    plt.xticks(x_pos, score_counts.index)
+    plt.xlabel("Review score")
+    plt.ylabel("Percentage of reviews (%)")
+    plt.title("Distribution of movie review scores")
+    plt.tight_layout()
+    plt.show()
 
 # -------------------------------------------------------------------
-# 14) Co-occurrence matrix analysis
+# Boxplot: Review score distribution by genre
 # -------------------------------------------------------------------
-top_n_words = [w for w, _ in token_counter.most_common(30)]
-cooc_matrix = pd.DataFrame(0, index=top_n_words, columns=top_n_words)
+if "film_genre" in df.columns and "review_score" in df.columns:
+
+    plt.figure(figsize=(14,6))
+    sns.boxplot(
+        data=df,
+        x="film_genre",
+        y="review_score",
+        showfliers=True
+    )
+
+    plt.title("Distribution of Review Scores by Film Genre")
+    plt.xlabel("Film genre")
+    plt.ylabel("Review score")
+    plt.xticks(rotation=45, ha="right")
+    plt.tight_layout()
+    plt.show()
+
+else:
+    print("⚠ 'film_genre' or 'review_score' not found. Skipping genre boxplot.")
+
+
+# -------------------------------------------------------------------
+# 12) N-grams analysis
+# -------------------------------------------------------------------
+all_tokens = [t for sublist in df["tokens"] for t in sublist]
+
+for n in [2, 3]:
+    counter = Counter(ngrams(all_tokens, n)).most_common(10)
+    labels = [" ".join(ng) for ng, _ in counter]
+    values = [freq for _, freq in counter]
+
+    plt.figure(figsize=(10,6))
+    sns.barplot(x=values, y=labels)
+    plt.title(f"Top 10 {n}-grams")
+    plt.tight_layout()
+    plt.show()
+
+# -------------------------------------------------------------------
+# 13) Co-occurrence matrix
+# -------------------------------------------------------------------
+top_words = [w for w, _ in token_counter.most_common(30)]
+cooc = pd.DataFrame(0, index=top_words, columns=top_words)
 
 for tokens in df["tokens"]:
-    tokens_set = set(tokens)
-    for w1, w2 in combinations(top_n_words, 2):
-        if w1 in tokens_set and w2 in tokens_set:
-            cooc_matrix.loc[w1, w2] += 1
-            cooc_matrix.loc[w2, w1] += 1
+    tokens = set(tokens)
+    for w1, w2 in combinations(top_words, 2):
+        if w1 in tokens and w2 in tokens:
+            cooc.loc[w1, w2] += 1
+            cooc.loc[w2, w1] += 1
 
 plt.figure(figsize=(12,10))
-sns.heatmap(cooc_matrix, cmap="YlGnBu", annot=True, fmt="d")
-plt.xticks(rotation=45, ha='right', fontstyle='italic')
-plt.yticks(rotation=0, va='center', fontstyle='italic')
+sns.heatmap(cooc, cmap="YlGnBu", annot=True, fmt="d")
 plt.title("Co-occurrence Matrix of Top 30 Words")
 plt.tight_layout()
 plt.show()
 
 # -------------------------------------------------------------------
-# 15) Descriptive analysis by genre
+# 14) Analysis by genre
 # -------------------------------------------------------------------
 if "film_genre" in df.columns:
-    print("Analyzing by genre...")
     for genre, subdf in df.groupby("film_genre"):
         words = [w for lst in subdf["tokens"] for w in lst]
         counter = Counter(words).most_common(20)
 
         top_df = pd.DataFrame(counter, columns=["word", "freq"])
         plt.figure(figsize=(10,6))
-        sns.barplot(data=top_df, x="freq", y="word", palette="viridis")
-        plt.title(f"Top 20 Most Frequent Words — Genre: {genre}")
-        plt.xlabel("Frequency")
-        plt.ylabel("Word")
+        sns.barplot(data=top_df, x="freq", y="word")
+        plt.title(f"Top 20 Words — Genre: {genre}")
         plt.tight_layout()
         plt.show()
-else:
-    print("⚠ No 'film_genre' field detected in dataset. Skipping genre analysis.")
