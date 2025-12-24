@@ -1,0 +1,219 @@
+import pandas as pd
+import re
+import nltk
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+from nltk.corpus import stopwords
+from nltk.stem import WordNetLemmatizer
+from nltk.tokenize import word_tokenize
+from nltk import ngrams, pos_tag
+
+from itertools import combinations
+from collections import Counter
+
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.decomposition import TruncatedSVD, PCA
+from sklearn.preprocessing import Normalizer
+from sklearn.cluster import KMeans
+from sklearn.metrics import silhouette_score
+
+from wordcloud import WordCloud
+
+# -------------------------------------------------------------------
+# 1) Load CSV
+# -------------------------------------------------------------------
+dossier = r"C:\Users\33778\Desktop\WM (Amine)"
+fichier = os.path.join(dossier, "roger_ebert_debug.csv")
+
+df = pd.read_csv(
+    fichier,
+    sep=';',
+    encoding='utf-8-sig',
+    engine='python'
+)
+
+df["article_text_full"] = df["article_text_full"].astype(str)
+total_docs = len(df)
+
+# -------------------------------------------------------------------
+# 2) NLTK setup
+# -------------------------------------------------------------------
+nltk.download("punkt", quiet=True)
+nltk.download("stopwords", quiet=True)
+nltk.download("wordnet", quiet=True)
+nltk.download("averaged_perceptron_tagger", quiet=True)
+
+lemmatizer = WordNetLemmatizer()
+stop_words = set(stopwords.words("english"))
+
+# -------------------------------------------------------------------
+# 3) Preprocessing + tokenization + lemmatization
+# -------------------------------------------------------------------
+def preprocess_and_tokenize(text):
+    text = re.sub(r"[^A-Za-z\s]", " ", text)
+    text = re.sub(r"\s+", " ", text).strip()
+
+    tokens = word_tokenize(text)
+    tagged_tokens = pos_tag(tokens)
+
+    processed_tokens = []
+    for token, tag in tagged_tokens:
+        token = lemmatizer.lemmatize(token.lower())
+
+        if (
+            token in stop_words or
+            len(token) <= 2 or
+            re.search(r"\d", token) or
+            tag in ("NNP", "NNPS")
+        ):
+            continue
+
+        processed_tokens.append(token)
+
+    return processed_tokens
+
+df["tokens"] = df["article_text_full"].apply(preprocess_and_tokenize)
+
+# -------------------------------------------------------------------
+# 4) Automatic filtering (document frequency)
+# -------------------------------------------------------------------
+min_doc_freq = 2
+max_doc_frac = 0.5
+
+doc_freq = Counter()
+for tokens in df["tokens"]:
+    for t in set(tokens):
+        doc_freq[t] += 1
+
+filtered_tokens = {
+    w for w, f in doc_freq.items()
+    if f >= min_doc_freq and f / total_docs <= max_doc_frac
+}
+
+df["tokens"] = df["tokens"].apply(
+    lambda toks: [t for t in toks if t in filtered_tokens]
+)
+
+df["clean_text"] = df["tokens"].apply(lambda toks: " ".join(toks))
+
+print(f"Number of documents: {total_docs}")
+print(f"Total tokens after filtering: {sum(len(t) for t in df['tokens'])}")
+
+# -------------------------------------------------------------------
+# 5) TF-IDF vectorization
+# -------------------------------------------------------------------
+tfidf_vectorizer = TfidfVectorizer(
+    ngram_range=(1, 2),
+    min_df=5,
+    max_df=0.7
+)
+
+X_tfidf = tfidf_vectorizer.fit_transform(df["clean_text"])
+print(f"TF-IDF dimensions (raw): {X_tfidf.shape}")
+
+# -------------------------------------------------------------------
+# 6) Dimensionality reduction (SVD) + scaling
+# -------------------------------------------------------------------
+svd = TruncatedSVD(n_components=150, random_state=42)
+X_tfidf_svd = svd.fit_transform(X_tfidf)
+
+X_tfidf_final = Normalizer(norm="l2").fit_transform(X_tfidf_svd)
+
+from sklearn.metrics.pairwise import cosine_similarity
+S = cosine_similarity(X_tfidf_final)
+
+# -------------------------------------------------------------------
+# Similarity matrix (cosine) — visualisation
+# -------------------------------------------------------------------
+n_docs = 20
+S_sub = S[:n_docs, :n_docs]
+labels = df["film_title"].iloc[:n_docs]
+
+plt.figure(figsize=(10,8))
+sns.heatmap(S_sub, cmap="viridis",
+            xticklabels=labels,
+            yticklabels=labels,
+            annot=True,
+            fmt=".2f",
+            annot_kws={"size": 7})
+
+plt.xticks(rotation=90, fontsize=8)
+plt.yticks(fontsize=8)
+plt.title("Cosine Similarity Matrix (first 20 documents)")
+plt.tight_layout()
+plt.show()
+
+
+# -------------------------------------------------------------------
+# Top-k most similar films (cosine similarity) — with titles
+# -------------------------------------------------------------------
+top_k = 5
+
+titles = df["film_title"].values
+
+for i in range(3):  # afficher pour 3 films
+    sims = S[i]
+    idx = np.argsort(sims)[::-1][1:top_k+1]  # exclure lui-même
+
+    print(f"\nFilm : {titles[i]}")
+    for j in idx:
+        print(f"  → {titles[j]} | similarity = {sims[j]:.3f}")
+
+
+# -------------------------------------------------------------------
+# 7) Silhouette-based choice of K
+# -------------------------------------------------------------------
+def best_k_silhouette(X, k_min=2, k_max=12):
+    scores = {}
+    for k in range(k_min, k_max + 1):
+        km = KMeans(n_clusters=k, random_state=42, n_init=20)
+        labels = km.fit_predict(X)
+        scores[k] = silhouette_score(X, labels, metric="cosine")
+
+    return scores
+
+tfidf_scores = best_k_silhouette(X_tfidf_final)
+best_k = max(tfidf_scores, key=tfidf_scores.get)
+
+print(f"\nBest K TF-IDF: {best_k} | silhouette = {tfidf_scores[best_k]:.4f}")
+
+# -------------------------------------------------------------------
+# 8) Final clustering
+# -------------------------------------------------------------------
+kmeans = KMeans(n_clusters=best_k, random_state=42, n_init=20)
+df["cluster"] = kmeans.fit_predict(X_tfidf_final)
+
+# -------------------------------------------------------------------
+# 8bis) Mots dominants par cluster
+# -------------------------------------------------------------------
+
+# Revenir de l’espace SVD vers l’espace TF-IDF
+centroids_tfidf = svd.inverse_transform(kmeans.cluster_centers_)
+
+terms = tfidf_vectorizer.get_feature_names_out()
+
+top_n = 10  # nombre de mots dominants par cluster
+
+for i in range(best_k):
+    top_idx = centroids_tfidf[i].argsort()[-top_n:][::-1]
+    top_terms = [terms[j] for j in top_idx]
+
+    print(f"\nCluster {i} ({(df['cluster']==i).sum()} documents)")
+    print("Mots dominants :", ", ".join(top_terms))
+
+sil_final = silhouette_score(X_tfidf_final, df["cluster"])
+print(f"\nFinal silhouette score: {sil_final:.4f}")
+
+# -------------------------------------------------------------------
+# 9) PCA visualization
+# -------------------------------------------------------------------
+pca = PCA(n_components=2, random_state=42)
+X_2d = pca.fit_transform(X_tfidf_final)
+
+plt.figure(figsize=(8,6))
+sns.scatterplot(x=X_2d[:,0], y=X_2d[:,1], hue=df["cluster"], palette="tab10")
+plt.title("TF-IDF + SVD Clustering (PCA)")
+plt.tight_layout()
+plt.show()
