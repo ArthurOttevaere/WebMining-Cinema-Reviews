@@ -9,17 +9,16 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
 from nltk import ngrams, pos_tag
-
 from itertools import combinations
 from collections import Counter
-
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.decomposition import TruncatedSVD, PCA
 from sklearn.preprocessing import Normalizer
 from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
-
+from sklearn.metrics.pairwise import cosine_similarity
 from wordcloud import WordCloud
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
 # -------------------------------------------------------------------
 # 1) Load CSV
@@ -28,7 +27,6 @@ df = pd.read_csv("roger_ebert_debug.csv")
 df["article_text_full"] = df["article_text_full"].astype(str)
 total_docs = len(df)
 
-
 # -------------------------------------------------------------------
 # 2) NLTK setup
 # -------------------------------------------------------------------
@@ -36,9 +34,11 @@ nltk.download("punkt", quiet=True)
 nltk.download("stopwords", quiet=True)
 nltk.download("wordnet", quiet=True)
 nltk.download("averaged_perceptron_tagger", quiet=True)
+nltk.download("vader_lexicon", quiet=True)
 
 lemmatizer = WordNetLemmatizer()
 stop_words = set(stopwords.words("english"))
+negations = {"not","no","never","hardly","none"}
 
 # -------------------------------------------------------------------
 # 3) Preprocessing + tokenization + lemmatization
@@ -113,7 +113,6 @@ X_tfidf_svd = svd.fit_transform(X_tfidf)
 
 X_tfidf_final = Normalizer(norm="l2").fit_transform(X_tfidf_svd)
 
-from sklearn.metrics.pairwise import cosine_similarity
 S = cosine_similarity(X_tfidf_final)
 
 # -------------------------------------------------------------------
@@ -130,29 +129,24 @@ sns.heatmap(S_sub, cmap="viridis",
             annot=True,
             fmt=".2f",
             annot_kws={"size": 7})
-
 plt.xticks(rotation=90, fontsize=8)
 plt.yticks(fontsize=8)
 plt.title("Cosine Similarity Matrix (first 20 documents)")
 plt.tight_layout()
 plt.show()
 
-
 # -------------------------------------------------------------------
-# Top-k most similar films (cosine similarity) — with titles
+# Top-k most similar films (cosine similarity)
 # -------------------------------------------------------------------
 top_k = 5
-
 titles = df["film_title"].values
 
-for i in range(3):  # afficher pour 3 films
+for i in range(3):  # show for 3 films
     sims = S[i]
-    idx = np.argsort(sims)[::-1][1:top_k+1]  # exclure lui-même
-
+    idx = np.argsort(sims)[::-1][1:top_k+1]
     print(f"\nFilm : {titles[i]}")
     for j in idx:
         print(f"  → {titles[j]} | similarity = {sims[j]:.3f}")
-
 
 # -------------------------------------------------------------------
 # 7) Silhouette-based choice of K
@@ -163,12 +157,10 @@ def best_k_silhouette(X, k_min=2, k_max=12):
         km = KMeans(n_clusters=k, random_state=42, n_init=20)
         labels = km.fit_predict(X)
         scores[k] = silhouette_score(X, labels, metric="cosine")
-
     return scores
 
 tfidf_scores = best_k_silhouette(X_tfidf_final)
 best_k = max(tfidf_scores, key=tfidf_scores.get)
-
 print(f"\nBest K TF-IDF: {best_k} | silhouette = {tfidf_scores[best_k]:.4f}")
 
 # -------------------------------------------------------------------
@@ -180,24 +172,120 @@ df["cluster"] = kmeans.fit_predict(X_tfidf_final)
 # -------------------------------------------------------------------
 # 8bis) Dominant words per cluster
 # -------------------------------------------------------------------
-
-# Transform back from the SVD space to the TF-IDF space
 centroids_tfidf = svd.inverse_transform(kmeans.cluster_centers_)
-
 terms = tfidf_vectorizer.get_feature_names_out()
-
-top_n = 10  # number of dominant words per cluster
+top_n = 10
 
 for i in range(best_k):
     top_idx = centroids_tfidf[i].argsort()[-top_n:][::-1]
     top_terms = [terms[j] for j in top_idx]
-
     print(f"\nCluster {i} ({(df['cluster']==i).sum()} documents)")
     print("Dominant words:", ", ".join(top_terms))
 
 sil_final = silhouette_score(X_tfidf_final, df["cluster"])
 print(f"\nFinal silhouette score: {sil_final:.4f}")
 
+# -------------------------------------------------------------------
+# 8ter) Thesaurus analysis based on filtered tokens
+# -------------------------------------------------------------------
+sia = SentimentIntensityAnalyzer()
+lexicon = sia.lexicon
+
+def extract_eval_words(tokens):
+    return [t for t in tokens if t in lexicon]
+
+df["eval_words"] = df["tokens"].apply(extract_eval_words)
+
+def filter_sentiment_words(tokens):
+    pos_words, neg_words = [], []
+    for i, token in enumerate(tokens):
+        prev_neg = i>0 and tokens[i-1] in negations
+        score = lexicon.get(token, 0)
+        if score != 0:
+            if prev_neg:
+                score = -score
+            if score > 0: pos_words.append(token)
+            elif score < 0: neg_words.append(token)
+    return pos_words, neg_words
+
+df["pos_words"], df["neg_words"] = zip(*df["eval_words"].apply(filter_sentiment_words))
+
+# -------------------------------------------------------------------
+# 6) Essential calculations: density & pos/neg ratio
+# -------------------------------------------------------------------
+df["review_word_count"] = df["tokens"].apply(len)
+df["eval_count"] = df["eval_words"].apply(len)
+df["eval_density"] = df["eval_count"] / df["review_word_count"]
+df["pos_count"] = df["pos_words"].apply(len)
+df["neg_count"] = df["neg_words"].apply(len)
+df["pos_neg_ratio"] = df["pos_count"] / (df["neg_count"] + 1)
+df["pos_neg_ratio"] = df["pos_neg_ratio"].fillna(0)
+
+# -------------------------------------------------------------------
+# 7) Word clouds
+# -------------------------------------------------------------------
+for color, words, title in [("white", df["pos_words"], "Positive Words"),
+                            ("black", df["neg_words"], "Negative Words")]:
+    all_words = [w for sublist in words for w in sublist]
+    counter = Counter(all_words)
+    wc = WordCloud(width=800, height=400, background_color=color).generate_from_frequencies(counter)
+    plt.figure(figsize=(10,5))
+    plt.imshow(wc, interpolation="bilinear")
+    plt.axis("off")
+    plt.title(title)
+    plt.show()
+
+# -------------------------------------------------------------------
+# 8) Compound sentiment score
+# -------------------------------------------------------------------
+df["compound"] = df["eval_words"].apply(lambda toks: sia.polarity_scores(" ".join(toks))["compound"])
+
+plt.figure(figsize=(8,6))
+sns.scatterplot(x=df["review_score"], y=df["compound"])
+plt.title("Review Score vs Compound Sentiment")
+plt.xlabel("Review Score")
+plt.ylabel("Compound Score")
+plt.show()
+
+# -------------------------------------------------------------------
+# 9) Top 20 reliable evaluative words
+# -------------------------------------------------------------------
+all_eval_words_filtered = [t for sublist in df["eval_words"] for t in sublist]
+freq_counter_filtered = Counter(all_eval_words_filtered)
+print("Top 20 filtered evaluative words:", freq_counter_filtered.most_common(20))
+
+# -------------------------------------------------------------------
+# 10) Analysis: Vocabulary vs Score
+# -------------------------------------------------------------------
+plt.figure(figsize=(8,6))
+sns.regplot(x=df["review_score"], y=df["eval_density"])
+plt.title("Evaluative Word Density vs Review Score")
+plt.xlabel("Review Score")
+plt.ylabel("Evaluative Density")
+plt.show()
+
+plt.figure(figsize=(8,6))
+sns.regplot(x=df["review_score"], y=df["pos_neg_ratio"])
+plt.title("Positive/Negative Word Ratio vs Review Score")
+plt.xlabel("Review Score")
+plt.ylabel("Pos/Neg Ratio")
+plt.show()
+
+# -------------------------------------------------------------------
+# 11) Analysis by genres
+# -------------------------------------------------------------------
+if "film_genre" in df.columns:
+    for genre, subdf in df.groupby("film_genre"):
+        words = [w for lst in subdf["eval_words"] for w in lst]
+        counter = Counter(words).most_common(20)
+        top_df = pd.DataFrame(counter, columns=["word","freq"])
+        plt.figure(figsize=(10,6))
+        sns.barplot(data=top_df, x="freq", y="word", palette="viridis")
+        plt.title(f"Top 20 Evaluative Words — Genre: {genre}")
+        plt.tight_layout()
+        plt.show()
+else:
+    print("⚠ No 'film_genre' field detected in dataset. Skipping genre analysis.")
 
 # -------------------------------------------------------------------
 # 9) PCA visualization
@@ -215,19 +303,15 @@ plt.show()
 # 10) Descriptive analysis (word frequency + word cloud)
 # -------------------------------------------------------------------
 token_counter = Counter([t for sublist in df["tokens"] for t in sublist])
-
 top20 = token_counter.most_common(20)
 words, freqs = zip(*top20)
-
 plt.figure(figsize=(12,6))
 sns.barplot(x=list(freqs), y=list(words))
 plt.title("Top 20 Most Frequent Words")
 plt.tight_layout()
 plt.show()
 
-wc = WordCloud(width=800, height=400, background_color="white") \
-    .generate_from_frequencies(token_counter)
-
+wc = WordCloud(width=800, height=400, background_color="white").generate_from_frequencies(token_counter)
 plt.figure(figsize=(12,6))
 plt.imshow(wc, interpolation="bilinear")
 plt.axis("off")
@@ -241,16 +325,11 @@ plt.show()
 if "review_score" in df.columns:
     score_counts = df["review_score"].value_counts().sort_index()
     percentages = score_counts / len(df) * 100
-
     x_pos = np.arange(len(score_counts)) * 1.2
-
     plt.figure(figsize=(12,6))
     bars = plt.bar(x_pos, percentages, width=1.0, edgecolor="black")
-
     for bar, pct in zip(bars, percentages):
-        plt.text(bar.get_x() + bar.get_width()/2, pct + 0.5,
-                 f"{pct:.1f}%", ha="center", va="bottom")
-
+        plt.text(bar.get_x() + bar.get_width()/2, pct + 0.5, f"{pct:.1f}%", ha="center", va="bottom")
     plt.xticks(x_pos, score_counts.index)
     plt.xlabel("Review score")
     plt.ylabel("Percentage of reviews (%)")
@@ -263,7 +342,6 @@ if "review_score" in df.columns:
 # -------------------------------------------------------------------
 if "film_genre" in df.columns and "review_score" in df.columns:
     df_filtered = df.groupby("film_genre").filter(lambda x: len(x) >= 5)
-
     plt.figure(figsize=(14,6))
     sns.boxplot(
         data=df_filtered,
@@ -284,7 +362,8 @@ else:
 # -------------------------------------------------------------------
 # Boxplot: Review length (word_count) by review score
 # -------------------------------------------------------------------
-if "review_score" in df.columns and "word_count" in df.columns:
+if "review_score" in df.columns:
+    df["word_count"] = df["tokens"].apply(len)
     plt.figure(figsize=(12,6))
     sns.boxplot(
         data=df,
@@ -305,15 +384,11 @@ else:
 # -------------------------------------------------------------------
 if "review_score" in df.columns:
     unique_scores = sorted(df["review_score"].dropna().unique())
-
     for score in unique_scores:
         tokens_score = [t for sublist in df[df["review_score"] == score]["tokens"] for t in sublist]
         counter = Counter(tokens_score)
         top10 = counter.most_common(10)
-        
-        if not top10:
-            continue
-
+        if not top10: continue
         words, freqs = zip(*top10)
         plt.figure(figsize=(8,5))
         sns.barplot(x=list(freqs), y=list(words), palette="coolwarm")
@@ -329,12 +404,10 @@ else:
 # 12) N-grams analysis
 # -------------------------------------------------------------------
 all_tokens = [t for sublist in df["tokens"] for t in sublist]
-
-for n in [2, 3]:
+for n in [2,3]:
     counter = Counter(ngrams(all_tokens, n)).most_common(10)
     labels = [" ".join(ng) for ng, _ in counter]
     values = [freq for _, freq in counter]
-
     plt.figure(figsize=(10,6))
     sns.barplot(x=values, y=labels)
     plt.title(f"Top 10 {n}-grams")
@@ -346,7 +419,6 @@ for n in [2, 3]:
 # -------------------------------------------------------------------
 top_words = [w for w, _ in token_counter.most_common(30)]
 cooc = pd.DataFrame(0, index=top_words, columns=top_words)
-
 for tokens in df["tokens"]:
     tokens = set(tokens)
     for w1, w2 in combinations(top_words, 2):
@@ -367,8 +439,7 @@ if "film_genre" in df.columns:
     for genre, subdf in df.groupby("film_genre"):
         words = [w for lst in subdf["tokens"] for w in lst]
         counter = Counter(words).most_common(20)
-
-        top_df = pd.DataFrame(counter, columns=["word", "freq"])
+        top_df = pd.DataFrame(counter, columns=["word","freq"])
         plt.figure(figsize=(10,6))
         sns.barplot(data=top_df, x="freq", y="word")
         plt.title(f"Top 20 Words — Genre: {genre}")
