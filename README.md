@@ -29,26 +29,43 @@ Le projet suit le même cheminement que le cours de Web Mining, à savoir :
 
 L'architecture respecte la séparation entre code source, données brutes et résultats. Dans le but de faciliter la réplication des analyses.
 
--data/ : Contient les datasets (bruts et traités)
--src/ :
-    - scraping/ : Scripts de collecte de données.
-    - text-mining/ : Scripts de prétraitement, TF-IDF et clustering.
-    - link-analysis/ : Construction du graphe, implémentation matricielle et analyse des liens.
--results/ : Résultats exportés (CSV, screenshots, etc.).
--requirements.txt : Listes des dépendances Python nécessaires.
-
 ```text
 .
 ├── src/                    # Code source Python
-│   ├── scraping-lwlies.py  # Script de collecte pour Little White Lies
-│   ├── scraping_amine.py   # Script de collecte pour [Site 2]
-│   ├── scraping_lenny.py   # Script de collecte pour [Site 3]
-│   └── 2_data_prep.py      # (À venir) Script de fusion et nettoyage
+│   ├── scraping            # Scripts de collecte des données (RogerEbert)
+│   ├── text-mining         # Scripts de transformation et d'analyse du contenu textuel des critiques
+│   ├── link-analysis       # Scripts de construction du graph et d'analyses des liens
+│
 ├── data/
-│   ├── raw/                # Données brutes issues du scraping (.csv/.xlsx)
-│   │                       # Note : Ces fichiers ne sont pas versionnés sur GitHub
+│   ├── raw/                # Données brutes issues du scraping, text-mining et link-analysis (.csv/.xlsx)
+│   │                       # Note : Ces fichiers ne sont pas versionnés sur GitHub (via .gitignore)
 │   └── processed/          # Données nettoyées prêtes pour l'analyse
+│
 ├── results/                # Graphiques, visualisations et rapports
 ├── .gitignore              # Configuration des fichiers exclus (env, données lourdes)
-├── requirements.txt        # Liste des dépendances Python
+├── requirements.txt        # Liste des dépendances Python nécessaires
 └── README.md               # Documentation du projet
+
+---
+
+
+## 🚀 Guide d'Utilisation (Pipeline)
+
+### 1. Installation
+
+Assurez-vous d'avoir Python 3.9+ installé. Clonez le repo et installez les dépendances :
+
+```Bash
+git clone https://github.com/votre-compte/votre-repo.git
+cd votre-repo
+pip install -r requirements.txt
+
+### 2. Exécution des analyses
+
+Pour répliquer l'analyse complète, exécutez les scripts dans l'ordre suivant :
+
+*Collecte : python src/scraping/scraper.py (Génère le fichier brut).
+
+*Traitement & Graphe : python src/text_mining/generate_gephi_linked.py (Génère les nœuds et les arêtes).
+
+*Analyse des métriques : python src/link_analysis/link_analysis_numpy.py (Calcule les centralités matricielles).
