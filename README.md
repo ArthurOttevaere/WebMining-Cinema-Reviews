@@ -65,8 +65,28 @@ pip install -r requirements.txt
 
 Pour répliquer l'analyse complète, exécutez les scripts dans l'ordre suivant :
 
-* Collecte : python src/scraping/scraper.py (Génère le fichier brut).
+* **Collecte :** python src/scraping/scraper.py (Génère le fichier brut).
 
-* Traitement & Graphe : python src/text_mining/generate_gephi_linked.py (Génère les nœuds et les arêtes).
+* **Traitement & Graphe :** python src/text_mining/generate_gephi_linked.py (Génère les nœuds et les arêtes).
 
-* Analyse des métriques : python src/link_analysis/link_analysis_numpy.py (Calcule les centralités matricielles).
+* **Analyse des métriques :** python src/link_analysis/link_analysis_numpy.py (Calcule les centralités matricielles).
+
+---
+
+## 🧠 Méthodologie et Concepts Clés
+
+### Text Mining
+
+Nous utilisons une approche hybride combinant TF-IDF et Truncated SVD (Latent Semantic Analysis) pour regrouper les films par thématiques narratives. Un nettoyage strict (suppression des noms propres et lemmatisation) garantit la pertinence des thèmes.
+
+### Link Analysis (Approche Matricielle)
+
+Contrairement aux approches classiques utilisant des librairies haut niveau, nous avons implémenté les mesures de centralité via l'algèbre linéaire :
+
+* Centralité de Degré : Calculée via la matrice d'adjacence binaire.
+
+* PageRank : Implémenté par la méthode des puissances (Power Iteration).
+
+* Information Centrality : Calculée à partir de la Pseudo-Inverse du Laplacien (L +) pour identifier les nœuds ponts.
+
+* Closeness, Eccentricity & Shortest Path : Basés sur l'algorithme de Floyd-Warshall.
