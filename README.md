@@ -59,6 +59,7 @@ Assurez-vous d'avoir Python 3.9+ installé. Clonez le repo et installez les dép
 git clone https://github.com/votre-compte/votre-repo.git
 cd votre-repo
 pip install -r requirements.txt
+```
 
 ### 2. Exécution des analyses
 
