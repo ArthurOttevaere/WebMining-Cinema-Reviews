@@ -8,9 +8,9 @@
 
 ## 👥 L'Équipe
 
-* **Arthur Ottevaere** 
+* **Arthur Ottevaere**
 * **Mohamed Amine El Mohicine**
-* **Lenny Andry** 
+* **Lenny Andry**
 
 ---
 
@@ -19,15 +19,23 @@
 Ce projet a pour but d'analyser les critiques cinématographiques se trouvant sur des blogs en ligne. Dans ce projet, nous collectons et analysons de nombreuses critiques provenant de trois blogs cinématographiques anglophones distincts afin d'identifier des tendances sémantiques et structurelles.
 
 Le projet suit le même cheminement que le cours de Web Mining, à savoir :
-1.  **Collecte de données (Scraping) :** Récupération automatique de corpus massifs (textes, notes, métadonnées, casting).
-2.  **Text Mining :** A compléter quand nous arriverons à cette étape.
-3.  **Link Analysis :** A compléter quand nous arriverons à cette étape.
+1.**Collecte de données (Scraping) :** Récupération automatique de corpus massifs (textes, notes, métadonnées, casting).
+2.**Text Mining :** A compléter quand nous arriverons à cette étape.
+3.**Link Analysis :** A compléter quand nous arriverons à cette étape.
 
 ---
 
 ## 📂 Structure du Projet
 
-L'architecture respecte la séparation entre code source, données brutes et résultats.
+L'architecture respecte la séparation entre code source, données brutes et résultats. Dans le but de faciliter la réplication des analyses.
+
+-data/ : Contient les datasets (bruts et traités)
+-src/ :
+    - scraping/ : Scripts de collecte de données.
+    - text-mining/ : Scripts de prétraitement, TF-IDF et clustering.
+    - link-analysis/ : Construction du graphe, implémentation matricielle et analyse des liens.
+-results/ : Résultats exportés (CSV, screenshots, etc.).
+-requirements.txt : Listes des dépendances Python nécessaires.
 
 ```text
 .
