@@ -65,8 +65,8 @@ pip install -r requirements.txt
 
 Pour répliquer l'analyse complète, exécutez les scripts dans l'ordre suivant :
 
-*Collecte : python src/scraping/scraper.py (Génère le fichier brut).
+* Collecte : python src/scraping/scraper.py (Génère le fichier brut).
 
-*Traitement & Graphe : python src/text_mining/generate_gephi_linked.py (Génère les nœuds et les arêtes).
+* Traitement & Graphe : python src/text_mining/generate_gephi_linked.py (Génère les nœuds et les arêtes).
 
-*Analyse des métriques : python src/link_analysis/link_analysis_numpy.py (Calcule les centralités matricielles).
+* Analyse des métriques : python src/link_analysis/link_analysis_numpy.py (Calcule les centralités matricielles).
