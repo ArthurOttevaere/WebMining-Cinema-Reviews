@@ -46,7 +46,19 @@ def closeness_centrality(SP: np.ndarray) -> np.ndarray:
         if len(valid_dists) > 1:
             dist_sum = valid_dists.sum()
             CC[i] = (len(valid_dists) - 1) / dist_sum
-    return CC    
+    return CC  
+
+def eccentricity_centrality(SP: np.ndarray) -> np.ndarray:
+    n = SP.shape[0]
+    ecc_cent = np.zeros(n, dtype=float)
+    for i in range(n):
+        dists = SP[i, :]
+        valid_dists = dists[dists < 90000] # On ignore les infinis
+        if len(valid_dists) > 0:
+            max_dist = valid_dists.max() # Distance vers le noeud le plus loin
+            if max_dist > 0:
+                ecc_cent[i] = 1.0 / max_dist
+    return ecc_cent  
     
 def laplacian_matrix(A: np.ndarray) -> np.ndarray:
     D = degree_matrix(A, "out")
@@ -128,6 +140,7 @@ def main():
     print("2️⃣ Shortest Path & Closeness...")
     SP = shortest_path_matrix(A_binary) 
     closeness = closeness_centrality(SP)
+    eccentricity = eccentricity_centrality(SP)
     
     real_dists = SP[SP < 90000]
     avg_path = real_dists.mean() if len(real_dists) > 0 else 0
@@ -147,6 +160,7 @@ def main():
         'Id': node_ids,
         'Degree': degrees,
         'Closeness': closeness,
+        'Eccentricity': eccentricity,
         'PageRank': pagerank,
         'InfoCent': info_centrality 
     })
@@ -154,7 +168,7 @@ def main():
     final_df = pd.merge(df_nodes, results, on='Id')
     
     # We round up for a better readability
-    cols_float = ['Closeness', 'PageRank', 'InfoCent']
+    cols_float = ['Closeness', 'Eccentricity', 'PageRank', 'InfoCent']
     final_df[cols_float] = final_df[cols_float].round(4)
     
     # CSV Export
@@ -167,7 +181,7 @@ def main():
     print("="*60)
     
     # We select only the interesting columns for the display. 
-    cols_to_show = ['Label', 'Theme', 'Degree', 'PageRank', 'InfoCent']
+    cols_to_show = ['Label', 'Theme', 'Degree', 'Closeness', 'Eccentricity', 'PageRank', 'InfoCent']
     
     # We extract top 20
     top_20 = final_df.sort_values(by='PageRank', ascending=False).head(20)[cols_to_show]
