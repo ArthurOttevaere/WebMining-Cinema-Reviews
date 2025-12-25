@@ -92,6 +92,8 @@ Contrairement aux approches classiques utilisant des librairies haut niveau, nou
 
 * **Closeness, Eccentricity & Shortest Path :** Basés sur l'algorithme de Floyd-Warshall.
 
+---
+
 ## 📊 Aperçu des Résultats
 
 ### Visualisation Gephi
