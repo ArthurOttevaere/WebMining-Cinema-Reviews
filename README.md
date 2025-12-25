@@ -45,9 +45,9 @@ L'architecture respecte la séparation entre code source, données brutes et ré
 ├── .gitignore              # Configuration des fichiers exclus (env, données lourdes)
 ├── requirements.txt        # Liste des dépendances Python nécessaires
 └── README.md               # Documentation du projet
+```
 
 ---
-
 
 ## 🚀 Guide d'Utilisation (Pipeline)
 
