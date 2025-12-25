@@ -190,5 +190,11 @@ def main():
     print(tabulate(top_20, headers='keys', tablefmt='fancy_grid', showindex=False))
     print("="*60)
 
+    # Adding the average path of the network
+    if 'closeness' in locals():
+        # L'excentricité est l'inverse (approximatif) de la closeness ou calculable via SP
+        # Mais pour faire simple, rappelle la moyenne :
+        print(f"INFO RÉSEAU : Un film est en moyenne à {avg_path:.2f} sauts de n'importe quel autre.")
+
 if __name__ == "__main__":
     main()
