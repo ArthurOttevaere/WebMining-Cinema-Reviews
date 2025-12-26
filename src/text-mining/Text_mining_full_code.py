@@ -28,7 +28,7 @@ def run_text_mining(df, show_plots=False):
     # 1) Load CSV
     # -------------------------------------------------------------------
     #df = pd.read_csv("roger_ebert_debug.csv")
-    df = pd.read_csv("data/processed/reviews_final_900.csv")
+    #df = pd.read_csv("data/processed/reviews_final_900.csv")
     df["article_text_full"] = df["article_text_full"].astype(str)
     total_docs = len(df)
 
