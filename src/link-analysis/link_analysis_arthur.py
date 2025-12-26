@@ -175,24 +175,40 @@ def main():
     final_df.to_csv(OUTPUT_FILE, index=False)
     print(f"✅ CSV exported : {OUTPUT_FILE}")
     
-    # --- TABULATE DISPlAY ---
-    print("\n" + "="*60)
-    print("🏆 TOP 20 FILMS (Ranked by PageRank)")
-    print("="*60)
+    # --- TABULATE DISPLAY (TOP N PER METRIC) ---
     
-    # We select only the interesting columns for the display. 
-    cols_to_show = ['Label', 'Theme', 'Degree', 'Closeness', 'Eccentricity', 'PageRank', 'InfoCent']
+    # We choose the top "n" to display.
+    TOP_N = 10
     
-    # We extract top 20
-    top_20 = final_df.sort_values(by='PageRank', ascending=False).head(20)[cols_to_show]
-    
-    # We display with tabulate
-    print(tabulate(top_20, headers='keys', tablefmt='fancy_grid', showindex=False))
-    print("="*60)
+    # Metrics to analyze.
+    metrics_to_show = [
+        ('Degree', 'Local influence (Number of direct connections)'),
+        ('Closeness', 'Closeness (Ability to reach quickly the network.)'),
+        ('Eccentricity', 'Graphic centrality (Distance to the farest point)'),
+        ('InfoCent', 'Strategic points (Bridges and information traffic)'),
+        ('PageRank', 'Global Influence (Importance of neighbours)')
 
-    # Adding the average path of the network
-    if 'closeness' in locals():
-        print(f"INFO RÉSEAU : Un film est en moyenne à {avg_path:.2f} sauts de n'importe quel autre.")
+    ]
+
+    print("\n" + "═"*80)
+    print("      📊 CENTRALITY ANALYSIS : TOP {} BY MEASURE".format(TOP_N))
+    print("═"*80)
+
+    for col, description in metrics_to_show:
+        print(f"\n🔥 {description} [{col}]")
+        
+        # Sorting by the displayed metric
+        top_df = final_df.sort_values(by=col, ascending=False).head(TOP_N)
+        
+        # We select the columns to display
+        display_cols = ['Label', 'Theme', col]
+        
+        print(tabulate(top_df[display_cols], headers='keys', tablefmt='fancy_grid', showindex=False))
+
+    print("\n" + "═"*80)
+    if 'avg_path' in locals():
+        print(f"🌍 GLOBAL STATISTIC : In average, one film is at {avg_path:.2f} jumps from another.")
+    print("═"*80)
 
 if __name__ == "__main__":
     main()
