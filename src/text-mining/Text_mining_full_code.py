@@ -19,6 +19,9 @@ from sklearn.metrics import silhouette_score
 from sklearn.metrics.pairwise import cosine_similarity
 from wordcloud import WordCloud
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
+import warnings
+
+warnings.filterwarnings("ignore", category=FutureWarning)
 
 # -------------------------------------------------------------------
 # 1) Load CSV
@@ -445,3 +448,48 @@ if "film_genre" in df.columns:
         plt.title(f"Top 20 Words — Genre: {genre}")
         plt.tight_layout()
         plt.show()
+
+# -------------------------------------------------------------------
+# 15) Average score & sentiment per cluster
+# -------------------------------------------------------------------
+if "review_score" in df.columns and "compound" in df.columns:
+    cluster_stats = df.groupby("cluster").agg(
+        avg_score=("review_score", "mean"),
+        avg_sentiment=("compound", "mean"),
+        n_docs=("review_score", "count")
+    ).reset_index()
+    print("\nCluster statistics (average score & sentiment):")
+    print(cluster_stats)
+
+# -------------------------------------------------------------------
+# 16) Type-Token Ratio (TTR) per review
+# -------------------------------------------------------------------
+df["ttr"] = df["tokens"].apply(lambda x: len(set(x)) / len(x) if len(x) > 0 else 0)
+
+# Histogram of TTR
+plt.figure(figsize=(8,6))
+sns.histplot(df["ttr"], bins=20, kde=True)
+plt.title("Distribution of Type-Token Ratio (TTR)")
+plt.xlabel("TTR")
+plt.ylabel("Number of Reviews")
+plt.tight_layout()
+plt.show()
+
+# Correlation of TTR with review score and sentiment
+if "review_score" in df.columns:
+    plt.figure(figsize=(8,6))
+    sns.scatterplot(x=df["review_score"], y=df["ttr"])
+    plt.title("TTR vs Review Score")
+    plt.xlabel("Review Score")
+    plt.ylabel("Type-Token Ratio")
+    plt.tight_layout()
+    plt.show()
+
+if "compound" in df.columns:
+    plt.figure(figsize=(8,6))
+    sns.scatterplot(x=df["compound"], y=df["ttr"])
+    plt.title("TTR vs Compound Sentiment")
+    plt.xlabel("Compound Sentiment")
+    plt.ylabel("Type-Token Ratio")
+    plt.tight_layout()
+    plt.show()
