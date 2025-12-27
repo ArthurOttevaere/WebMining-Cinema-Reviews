@@ -82,6 +82,21 @@ def information_centrality(L_plus: np.ndarray) -> np.ndarray:
     info_cent = (info_cent - info_cent.min()) / (info_cent.max() - info_cent.min())
     return info_cent
 
+def get_spectral_partition(L: np.ndarray) -> np.ndarray:
+    """
+    Fiedler Vector' to cut the graph into two communities
+    """
+    print("   ⏳ Processing the eigen values...")
+    # eigh is optimized for symetric matrix such as L
+    eigenvals, eigenvecs = np.linalg.eigh(L)
+    
+    # Fiedler vector is the seconde column (first one is for the values)
+    fiedler_vector = eigenvecs[:, 1]
+    
+    # We split (if sign is "+" or "-").
+    partition = np.where(fiedler_vector > 0, 1, 0)
+    return partition
+
 def pagerank_power_iteration(A: np.ndarray, alpha: float = 0.85, max_iter: int = 100) -> np.ndarray:
     n = A.shape[0]
     P = transition_matrix(A)
@@ -152,6 +167,11 @@ def main():
     print("4️⃣ Information Centrality (via Laplacian L+)...")
     L_plus = laplacian_pseudoinverse(A)
     info_centrality = information_centrality(L_plus)
+
+    # --- NEW FEATURE 1: SPECTRAL CLUSTERING ---
+    print("5️⃣ Spectral Clustering (Fiedler Partition)...")
+    L = laplacian_matrix(A) # On recalcule L ou on le récupère
+    communities = get_spectral_partition(L)
     
     # --- EXPORT & DISPLAY ---
     
@@ -162,7 +182,8 @@ def main():
         'Closeness': closeness,
         'Eccentricity': eccentricity,
         'PageRank': pagerank,
-        'InfoCent': info_centrality 
+        'InfoCent': info_centrality,
+        'SpectralGroup': communities
     })
     
     final_df = pd.merge(df_nodes, results, on='Id')
@@ -174,6 +195,16 @@ def main():
     # CSV Export
     final_df.to_csv(OUTPUT_FILE, index=False)
     print(f"✅ CSV exported : {OUTPUT_FILE}")
+
+    # --- NEW FEATURE 2: CORRELATION MATRIX ---
+    print("\n" + "═"*80)
+    print("      🧩 META-ANALYSIS : CORRELATION BETWEEN METRICS")
+    print("      (Does popularity mean influence ?)")
+    print("═"*80)
+    
+    # Spearman correlation on the ranks, not the values.
+    corr_matrix = final_df[['Degree', 'Closeness', 'PageRank', 'InfoCent']].corr(method='spearman')
+    print(tabulate(corr_matrix, headers='keys', tablefmt='fancy_grid', floatfmt=".2f"))
     
     # --- TABULATE DISPLAY (TOP N PER METRIC) ---
     
@@ -205,10 +236,39 @@ def main():
         
         print(tabulate(top_df[display_cols], headers='keys', tablefmt='fancy_grid', showindex=False))
 
+    # --- NEW FEATURE 3: GLOBAL GRAPH STATS ---
     print("\n" + "═"*80)
-    if 'avg_path' in locals():
-        print(f"🌍 GLOBAL STATISTIC : In average, one film is at {avg_path:.2f} jumps from another.")
+    print("      🌍 NETWORK'S GLOBAL HEALTH")
     print("═"*80)
+    
+    # Diameter and radius 
+    if 'real_dists' in locals() and len(real_dists) > 0:
+        diameter = real_dists.max()
+        radius = real_dists.min() # Sur les distances non-nulles
+        print(f"📏 Graph diameter : {int(diameter)} jumps (Max distance between two films)")
+        print(f"🎯 Graph radius : {int(radius)} jump (Minimal eccentircity)")
+        print(f"🏃 Average distance : {avg_path:.2f} jumps")
+    
+    # Quick analysis of the spectral groups
+    group_0_size = final_df[final_df['SpectralGroup'] == 0].shape[0]
+    group_1_size = final_df[final_df['SpectralGroup'] == 1].shape[0]
+    print(f"🌗 Spectral partition : Group A ({group_0_size} films) vs Group B ({group_1_size} films)")
+    print("═"*80)
+
+    # --- NAMING THE SPECTRAL GROUPS ---
+    print("\n🕵️‍♂️ IDENTITY OF SPECTRAL GROUPS (Who are they?)")
+    print("─"*60)
+    
+    for group_id in [0, 1]:
+        # We take all the films in this group.
+        subset = final_df[final_df['SpectralGroup'] == group_id]
+        
+        # We count the themes appearing the most in this group.
+        top_themes = subset['Theme'].value_counts().head(3)
+        
+        print(f"\n🔵 GROUP {group_id} ({len(subset)} films) is dominated by:")
+        for theme, count in top_themes.items():
+            print(f"   - {theme} ({count} films)")
 
 if __name__ == "__main__":
     main()
