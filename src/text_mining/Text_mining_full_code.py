@@ -23,7 +23,7 @@ import warnings
 
 warnings.filterwarnings("ignore", category=FutureWarning)
 
-def run_text_mining(df, show_plots=True):
+def run_text_mining(df, show_plots=False):
     # -------------------------------------------------------------------
     # 1) Load CSV
     # -------------------------------------------------------------------
