@@ -497,4 +497,99 @@ if "compound" in df.columns:
     plt.tight_layout()
     plt.show()
 
+# -------------------------------------------------------------------
+# Sentiment trajectory analysis (narrative progression)
+# -------------------------------------------------------------------
 
+# We reuse the existing VADER sentiment analyzer (sia)
+# and the already cleaned full review text stored in the DataFrame.
+
+def sentiment_trajectory(text, n_parts=5):
+    """
+    Splits a review into n_parts equal segments and computes
+    the VADER compound sentiment score for each segment.
+    """
+    words = text.split()
+    
+    # If the review is empty, return neutral sentiment values
+    if len(words) == 0:
+        return [0] * n_parts
+
+    # Split the review into n_parts consecutive chunks
+    chunks = np.array_split(words, n_parts)
+    scores = []
+
+    # Compute sentiment score for each chunk
+    for chunk in chunks:
+        chunk_text = " ".join(chunk)
+        sentiment = sia.polarity_scores(chunk_text)["compound"]
+        scores.append(sentiment)
+
+    return scores
+
+
+# Thresholds used to distinguish review groups
+LOW_SCORE = 2.0     # low-rated (negative) reviews
+HIGH_SCORE = 3.0    # high-rated (positive) reviews
+
+records = []
+
+# Iterate through all reviews in the DataFrame
+for _, row in df.iterrows():
+    score = row["review_score"]
+
+    # Assign reviews to groups based on their rating
+    if score <= LOW_SCORE:
+        group = "Disappointing films (0–2)"
+    elif score >= HIGH_SCORE:
+        group = "Outstanding films (3–4)"
+    else:
+        continue  # neutral reviews are excluded from this analysis
+
+    # Compute sentiment trajectory for the review
+    traj = sentiment_trajectory(row["article_text_full"])
+
+    # Store sentiment values for each narrative stage
+    for step, value in enumerate(traj):
+        records.append([group, step, value])
+
+
+# Create a DataFrame suitable for visualization
+df_plot = pd.DataFrame(
+    records,
+    columns=["Group", "Narrative stage", "Sentiment"]
+)
+
+# -------------------------------------------------------------------
+# Visualization of sentiment trajectories
+# -------------------------------------------------------------------
+
+plt.figure(figsize=(12, 7))
+
+# Line plot showing average sentiment evolution for each group
+sns.lineplot(
+    data=df_plot,
+    x="Narrative stage",
+    y="Sentiment",
+    hue="Group",
+    style="Group",
+    markers=True,
+    dashes=False,
+    linewidth=3
+)
+
+# Label narrative stages explicitly
+plt.xticks(
+    [0, 1, 2, 3, 4],
+    ["Introduction", "Early development", "Middle", "Climax", "Conclusion"]
+)
+
+# Reference line for neutral sentiment
+plt.axhline(0, color="black", linestyle="--", alpha=0.5)
+
+plt.title("Sentiment trajectory: outstanding vs disappointing films")
+plt.xlabel("Narrative progression")
+plt.ylabel("Average VADER sentiment (compound)")
+plt.grid(alpha=0.3)
+plt.tight_layout()
+plt.show()
