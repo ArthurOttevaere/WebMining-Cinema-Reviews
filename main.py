@@ -1,12 +1,11 @@
 """
-PIPELINE PRINCIPAL - PROJET ROGER EBERT
-Groupe X - MLSMM2153
+PIPELINE - PROJECT ROGER EBERT (Cinema Reviews) - Web Mining
 """
 
 import pandas as pd
 import os
 
-# Importation de tes modules (notation par points)
+# Functions importation
 #from src.scraping.bfs_arthur import launch_scraping_roger_ebert
 #from src.text_mining.Text_mining_full_code import run_text_mining
 #from src.link_analysis.graph_builder_arthur import main as build_graph
