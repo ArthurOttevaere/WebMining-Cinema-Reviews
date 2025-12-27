@@ -1,42 +1,63 @@
 """
-Launching script for the project of Web Mining
-This script alloww the launching of the diffrent steps of the project (scraping, text mining and link analysis).
-It works by calling all of the required functions.
+PIPELINE PRINCIPAL - PROJET ROGER EBERT
+Groupe X - MLSMM2153
 """
 
-# --- PARAMETERS ---
-RUN_SCRAPER = False
-LIMIT_FILMS = 900
+import pandas as pd
+import os
+
+# Importation de tes modules (notation par points)
+#from src.scraping.bfs_arthur import launch_scraping_roger_ebert
+#from src.text_mining.Text_mining_full_code import run_text_mining
+#from src.link_analysis.graph_builder_arthur import main as build_graph
+#from src.link_analysis.link_analysis_arthur import main as run_link_analysis
+
+# --- CONFIGURATION ---
+RUN_SCRAPER = False      # True to scrape new reviews
+SHOW_PLOTS = False       # True to see all the graphs
+LIMIT_SCRAPING = 900
+DATA_PATH = "data/processed/reviews_final_900.csv"
 
 
 def main():
-    print("🚀 Processing the launching...")
+    print("═" * 50)
+    print("🎬 PROCESSING THE LAUNCH...")    
+    print("═" * 50)
 
     if RUN_SCRAPER:
         print('🌐 STEP 1 : Scraping new reviews...')
         # We call the scraper 
-        #from src.scraping.bfs_arthur.py import launch_scraping_roger_ebert() 
-        #df = launch_scraping_roger_ebert(limit=LIMIT_FILMS)
+        #df_raw = launch_scraping_roger_ebert(limit=LIMIT_SCRAPING)
     else:
-        print("📂 STEP 1 : Loading the original dataset (used for the analysis if the project)...")
-        import pandas as pd
-        try:
-            # We load the original csv file (900 reviews) 
-            df = pd.read_csv("data/processed/reviews_final_900.csv")
-        except FileNotFoundError:
-            print("❌ Error : Original file can not be found.")
+        print(f"\n📂 STEP 1 : Loading the original dataset ({DATA_PATH})...")
+        if os.path.exists(DATA_PATH):
+            df_raw = pd.read_csv(DATA_PATH)
+        else:
+            print(f"❌ Error : File {DATA_PATH} not found !")
             return
         
-    # --- STEP 2 : Text Mining ---
-    print("🧠 STEP 2 : Text Mining...")
-    # Call the text mining function 
+    # --- STEP 2 : TEXT MINING & CLUSTERING ---
+    print("\n🧠 STEP 2 : Text mining analysis...")
+    #df_processed = run_text_mining(df_raw, show_plots=SHOW_PLOTS)
+    
+    # We save the enriched results
+    os.makedirs("data/processed", exist_ok=True)
+    #df_processed.to_csv("data/processed/reviews_with_clusters.csv", index=False)
+    print("✅ Improved data saved.")
 
-    # --- STEP 3 : Link Analysis ---
+
+    # --- ÉTAPE 3.1 : BUILDING THE GRAPH ---
+    print("\n🕸️  STEP 3.1 : Building the network (Nodes & Edges)...")
+    #build_graph()
+
+    # --- STEP 3.2 : Link Analysis ---
     print("📊 STEP 3 : Processing the metrics...")
     # Call the link analysis function 
+    #run_link_analysis()
 
-    print("✅ Finished.")
-
+    print("\n" + "═" * 50)
+    print("🏆 SUCCESSFULLY FINISHED")
+    print("═" * 50)
 
 if __name__ == "__main__":
     main()
