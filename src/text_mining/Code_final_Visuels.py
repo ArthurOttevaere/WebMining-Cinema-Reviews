@@ -27,28 +27,8 @@ warnings.filterwarnings("ignore", category=FutureWarning)
 
 def run_text_mining(df, show_plots=False):
     # -------------------------------------------------------------------
-    # Load CSV
+    # Configuration
     # -------------------------------------------------------------------
-
-    # df = pd.read_csv("roger_ebert_debug.csv")  # read CSV file into dataframe
-    file_path = r"C:\Users\33778\Desktop\WM (Amine)\roger_ebert_debug.csv"
-
-    try:
-        df = pd.read_csv(
-            file_path,
-            sep=',',
-            encoding='utf-8-sig',
-            on_bad_lines='skip',
-            engine='python'
-        )
-    except UnicodeDecodeError:
-        df = pd.read_csv(
-            file_path,
-            sep=',',
-            encoding='latin1',
-            on_bad_lines='skip',
-            engine='python'
-        )
 
     total_docs = len(df)
     df["article_text_full"] = df["article_text_full"].astype(str)  # ensure text is string
@@ -670,8 +650,6 @@ def run_text_mining(df, show_plots=False):
     return df
 
     # --- LAUNCHING ---
-
-
 if __name__ == "__main__":
     # Allows to test the file we want
     df_test = pd.read_csv("data/processed/reviews_final_900.csv")
