@@ -45,7 +45,7 @@ def main():
     print("✅ Improved data saved.")
 
 
-    # --- ÉTAPE 3.1 : BUILDING THE GRAPH ---
+    # --- STEP 3.1 : BUILDING THE GRAPH ---
     print("\n🕸️  STEP 3.1 : Building the network (Nodes & Edges)...")
     try:
         build_graph() # Appelle la fonction main() de graph_builder
