@@ -53,9 +53,9 @@ def eccentricity_centrality(SP: np.ndarray) -> np.ndarray:
     ecc_cent = np.zeros(n, dtype=float)
     for i in range(n):
         dists = SP[i, :]
-        valid_dists = dists[dists < 90000] # On ignore les infinis
+        valid_dists = dists[dists < 90000] # We ignore the "infinite"
         if len(valid_dists) > 0:
-            max_dist = valid_dists.max() # Distance vers le noeud le plus loin
+            max_dist = valid_dists.max() # Distance to the farest node. 
             if max_dist > 0:
                 ecc_cent[i] = 1.0 / max_dist
     return ecc_cent  
@@ -241,14 +241,25 @@ def main():
     print("      🌍 NETWORK'S GLOBAL HEALTH")
     print("═"*80)
     
-    # Diameter and radius 
-    if 'real_dists' in locals() and len(real_dists) > 0:
-        diameter = real_dists.max()
-        radius = real_dists.min() # Sur les distances non-nulles
-        print(f"📏 Graph diameter : {int(diameter)} jumps (Max distance between two films)")
-        print(f"🎯 Graph radius : {int(radius)} jump (Minimal eccentircity)")
-        print(f"🏃 Average distance : {avg_path:.2f} jumps")
+    # 1. We filter to avoid "0" values
+    valid_scores = eccentricity[eccentricity > 0]
     
+    if len(valid_scores) > 0:
+        # Radius 
+        min_eccentricity_value = 1.0 / valid_scores.max()
+        
+        # Diameter
+        max_eccentricity_value = 1.0 / valid_scores.min()
+        
+        print(f"📏 Graph diameter : {int(max_eccentricity_value)} jumps (Max eccentricity)")
+        print(f"🎯 Graph radius   : {int(min_eccentricity_value)} jumps (Min eccentricity / Center)")
+    else:
+        print("⚠️ Graph appears to be fully disconnected.")
+
+    # We display the average distance
+    if 'avg_path' in locals():
+        print(f"🏃 Average distance : {avg_path:.2f} jumps")
+        
     # Quick analysis of the spectral groups
     group_0_size = final_df[final_df['SpectralGroup'] == 0].shape[0]
     group_1_size = final_df[final_df['SpectralGroup'] == 1].shape[0]
