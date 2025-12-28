@@ -118,9 +118,9 @@ def pagerank_power_iteration(A: np.ndarray, alpha: float = 0.85, max_iter: int =
 # 2. MAIN PIPELINE
 # ==========================================
 
-INPUT_EDGES = "data/raw/edges_tfidf.csv"
-INPUT_NODES = "data/raw/nodes_tfidf.csv"
-OUTPUT_FILE = "data/raw/numpy_metrics_results.csv"
+INPUT_EDGES = "data/processed/edges_tfidf.csv"
+INPUT_NODES = "data/processed/nodes_tfidf.csv"
+OUTPUT_FILE = "data/processed/numpy_metrics_results.csv"
 
 def main():
     print("📂 Loading data...")
