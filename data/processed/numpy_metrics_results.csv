@@ -1,9 +1,9 @@
 Id,Label,Theme,Score,Degree,Closeness,Eccentricity,PageRank,InfoCent,SpectralGroup
-6413ccb9-6585-462c-a5a5-416fc4fcb65a,Cover-Up,"war, men, moment",3.0,1,0.1626,0.1,0.0004,0.0,1
+6413ccb9-6585-462c-a5a5-416fc4fcb65a,Cover-Up,"war, men, moment",3.0,1,0.1626,0.1,0.0004,0.0,0
 c945c4bf-ab0d-4acc-9957-26ea75dd764a,Scarlet,"war, men, moment",2.0,4,0.1735,0.0909,0.0008,0.0,0
 34f5853b-f4fa-4e25-ad3d-75e5581397e1,The King of Color,"school, love, friend",3.0,4,0.158,0.1,0.0008,0.0,1
-cbfcc813-0f80-4dce-b2e6-d8fbc7024e5b,David,"music, song, musical",3.0,3,0.1105,0.0769,0.0006,0.0,0
-d9a2fb0f-909a-40ed-9407-c0928dc398e1,Dust Bunny,"action, hero, creature",3.0,4,0.1628,0.0833,0.0008,0.0,1
+cbfcc813-0f80-4dce-b2e6-d8fbc7024e5b,David,"music, song, musical",3.0,3,0.1105,0.0769,0.0006,0.0,1
+d9a2fb0f-909a-40ed-9407-c0928dc398e1,Dust Bunny,"action, hero, creature",3.0,4,0.1628,0.0833,0.0008,0.0,0
 07892ace-8b25-427d-a699-1e07c490599b,The Housemaid,"horror, house, home",2.5,3,0.1579,0.0833,0.0006,0.0,0
 5454342e-cc8a-494a-ad96-f897d30c1092,Resurrection,"war, men, moment",2.0,10,0.1721,0.0909,0.0021,0.0,0
 6d0114cb-7ae1-4b00-b79a-3fcb01620598,Lone Samurai,"action, hero, creature",2.5,4,0.1735,0.0833,0.0009,0.0,1
@@ -12,66 +12,66 @@ a7ba346a-ddf2-4840-97d8-137da0e45f70,The SpongeBob Movie: Search for SquarePants
 b4c84a83-793c-476b-a1e6-2ffc3cf5a476,Wake Up Dead Man: A Knives Out Mystery,"love, friend, young",3.5,4,0.1662,0.0833,0.0009,0.0,0
 eb52d2d7-289a-44f1-9427-5bab3cf5cd71,Ella McCay,"family, father, child",3.0,5,0.1861,0.1111,0.0011,0.0,0
 42edbf25-2847-454d-ad5e-9a60a5aa5ff9,Influencers,"horror, house, home",3.0,4,0.156,0.1,0.0009,0.0,1
-141fc352-9104-417b-9799-be5f82969e7e,Breakdown: 1975,"war, men, moment",2.0,3,0.1684,0.1,0.0007,0.0,0
+141fc352-9104-417b-9799-be5f82969e7e,Breakdown: 1975,"war, men, moment",2.0,3,0.1684,0.1,0.0007,0.0,1
 1070ae5f-9e40-402c-8421-002c95fffc38,The Voice of Hind Rajab,"family, father, child",4.0,8,0.175,0.1,0.0017,0.0,0
 3d5764c1-3a52-4ca3-85cc-55d0014e2a10,The Elephant,"war, men, moment",3.5,3,0.1531,0.0833,0.0007,0.0,0
-9fe0554a-f3ac-4112-b49e-ab7e05f416c9,"Silent Night, Deadly Night","horror, house, home",1.5,5,0.1549,0.0833,0.001,0.0,0
-2e93014d-a4e7-4830-b973-d4587ef5c71c,Avatar: Fire and Ash,"action, hero, creature",2.5,4,0.1602,0.0909,0.0007,0.0,0
+9fe0554a-f3ac-4112-b49e-ab7e05f416c9,"Silent Night, Deadly Night","horror, house, home",1.5,5,0.1549,0.0833,0.001,0.0,1
+2e93014d-a4e7-4830-b973-d4587ef5c71c,Avatar: Fire and Ash,"action, hero, creature",2.5,4,0.1602,0.0909,0.0007,0.0,1
 aaeca4b2-f938-4330-a4a1-0d5976697087,Is This Thing On?,"school, love, friend",3.5,20,0.2042,0.125,0.004,0.0,1
-98299f44-18bd-4d14-82b5-bbb67d518ed9,Atropia,"war, men, moment",2.5,8,0.1795,0.1,0.0016,0.0,1
+98299f44-18bd-4d14-82b5-bbb67d518ed9,Atropia,"war, men, moment",2.5,8,0.1795,0.1,0.0016,0.0,0
 295e36c4-2906-41d7-9508-7fccb4c008ef,Belle,"school, love, friend",3.0,4,0.1655,0.1,0.0009,0.0,1
-d8c45a4a-0b6e-46cb-be33-5cebb46a7933,Mirai,"family, father, child",2.0,6,0.1734,0.0909,0.0013,0.0,0
+d8c45a4a-0b6e-46cb-be33-5cebb46a7933,Mirai,"family, father, child",2.0,6,0.1734,0.0909,0.0013,0.0,1
 9aae23d6-035d-4bf9-b85e-aef2ef3eb174,The Prince Of Egypt,"action, hero, creature",3.5,4,0.1567,0.0909,0.0008,0.0,0
 9d6d5efc-b8ba-4bf2-8938-5296790208a8,A Simple Favor,"school, love, friend",3.0,5,0.1519,0.0909,0.001,0.0,0
-e8c8c3f3-9c79-441e-9f34-d445b8e46a4e,Another Simple Favor,"comedy, action, bank",2.5,4,0.1588,0.1,0.0008,0.0,1
+e8c8c3f3-9c79-441e-9f34-d445b8e46a4e,Another Simple Favor,"comedy, action, bank",2.5,4,0.1588,0.1,0.0008,0.0,0
 e99bffa0-94be-436e-a80e-0f3c98371d4d,Long Day’s Journey Into Night,"war, men, moment",4.0,7,0.1754,0.1,0.0014,0.0,1
 5da96095-696e-4a3b-a4c4-21a893a9dd4c,Glass Onion: A Knives Out Mystery,"comedy, action, bank",3.0,8,0.1627,0.1,0.0017,0.0,1
 c023c615-3d67-4fff-b900-31256aa99658,Knives Out,"love, friend, young",3.5,5,0.1741,0.0909,0.0012,0.0,0
 5e356043-fb2f-495b-a356-aae2ab000bdb,Influencer,"horror, house, home",3.0,7,0.1679,0.1,0.0016,0.0,1
-51d1245b-3065-4f12-83cf-53b395a4456d,The Man Who Sold His Skin,"war, men, moment",2.5,4,0.1523,0.0909,0.0009,0.0,0
-2b05eb62-3c09-45ea-b27c-01e2fcd53e73,Four Daughters,"family, father, child",3.5,5,0.1657,0.0909,0.0011,0.0,0
-1e3b4fbc-7285-4fce-8178-85bce12db26c,Put Your Soul on Your Hand and Walk,"family, father, child",4.0,2,0.1522,0.0909,0.0005,0.0,0
-ffcb149f-8fb1-483b-a2d2-21c09660f1c3,Terminator 2: Judgment Day,"action, hero, creature",3.5,8,0.1635,0.0833,0.0016,0.0,1
-9d14a7ca-0032-43fd-bbbe-2c7b3916dc63,Aliens,"alien, ship, space",3.5,10,0.1496,0.0909,0.002,0.0,1
-a3fdd9bd-2c1a-4b93-9da4-43d8cd7fca1d,Avatar: The Way of Water,"war, men, moment",3.5,4,0.1656,0.1,0.0008,0.0,0
+51d1245b-3065-4f12-83cf-53b395a4456d,The Man Who Sold His Skin,"war, men, moment",2.5,4,0.1523,0.0909,0.0009,0.0,1
+2b05eb62-3c09-45ea-b27c-01e2fcd53e73,Four Daughters,"family, father, child",3.5,5,0.1657,0.0909,0.0011,0.0,1
+1e3b4fbc-7285-4fce-8178-85bce12db26c,Put Your Soul on Your Hand and Walk,"family, father, child",4.0,2,0.1522,0.0909,0.0005,0.0,1
+ffcb149f-8fb1-483b-a2d2-21c09660f1c3,Terminator 2: Judgment Day,"action, hero, creature",3.5,8,0.1635,0.0833,0.0016,0.0,0
+9d14a7ca-0032-43fd-bbbe-2c7b3916dc63,Aliens,"alien, ship, space",3.5,10,0.1496,0.0909,0.002,0.0,0
+a3fdd9bd-2c1a-4b93-9da4-43d8cd7fca1d,Avatar: The Way of Water,"war, men, moment",3.5,4,0.1656,0.1,0.0008,0.0,1
 67a75c61-ad43-4e81-a82c-ad70ef82d4fa,A Star is Born,"music, song, musical",3.5,8,0.122,0.0833,0.0017,0.0,0
 15b0f0e2-9809-4084-b307-d02659668555,Maestro,"music, song, musical",3.0,4,0.1232,0.0833,0.0007,0.0,0
 4e350912-a274-404c-9c13-5cf4e6d80ff5,The Son,"love, friend, young",4.0,5,0.1722,0.0909,0.0011,0.0,0
-a69354fa-41a8-4128-a633-45be786d615e,Wag the Dog,"school, love, friend",4.0,5,0.1871,0.1111,0.001,0.0,1
+a69354fa-41a8-4128-a633-45be786d615e,Wag the Dog,"school, love, friend",4.0,5,0.1871,0.1111,0.001,0.0,0
 bef7458f-5556-4493-b769-25cfea0db07a,Warfare,"war, men, moment",3.0,6,0.1707,0.1,0.0012,0.0,1
-4fd9e115-e48a-4799-aa57-22ddd73e22f7,American Sniper,"war, men, moment",3.5,5,0.1669,0.1,0.0011,0.0,1
+4fd9e115-e48a-4799-aa57-22ddd73e22f7,American Sniper,"war, men, moment",3.5,5,0.1669,0.1,0.0011,0.0,0
 44485fac-a79d-4a19-a54f-e207066a5cc5,Inside Out,"school, love, friend",4.0,4,0.1668,0.1,0.0009,0.0,1
-102bfb19-f615-4e3a-bd9a-7dcfe64b8639,The Boy and the Beast,"action, hero, creature",3.0,4,0.164,0.1,0.0009,0.0,0
-886d1b1b-12c0-4cc9-811c-1fd0132a3eeb,Discovering human nature,"love, friend, young",4.0,4,0.1669,0.0833,0.0008,0.0,0
-fc1c7717-8598-4d87-b4b8-42032942e5d3,What Dreams May Come,"war, men, moment",3.5,3,0.1686,0.0909,0.0006,0.0,0
-17f2bc72-94e3-495a-be03-f6f6cbacaf90,A Bug’s Life,"action, hero, creature",3.5,4,0.1522,0.0909,0.0011,0.0,1
-015e5306-3c12-4754-9362-d709d02e0ce8,Antz,"action, hero, creature",3.5,4,0.1522,0.0909,0.0012,0.0,1
-beb28e89-575f-413d-ad73-50127261729d,The Heat,"love, friend, young",3.0,5,0.1582,0.0833,0.0011,0.0,1
-3d73b9d3-e240-4d0e-84d5-161d37102660,Gone Girl,"love, friend, young",3.5,8,0.1888,0.1,0.0016,0.0,0
+102bfb19-f615-4e3a-bd9a-7dcfe64b8639,The Boy and the Beast,"action, hero, creature",3.0,4,0.164,0.1,0.0009,0.0,1
+886d1b1b-12c0-4cc9-811c-1fd0132a3eeb,Discovering human nature,"love, friend, young",4.0,4,0.1669,0.0833,0.0008,0.0,1
+fc1c7717-8598-4d87-b4b8-42032942e5d3,What Dreams May Come,"war, men, moment",3.5,3,0.1686,0.0909,0.0006,0.0,1
+17f2bc72-94e3-495a-be03-f6f6cbacaf90,A Bug’s Life,"action, hero, creature",3.5,4,0.1522,0.0909,0.0011,0.0,0
+015e5306-3c12-4754-9362-d709d02e0ce8,Antz,"action, hero, creature",3.5,4,0.1522,0.0909,0.0012,0.0,0
+beb28e89-575f-413d-ad73-50127261729d,The Heat,"love, friend, young",3.0,5,0.1582,0.0833,0.0011,0.0,0
+3d73b9d3-e240-4d0e-84d5-161d37102660,Gone Girl,"love, friend, young",3.5,8,0.1888,0.1,0.0016,0.0,1
 77c0f5b4-4f88-409c-99fc-50564aae6981,Triangle of Sadness,"school, love, friend",3.0,0,0.0,0.0,0.0002,1.0,0
-ee7ff62e-be15-4cb2-bcb3-c185889f1d48,The Menu,"comedy, action, bank",3.0,3,0.1496,0.0909,0.0008,0.0,1
-eb863d28-a5a1-4cb6-b8da-9d15e262b604,Almost Famous,"music, song, musical",4.0,5,0.1307,0.0909,0.0012,0.0,0
+ee7ff62e-be15-4cb2-bcb3-c185889f1d48,The Menu,"comedy, action, bank",3.0,3,0.1496,0.0909,0.0008,0.0,0
+eb863d28-a5a1-4cb6-b8da-9d15e262b604,Almost Famous,"music, song, musical",4.0,5,0.1307,0.0909,0.0012,0.0,1
 bc5e0496-0534-4bb1-bc03-b1c9fd412785,Get Out,"horror, house, home",3.0,7,0.1613,0.0833,0.0013,0.0,1
-042d06b7-f8b7-4328-bbad-23e67fbfea16,The franchise on the edge of forever,"alien, ship, space",2.5,6,0.1731,0.1,0.0011,0.0,1
-63a10d5f-cc8a-438b-9304-ad78f86802ae,Alien,"alien, ship, space",4.0,12,0.1523,0.0909,0.0023,0.0,1
+042d06b7-f8b7-4328-bbad-23e67fbfea16,The franchise on the edge of forever,"alien, ship, space",2.5,6,0.1731,0.1,0.0011,0.0,0
+63a10d5f-cc8a-438b-9304-ad78f86802ae,Alien,"alien, ship, space",4.0,12,0.1523,0.0909,0.0023,0.0,0
 42a6e6a2-c34a-4dde-9fd7-1d7cee78ce2f,Cameron retains his crown,"action, hero, creature",4.0,4,0.1646,0.0909,0.0009,0.0,1
-df5b6f90-03b7-40ad-b738-64ff8e1e06c0,Titanic,"alien, ship, space",4.0,5,0.1518,0.0909,0.0011,0.0,1
-39d2965d-96b3-4731-b802-313c7dc6f19b,Fall of the sparrow,"music, song, musical",4.0,6,0.1107,0.0769,0.0013,0.0,0
+df5b6f90-03b7-40ad-b738-64ff8e1e06c0,Titanic,"alien, ship, space",4.0,5,0.1518,0.0909,0.0011,0.0,0
+39d2965d-96b3-4731-b802-313c7dc6f19b,Fall of the sparrow,"music, song, musical",4.0,6,0.1107,0.0769,0.0013,0.0,1
 d94a4f17-3c14-4398-9fcc-1179333a99c5,Spotlight,"school, love, friend",3.5,6,0.1927,0.1111,0.0013,0.0,0
-e32769e9-6aff-4fdb-97b3-417e1d35024d,Bombshell,"school, love, friend",3.0,10,0.1799,0.1,0.002,0.0,0
+e32769e9-6aff-4fdb-97b3-417e1d35024d,Bombshell,"school, love, friend",3.0,10,0.1799,0.1,0.002,0.0,1
 374c7892-931c-4262-aa57-805748f33c3d,The Godfather,"family, father, child",4.0,5,0.1709,0.0909,0.001,0.0,0
 c6fcdf98-cc07-47bf-b74a-62b3cea13ea0,Dr. Strangelove,"war, men, moment",4.0,5,0.1833,0.1,0.0011,0.0,1
 75f06cd7-7650-4c1d-b403-4a13090c61b8,Broadcast News,"school, love, friend",4.0,6,0.1841,0.1,0.0014,0.0,1
-6daa34dc-a67c-4e9d-abdd-a475dde37c63,Civil War,"war, men, moment",4.0,11,0.1941,0.1111,0.0022,0.0,1
-cb006a60-f749-4915-a799-068e907a623e,Ex Machina,"war, men, moment",4.0,4,0.1756,0.1,0.0009,0.0,0
-40ce1fea-fc86-4efd-9b44-c1ba6ca6d191,Annihilation,"horror, house, home",3.5,6,0.157,0.0833,0.0012,0.0,1
-9c39beca-963a-400b-b109-c0907b9a47a8,Jersey Boys,"music, song, musical",2.0,7,0.1382,0.0909,0.0014,0.0,0
-fd77e8f9-3b87-45d3-b64d-fcd12f877321,South Africa’s messiah as rugby fan,"school, love, friend",3.5,7,0.1962,0.1111,0.0013,0.0,1
-be75fe10-cba3-4772-9ea1-b7fc63caac7f,Sniper,"action, hero, creature",3.0,1,0.1509,0.0909,0.0004,0.0,1
-d943ffc1-ca89-4880-a559-73cf7d5890d0,Foxcatcher,"family, father, child",2.5,5,0.1575,0.0909,0.0012,0.0,1
-37b29e53-23c4-4e23-becb-22ea4e209a46,Five Nights at Freddy’s 2,"action, hero, creature",3.0,5,0.1646,0.0833,0.0012,0.0,1
-00b8ae8c-b745-4dd0-b4d4-181837c962e8,Jay Kelly,"school, love, friend",3.0,9,0.1662,0.1,0.0018,0.0,1
-af9dd48a-6651-4899-bdc7-0e5c42e64a6c,Little Trouble Girls,"war, men, moment",3.5,3,0.1708,0.0909,0.0007,0.0,1
+6daa34dc-a67c-4e9d-abdd-a475dde37c63,Civil War,"war, men, moment",4.0,11,0.1941,0.1111,0.0022,0.0,0
+cb006a60-f749-4915-a799-068e907a623e,Ex Machina,"war, men, moment",4.0,4,0.1756,0.1,0.0009,0.0,1
+40ce1fea-fc86-4efd-9b44-c1ba6ca6d191,Annihilation,"horror, house, home",3.5,6,0.157,0.0833,0.0012,0.0,0
+9c39beca-963a-400b-b109-c0907b9a47a8,Jersey Boys,"music, song, musical",2.0,7,0.1382,0.0909,0.0014,0.0,1
+fd77e8f9-3b87-45d3-b64d-fcd12f877321,South Africa’s messiah as rugby fan,"school, love, friend",3.5,7,0.1962,0.1111,0.0013,0.0,0
+be75fe10-cba3-4772-9ea1-b7fc63caac7f,Sniper,"action, hero, creature",3.0,1,0.1509,0.0909,0.0004,0.0,0
+d943ffc1-ca89-4880-a559-73cf7d5890d0,Foxcatcher,"family, father, child",2.5,5,0.1575,0.0909,0.0012,0.0,0
+37b29e53-23c4-4e23-becb-22ea4e209a46,Five Nights at Freddy’s 2,"action, hero, creature",3.0,5,0.1646,0.0833,0.0012,0.0,0
+00b8ae8c-b745-4dd0-b4d4-181837c962e8,Jay Kelly,"school, love, friend",3.0,9,0.1662,0.1,0.0018,0.0,0
+af9dd48a-6651-4899-bdc7-0e5c42e64a6c,Little Trouble Girls,"war, men, moment",3.5,3,0.1708,0.0909,0.0007,0.0,0
 b3d2759e-69d3-4ad8-9a76-5ae1020fa821,The Chronology of Water,"school, love, friend",4.0,2,0.156,0.1,0.0006,0.0,1
 ed1a8c48-ee59-4e49-bba1-a938ad76e437,Rosemead,"family, father, child",3.0,4,0.1635,0.0909,0.0008,0.0,0
 e2e9c811-c08d-40da-9793-083acd97e301,Oh. What. Fun.,"family, father, child",2.0,17,0.183,0.1,0.0032,0.0,0
@@ -79,815 +79,815 @@ e2e9c811-c08d-40da-9793-083acd97e301,Oh. What. Fun.,"family, father, child",2.0,
 1496ae73-2a53-4c62-a3d6-4e7ead538fa8,The Merchants of Joy,"family, father, child",3.0,5,0.1668,0.0909,0.0011,0.0,1
 8bf77c1e-c2fb-44f9-a1f6-0536bc6894b0,The Mysterious Gaze of the Flamingo,"family, father, child",3.0,4,0.1595,0.0909,0.0009,0.0,0
 04a2b005-82b8-4753-8d2b-c838b134d9ac,Merrily We Roll Along,"music, song, musical",3.5,15,0.1401,0.0909,0.0027,0.0,0
-8aa9fd05-05bd-45dd-9518-7b91e456fef6,Merv,"school, love, friend",1.5,5,0.1682,0.1,0.0013,0.0,0
+8aa9fd05-05bd-45dd-9518-7b91e456fef6,Merv,"school, love, friend",1.5,5,0.1682,0.1,0.0013,0.0,1
 cb9b3725-e73d-4334-a6e0-f3ad62c37f95,Fackham Hall,"family, father, child",2.0,4,0.1583,0.0909,0.0009,0.0,0
-4d9b3903-2621-4fc3-bc43-3c264594ef2b,Man Finds Tape,"horror, house, home",3.0,6,0.1685,0.0909,0.0013,0.0,1
+4d9b3903-2621-4fc3-bc43-3c264594ef2b,Man Finds Tape,"horror, house, home",3.0,6,0.1685,0.0909,0.0013,0.0,0
 7558ded1-4275-4e88-aeee-8c68df5faa37,100 Nights of Hero,"war, men, moment",3.0,2,0.1809,0.1111,0.0005,0.0,0
 4d7d2b65-1804-4eb6-b018-d38b72c9ab08,Come Closer,"school, love, friend",2.5,7,0.1691,0.0909,0.0013,0.0,0
 62632b15-39d3-411b-8dfa-ea4d79e598a2,Kill Bill: The Whole Bloody Affair,"war, men, moment",4.0,6,0.1893,0.1,0.0011,0.0,1
-59ce79a6-7170-4153-b8b9-c111f1d59c67,Reflection in a Dead Diamond,"war, men, moment",3.0,5,0.1664,0.0909,0.001,0.0,1
-403de090-bbf0-4610-acf0-bffd0789e52d,Little Disasters,"family, father, child",1.5,5,0.1629,0.0909,0.001,0.0,0
-b16c794a-1650-4046-95b3-9b7ca7448942,La Grazia,"war, men, moment",3.0,1,0.1535,0.1,0.0004,0.0,1
+59ce79a6-7170-4153-b8b9-c111f1d59c67,Reflection in a Dead Diamond,"war, men, moment",3.0,5,0.1664,0.0909,0.001,0.0,0
+403de090-bbf0-4610-acf0-bffd0789e52d,Little Disasters,"family, father, child",1.5,5,0.1629,0.0909,0.001,0.0,1
+b16c794a-1650-4046-95b3-9b7ca7448942,La Grazia,"war, men, moment",3.0,1,0.1535,0.1,0.0004,0.0,0
 f826909b-42b0-49c9-b417-bf385656cfe6,Marty Supreme,"school, love, friend",4.0,4,0.153,0.1,0.0009,0.0,1
-62d65a01-9447-4308-99e0-b7308b81d904,Five Nights at Freddy’s,"horror, house, home",2.0,4,0.1732,0.0909,0.0009,0.0,1
+62d65a01-9447-4308-99e0-b7308b81d904,Five Nights at Freddy’s,"horror, house, home",2.0,4,0.1732,0.0909,0.0009,0.0,0
 a404db87-440e-479c-8d6d-2b84a55c6ce9,The Wind,"war, men, moment",3.5,4,0.162,0.0909,0.0008,0.0,1
-486d7bf0-794a-4f3a-a058-df435ef7bc5a,Uncut Gems,"love, friend, young",4.0,4,0.1631,0.0833,0.0009,0.0,0
+486d7bf0-794a-4f3a-a058-df435ef7bc5a,Uncut Gems,"love, friend, young",4.0,4,0.1631,0.0833,0.0009,0.0,1
 f8e11e54-ed0e-403e-9187-2174567f96a1,The Meyerowitz Stories,"family, father, child",3.5,8,0.1781,0.1,0.0015,0.0,0
 e2699575-9ee7-49b8-8ccc-c89ab59c8e43,The Ref,"love, friend, young",3.0,3,0.158,0.0909,0.0007,0.0,0
 c2ee2408-a8da-4851-98c1-fbb2218cb233,Suze,"school, love, friend",3.0,6,0.1653,0.1,0.0013,0.0,1
-b7b28681-8cac-4bcc-85f4-2e60a2a7e926,Galaxy Quest,"alien, ship, space",3.0,7,0.1495,0.0909,0.0015,0.0,1
+b7b28681-8cac-4bcc-85f4-2e60a2a7e926,Galaxy Quest,"alien, ship, space",3.0,7,0.1495,0.0909,0.0015,0.0,0
 60af43aa-b66f-483b-984c-5401cc9a8d4d,Downton Abbey,"school, love, friend",3.5,6,0.1632,0.1,0.0012,0.0,1
 85ffb3ca-0519-402e-ba26-b2b39c303226,The Blair Witch Project,"horror, house, home",4.0,4,0.1544,0.0833,0.0009,0.0,0
 c41e88d3-0504-4154-988c-15edf3c7c1c3,Prince of Darkness,"action, hero, creature",2.0,4,0.1622,0.0833,0.0007,0.0,1
-269f1d9a-ec7d-4407-899c-1478ab63dd7f,Shelby Oaks,"horror, house, home",2.0,5,0.1695,0.1,0.0013,0.0,1
+269f1d9a-ec7d-4407-899c-1478ab63dd7f,Shelby Oaks,"horror, house, home",2.0,5,0.1695,0.1,0.0013,0.0,0
 6b7ce099-e135-4502-ae0f-e5aea0a20c15,The Endless,"horror, house, home",3.5,4,0.1459,0.0769,0.0008,0.0,1
-d991a62e-13bf-4f7a-a924-4feaa57f7457,Something in the Dirt,"love, friend, young",3.0,5,0.1616,0.0909,0.0011,0.0,0
+d991a62e-13bf-4f7a-a924-4feaa57f7457,Something in the Dirt,"love, friend, young",3.0,5,0.1616,0.0909,0.0011,0.0,1
 998382ec-493c-4b3e-a9af-595cf05338b0,Stories We Tell,"family, father, child",4.0,4,0.1576,0.0909,0.0009,0.0,0
 11ad37ab-3140-48dc-b345-b49edcda81e7,It Follows,"love, friend, young",3.5,6,0.1464,0.0833,0.0014,0.0,0
 5a2bc463-4270-4e96-abe8-cef694772615,Longlegs,"horror, house, home",2.5,5,0.1619,0.0833,0.0011,0.0,1
 9f61af53-e589-499c-b93a-02d47fb75260,The Idea of You,"music, song, musical",3.0,4,0.1161,0.0833,0.0007,0.0,0
-1f390017-71a7-416a-a303-55ba8b9caeb8,"Kill Bill, Volume 1","action, hero, creature",4.0,7,0.1904,0.0909,0.0015,0.0,0
-2ddb7451-5806-42b1-9874-ad416b8b479e,"Kill Bill, Volume 2","action, hero, creature",4.0,7,0.1876,0.0909,0.0016,0.0,0
-29fd2027-d161-4708-b169-34e792917fab,Once Upon a Time … in Hollywood,"school, love, friend",4.0,11,0.1784,0.1111,0.0021,0.0,1
+1f390017-71a7-416a-a303-55ba8b9caeb8,"Kill Bill, Volume 1","action, hero, creature",4.0,7,0.1904,0.0909,0.0015,0.0,1
+2ddb7451-5806-42b1-9874-ad416b8b479e,"Kill Bill, Volume 2","action, hero, creature",4.0,7,0.1876,0.0909,0.0016,0.0,1
+29fd2027-d161-4708-b169-34e792917fab,Once Upon a Time … in Hollywood,"school, love, friend",4.0,11,0.1784,0.1111,0.0021,0.0,0
 6a182fa5-57dc-44c1-bcb7-0d7a43700c97,Pulp Fiction,"love, friend, young",4.0,5,0.1627,0.0909,0.001,0.0,1
-78ad1f38-0b38-4c71-83c6-57e9f09b7c44,Let the Corpses Tan,"war, men, moment",2.0,5,0.1701,0.1,0.0011,0.0,1
+78ad1f38-0b38-4c71-83c6-57e9f09b7c44,Let the Corpses Tan,"war, men, moment",2.0,5,0.1701,0.1,0.0011,0.0,0
 330a3978-7c0f-4169-93e3-fb183c494a92,Parthenope,"war, men, moment",3.0,8,0.1923,0.1,0.0016,0.0,0
 262ca744-a976-4a52-8671-7b2c34213277,Heaven Knows What,"school, love, friend",2.0,5,0.1869,0.1111,0.001,0.0,1
-02ff4903-6d94-45dd-b025-7a4838d0b625,Good Time,"comedy, action, bank",3.5,4,0.1378,0.0909,0.0007,0.0,1
+02ff4903-6d94-45dd-b025-7a4838d0b625,Good Time,"comedy, action, bank",3.5,4,0.1378,0.0909,0.0007,0.0,0
 3f45df0d-5bc5-40c1-94a6-3e55188c2e3d,The Royal Tenenbaums,"family, father, child",3.5,5,0.1606,0.0909,0.0012,0.0,0
-20e6db1f-ce92-48e3-81e1-7d14116c25d6,May December,"school, love, friend",4.0,4,0.1679,0.1,0.0007,0.0,0
+20e6db1f-ce92-48e3-81e1-7d14116c25d6,May December,"school, love, friend",4.0,4,0.1679,0.1,0.0007,0.0,1
 515601e5-5cd3-4d0b-b65d-3c47b453c1e1,Trekkies,"school, love, friend",3.0,0,0.0,0.0,0.0002,1.0,0
-fc8ba89d-6704-4abd-80c9-45aab67a9f3b,Toy Story 4,"family, father, child",4.0,4,0.1651,0.0909,0.0008,0.0,0
+fc8ba89d-6704-4abd-80c9-45aab67a9f3b,Toy Story 4,"family, father, child",4.0,4,0.1651,0.0909,0.0008,0.0,1
 6ba3b4a2-8937-426b-b217-c6abbb3dd277,Joker,"school, love, friend",2.0,4,0.1629,0.0909,0.0008,0.0,1
 93307af2-942f-40db-a2bf-6eabd3437cc5,Moonstruck,"love, friend, young",4.0,6,0.1686,0.0833,0.0012,0.0,0
 f90b82af-b2be-4d34-be0f-14cae9a9ffac,Once Around,"family, father, child",3.5,5,0.1628,0.0909,0.001,0.0,1
-946b795d-a6fa-45ff-ae26-82df077eab3b,The Wedding Banquet,"love, friend, young",3.0,4,0.1637,0.0833,0.0009,0.0,0
+946b795d-a6fa-45ff-ae26-82df077eab3b,The Wedding Banquet,"love, friend, young",3.0,4,0.1637,0.0833,0.0009,0.0,1
 661b08b8-dce6-4235-9ab5-081554f9ea0a,The art of conversation,"family, father, child",4.0,10,0.1656,0.0909,0.0021,0.0,0
-34bdc845-b28d-4880-96c6-8aca201890b5,The Exorcist,"horror, house, home",4.0,7,0.168,0.0833,0.0013,0.0,1
+34bdc845-b28d-4880-96c6-8aca201890b5,The Exorcist,"horror, house, home",4.0,7,0.168,0.0833,0.0013,0.0,0
 f0873108-0c1c-452c-bf5f-ce9e5a93b203,The Thing,"action, hero, creature",2.5,2,0.155,0.0833,0.0005,0.0,1
 6fb25578-5363-430f-a719-192b7253cea6,Hell House LLC: Lineage,"horror, house, home",1.5,10,0.1765,0.0909,0.002,0.0,1
-f80773dc-b0cf-47c0-987a-74fb29469445,Edge of Tomorrow,"war, men, moment",3.5,6,0.1757,0.1,0.0012,0.0,0
-d9ccd955-b8c9-4117-9a22-fd2b622fbee5,The shadow of his smile,"love, friend, young",4.0,4,0.1689,0.0909,0.0008,0.0,0
-5a9272c6-a689-4d09-8c53-ae0c66c46487,Crime and crime again,"love, friend, young",3.5,4,0.153,0.0833,0.0009,0.0,0
-f2e456ef-38ba-4e01-93aa-6de8a94cac25,The X-Files,"alien, ship, space",3.0,4,0.1323,0.0833,0.0008,0.0,1
-cb7d0b19-aab3-410c-a6b1-0f9d137877d4,The Sweet Hereafter,"love, friend, young",4.0,4,0.1623,0.0833,0.0009,0.0,1
+f80773dc-b0cf-47c0-987a-74fb29469445,Edge of Tomorrow,"war, men, moment",3.5,6,0.1757,0.1,0.0012,0.0,1
+d9ccd955-b8c9-4117-9a22-fd2b622fbee5,The shadow of his smile,"love, friend, young",4.0,4,0.1689,0.0909,0.0008,0.0,1
+5a9272c6-a689-4d09-8c53-ae0c66c46487,Crime and crime again,"love, friend, young",3.5,4,0.153,0.0833,0.0009,0.0,1
+f2e456ef-38ba-4e01-93aa-6de8a94cac25,The X-Files,"alien, ship, space",3.0,4,0.1323,0.0833,0.0008,0.0,0
+cb7d0b19-aab3-410c-a6b1-0f9d137877d4,The Sweet Hereafter,"love, friend, young",4.0,4,0.1623,0.0833,0.0009,0.0,0
 82a0d178-907e-42c4-b241-e5ec5cfcc6cb,"Love, chicken Tetrazzini and rickshaws","love, friend, young",3.0,5,0.1705,0.0909,0.001,0.0,1
 0a88094c-86c0-4420-83b9-f91921e23ec3,The Silence of the Lambs,"love, friend, young",4.0,5,0.1614,0.0833,0.0011,0.0,0
 3971b8af-138e-4733-bcae-a62a9fc52ab4,I Am the Pretty Thing that Lives in the House,"horror, house, home",3.0,13,0.1837,0.1,0.0026,0.0,1
-57a319f4-8a9d-47f8-87a0-7613a6e35fc3,Notting Hill,"love, friend, young",3.0,5,0.1634,0.0909,0.001,0.0,0
-ffc0ef4b-ef5c-476c-af93-975eaa4e95c5,The Matrix Reloaded,"action, hero, creature",3.5,7,0.1736,0.0833,0.0013,0.0,1
+57a319f4-8a9d-47f8-87a0-7613a6e35fc3,Notting Hill,"love, friend, young",3.0,5,0.1634,0.0909,0.001,0.0,1
+ffc0ef4b-ef5c-476c-af93-975eaa4e95c5,The Matrix Reloaded,"action, hero, creature",3.5,7,0.1736,0.0833,0.0013,0.0,0
 04f971dd-5c8d-4c3e-84d2-293819336ede,The Strange Color of Your Body’s Tears,"war, men, moment",3.0,5,0.1629,0.0909,0.0011,0.0,0
-40a89390-22bc-4396-8509-230443c71abf,A Clockwork Orange,"love, friend, young",2.0,4,0.1555,0.0909,0.0009,0.0,0
+40a89390-22bc-4396-8509-230443c71abf,A Clockwork Orange,"love, friend, young",2.0,4,0.1555,0.0909,0.0009,0.0,1
 cdc5fad9-6210-4352-96a7-c2cc05174d6d,The Two Popes,"school, love, friend",3.5,6,0.2057,0.125,0.0012,0.0,1
 d0d81a23-8a60-4a07-b82a-d7540877126d,The Hand of God,"family, father, child",3.5,6,0.1803,0.1,0.0012,0.0,0
 a5de0f88-6207-42d6-ac7b-4cb5075d1173,La Dolce Vita,"love, friend, young",4.0,7,0.1716,0.0833,0.0012,0.0,1
-5b167345-304c-4a0b-b49d-4ed678a69dcf,Youth,"war, men, moment",2.0,4,0.1731,0.1,0.0008,0.0,1
+5b167345-304c-4a0b-b49d-4ed678a69dcf,Youth,"war, men, moment",2.0,4,0.1731,0.1,0.0008,0.0,0
 d2b6baab-8a40-420c-912b-97dca6fa765d,Amarcord,"family, father, child",4.0,5,0.1974,0.1111,0.0011,0.0,1
-2bf9e815-b4ff-4e5b-9495-401f85c33ae9,City of Women,"love, friend, young",2.5,3,0.1476,0.0833,0.0007,0.0,0
-5a695831-90b7-48ed-8c2c-c52af326b09f,Yves Saint Laurent,"school, love, friend",2.0,4,0.1638,0.1,0.0009,0.0,1
+2bf9e815-b4ff-4e5b-9495-401f85c33ae9,City of Women,"love, friend, young",2.5,3,0.1476,0.0833,0.0007,0.0,1
+5a695831-90b7-48ed-8c2c-c52af326b09f,Yves Saint Laurent,"school, love, friend",2.0,4,0.1638,0.1,0.0009,0.0,0
 7ff1ff8e-a2bc-498e-a862-996f9c117173,The Thing With Feathers,"family, father, child",1.5,3,0.1563,0.0909,0.0006,0.0,0
 89b8a032-f0ba-44ba-b3e5-5d8a9a52c6f1,The Secret Agent,"love, friend, young",4.0,6,0.1748,0.1,0.0012,0.0,0
 a74b4b28-8d73-4f9d-9c0f-b829e53b52e3,Sisu: Road to Revenge,"action, hero, creature",3.5,6,0.1679,0.0909,0.0012,0.0,0
 b8db7b0c-c9f2-4fc8-bfc7-d8b0b4a19105,Troll 2,"action, hero, creature",2.0,5,0.1617,0.0909,0.001,0.0,0
-97cf0182-884f-4c09-b57c-a775a198e692,Cactus Pears,"family, father, child",4.0,9,0.1836,0.1,0.0017,0.0,0
+97cf0182-884f-4c09-b57c-a775a198e692,Cactus Pears,"family, father, child",4.0,9,0.1836,0.1,0.0017,0.0,1
 920518c4-8e35-4cc6-ba8c-9251600db28f,Zootopia 2,"action, hero, creature",4.0,3,0.1371,0.0909,0.001,0.0,1
 9e4e6707-e2d4-4274-8b4a-3ce7d943ed2a,Angel’s Egg,"war, men, moment",3.5,6,0.1716,0.1,0.0013,0.0,1
-e7ff444d-58d1-4ae2-8020-bd43b830b287,The Stringer: The Man Who Took the Photo,"school, love, friend",3.5,3,0.147,0.0909,0.0007,0.0,1
-1c206198-54e5-429e-a4a1-e82db6f58cb9,Hamnet,"family, father, child",2.5,4,0.157,0.0909,0.0009,0.0,0
-4dab877b-f7af-4159-a4a4-4a6b593fe57c,The Shuffle,"music, song, musical",3.0,5,0.1617,0.1,0.0009,0.0,1
+e7ff444d-58d1-4ae2-8020-bd43b830b287,The Stringer: The Man Who Took the Photo,"school, love, friend",3.5,3,0.147,0.0909,0.0007,0.0,0
+1c206198-54e5-429e-a4a1-e82db6f58cb9,Hamnet,"family, father, child",2.5,4,0.157,0.0909,0.0009,0.0,1
+4dab877b-f7af-4159-a4a4-4a6b593fe57c,The Shuffle,"music, song, musical",3.0,5,0.1617,0.1,0.0009,0.0,0
 30e944ad-d8e0-46ec-8648-85faae6cdc57,Wicked: For Good,"music, song, musical",3.0,6,0.1232,0.0833,0.0011,0.0,0
 09782f7e-35a2-4edb-bc15-468c90d7058b,Zodiac Killer Project,"horror, house, home",3.0,7,0.1787,0.0909,0.0017,0.0,1
-7417da05-c1a9-42b2-b655-599af6e64f34,Sallywood,"school, love, friend",3.0,6,0.1658,0.1,0.0013,0.0,1
-6d919a3f-4244-4a78-ae91-aa7205928c8f,BLKNWS: Terms & Conditions,"war, men, moment",4.0,5,0.1592,0.1,0.001,0.0,1
-44651d00-7a41-41cd-9d6d-be2f35884a19,Eternity,"school, love, friend",3.5,2,0.1707,0.1111,0.0004,0.0,0
-b2d82e9e-d051-4ba1-93da-cd347f603f98,Rental Family,"school, love, friend",3.5,6,0.1628,0.1,0.0013,0.0,1
-f7e3a346-a1a2-4833-abe0-cb8515910f48,Cutting Through Rocks,"family, father, child",3.0,4,0.1767,0.1,0.0008,0.0,0
-a6143dcc-2810-4969-bf70-b52165503ac1,The Family Plan 2,"comedy, action, bank",1.0,6,0.1528,0.0909,0.0013,0.0,1
+7417da05-c1a9-42b2-b655-599af6e64f34,Sallywood,"school, love, friend",3.0,6,0.1658,0.1,0.0013,0.0,0
+6d919a3f-4244-4a78-ae91-aa7205928c8f,BLKNWS: Terms & Conditions,"war, men, moment",4.0,5,0.1592,0.1,0.001,0.0,0
+44651d00-7a41-41cd-9d6d-be2f35884a19,Eternity,"school, love, friend",3.5,2,0.1707,0.1111,0.0004,0.0,1
+b2d82e9e-d051-4ba1-93da-cd347f603f98,Rental Family,"school, love, friend",3.5,6,0.1628,0.1,0.0013,0.0,0
+f7e3a346-a1a2-4833-abe0-cb8515910f48,Cutting Through Rocks,"family, father, child",3.0,4,0.1767,0.1,0.0008,0.0,1
+a6143dcc-2810-4969-bf70-b52165503ac1,The Family Plan 2,"comedy, action, bank",1.0,6,0.1528,0.0909,0.0013,0.0,0
 91f29c49-60e5-41ed-920e-743765d81b55,Teenage Wasteland,"school, love, friend",3.0,4,0.1575,0.1,0.0007,0.0,0
 7af17704-b1b5-4b76-9a7a-27180a34031d,The Tale of Silyan,"family, father, child",4.0,4,0.1698,0.1,0.0009,0.0,1
-09df6d0c-bd9d-4bfc-9744-42457d6490e8,Aquarius,"family, father, child",3.5,5,0.1669,0.0909,0.001,0.0,1
-33166473-637e-49a8-89fa-ff3b9ce1f7c0,Sisu,"war, men, moment",3.5,6,0.1793,0.1,0.0013,0.0,1
+09df6d0c-bd9d-4bfc-9744-42457d6490e8,Aquarius,"family, father, child",3.5,5,0.1669,0.0909,0.001,0.0,0
+33166473-637e-49a8-89fa-ff3b9ce1f7c0,Sisu,"war, men, moment",3.5,6,0.1793,0.1,0.0013,0.0,0
 39e33deb-e832-40c0-8a82-bb8c2534c6c5,Zootopia,"action, hero, creature",3.0,4,0.1587,0.1,0.0011,0.0,1
-290008fc-c178-47ed-93b4-ca964dd90d51,The Matrix,"action, hero, creature",3.0,14,0.1793,0.0833,0.0026,0.0,1
-8e2ced7a-5041-46fc-9268-b6d3b54afe75,The Rider,"war, men, moment",4.0,3,0.1405,0.0909,0.0014,0.0,1
-85790dc5-2b6b-421d-96f5-22c794939960,Nomadland,"family, father, child",4.0,4,0.1562,0.0909,0.0008,0.0,1
-d95a340d-1879-4068-9569-0caf7081b70c,Eternals,"war, men, moment",2.0,5,0.1698,0.1,0.001,0.0,1
-6337d156-bd25-46a1-8beb-b730a30e22a1,Cold War,"music, song, musical",4.0,1,0.0991,0.0714,0.0004,0.0,0
-b08f0f5a-e714-41fa-8cb2-28d09a582d0f,Sentimental Value,"family, father, child",4.0,9,0.1843,0.1,0.0017,0.0,1
-effc6aee-57df-4bd9-aca6-ae88d9cbe206,"Family Romance, LLC","family, father, child",3.0,4,0.1592,0.0909,0.0009,0.0,0
+290008fc-c178-47ed-93b4-ca964dd90d51,The Matrix,"action, hero, creature",3.0,14,0.1793,0.0833,0.0026,0.0,0
+8e2ced7a-5041-46fc-9268-b6d3b54afe75,The Rider,"war, men, moment",4.0,3,0.1405,0.0909,0.0014,0.0,0
+85790dc5-2b6b-421d-96f5-22c794939960,Nomadland,"family, father, child",4.0,4,0.1562,0.0909,0.0008,0.0,0
+d95a340d-1879-4068-9569-0caf7081b70c,Eternals,"war, men, moment",2.0,5,0.1698,0.1,0.001,0.0,0
+6337d156-bd25-46a1-8beb-b730a30e22a1,Cold War,"music, song, musical",4.0,1,0.0991,0.0714,0.0004,0.0,1
+b08f0f5a-e714-41fa-8cb2-28d09a582d0f,Sentimental Value,"family, father, child",4.0,9,0.1843,0.1,0.0017,0.0,0
+effc6aee-57df-4bd9-aca6-ae88d9cbe206,"Family Romance, LLC","family, father, child",3.0,4,0.1592,0.0909,0.0009,0.0,1
 e956efb7-64e3-447f-8bf4-00bcf41e6b46,Lost in Translation,"love, friend, young",4.0,5,0.169,0.0909,0.001,0.0,0
 56882058-2268-439a-a9f7-3d929fa39c0e,The Family Plan,"comedy, action, bank",1.5,5,0.1518,0.0909,0.0012,0.0,0
 9a51aade-7dc3-4a6e-b24e-5fd3983479a9,Wolfs,"school, love, friend",3.0,4,0.144,0.0909,0.0009,0.0,1
-5aeca4d9-298e-4453-ae28-49085dade2c1,Arthur the King,"school, love, friend",3.0,6,0.181,0.1,0.0013,0.0,1
+5aeca4d9-298e-4453-ae28-49085dade2c1,Arthur the King,"school, love, friend",3.0,6,0.181,0.1,0.0013,0.0,0
 aac1e7d9-e1ad-4f28-a549-0767ba559286,Nobody,"action, hero, creature",3.0,7,0.1704,0.1,0.0015,0.0,0
-7287af51-dd0f-4091-b009-789346ac6c06,True Lies,"action, hero, creature",3.0,5,0.1467,0.0769,0.001,0.0,1
+7287af51-dd0f-4091-b009-789346ac6c06,True Lies,"action, hero, creature",3.0,5,0.1467,0.0769,0.001,0.0,0
 b85f8da3-cfad-4b4c-abd5-ae2a92ecebf7,Boys State,"school, love, friend",3.5,5,0.2076,0.125,0.0011,0.0,1
 7902b523-2ccc-4f19-853a-7084018528f9,Girls State,"school, love, friend",3.5,3,0.1768,0.1111,0.0006,0.0,0
-be1e2fb0-36d7-4764-bc60-799bf34f8331,Honeyland,"family, father, child",3.5,4,0.1615,0.0909,0.0008,0.0,0
-ee52b84a-4e22-48ac-88b1-001fb08fdd3b,Paper-thin walls between past and present,"family, father, child",4.0,6,0.1604,0.0909,0.0012,0.0,0
+be1e2fb0-36d7-4764-bc60-799bf34f8331,Honeyland,"family, father, child",3.5,4,0.1615,0.0909,0.0008,0.0,1
+ee52b84a-4e22-48ac-88b1-001fb08fdd3b,Paper-thin walls between past and present,"family, father, child",4.0,6,0.1604,0.0909,0.0012,0.0,1
 99f2230d-4129-428c-a7d7-8190bf218f0a,"Technically awesome, emotionally distant, and classically Kubrick","war, men, moment",4.0,7,0.1863,0.1111,0.0013,0.0,0
-a3df9654-5102-42ea-a67d-0941b7bd3897,Mad Max: Fury Road,"action, hero, creature",4.0,13,0.1866,0.1,0.0023,0.0,0
-79e66508-85a4-43d9-be27-da7acc56da0f,Strange Days,"love, friend, young",4.0,5,0.1647,0.1,0.001,0.0,0
+a3df9654-5102-42ea-a67d-0941b7bd3897,Mad Max: Fury Road,"action, hero, creature",4.0,13,0.1866,0.1,0.0023,0.0,1
+79e66508-85a4-43d9-be27-da7acc56da0f,Strange Days,"love, friend, young",4.0,5,0.1647,0.1,0.001,0.0,1
 a67be2a0-5fd2-4c52-9cca-867469b73960,Bound,"love, friend, young",4.0,5,0.1779,0.1,0.001,0.0,0
-0929b0fd-9e1b-464c-b3dc-20815db14212,Doug’s 1st Movie,"action, hero, creature",1.5,4,0.1642,0.0833,0.0007,0.0,1
+0929b0fd-9e1b-464c-b3dc-20815db14212,Doug’s 1st Movie,"action, hero, creature",1.5,4,0.1642,0.0833,0.0007,0.0,0
 def37cc9-0261-41cc-8975-a948b3124bd3,Guardians of the Galaxy,"action, hero, creature",3.0,7,0.1602,0.0833,0.0016,0.0,1
-19e4cd41-b526-4d66-8923-c5807b9503b6,Doctor Strange,"war, men, moment",2.5,7,0.1931,0.1111,0.0014,0.0,0
-70f8b8bd-6ed6-466d-9deb-59786040300b,Captain Marvel,"comedy, action, bank",2.5,6,0.1717,0.1,0.0012,0.0,1
-53a66e7c-c9e5-4c52-ab95-db2bfb577f9e,Avengers: Infinity War,"action, hero, creature",2.5,10,0.1871,0.1,0.002,0.0,1
-ae2ee1a9-8b9b-4c2e-8dd9-f97550e29c12,Casablanca,"love, friend, young",4.0,9,0.1788,0.1,0.0018,0.0,1
+19e4cd41-b526-4d66-8923-c5807b9503b6,Doctor Strange,"war, men, moment",2.5,7,0.1931,0.1111,0.0014,0.0,1
+70f8b8bd-6ed6-466d-9deb-59786040300b,Captain Marvel,"comedy, action, bank",2.5,6,0.1717,0.1,0.0012,0.0,0
+53a66e7c-c9e5-4c52-ab95-db2bfb577f9e,Avengers: Infinity War,"action, hero, creature",2.5,10,0.1871,0.1,0.002,0.0,0
+ae2ee1a9-8b9b-4c2e-8dd9-f97550e29c12,Casablanca,"love, friend, young",4.0,9,0.1788,0.1,0.0018,0.0,0
 362339e4-5d3c-41dd-a9e1-f3dcd45879d9,The Worst Person in the World,"war, men, moment",4.0,8,0.1845,0.1,0.0016,0.0,1
-afa1c67e-78a7-4996-82a6-fc016102c48b,Scenes from a Marriage,"family, father, child",4.0,4,0.1673,0.1,0.0009,0.0,0
-45b2c54e-3999-42e1-8c25-ad3a2e3a420c,Before Sunrise,"love, friend, young",3.0,6,0.1472,0.0769,0.0012,0.0,0
-62b27889-1d99-4402-a1ab-9ccd20fe103f,John Wick,"comedy, action, bank",3.0,4,0.1577,0.1,0.0009,0.0,1
+afa1c67e-78a7-4996-82a6-fc016102c48b,Scenes from a Marriage,"family, father, child",4.0,4,0.1673,0.1,0.0009,0.0,1
+45b2c54e-3999-42e1-8c25-ad3a2e3a420c,Before Sunrise,"love, friend, young",3.0,6,0.1472,0.0769,0.0012,0.0,1
+62b27889-1d99-4402-a1ab-9ccd20fe103f,John Wick,"comedy, action, bank",3.0,4,0.1577,0.1,0.0009,0.0,0
 405e9180-9f48-4b13-a640-51db34595a3e,Hardcore Henry,"action, hero, creature",2.5,4,0.1698,0.0909,0.0008,0.0,1
-63ea6fc0-07bb-4ec6-94e1-f38d38bedf86,Wayne’s World,"school, love, friend",3.0,1,0.141,0.0909,0.0003,0.0,0
-3c06248b-8ff3-4298-af5e-64391241272b,Total Recall,"action, hero, creature",3.5,5,0.1574,0.0833,0.0011,0.0,1
-646b5df3-5039-4b00-94b5-9eb90dbbb65b,Frankenstein,"war, men, moment",4.0,5,0.1624,0.0909,0.0011,0.0,1
-df41eec6-e5ef-415b-9455-e01e47355426,Murder at the Embassy,"love, friend, young",1.5,5,0.1685,0.0909,0.0011,0.0,1
-dd0c6514-7189-48b2-9c44-73c6b94c3e1c,King Ivory,"love, friend, young",1.5,6,0.1529,0.0909,0.0013,0.0,0
-023ab3a2-b649-4faa-ba6e-286c6901d8d3,Playdate,"comedy, action, bank",1.0,4,0.1672,0.1111,0.0009,0.0,1
+63ea6fc0-07bb-4ec6-94e1-f38d38bedf86,Wayne’s World,"school, love, friend",3.0,1,0.141,0.0909,0.0003,0.0,1
+3c06248b-8ff3-4298-af5e-64391241272b,Total Recall,"action, hero, creature",3.5,5,0.1574,0.0833,0.0011,0.0,0
+646b5df3-5039-4b00-94b5-9eb90dbbb65b,Frankenstein,"war, men, moment",4.0,5,0.1624,0.0909,0.0011,0.0,0
+df41eec6-e5ef-415b-9455-e01e47355426,Murder at the Embassy,"love, friend, young",1.5,5,0.1685,0.0909,0.0011,0.0,0
+dd0c6514-7189-48b2-9c44-73c6b94c3e1c,King Ivory,"love, friend, young",1.5,6,0.1529,0.0909,0.0013,0.0,1
+023ab3a2-b649-4faa-ba6e-286c6901d8d3,Playdate,"comedy, action, bank",1.0,4,0.1672,0.1111,0.0009,0.0,0
 440ba998-57f0-4577-b26a-ddc989006241,Left-Handed Girl,"family, father, child",3.0,5,0.1693,0.1,0.0011,0.0,0
-68a40a25-aa90-4708-af65-465e02021abf,The American Revolution,"war, men, moment",3.5,5,0.1753,0.1111,0.001,0.0,1
-7dd188b2-db2c-4576-a02c-d7a29ef7705f,The Carpenter’s Son,"horror, house, home",1.5,5,0.1586,0.0833,0.001,0.0,1
+68a40a25-aa90-4708-af65-465e02021abf,The American Revolution,"war, men, moment",3.5,5,0.1753,0.1111,0.001,0.0,0
+7dd188b2-db2c-4576-a02c-d7a29ef7705f,The Carpenter’s Son,"horror, house, home",1.5,5,0.1586,0.0833,0.001,0.0,0
 f2c40ec8-e4ad-4996-ad9f-026f80da5e24,Now You See Me: Now You Don’t,"school, love, friend",2.5,1,0.1157,0.0714,0.0006,0.0,1
 bf746886-ce9f-403a-9dec-1908d20e50ff,The Beast in Me,"family, father, child",3.5,4,0.1658,0.1,0.0009,0.0,0
 d4a5405f-f52b-4a7e-bd90-cf7b6cceca2c,Rebuilding,"family, father, child",3.5,4,0.1695,0.0909,0.0009,0.0,0
-246d964e-a81f-49eb-8eb1-679d9db5a942,ARCO,"war, men, moment",3.0,5,0.173,0.1,0.0012,0.0,1
+246d964e-a81f-49eb-8eb1-679d9db5a942,ARCO,"war, men, moment",3.0,5,0.173,0.1,0.0012,0.0,0
 61dc2e0c-3448-4c9e-b139-98c0143d0a30,Keeper,"horror, house, home",2.0,11,0.1664,0.0909,0.0021,0.0,0
-531b74af-0164-4f8a-9075-67d6576f9244,Being Eddie,"comedy, action, bank",3.0,4,0.1593,0.1,0.0011,0.0,0
+531b74af-0164-4f8a-9075-67d6576f9244,Being Eddie,"comedy, action, bank",3.0,4,0.1593,0.1,0.0011,0.0,1
 3dd9e126-60fb-4788-a7e8-15d0d278fe64,The Running Man,"school, love, friend",2.5,5,0.1623,0.1,0.001,0.0,1
-0538e17d-5e4f-4eea-a7c7-712387d10b3d,Nuremberg,"war, men, moment",3.0,5,0.169,0.0909,0.0011,0.0,0
+0538e17d-5e4f-4eea-a7c7-712387d10b3d,Nuremberg,"war, men, moment",3.0,5,0.169,0.0909,0.0011,0.0,1
 f1766e3c-1cee-4b9b-a416-716273b2b9cd,Trifole,"school, love, friend",3.0,2,0.1374,0.0909,0.0011,0.0,1
 6791d40a-b024-4a93-948f-3f7962024b3f,Come See Me in the Good Light,"school, love, friend",3.5,5,0.1635,0.1,0.0011,0.0,1
 e335d0ba-b21a-47d8-abc0-edb658e224d2,In Your Dreams,"family, father, child",3.5,4,0.1653,0.1,0.0008,0.0,0
-18f16a2a-3c4a-4977-84c4-fd72d995b912,Trap House,"comedy, action, bank",2.5,4,0.1673,0.1,0.0008,0.0,1
-2761c6ef-43fe-4fcd-8031-4ef8cd3920e1,The Things You Kill,"family, father, child",3.5,5,0.1586,0.0909,0.0011,0.0,0
-aac51cf8-5fe3-4ad6-8ed2-608b6b74ffde,Clue,"love, friend, young",2.0,2,0.1629,0.0909,0.0005,0.0,1
-2398ff26-fb89-4ae6-bcb5-5525db2b2cb8,Anora,"family, father, child",4.0,5,0.1592,0.0909,0.0011,0.0,0
-b57a05d0-a2da-4f75-8fb1-4fa060952d3c,Now You See Me,"action, hero, creature",3.0,2,0.1308,0.0769,0.0009,0.0,1
+18f16a2a-3c4a-4977-84c4-fd72d995b912,Trap House,"comedy, action, bank",2.5,4,0.1673,0.1,0.0008,0.0,0
+2761c6ef-43fe-4fcd-8031-4ef8cd3920e1,The Things You Kill,"family, father, child",3.5,5,0.1586,0.0909,0.0011,0.0,1
+aac51cf8-5fe3-4ad6-8ed2-608b6b74ffde,Clue,"love, friend, young",2.0,2,0.1629,0.0909,0.0005,0.0,0
+2398ff26-fb89-4ae6-bcb5-5525db2b2cb8,Anora,"family, father, child",4.0,5,0.1592,0.0909,0.0011,0.0,1
+b57a05d0-a2da-4f75-8fb1-4fa060952d3c,Now You See Me,"action, hero, creature",3.0,2,0.1308,0.0769,0.0009,0.0,0
 f82841fb-a896-4bec-aa14-7b242679e609,A Love Song,"music, song, musical",2.5,1,0.1104,0.0769,0.0003,0.0,0
 5c57d6b4-3dc5-49e3-97c7-f803bd31ecf6,The Mastermind,"comedy, action, bank",3.5,7,0.1822,0.1111,0.0014,0.0,1
 d354791a-1ca1-48d5-8c7a-917870139149,The History of Sound,"music, song, musical",2.0,4,0.11,0.0769,0.0011,0.0,0
 9b4d9fbf-e1c7-4116-851f-1121b2bea1d2,Weapons,"horror, house, home",3.5,7,0.1692,0.0833,0.0013,0.0,1
-09de6b6d-faff-43eb-b5ee-911a08aee580,Sly,"school, love, friend",2.5,4,0.1589,0.1,0.0009,0.0,1
+09de6b6d-faff-43eb-b5ee-911a08aee580,Sly,"school, love, friend",2.5,4,0.1589,0.1,0.0009,0.0,0
 ab2ea0d8-3015-4233-bbe5-e54fcb23426c,Sinners,"war, men, moment",2.5,5,0.1553,0.0909,0.0011,0.0,1
-6b79c4f3-0fad-4dc4-9401-a80be707b6e5,The Truffle Hunters,"school, love, friend",3.0,3,0.1591,0.1,0.0011,0.0,0
-894573a5-9933-4c41-8313-7071388f0078,Blue Moon,"school, love, friend",3.5,4,0.161,0.1,0.0009,0.0,1
-8eec8e69-48ad-4c3f-bae3-cfbcf4288f2b,Stuber,"comedy, action, bank",2.0,4,0.1609,0.0909,0.0009,0.0,0
+6b79c4f3-0fad-4dc4-9401-a80be707b6e5,The Truffle Hunters,"school, love, friend",3.0,3,0.1591,0.1,0.0011,0.0,1
+894573a5-9933-4c41-8313-7071388f0078,Blue Moon,"school, love, friend",3.5,4,0.161,0.1,0.0009,0.0,0
+8eec8e69-48ad-4c3f-bae3-cfbcf4288f2b,Stuber,"comedy, action, bank",2.0,4,0.1609,0.0909,0.0009,0.0,1
 f1349bba-f223-48ca-ad05-de5b90cd2f55,Apples,"school, love, friend",2.5,4,0.1636,0.1,0.0009,0.0,1
-51463bbd-a2e5-4cb0-8275-a6574ea32dd6,It Was Just an Accident,"comedy, action, bank",4.0,4,0.1486,0.0909,0.0009,0.0,1
-7485b831-843f-458c-ac75-629ddc62ebda,Jagged Edge,"love, friend, young",3.5,9,0.1747,0.0909,0.0018,0.0,1
-3bac4f98-a4a6-4e7f-8d5e-3f4d3d20366a,The Transporter,"action, hero, creature",2.5,10,0.188,0.0909,0.002,0.0,1
-90e5f964-e5eb-4b56-8567-64a2bbdba154,96 hours to save his daughter from a fate worse than death,"action, hero, creature",2.5,4,0.1459,0.0769,0.001,0.0,1
+51463bbd-a2e5-4cb0-8275-a6574ea32dd6,It Was Just an Accident,"comedy, action, bank",4.0,4,0.1486,0.0909,0.0009,0.0,0
+7485b831-843f-458c-ac75-629ddc62ebda,Jagged Edge,"love, friend, young",3.5,9,0.1747,0.0909,0.0018,0.0,0
+3bac4f98-a4a6-4e7f-8d5e-3f4d3d20366a,The Transporter,"action, hero, creature",2.5,10,0.188,0.0909,0.002,0.0,0
+90e5f964-e5eb-4b56-8567-64a2bbdba154,96 hours to save his daughter from a fate worse than death,"action, hero, creature",2.5,4,0.1459,0.0769,0.001,0.0,0
 6e78fd1f-90ff-4e95-aae2-f906153a192c,Damn! Kidnapped again!,"action, hero, creature",3.0,2,0.1322,0.0714,0.0005,0.0,1
 6933259d-bdfb-45d3-a757-0eaa9ce086cc,The case of the fateful skinny-dip,"love, friend, young",3.5,4,0.1667,0.1,0.0008,0.0,0
 80b97032-ad52-41b9-b0a1-b2f4038c5096,"With Li on attack, ‘Unleashed’ no dog","action, hero, creature",3.0,6,0.1936,0.1,0.0013,0.0,1
 56acca3b-d6cf-46fd-8dd8-4c212184d4e2,Silly sequel is quite transporting,"action, hero, creature",3.0,5,0.1668,0.0833,0.001,0.0,0
 e16a402e-2a13-4092-a80d-9991474a9e7d,Not an introspective Hulk,"action, hero, creature",2.5,4,0.1572,0.0833,0.0008,0.0,1
-82f7568f-90fa-4611-8f80-bbf9242807ac,Oblivion,"alien, ship, space",2.0,5,0.1323,0.0833,0.0009,0.0,1
-6ee4a546-a163-4e83-aa09-8992bae574ed,Bay rocks ’em and socks ’em,"action, hero, creature",3.0,4,0.1634,0.0833,0.0009,0.0,1
-f4d14a69-49dc-44b8-89dd-306d6a343c70,"Lacking brains, loaded with brawn","action, hero, creature",3.0,5,0.1635,0.0833,0.001,0.0,0
-aa7275ea-5414-4e9b-b880-2fbf46db48a5,Nostalgia for the feel of early Spielberg,"action, hero, creature",3.5,5,0.1609,0.0833,0.0013,0.0,1
-31ab9828-5dfc-42cb-9e0a-56a9cdbf3c66,A quantum man in a universe of mere masked marvels,"action, hero, creature",4.0,5,0.1577,0.0833,0.0011,0.0,1
-7c4e9485-4f62-4388-a169-7778791e84ce,First Reformed,"war, men, moment",4.0,6,0.202,0.1111,0.0013,0.0,1
+82f7568f-90fa-4611-8f80-bbf9242807ac,Oblivion,"alien, ship, space",2.0,5,0.1323,0.0833,0.0009,0.0,0
+6ee4a546-a163-4e83-aa09-8992bae574ed,Bay rocks ’em and socks ’em,"action, hero, creature",3.0,4,0.1634,0.0833,0.0009,0.0,0
+f4d14a69-49dc-44b8-89dd-306d6a343c70,"Lacking brains, loaded with brawn","action, hero, creature",3.0,5,0.1635,0.0833,0.001,0.0,1
+aa7275ea-5414-4e9b-b880-2fbf46db48a5,Nostalgia for the feel of early Spielberg,"action, hero, creature",3.5,5,0.1609,0.0833,0.0013,0.0,0
+31ab9828-5dfc-42cb-9e0a-56a9cdbf3c66,A quantum man in a universe of mere masked marvels,"action, hero, creature",4.0,5,0.1577,0.0833,0.0011,0.0,0
+7c4e9485-4f62-4388-a169-7778791e84ce,First Reformed,"war, men, moment",4.0,6,0.202,0.1111,0.0013,0.0,0
 99313401-6df4-451e-a684-9efc62be4c90,Living,"school, love, friend",3.0,4,0.1531,0.1,0.0009,0.0,1
-287da01f-4229-4ba2-ad1d-baebffcc4900,Ikiru,"love, friend, young",4.0,5,0.1726,0.0833,0.001,0.0,0
+287da01f-4229-4ba2-ad1d-baebffcc4900,Ikiru,"love, friend, young",4.0,5,0.1726,0.0833,0.001,0.0,1
 6aaeed5c-fef1-4352-bd6c-2e35bdfd251f,Barbarian,"horror, house, home",3.0,6,0.1631,0.0909,0.0011,0.0,0
 21300c74-4c00-45f6-a1b7-48c39f71600f,Magnolia,"love, friend, young",4.0,5,0.1523,0.0909,0.0012,0.0,0
-5aad0239-f798-4292-8c2f-c2de30148570,Rocky,"love, friend, young",4.0,4,0.1447,0.0833,0.0008,0.0,0
+5aad0239-f798-4292-8c2f-c2de30148570,Rocky,"love, friend, young",4.0,4,0.1447,0.0833,0.0008,0.0,1
 31de95e3-1b66-4722-a79b-5211009ab1ed,Judge Dredd,"action, hero, creature",2.0,4,0.1497,0.0769,0.0008,0.0,1
-fd521e16-5b58-4204-90ad-a4262bfbee28,Stop! Or My Mom Will Shoot,"comedy, action, bank",0.5,0,0.0,0.0,0.0002,1.0,1
-43e36ac2-4ea7-4259-b98e-8bff823e8340,Rhinestone,"music, song, musical",1.0,4,0.0999,0.0714,0.0008,0.0,0
+fd521e16-5b58-4204-90ad-a4262bfbee28,Stop! Or My Mom Will Shoot,"comedy, action, bank",0.5,0,0.0,0.0,0.0002,1.0,0
+43e36ac2-4ea7-4259-b98e-8bff823e8340,Rhinestone,"music, song, musical",1.0,4,0.0999,0.0714,0.0008,0.0,1
 83bfdcfb-098f-482a-8fff-409afe2bc354,Frankie,"family, father, child",3.0,5,0.1477,0.0833,0.0011,0.0,0
-db18162d-2cec-44b6-a551-6339cbea1337,Creed,"school, love, friend",4.0,8,0.1588,0.1,0.0018,0.0,1
+db18162d-2cec-44b6-a551-6339cbea1337,Creed,"school, love, friend",4.0,8,0.1588,0.1,0.0018,0.0,0
 745d3364-eb09-4efb-b6ad-c6c1f9b18f96,Black Panther: Wakanda Forever,"war, men, moment",1.5,7,0.1828,0.1,0.0013,0.0,1
 d8c4c3ea-1263-498e-a3a6-0661f590880d,Queen of the Damned,"war, men, moment",2.0,5,0.138,0.0833,0.0015,0.0,1
 6bacca1f-c4b3-4e9b-b853-4db5c85917f9,From Dusk Till Dawn,"action, hero, creature",3.0,3,0.1343,0.0769,0.0008,0.0,1
 e9127156-1c12-4aba-9eba-8125274db844,The Big Sick,"comedy, action, bank",3.5,5,0.1839,0.1111,0.0011,0.0,1
 224f965c-55b4-4216-89b9-727740907634,‘Garden State’ ambles toward emotional awakening,"love, friend, young",3.0,4,0.1643,0.0909,0.0009,0.0,0
 613a109e-ce10-4056-b8a8-3ff017516f03,‘Elizabethtown’: Shorter is better,"family, father, child",3.0,4,0.1597,0.0909,0.0009,0.0,0
-904d1c62-6bd5-42db-b069-2d87880b434a,I Wish You All the Best,"school, love, friend",3.5,4,0.1606,0.0909,0.0007,0.0,1
-50243cce-4128-49d8-9e42-3b3c1b6bc2d9,All That We Love,"family, father, child",3.0,4,0.148,0.0833,0.001,0.0,1
-5a3f6417-12d6-4666-abac-3bb8fe5a1286,Long Shadows,"war, men, moment",1.0,2,0.1501,0.1,0.0005,0.0,0
+904d1c62-6bd5-42db-b069-2d87880b434a,I Wish You All the Best,"school, love, friend",3.5,4,0.1606,0.0909,0.0007,0.0,0
+50243cce-4128-49d8-9e42-3b3c1b6bc2d9,All That We Love,"family, father, child",3.0,4,0.148,0.0833,0.001,0.0,0
+5a3f6417-12d6-4666-abac-3bb8fe5a1286,Long Shadows,"war, men, moment",1.0,2,0.1501,0.1,0.0005,0.0,1
 f61e625d-82d3-4155-ac49-1f1570b20891,Little Amélie or the Character of Rain,"war, men, moment",3.0,1,0.1475,0.0909,0.0004,0.0,1
-47891cd2-4bef-4b8d-a989-425530b3dd3a,Predator: Badlands,"action, hero, creature",4.0,7,0.1741,0.1,0.0016,0.0,1
-13fbe8d6-5f76-4a6f-bdc3-4d794de68168,"Coexistence, My Ass!","family, father, child",3.5,4,0.1722,0.1,0.0009,0.0,1
-fda99be7-6c52-407e-b47e-d0837c160f89,Hallow Road,"comedy, action, bank",1.5,5,0.1483,0.0909,0.0011,0.0,1
-2edb2cc5-80df-44c2-89ff-a23b53744a99,Baahubali: The Epic,"action, hero, creature",2.5,4,0.1472,0.0833,0.0009,0.0,1
+47891cd2-4bef-4b8d-a989-425530b3dd3a,Predator: Badlands,"action, hero, creature",4.0,7,0.1741,0.1,0.0016,0.0,0
+13fbe8d6-5f76-4a6f-bdc3-4d794de68168,"Coexistence, My Ass!","family, father, child",3.5,4,0.1722,0.1,0.0009,0.0,0
+fda99be7-6c52-407e-b47e-d0837c160f89,Hallow Road,"comedy, action, bank",1.5,5,0.1483,0.0909,0.0011,0.0,0
+2edb2cc5-80df-44c2-89ff-a23b53744a99,Baahubali: The Epic,"action, hero, creature",2.5,4,0.1472,0.0833,0.0009,0.0,0
 ef536707-1098-476a-b532-33bb00e148ab,Train Dreams,"school, love, friend",4.0,4,0.1517,0.0909,0.0009,0.0,1
-b24fbb72-73b7-4489-b0d8-74d678af73ab,Violent Ends,"family, father, child",2.0,4,0.1606,0.1,0.0009,0.0,0
-e784ab67-ee8d-40b5-b640-3c4adae17e66,Dracula,"war, men, moment",3.0,5,0.1462,0.0909,0.0012,0.0,1
-bca0d494-94fb-4ca3-bb8e-c8369777caf3,Peter Hujar’s Day,"school, love, friend",4.0,2,0.1485,0.0909,0.0004,0.0,1
+b24fbb72-73b7-4489-b0d8-74d678af73ab,Violent Ends,"family, father, child",2.0,4,0.1606,0.1,0.0009,0.0,1
+e784ab67-ee8d-40b5-b640-3c4adae17e66,Dracula,"war, men, moment",3.0,5,0.1462,0.0909,0.0012,0.0,0
+bca0d494-94fb-4ca3-bb8e-c8369777caf3,Peter Hujar’s Day,"school, love, friend",4.0,2,0.1485,0.0909,0.0004,0.0,0
 b65592ea-84d5-4557-890f-30a35184aeae,Death by Lightning,"school, love, friend",3.5,5,0.1898,0.1,0.001,0.0,1
-1d9a2427-816f-4243-a2a9-0d3578351a05,Nouvelle Vague,"war, men, moment",3.0,6,0.1982,0.1,0.0012,0.0,1
-6f1a2807-9b42-4885-9281-c2c36eaf9005,Anniversary,"family, father, child",3.5,9,0.213,0.125,0.0018,0.0,0
+1d9a2427-816f-4243-a2a9-0d3578351a05,Nouvelle Vague,"war, men, moment",3.0,6,0.1982,0.1,0.0012,0.0,0
+6f1a2807-9b42-4885-9281-c2c36eaf9005,Anniversary,"family, father, child",3.5,9,0.213,0.125,0.0018,0.0,1
 c44d0eec-1d5a-4989-87a7-7356684a608f,All Her Fault,"family, father, child",3.0,6,0.1624,0.0909,0.0012,0.0,0
-6757e7ea-8b7b-489d-9eb0-09736bf1c321,Die My Love,"family, father, child",3.5,5,0.1642,0.0909,0.001,0.0,0
+6757e7ea-8b7b-489d-9eb0-09736bf1c321,Die My Love,"family, father, child",3.5,5,0.1642,0.0909,0.001,0.0,1
 6a0bc929-113c-4a16-90c9-542abdf3eb16,Christy,"school, love, friend",2.0,4,0.1518,0.1,0.001,0.0,1
 856307ee-b33e-4fbe-aa60-d0989fb4f45f,Prey,"action, hero, creature",3.5,4,0.1608,0.1,0.0009,0.0,1
-5b0368db-e6ba-465e-8c83-cab6d9c488b9,Predator: Killer of Killers,"action, hero, creature",3.5,4,0.1593,0.0909,0.0009,0.0,1
+5b0368db-e6ba-465e-8c83-cab6d9c488b9,Predator: Killer of Killers,"action, hero, creature",3.5,4,0.1593,0.0909,0.0009,0.0,0
 24edab4f-3176-452f-b647-4efbf28e4374,RRR,"action, hero, creature",3.5,5,0.1405,0.0769,0.0012,0.0,0
 4c9859d6-40a9-4abd-a9f7-783d1a144ea8,Sing Sing,"school, love, friend",4.0,2,0.1759,0.1111,0.0005,0.0,1
 8b9bb721-c9ec-4474-9108-f71aedd6c95f,Jockey,"school, love, friend",3.5,6,0.1633,0.1,0.0015,0.0,1
-330361a4-01d9-4f67-b5c8-5044ed49469d,Do Not Expect Too Much from the End of the World,"school, love, friend",3.5,4,0.1623,0.1,0.0008,0.0,1
-8e575aef-4308-4238-9c91-e762c394d956,Bad Luck Banging or Loony Porn,"war, men, moment",3.0,4,0.1753,0.1,0.0008,0.0,1
-963e2f90-9df8-43b7-aa8c-d9ecbfc79735,Bad Education,"school, love, friend",3.0,10,0.1724,0.1,0.002,0.0,1
-e078d20e-4520-4148-a556-8d812570d295,Breathless,"love, friend, young",4.0,8,0.1865,0.1,0.0017,0.0,0
-8a3ff0b3-e344-42ca-bd47-86206b5b8f5f,Day for Night,"love, friend, young",4.0,5,0.1663,0.0909,0.001,0.0,0
-413cc6c6-2e75-4955-bc25-7cc6565f5784,Hit Man,"comedy, action, bank",3.5,4,0.1451,0.0833,0.001,0.0,1
-c86a4643-7ca0-4f4c-940b-142b85d04b37,Small Things Like These,"love, friend, young",4.0,5,0.1739,0.0833,0.0011,0.0,0
-945fedd3-fb5d-4c2c-9375-f1d102d6d920,Euphoria,"family, father, child",1.5,4,0.1487,0.0833,0.0009,0.0,0
+330361a4-01d9-4f67-b5c8-5044ed49469d,Do Not Expect Too Much from the End of the World,"school, love, friend",3.5,4,0.1623,0.1,0.0008,0.0,0
+8e575aef-4308-4238-9c91-e762c394d956,Bad Luck Banging or Loony Porn,"war, men, moment",3.0,4,0.1753,0.1,0.0008,0.0,0
+963e2f90-9df8-43b7-aa8c-d9ecbfc79735,Bad Education,"school, love, friend",3.0,10,0.1724,0.1,0.002,0.0,0
+e078d20e-4520-4148-a556-8d812570d295,Breathless,"love, friend, young",4.0,8,0.1865,0.1,0.0017,0.0,1
+8a3ff0b3-e344-42ca-bd47-86206b5b8f5f,Day for Night,"love, friend, young",4.0,5,0.1663,0.0909,0.001,0.0,1
+413cc6c6-2e75-4955-bc25-7cc6565f5784,Hit Man,"comedy, action, bank",3.5,4,0.1451,0.0833,0.001,0.0,0
+c86a4643-7ca0-4f4c-940b-142b85d04b37,Small Things Like These,"love, friend, young",4.0,5,0.1739,0.0833,0.0011,0.0,1
+945fedd3-fb5d-4c2c-9375-f1d102d6d920,Euphoria,"family, father, child",1.5,4,0.1487,0.0833,0.0009,0.0,1
 249b3ff5-11e3-4c40-9ec2-688cb459164a,Anyone But You,"school, love, friend",3.5,5,0.1567,0.1,0.0011,0.0,1
 bb49315d-2923-4ddb-b800-20c0f4a0d45b,Predator,"action, hero, creature",3.0,6,0.1777,0.1,0.0015,0.0,1
 cbbfb67c-a5d2-47bb-9b85-58c4b21cb621,Turning Red,"family, father, child",3.5,4,0.1551,0.0909,0.0008,0.0,0
 68cecdfc-ff60-4f6c-b2f2-92ff01b12fa7,All About Eve,"love, friend, young",4.0,8,0.1745,0.1,0.0016,0.0,1
-b2c621d9-253b-48e3-b260-e7a444edf819,Junior Bonner,"comedy, action, bank",2.0,1,0.1232,0.0833,0.0005,0.0,1
-c346af13-2091-4387-866d-aa22c09c1a1b,Bull Durham,"school, love, friend",3.5,4,0.1585,0.1,0.0012,0.0,1
-c2cc45a9-c823-43ab-99e7-ddf4648b777e,Tin Cup,"school, love, friend",3.0,4,0.1477,0.0909,0.001,0.0,1
-4f8f7688-cdd6-492a-909b-05afa71575af,Nashville,"music, song, musical",4.0,6,0.1101,0.0769,0.0015,0.0,0
-6ebd9c6c-939d-422f-9fcb-2072a1056c3b,Short Cuts,"love, friend, young",4.0,8,0.1709,0.0833,0.0016,0.0,0
+b2c621d9-253b-48e3-b260-e7a444edf819,Junior Bonner,"comedy, action, bank",2.0,1,0.1232,0.0833,0.0005,0.0,0
+c346af13-2091-4387-866d-aa22c09c1a1b,Bull Durham,"school, love, friend",3.5,4,0.1585,0.1,0.0012,0.0,0
+c2cc45a9-c823-43ab-99e7-ddf4648b777e,Tin Cup,"school, love, friend",3.0,4,0.1477,0.0909,0.001,0.0,0
+4f8f7688-cdd6-492a-909b-05afa71575af,Nashville,"music, song, musical",4.0,6,0.1101,0.0769,0.0015,0.0,1
+6ebd9c6c-939d-422f-9fcb-2072a1056c3b,Short Cuts,"love, friend, young",4.0,8,0.1709,0.0833,0.0016,0.0,1
 1841c2a5-13b6-4f8f-80bb-27d9b1f175e0,‘Bad Education’ lets us wander on sexual edge,"love, friend, young",3.5,4,0.1463,0.0833,0.0008,0.0,0
-d77be39e-935e-4b37-93f9-a63045935221,Thoroughbreds,"family, father, child",3.5,4,0.1537,0.0909,0.0009,0.0,0
+d77be39e-935e-4b37-93f9-a63045935221,Thoroughbreds,"family, father, child",3.5,4,0.1537,0.0909,0.0009,0.0,1
 4f741a6a-f482-45c6-92e6-1951337030d2,Election,"school, love, friend",3.5,8,0.1664,0.1,0.0017,0.0,0
 c3008f3a-4818-45ca-95c8-54adc9a6bc06,X-Men,"action, hero, creature",2.5,6,0.1612,0.0833,0.0014,0.0,1
-8f755530-a626-405b-a462-d681f8ba5e79,Logan,"action, hero, creature",3.5,9,0.1805,0.0909,0.002,0.0,0
-aa712b45-4b7e-469b-b4c6-9db667c9103e,Citizen Kane,"love, friend, young",4.0,6,0.1675,0.0909,0.0013,0.0,0
+8f755530-a626-405b-a462-d681f8ba5e79,Logan,"action, hero, creature",3.5,9,0.1805,0.0909,0.002,0.0,1
+aa712b45-4b7e-469b-b4c6-9db667c9103e,Citizen Kane,"love, friend, young",4.0,6,0.1675,0.0909,0.0013,0.0,1
 1d1bb574-9b93-4f97-82bc-ccd581a5127d,Bonnie and Clyde,"comedy, action, bank",4.0,7,0.1568,0.1,0.0014,0.0,1
-b0c924ff-7266-4975-910e-9643e7e0f0e6,A girl and a boy on the road to nowhere,"love, friend, young",4.0,7,0.173,0.0909,0.0014,0.0,1
-34cea128-1352-4d67-a341-a74e10aa98a9,Bob le Flambeur,"love, friend, young",4.0,9,0.1794,0.1,0.0018,0.0,0
-ac050ddc-2328-414a-b800-904d45c5cb3d,Weekend,"war, men, moment",4.0,2,0.1522,0.0909,0.0004,0.0,1
+b0c924ff-7266-4975-910e-9643e7e0f0e6,A girl and a boy on the road to nowhere,"love, friend, young",4.0,7,0.173,0.0909,0.0014,0.0,0
+34cea128-1352-4d67-a341-a74e10aa98a9,Bob le Flambeur,"love, friend, young",4.0,9,0.1794,0.1,0.0018,0.0,1
+ac050ddc-2328-414a-b800-904d45c5cb3d,Weekend,"war, men, moment",4.0,2,0.1522,0.0909,0.0004,0.0,0
 4e3c938f-773b-4d38-b58f-43dfdf04430b,The Birth of a Nation,"war, men, moment",4.0,11,0.208,0.1111,0.0024,0.0,1
-7c91bbb8-d973-4225-bc0f-e55571152f30,Ed Wood,"love, friend, young",3.5,4,0.1627,0.0909,0.0008,0.0,0
-1d686142-ab0a-4be3-90d1-a656c486a2c2,Boogie Nights,"love, friend, young",4.0,5,0.1568,0.0833,0.0012,0.0,1
+7c91bbb8-d973-4225-bc0f-e55571152f30,Ed Wood,"love, friend, young",3.5,4,0.1627,0.0909,0.0008,0.0,1
+1d686142-ab0a-4be3-90d1-a656c486a2c2,Boogie Nights,"love, friend, young",4.0,5,0.1568,0.0833,0.0012,0.0,0
 a5dbe910-4ddc-4a89-a68d-a17054eadeab,The 400 Blows,"love, friend, young",4.0,5,0.1679,0.0909,0.0011,0.0,1
 371394f7-ff2c-4a9e-ac32-016d7c3576e6,Jules and Jim,"love, friend, young",4.0,9,0.1811,0.1,0.0018,0.0,1
 641e1cfc-5045-424f-bbf6-895b95ebc005,Out of Sight,"comedy, action, bank",3.5,7,0.1452,0.1,0.0015,0.0,1
-ef789e8d-410a-419f-b0dd-de2b1a57c163,Set It Up,"school, love, friend",3.0,7,0.1733,0.1111,0.0015,0.0,1
-a486e470-4c21-4dbf-9552-0f2c97734731,"Don’t sleep with anybody, but say you did","school, love, friend",3.5,6,0.1561,0.0909,0.0012,0.0,0
-166ab9f9-1754-46ed-8f3c-41679dde3e8c,The Scarlet Letter,"love, friend, young",1.5,6,0.1901,0.1,0.0012,0.0,0
+ef789e8d-410a-419f-b0dd-de2b1a57c163,Set It Up,"school, love, friend",3.0,7,0.1733,0.1111,0.0015,0.0,0
+a486e470-4c21-4dbf-9552-0f2c97734731,"Don’t sleep with anybody, but say you did","school, love, friend",3.5,6,0.1561,0.0909,0.0012,0.0,1
+166ab9f9-1754-46ed-8f3c-41679dde3e8c,The Scarlet Letter,"love, friend, young",1.5,6,0.1901,0.1,0.0012,0.0,1
 573a2d16-4c52-4d79-8b63-ab09dc62d496,Working Girl,"love, friend, young",4.0,7,0.1582,0.0833,0.0013,0.0,0
 55860bed-9f3b-47b4-a336-322398a86667,Regretting You,"school, love, friend",1.5,4,0.1495,0.0909,0.0008,0.0,1
-1fd03578-3117-4325-9800-28c5e7843d32,The Monster of Florence,"love, friend, young",2.0,7,0.1747,0.0833,0.0015,0.0,0
-9235ee43-ae71-4690-9829-dc6020aefb3e,Harlan Coben’s Lazarus,"family, father, child",2.0,5,0.1461,0.0833,0.0012,0.0,0
-6b3796b9-0c85-43a9-a41f-de3223caf21f,Mistress Dispeller,"family, father, child",3.5,1,0.1421,0.0833,0.0003,0.0,0
-362b6794-5677-4bba-a3b5-c09a89abcdfa,The Hand That Rocks the Cradle,"horror, house, home",3.0,4,0.157,0.0909,0.0008,0.0,0
-eed9e570-5880-4270-afff-a5854f8cd98e,Bugonia,"alien, ship, space",2.5,4,0.1323,0.0833,0.0007,0.0,1
+1fd03578-3117-4325-9800-28c5e7843d32,The Monster of Florence,"love, friend, young",2.0,7,0.1747,0.0833,0.0015,0.0,1
+9235ee43-ae71-4690-9829-dc6020aefb3e,Harlan Coben’s Lazarus,"family, father, child",2.0,5,0.1461,0.0833,0.0012,0.0,1
+6b3796b9-0c85-43a9-a41f-de3223caf21f,Mistress Dispeller,"family, father, child",3.5,1,0.1421,0.0833,0.0003,0.0,1
+362b6794-5677-4bba-a3b5-c09a89abcdfa,The Hand That Rocks the Cradle,"horror, house, home",3.0,4,0.157,0.0909,0.0008,0.0,1
+eed9e570-5880-4270-afff-a5854f8cd98e,Bugonia,"alien, ship, space",2.5,4,0.1323,0.0833,0.0007,0.0,0
 37d0f2fd-6092-46a2-99e6-a319690997ac,Pets on a Train,"school, love, friend",2.5,6,0.165,0.1,0.0013,0.0,0
 c845cc5b-2b5f-414f-b1db-dea45bcf8ef0,OTHER,"horror, house, home",1.5,6,0.1603,0.0909,0.0012,0.0,1
-0fd363b0-7bdc-4210-886a-369e56511a46,Chainsaw Man The Movie: Reze Arc,"war, men, moment",3.5,6,0.1657,0.0909,0.0014,0.0,0
+0fd363b0-7bdc-4210-886a-369e56511a46,Chainsaw Man The Movie: Reze Arc,"war, men, moment",3.5,6,0.1657,0.0909,0.0014,0.0,1
 1fc6eb92-b6ac-45a7-8c22-b332e889da54,Good News,"school, love, friend",3.0,2,0.1672,0.1,0.0007,0.0,0
-0873712a-d09e-49b8-b523-f6c51066efb3,The Astronaut,"horror, house, home",2.0,4,0.156,0.0909,0.0008,0.0,1
+0873712a-d09e-49b8-b523-f6c51066efb3,The Astronaut,"horror, house, home",2.0,4,0.156,0.0909,0.0008,0.0,0
 27526200-84f5-4663-b73f-40c265197814,Hedda,"family, father, child",2.5,3,0.1836,0.1111,0.0006,0.0,0
-bcede3d9-51d1-426c-b3d6-90f791853cf4,The Twits,"family, father, child",2.5,1,0.1402,0.0833,0.0003,0.0,0
+bcede3d9-51d1-426c-b3d6-90f791853cf4,The Twits,"family, father, child",2.5,1,0.1402,0.0833,0.0003,0.0,1
 3f13ae94-3629-4e60-b143-23f7d9976d92,Queens of the Dead,"school, love, friend",3.0,2,0.1383,0.0833,0.0008,0.0,1
 0981dc69-9dd4-4ffb-b78e-1b74aabeda7d,Stitch Head,"war, men, moment",2.5,3,0.1621,0.0909,0.0006,0.0,1
-7deae003-cd0e-47ac-b471-3af4f4040d52,The Man Who Saves the World?,"school, love, friend",4.0,1,0.1437,0.1,0.0005,0.0,1
-531d120b-c673-488f-89d8-a1066614ba8b,Last Days,"war, men, moment",1.5,5,0.17,0.0909,0.0011,0.0,0
+7deae003-cd0e-47ac-b471-3af4f4040d52,The Man Who Saves the World?,"school, love, friend",4.0,1,0.1437,0.1,0.0005,0.0,0
+531d120b-c673-488f-89d8-a1066614ba8b,Last Days,"war, men, moment",1.5,5,0.17,0.0909,0.0011,0.0,1
 45433c8d-60f2-48a9-a3d6-fc9f1419ccb5,Springsteen: Deliver Me from Nowhere,"music, song, musical",3.0,7,0.1233,0.0833,0.0014,0.0,0
-196da040-7438-4e81-ab1d-b8a4e4113e18,It Ends With Us,"family, father, child",2.5,4,0.1528,0.0833,0.0009,0.0,0
+196da040-7438-4e81-ab1d-b8a4e4113e18,It Ends With Us,"family, father, child",2.5,4,0.1528,0.0833,0.0009,0.0,1
 94f55ba2-1e57-480c-95d4-1b4a8a28881d,Zodiac,"love, friend, young",4.0,7,0.1788,0.0909,0.0015,0.0,0
 7fb6c27d-cfde-4e8a-b350-ef5708278aee,Missing You,"horror, house, home",1.5,4,0.1555,0.0909,0.0008,0.0,0
 404984e6-a02e-4f49-93d7-b23cdcd0dd96,Shiva Baby,"family, father, child",4.0,6,0.1505,0.0833,0.0012,0.0,0
-16086536-0537-49de-9ea2-a71b36ddcf27,Sanctuary,"school, love, friend",3.0,2,0.1485,0.1,0.0005,0.0,1
+16086536-0537-49de-9ea2-a71b36ddcf27,Sanctuary,"school, love, friend",3.0,2,0.1485,0.1,0.0005,0.0,0
 9b99b210-3a02-4f1f-8913-c35860164a5d,The Passion of Joan of Arc,"war, men, moment",4.0,7,0.1936,0.1111,0.0014,0.0,1
 cd1ca384-9187-4f65-b171-4dfc669180fa,Eddington,"horror, house, home",2.5,5,0.1594,0.0909,0.0009,0.0,1
 9048552b-0c6e-407d-ba26-9b173c156d50,Dog Day Afternoon,"comedy, action, bank",3.5,6,0.1427,0.1,0.0016,0.0,1
 51d03866-6983-490b-bcbb-480927c24460,Demon Slayer: Kimetsu no Yaiba Infinity Castle,"action, hero, creature",3.0,7,0.1696,0.0909,0.0017,0.0,1
 5a76c854-8d76-4ca8-b8e2-0db39f563d75,Dawn of the Dead,"war, men, moment",4.0,2,0.1391,0.0769,0.0007,0.0,1
-575f45cc-e5b7-476e-9a8d-19dc32cf34d2,Better Luck Tomorrow,"school, love, friend",4.0,10,0.1788,0.1,0.0019,0.0,1
+575f45cc-e5b7-476e-9a8d-19dc32cf34d2,Better Luck Tomorrow,"school, love, friend",4.0,10,0.1788,0.1,0.0019,0.0,0
 bf88ea93-86c8-4b78-8c22-3eedf948a68a,Badlands,"love, friend, young",4.0,6,0.1728,0.0833,0.0012,0.0,0
-fb0e6e71-ca0b-4971-adaa-81e08a969aaa,"A brokedown, boozy C&W singer. A great Jeff Bridges performance.","music, song, musical",4.0,6,0.1101,0.0769,0.0014,0.0,0
-c09491a5-593a-4a42-8f9b-b44e263eb3ba,Road Diary: Bruce Springsteen and The E Street Band,"music, song, musical",3.0,8,0.1291,0.0909,0.0018,0.0,0
-89ae750b-fd33-4e16-97ef-8d80f5bb3448,Hope Floats,"love, friend, young",2.0,5,0.1839,0.0909,0.001,0.0,0
+fb0e6e71-ca0b-4971-adaa-81e08a969aaa,"A brokedown, boozy C&W singer. A great Jeff Bridges performance.","music, song, musical",4.0,6,0.1101,0.0769,0.0014,0.0,1
+c09491a5-593a-4a42-8f9b-b44e263eb3ba,Road Diary: Bruce Springsteen and The E Street Band,"music, song, musical",3.0,8,0.1291,0.0909,0.0018,0.0,1
+89ae750b-fd33-4e16-97ef-8d80f5bb3448,Hope Floats,"love, friend, young",2.0,5,0.1839,0.0909,0.001,0.0,1
 53cfa1d6-2924-470f-8a5c-1d353fdc42f3,"Alice, Darling","school, love, friend",3.0,4,0.1728,0.1111,0.0008,0.0,1
 ddd74cf7-edf8-4e36-8eef-7a0782b9d4e0,A sermon written in blood,"love, friend, young",4.0,10,0.1848,0.0909,0.002,0.0,0
 c138b288-ea49-4077-97bd-b5a41e0fc292,Bullitt,"action, hero, creature",4.0,5,0.1504,0.0769,0.001,0.0,1
 4cfdede2-660e-46ea-9829-15669592ed65,The Game,"love, friend, young",3.5,4,0.1692,0.0909,0.0008,0.0,0
-3ec1b42b-79ef-4be0-ae0d-8df3f992615b,Fight Club,"love, friend, young",2.0,5,0.1624,0.0909,0.001,0.0,0
+3ec1b42b-79ef-4be0-ae0d-8df3f992615b,Fight Club,"love, friend, young",2.0,5,0.1624,0.0909,0.001,0.0,1
 620a2d27-3ff0-4623-86a0-b23aca3890f4,Panic Room,"love, friend, young",3.0,5,0.1662,0.0833,0.001,0.0,1
-01a2357c-fb37-41d0-86e6-260e2ec29c63,Carry-On,"comedy, action, bank",3.0,6,0.1616,0.0909,0.0012,0.0,1
+01a2357c-fb37-41d0-86e6-260e2ec29c63,Carry-On,"comedy, action, bank",3.0,6,0.1616,0.0909,0.0012,0.0,0
 4b6d542c-b3f1-46dd-8188-10486eaa38f2,Piercing,"war, men, moment",1.5,5,0.1663,0.1,0.001,0.0,1
-e0919917-5606-4b2f-a9ce-86070a2091e2,The Conversation,"love, friend, young",4.0,10,0.173,0.0909,0.0019,0.0,0
+e0919917-5606-4b2f-a9ce-86070a2091e2,The Conversation,"love, friend, young",4.0,10,0.173,0.0909,0.0019,0.0,1
 0692d3d0-8091-47a3-aa5e-52222f9f5c35,Five Easy Pieces,"family, father, child",4.0,5,0.1594,0.0909,0.0011,0.0,0
-b97904d5-6a4c-4a49-b3e5-9ae8d29f8974,Interstellar,"family, father, child",3.5,6,0.2007,0.1111,0.0012,0.0,0
-d4674023-8675-4df6-a158-15698f0e6ecc,The Night of the Living Dead,"love, friend, young",3.5,5,0.1735,0.0833,0.0011,0.0,0
+b97904d5-6a4c-4a49-b3e5-9ae8d29f8974,Interstellar,"family, father, child",3.5,6,0.2007,0.1111,0.0012,0.0,1
+d4674023-8675-4df6-a158-15698f0e6ecc,The Night of the Living Dead,"love, friend, young",3.5,5,0.1735,0.0833,0.0011,0.0,1
 7effe8de-84d7-42f5-b3c0-67d38c1f7412,The Graduate,"love, friend, young",3.0,4,0.1619,0.0909,0.0008,0.0,1
 e10ad936-1ddc-4cf1-b052-2738f28a1b0f,Far North,"family, father, child",1.0,4,0.1461,0.0909,0.0009,0.0,0
 124f83d4-5b4d-4b2b-bc21-2e6707b9f6bb,Thieves Like Us,"comedy, action, bank",3.5,7,0.1561,0.1,0.0015,0.0,1
-eb1cc23f-72c2-4284-b6a9-a6bbd8935b25,The Sugarland Express,"comedy, action, bank",2.5,3,0.1439,0.0909,0.0007,0.0,1
-87740e73-3546-4152-bccc-6c6e9e06255a,Deep in the heart of Texas,"love, friend, young",4.0,11,0.1799,0.0909,0.0022,0.0,1
+eb1cc23f-72c2-4284-b6a9-a6bbd8935b25,The Sugarland Express,"comedy, action, bank",2.5,3,0.1439,0.0909,0.0007,0.0,0
+87740e73-3546-4152-bccc-6c6e9e06255a,Deep in the heart of Texas,"love, friend, young",4.0,11,0.1799,0.0909,0.0022,0.0,0
 8f7a64f5-3b5f-4f5f-b135-a8da51429a8d,Starman,"alien, ship, space",3.0,4,0.1323,0.0833,0.0007,0.0,1
-36738cad-2adb-469f-aea9-9652aff71a6c,Tender Mercies,"music, song, musical",4.0,5,0.1044,0.0769,0.0011,0.0,0
-95555483-e7bd-46c0-a3b7-eae123b83852,Mr. K,"war, men, moment",2.0,5,0.1676,0.0909,0.001,0.0,1
-c2318b98-aad6-4f06-818a-cea120f82c97,Mr. Scorsese,"love, friend, young",3.5,6,0.1453,0.0833,0.0012,0.0,0
-e3ab0b8b-ff31-419e-809b-5d4ba2a23bd5,"There Was, There Was Not","war, men, moment",4.0,5,0.1804,0.1111,0.001,0.0,1
-9b484325-1802-4fa8-8d5e-d263d2a3c76b,The Perfect Neighbor,"love, friend, young",3.0,5,0.1629,0.1,0.001,0.0,0
+36738cad-2adb-469f-aea9-9652aff71a6c,Tender Mercies,"music, song, musical",4.0,5,0.1044,0.0769,0.0011,0.0,1
+95555483-e7bd-46c0-a3b7-eae123b83852,Mr. K,"war, men, moment",2.0,5,0.1676,0.0909,0.001,0.0,0
+c2318b98-aad6-4f06-818a-cea120f82c97,Mr. Scorsese,"love, friend, young",3.5,6,0.1453,0.0833,0.0012,0.0,1
+e3ab0b8b-ff31-419e-809b-5d4ba2a23bd5,"There Was, There Was Not","war, men, moment",4.0,5,0.1804,0.1111,0.001,0.0,0
+9b484325-1802-4fa8-8d5e-d263d2a3c76b,The Perfect Neighbor,"love, friend, young",3.0,5,0.1629,0.1,0.001,0.0,1
 4aa26ad2-3332-4f2f-a44c-d2fe9684daed,Murdaugh: Death in the Family,"family, father, child",2.5,4,0.1565,0.0909,0.001,0.0,0
-f7e17b9c-3328-4e8b-a064-155e4048109c,Good Fortune,"school, love, friend",2.5,5,0.162,0.1,0.0011,0.0,1
-c44ac325-e93a-4f90-8678-91c4100035b4,A House of Dynamite,"war, men, moment",4.0,4,0.1715,0.1,0.0008,0.0,1
-6038ca47-82c9-4811-8faa-3827b394c5f8,Ballad of a Small Player,"school, love, friend",1.5,2,0.1543,0.1,0.0005,0.0,1
-87c5560d-8f4e-474d-a1a7-70442443c465,Truth & Treason,"school, love, friend",2.0,4,0.1646,0.1,0.0009,0.0,1
+f7e17b9c-3328-4e8b-a064-155e4048109c,Good Fortune,"school, love, friend",2.5,5,0.162,0.1,0.0011,0.0,0
+c44ac325-e93a-4f90-8678-91c4100035b4,A House of Dynamite,"war, men, moment",4.0,4,0.1715,0.1,0.0008,0.0,0
+6038ca47-82c9-4811-8faa-3827b394c5f8,Ballad of a Small Player,"school, love, friend",1.5,2,0.1543,0.1,0.0005,0.0,0
+87c5560d-8f4e-474d-a1a7-70442443c465,Truth & Treason,"school, love, friend",2.0,4,0.1646,0.1,0.0009,0.0,0
 f3c7bee1-4b44-443b-990c-c90151bee927,She Walks in Darkness,"war, men, moment",3.0,1,0.1453,0.0833,0.0003,0.0,0
 bff61079-2345-4e12-940e-06504b64136a,After the Hunt,"school, love, friend",3.0,7,0.1738,0.1,0.0013,0.0,0
-c4563974-d68c-4e47-add4-7706753df498,Kiss of the Spider Woman,"music, song, musical",3.0,7,0.1218,0.0833,0.0015,0.0,0
+c4563974-d68c-4e47-add4-7706753df498,Kiss of the Spider Woman,"music, song, musical",3.0,7,0.1218,0.0833,0.0015,0.0,1
 da87fe75-6fec-4b6a-812d-122b1bb9c5ac,Urchin,"school, love, friend",3.5,4,0.1697,0.1111,0.0009,0.0,1
 a7fce8ac-327a-48ef-800f-3776a4c6f8e9,Black Phone 2,"horror, house, home",3.0,8,0.1678,0.0909,0.0015,0.0,0
-36199fb2-f13c-4285-9223-311ca489d053,TRON: Ares,"action, hero, creature",4.0,7,0.1817,0.0909,0.0013,0.0,1
-5136ea75-3e92-4ecf-86dd-e0e221727a09,Who Killed the Montreal Expos?,"school, love, friend",3.5,5,0.1669,0.1,0.0014,0.0,1
+36199fb2-f13c-4285-9223-311ca489d053,TRON: Ares,"action, hero, creature",4.0,7,0.1817,0.0909,0.0013,0.0,0
+5136ea75-3e92-4ecf-86dd-e0e221727a09,Who Killed the Montreal Expos?,"school, love, friend",3.5,5,0.1669,0.1,0.0014,0.0,0
 bbe64617-42a3-4fc0-84e0-99c04d2ca9e7,The Woman in Cabin 10,"horror, house, home",1.5,3,0.15,0.0833,0.0007,0.0,0
-c6427855-7485-4d47-8328-07a21567d5bb,Fairyland,"family, father, child",3.5,13,0.1858,0.1,0.0025,0.0,0
+c6427855-7485-4d47-8328-07a21567d5bb,Fairyland,"family, father, child",3.5,13,0.1858,0.1,0.0025,0.0,1
 2b271ec4-eb8b-442e-a5b2-f3011fe3b93a,Taxi Driver,"love, friend, young",4.0,5,0.1392,0.0769,0.0011,0.0,0
 ed88d090-99dd-4d7a-8c17-f6454b5d7bb2,GoodFellas,"love, friend, young",4.0,10,0.1622,0.0909,0.0019,0.0,0
 effdac53-c864-48ee-8c64-c1429c8add56,Raging Bull,"love, friend, young",4.0,9,0.1436,0.0833,0.0018,0.0,0
 2307aa24-cd71-4dba-8f49-5e169b19915b,Killers of the Flower Moon,"love, friend, young",4.0,6,0.1405,0.0833,0.0012,0.0,0
-fe10caba-16ca-49f8-be82-f3e6331e3d85,The White Lotus,"family, father, child",4.0,5,0.1553,0.0833,0.0011,0.0,0
-b7dca16b-d4dd-4a77-8539-6c7090b783e3,Heads of State,"comedy, action, bank",2.5,4,0.1581,0.1,0.0009,0.0,0
-c486ae1f-e3d9-4c86-93db-8f9f9d275844,Detroit,"war, men, moment",2.0,7,0.1919,0.1111,0.0019,0.0,0
+fe10caba-16ca-49f8-be82-f3e6331e3d85,The White Lotus,"family, father, child",4.0,5,0.1553,0.0833,0.0011,0.0,1
+b7dca16b-d4dd-4a77-8539-6c7090b783e3,Heads of State,"comedy, action, bank",2.5,4,0.1581,0.1,0.0009,0.0,1
+c486ae1f-e3d9-4c86-93db-8f9f9d275844,Detroit,"war, men, moment",2.0,7,0.1919,0.1111,0.0019,0.0,1
 95292009-e9f3-4ff0-ab9a-5211184d5636,The most dangerous job in the Army,"love, friend, young",4.0,2,0.148,0.0833,0.0005,0.0,1
 c45d94e0-993a-42f9-8dcb-ce2050e0c2c1,The Banshees of Inisherin,"comedy, action, bank",3.5,3,0.1569,0.1,0.0007,0.0,1
-4f11beb4-e723-4147-b2f2-ce1bff059149,All Quiet on the Western Front,"war, men, moment",2.0,7,0.1824,0.1111,0.0014,0.0,1
-a863cb22-152a-4210-a0b6-5594130b6d01,Conclave,"war, men, moment",4.0,4,0.2021,0.125,0.0009,0.0,1
-07a7c2ff-69d3-4249-b3ac-58c8f9968aaf,An American in Paris,"music, song, musical",3.5,5,0.1099,0.0769,0.0009,0.0,0
-4eca45b0-64b6-4d14-91e9-bb95f3ecf381,The Beast,"horror, house, home",4.0,4,0.1603,0.0833,0.0007,0.0,1
-32d19050-0e87-4f0d-a5ef-86e036deb0d7,Beach Rats,"love, friend, young",3.5,4,0.1589,0.0833,0.0008,0.0,1
+4f11beb4-e723-4147-b2f2-ce1bff059149,All Quiet on the Western Front,"war, men, moment",2.0,7,0.1824,0.1111,0.0014,0.0,0
+a863cb22-152a-4210-a0b6-5594130b6d01,Conclave,"war, men, moment",4.0,4,0.2021,0.125,0.0009,0.0,0
+07a7c2ff-69d3-4249-b3ac-58c8f9968aaf,An American in Paris,"music, song, musical",3.5,5,0.1099,0.0769,0.0009,0.0,1
+4eca45b0-64b6-4d14-91e9-bb95f3ecf381,The Beast,"horror, house, home",4.0,4,0.1603,0.0833,0.0007,0.0,0
+32d19050-0e87-4f0d-a5ef-86e036deb0d7,Beach Rats,"love, friend, young",3.5,4,0.1589,0.0833,0.0008,0.0,0
 a68de043-c2c0-4490-9c0d-19efb4f6f5df,The Black Phone,"horror, house, home",4.0,4,0.1436,0.0833,0.0009,0.0,0
-8a9a77c0-518f-4f77-a5ba-ae5055b36c0a,A Nightmare On Elm Street 3: Dream Warriors,"action, hero, creature",1.5,4,0.1636,0.0909,0.0009,0.0,1
-01e21453-682d-4c03-9008-c94f309bb4f2,Tron,"action, hero, creature",4.0,7,0.1784,0.0909,0.0015,0.0,1
-b4423d38-f059-48dc-898c-232d2e1ea5fc,Blade Runner 2049,"war, men, moment",3.5,4,0.158,0.1,0.0008,0.0,0
-8b5fe2f8-e5a1-4350-a770-4872eba1a59c,Guillermo del Toro’s Pinocchio,"war, men, moment",4.0,9,0.1852,0.1,0.0018,0.0,0
-6698858e-d9b3-423b-8325-abe9a8eae7fa,The Searchers,"war, men, moment",4.0,4,0.1803,0.1,0.001,0.0,0
+8a9a77c0-518f-4f77-a5ba-ae5055b36c0a,A Nightmare On Elm Street 3: Dream Warriors,"action, hero, creature",1.5,4,0.1636,0.0909,0.0009,0.0,0
+01e21453-682d-4c03-9008-c94f309bb4f2,Tron,"action, hero, creature",4.0,7,0.1784,0.0909,0.0015,0.0,0
+b4423d38-f059-48dc-898c-232d2e1ea5fc,Blade Runner 2049,"war, men, moment",3.5,4,0.158,0.1,0.0008,0.0,1
+8b5fe2f8-e5a1-4350-a770-4872eba1a59c,Guillermo del Toro’s Pinocchio,"war, men, moment",4.0,9,0.1852,0.1,0.0018,0.0,1
+6698858e-d9b3-423b-8325-abe9a8eae7fa,The Searchers,"war, men, moment",4.0,4,0.1803,0.1,0.001,0.0,1
 f2c109cb-84a1-40ff-9100-615a12d38955,Mean Streets,"love, friend, young",4.0,5,0.1411,0.0833,0.0011,0.0,0
 aaef7f3e-d275-4feb-9107-4a8033f6b911,Dances with Wolves,"war, men, moment",4.0,5,0.1816,0.1111,0.0013,0.0,1
-4f35d1c5-a23e-4edb-ba0b-2ea45e6c896d,Apocalypse Now,"war, men, moment",4.0,6,0.1683,0.0909,0.0012,0.0,1
+4f35d1c5-a23e-4edb-ba0b-2ea45e6c896d,Apocalypse Now,"war, men, moment",4.0,6,0.1683,0.0909,0.0012,0.0,0
 1792245e-8bb9-4f35-8ea7-f464239ef1ac,Scenes from an enchanted childhood,"family, father, child",4.0,5,0.1759,0.0909,0.0011,0.0,1
 f7df84e2-407f-4478-854b-7205ebd8826c,Ordinary People,"family, father, child",4.0,9,0.1722,0.1,0.0018,0.0,0
 ddce3694-8718-4191-a684-ed4ddfe070db,On the Waterfront,"love, friend, young",4.0,5,0.1566,0.0909,0.0009,0.0,0
-5e069119-2bdc-4b3c-a0b8-f6e825cba912,This Boy’s Life,"love, friend, young",3.5,4,0.1655,0.0909,0.0009,0.0,0
-2890c01e-ba55-4cf7-adbb-99c5031ec651,Certain Women,"school, love, friend",3.5,4,0.1485,0.0909,0.0008,0.0,1
-ab316edb-f825-469e-9f49-d2ec5678f181,Big Little Lies,"love, friend, young",3.5,7,0.1871,0.1,0.0014,0.0,0
+5e069119-2bdc-4b3c-a0b8-f6e825cba912,This Boy’s Life,"love, friend, young",3.5,4,0.1655,0.0909,0.0009,0.0,1
+2890c01e-ba55-4cf7-adbb-99c5031ec651,Certain Women,"school, love, friend",3.5,4,0.1485,0.0909,0.0008,0.0,0
+ab316edb-f825-469e-9f49-d2ec5678f181,Big Little Lies,"love, friend, young",3.5,7,0.1871,0.1,0.0014,0.0,1
 e96b7b5d-13ff-42df-8976-39abbbb598a5,Parasite,"family, father, child",4.0,6,0.1683,0.0909,0.0011,0.0,0
 e5900284-e466-476c-bce8-8afb01c7a4d2,The Color Purple,"family, father, child",4.0,5,0.163,0.0909,0.0013,0.0,0
 1d5eca34-7ac4-45ef-be41-5c10fff1687c,"Home, but not forgotten","love, friend, young",4.0,5,0.1708,0.0909,0.001,0.0,0
 1de294bd-db4e-4a8a-891e-775a26b9591c,Old country for hit men,"love, friend, young",4.0,5,0.1659,0.0833,0.001,0.0,0
 4bf4b9d3-fdba-4fd3-9783-3220fc2cfbee,"Three Billboards Outside Ebbing, Missouri","love, friend, young",4.0,4,0.1661,0.0909,0.0008,0.0,0
 29e5461e-547e-4625-98fb-084f47419273,"And I looked, and behold a pale horse","war, men, moment",4.0,5,0.1684,0.1,0.001,0.0,1
-30898242-3298-431d-bf26-b2a99098b349,The Painted Bird,"war, men, moment",2.5,5,0.1733,0.1,0.001,0.0,0
+30898242-3298-431d-bf26-b2a99098b349,The Painted Bird,"war, men, moment",2.5,5,0.1733,0.1,0.001,0.0,1
 0bf29768-1cdd-4842-922c-83a07d4845e1,On the casualties of war,"war, men, moment",4.0,7,0.1777,0.1,0.0015,0.0,0
 83cc8561-2dd6-4e7b-b139-f0ea67987cfe,Saint Omer,"war, men, moment",4.0,3,0.1783,0.1,0.0007,0.0,1
-1e4594df-2481-4d0d-ada8-fdd5cbca3b86,Things that go bump in the attic,"horror, house, home",3.0,6,0.1691,0.0909,0.0012,0.0,1
-2b69b55f-3f62-4dbd-a449-66f7bac77495,Strange how the wood-chipper payoff shot is missing,"action, hero, creature",2.0,0,0.0,0.0,0.0002,1.0,0
+1e4594df-2481-4d0d-ada8-fdd5cbca3b86,Things that go bump in the attic,"horror, house, home",3.0,6,0.1691,0.0909,0.0012,0.0,0
+2b69b55f-3f62-4dbd-a449-66f7bac77495,Strange how the wood-chipper payoff shot is missing,"action, hero, creature",2.0,0,0.0,0.0,0.0002,1.0,1
 90e13a3c-5578-4fde-ba35-6952c27e2db0,Nosferatu,"war, men, moment",4.0,5,0.138,0.0833,0.0015,0.0,1
-6dbc057d-df92-4c11-9e8a-c32f6928b9da,Angel Heart,"love, friend, young",3.5,4,0.1509,0.0833,0.0008,0.0,0
-31dfe5a8-07b4-4877-bd32-e6ca83894a32,Blade Runner,"action, hero, creature",3.0,4,0.1573,0.0833,0.0009,0.0,1
+6dbc057d-df92-4c11-9e8a-c32f6928b9da,Angel Heart,"love, friend, young",3.5,4,0.1509,0.0833,0.0008,0.0,1
+31dfe5a8-07b4-4877-bd32-e6ca83894a32,Blade Runner,"action, hero, creature",3.0,4,0.1573,0.0833,0.0009,0.0,0
 5bfffcb9-7c5a-4c05-8014-422030318705,Prisoners,"family, father, child",2.5,4,0.1528,0.0909,0.0009,0.0,0
 9f979b0f-fd07-4b23-a209-caba505c4f04,Arrival,"alien, ship, space",3.0,5,0.1551,0.0909,0.0008,0.0,1
 fff85687-29bc-47fe-8a5b-d944ed662af4,Sicario,"horror, house, home",3.0,4,0.1579,0.0833,0.0008,0.0,1
 94e3f2cb-f5c4-4110-add5-17fb0b26a381,When worlds collide,"war, men, moment",4.0,4,0.1741,0.0909,0.0009,0.0,1
-1f6ae2d4-19ec-4e76-868d-6c3ace25d7e7,The Shape of Water,"war, men, moment",2.5,5,0.1709,0.1,0.001,0.0,1
-dbce103c-bc52-487d-a395-3cb27b541e17,The Devil’s Backbone,"war, men, moment",3.0,6,0.1956,0.1,0.0013,0.0,0
+1f6ae2d4-19ec-4e76-868d-6c3ace25d7e7,The Shape of Water,"war, men, moment",2.5,5,0.1709,0.1,0.001,0.0,0
+dbce103c-bc52-487d-a395-3cb27b541e17,The Devil’s Backbone,"war, men, moment",3.0,6,0.1956,0.1,0.0013,0.0,1
 6c71252f-4e50-4421-b824-ed23e83304f6,What fresh Hellboy is this?,"action, hero, creature",3.5,4,0.1556,0.0833,0.0008,0.0,0
-71d80124-e344-4543-ab95-9d379c52013f,Anemone,"family, father, child",1.5,7,0.1569,0.0909,0.0015,0.0,0
-c68b7ad8-a100-4e9a-aa8b-bfededbf5434,Predators,"school, love, friend",3.0,4,0.1844,0.1111,0.0008,0.0,1
-48c8129a-e7b1-4c7b-ba89-4b2c0979cfde,Roofman,"comedy, action, bank",2.0,2,0.1545,0.1,0.0004,0.0,1
-cfd7b8d9-ed68-49ca-a9ad-eea392684037,Good Boy,"horror, house, home",3.0,7,0.1737,0.0909,0.0012,0.0,1
+71d80124-e344-4543-ab95-9d379c52013f,Anemone,"family, father, child",1.5,7,0.1569,0.0909,0.0015,0.0,1
+c68b7ad8-a100-4e9a-aa8b-bfededbf5434,Predators,"school, love, friend",3.0,4,0.1844,0.1111,0.0008,0.0,0
+48c8129a-e7b1-4c7b-ba89-4b2c0979cfde,Roofman,"comedy, action, bank",2.0,2,0.1545,0.1,0.0004,0.0,0
+cfd7b8d9-ed68-49ca-a9ad-eea392684037,Good Boy,"horror, house, home",3.0,7,0.1737,0.0909,0.0012,0.0,0
 2925ea06-8efa-4874-b221-1d00134ee760,Stiller & Meara: Nothing is Lost,"family, father, child",3.0,8,0.1609,0.0909,0.0016,0.0,0
 f7b1068b-b13b-4abf-950c-49f864f396c6,Killing Faith,"war, men, moment",3.0,4,0.1632,0.1,0.0009,0.0,0
 701727d5-d944-4748-9513-224671fe1861,Beast of War,"war, men, moment",3.0,2,0.1577,0.1,0.0009,0.0,0
-a9624899-6ba5-4b9e-a544-d11c1fd2ee9d,The Road Between Us: The Ultimate Rescue,"family, father, child",3.0,4,0.1668,0.1,0.0009,0.0,0
+a9624899-6ba5-4b9e-a544-d11c1fd2ee9d,The Road Between Us: The Ultimate Rescue,"family, father, child",3.0,4,0.1668,0.1,0.0009,0.0,1
 dda9f777-1206-4a7c-9b39-c0a651a8af06,Shell,"horror, house, home",3.0,4,0.155,0.0769,0.0008,0.0,1
 cc20823f-5417-477f-a74d-5a9f8ef21a32,Vicious,"horror, house, home",2.0,8,0.1681,0.0909,0.0015,0.0,1
 46fe4514-84c9-4f39-85f2-40100c301ac6,Monster: The Ed Gein Story,"horror, house, home",1.5,7,0.1713,0.0833,0.0014,0.0,1
-f9da36f4-a38f-4cc4-9387-ce73fc6a571e,V/H/S/HALLOWEEN,"horror, house, home",3.0,10,0.178,0.0909,0.002,0.0,1
-e777ced0-f4a4-454d-8ae1-4d6b90897627,Bone Lake,"horror, house, home",3.0,12,0.1695,0.0909,0.0024,0.0,0
+f9da36f4-a38f-4cc4-9387-ce73fc6a571e,V/H/S/HALLOWEEN,"horror, house, home",3.0,10,0.178,0.0909,0.002,0.0,0
+e777ced0-f4a4-454d-8ae1-4d6b90897627,Bone Lake,"horror, house, home",3.0,12,0.1695,0.0909,0.0024,0.0,1
 5d0b2c0d-b9f7-48f5-9edf-661841b18642,Play Dirty,"comedy, action, bank",1.5,11,0.1841,0.1111,0.0021,0.0,1
 0d6eb822-3efc-4e86-9a0f-462d6f2974e3,The Alabama Solution,"school, love, friend",3.5,3,0.1645,0.1,0.0008,0.0,1
 dd423e5d-b2c0-4b78-9883-f3b4f4a924e2,The Smashing Machine,"school, love, friend",3.0,9,0.175,0.1111,0.0018,0.0,1
 370f3f78-754f-488c-9fc5-6385fc1c8f29,The Ice Tower,"war, men, moment",4.0,6,0.1793,0.0909,0.0013,0.0,1
 6040278b-a18b-4636-8f40-ff7d3fc3c5e0,The Librarians,"school, love, friend",3.5,5,0.1503,0.0909,0.001,0.0,0
-a4459701-f740-4d87-9a41-5ba4f5cbca24,Are We Good?,"school, love, friend",2.5,5,0.1767,0.1111,0.0011,0.0,1
-f406dec5-9365-4f02-b4f1-95369fa39f71,If I Had Legs I’d Kick You,"family, father, child",3.5,4,0.1634,0.0909,0.0008,0.0,0
+a4459701-f740-4d87-9a41-5ba4f5cbca24,Are We Good?,"school, love, friend",2.5,5,0.1767,0.1111,0.0011,0.0,0
+f406dec5-9365-4f02-b4f1-95369fa39f71,If I Had Legs I’d Kick You,"family, father, child",3.5,4,0.1634,0.0909,0.0008,0.0,1
 c80a7947-dce5-4af3-9e06-0af7a07b4574,Good One,"family, father, child",4.0,5,0.1592,0.0909,0.001,0.0,0
 117f49e3-bd96-4967-9cb1-255fa9e29686,Time,"family, father, child",3.5,5,0.1789,0.1,0.001,0.0,0
 e4d96929-56ef-48ea-a4ac-74badd68a39d,The Dark and the Wicked,"horror, house, home",3.0,5,0.1488,0.0769,0.0011,0.0,1
-1337bf08-a179-44a1-992c-0dcc030de485,Lethal Weapon,"action, hero, creature",4.0,5,0.1477,0.0769,0.001,0.0,1
-967ff1bb-a868-4fee-bd83-410c61a084b7,The Long Kiss Goodnight,"action, hero, creature",2.5,6,0.177,0.0909,0.0011,0.0,0
+1337bf08-a179-44a1-992c-0dcc030de485,Lethal Weapon,"action, hero, creature",4.0,5,0.1477,0.0769,0.001,0.0,0
+967ff1bb-a868-4fee-bd83-410c61a084b7,The Long Kiss Goodnight,"action, hero, creature",2.5,6,0.177,0.0909,0.0011,0.0,1
 49b65c7b-5848-44ed-ba9b-2d73cb9d6e81,The Nice Guys,"comedy, action, bank",3.0,11,0.1675,0.1,0.0021,0.0,1
-5fff2301-912e-46b7-8c80-a3da835bcd22,The Predator,"action, hero, creature",3.0,7,0.1842,0.1111,0.0016,0.0,1
+5fff2301-912e-46b7-8c80-a3da835bcd22,The Predator,"action, hero, creature",3.0,7,0.1842,0.1111,0.0016,0.0,0
 65610670-0e94-4da1-ac82-a1421980e4a0,Don’t Look Back,"music, song, musical",3.0,5,0.1524,0.1,0.0011,0.0,0
 34abd479-d54c-4c29-af88-fcb97f48a2c5,Don’t Look Now,"love, friend, young",4.0,7,0.1735,0.0909,0.0013,0.0,0
 83b4d199-f685-429f-bda7-29948240a534,The Tenant,"horror, house, home",1.0,2,0.1544,0.0833,0.0005,0.0,0
 b90fadfb-575c-4d8e-b589-2a17dc4c1c7d,The Sixth Sense,"love, friend, young",3.0,6,0.1813,0.0909,0.0014,0.0,1
 64bbbf8a-e008-4e9c-a40c-51210f1d2d34,The Babadook,"horror, house, home",3.5,8,0.1643,0.0833,0.0016,0.0,1
-a2706092-291d-4226-9248-3d4daa8e7cd8,Mother of nightmares,"horror, house, home",3.0,6,0.1762,0.0909,0.0013,0.0,1
-af10565b-d472-42bf-8cf1-4ff2a4495eb5,Raiders of the Lost Ark,"action, hero, creature",4.0,4,0.1709,0.0909,0.0008,0.0,0
-00d37473-bdc3-4838-b661-1a6aafc18a8a,Places in the Heart,"family, father, child",3.0,4,0.1658,0.1,0.001,0.0,0
-874bef5e-771e-48b1-9bed-812c1d67bda5,We believed a man could fly,"action, hero, creature",4.0,9,0.1697,0.0909,0.002,0.0,1
-f98b5108-45c4-48da-b127-dbf55f723c6d,Chain Reaction,"action, hero, creature",2.5,4,0.1506,0.0769,0.0008,0.0,1
-70f9ad53-2f3b-4c3d-9f68-a85596001052,Mission: Impossible,"action, hero, creature",3.0,6,0.1603,0.0833,0.0013,0.0,1
+a2706092-291d-4226-9248-3d4daa8e7cd8,Mother of nightmares,"horror, house, home",3.0,6,0.1762,0.0909,0.0013,0.0,0
+af10565b-d472-42bf-8cf1-4ff2a4495eb5,Raiders of the Lost Ark,"action, hero, creature",4.0,4,0.1709,0.0909,0.0008,0.0,1
+00d37473-bdc3-4838-b661-1a6aafc18a8a,Places in the Heart,"family, father, child",3.0,4,0.1658,0.1,0.001,0.0,1
+874bef5e-771e-48b1-9bed-812c1d67bda5,We believed a man could fly,"action, hero, creature",4.0,9,0.1697,0.0909,0.002,0.0,0
+f98b5108-45c4-48da-b127-dbf55f723c6d,Chain Reaction,"action, hero, creature",2.5,4,0.1506,0.0769,0.0008,0.0,0
+70f9ad53-2f3b-4c3d-9f68-a85596001052,Mission: Impossible,"action, hero, creature",3.0,6,0.1603,0.0833,0.0013,0.0,0
 02c4ead3-eee4-4bab-bd22-bc954692eaf2,The Jerk,"comedy, action, bank",2.0,5,0.1795,0.1,0.0012,0.0,1
-7d68275a-2cee-4b5c-a672-35a5d77c5b2e,Chain Reactions,"horror, house, home",3.0,5,0.1599,0.0833,0.001,0.0,1
-453187f4-bce7-42f8-8658-e48d56f69dc4,Doin’ It,"school, love, friend",2.5,10,0.1643,0.1,0.0019,0.0,0
-91a460b9-42a8-4fa5-bd3f-8e8dd49e55ad,Prisoner of War,"action, hero, creature",2.5,5,0.1807,0.0909,0.0011,0.0,1
-241fd554-61b7-40dc-81c1-4e722acd4537,House of Guinness,"school, love, friend",3.0,4,0.1777,0.1111,0.0009,0.0,1
+7d68275a-2cee-4b5c-a672-35a5d77c5b2e,Chain Reactions,"horror, house, home",3.0,5,0.1599,0.0833,0.001,0.0,0
+453187f4-bce7-42f8-8658-e48d56f69dc4,Doin’ It,"school, love, friend",2.5,10,0.1643,0.1,0.0019,0.0,1
+91a460b9-42a8-4fa5-bd3f-8e8dd49e55ad,Prisoner of War,"action, hero, creature",2.5,5,0.1807,0.0909,0.0011,0.0,0
+241fd554-61b7-40dc-81c1-4e722acd4537,House of Guinness,"school, love, friend",3.0,4,0.1777,0.1111,0.0009,0.0,0
 e47f9de5-2e3e-4cfe-8019-c95d7a111dee,The Senior,"school, love, friend",3.0,6,0.1693,0.1,0.0013,0.0,1
-a53cea48-ca84-4c1e-a841-38b94a06d440,All of You,"school, love, friend",3.0,7,0.1605,0.1,0.0014,0.0,1
+a53cea48-ca84-4c1e-a841-38b94a06d440,All of You,"school, love, friend",3.0,7,0.1605,0.1,0.0014,0.0,0
 0124b3a3-42f7-4b12-af33-de6fcdd6f39c,London Calling,"comedy, action, bank",1.5,6,0.1613,0.1,0.0012,0.0,1
-d4652e27-ea69-424f-83ec-6571774c25eb,Megadoc,"school, love, friend",4.0,5,0.145,0.0909,0.0012,0.0,1
+d4652e27-ea69-424f-83ec-6571774c25eb,Megadoc,"school, love, friend",4.0,5,0.145,0.0909,0.0012,0.0,0
 2fd05e42-2eb4-4f33-9cdb-967671117666,Wayward,"horror, house, home",2.5,5,0.1586,0.0833,0.0009,0.0,0
-aff7b1a0-5105-4814-9db9-c719bfc402e3,Coyotes,"comedy, action, bank",2.0,4,0.1492,0.0909,0.0009,0.0,1
-266ea820-efb8-4d45-b459-1c5c2f9bad0e,A Big Bold Beautiful Journey,"school, love, friend",2.5,4,0.1895,0.1111,0.0008,0.0,1
-ed08ee83-916f-4997-9191-e27d19a7a3ec,The Strangers: Chapter 2,"horror, house, home",1.0,4,0.155,0.0833,0.0008,0.0,1
-3bd89b42-2773-4ddc-bb62-f4cb9698725f,One Battle After Another,"war, men, moment",4.0,4,0.1841,0.1111,0.0008,0.0,1
+aff7b1a0-5105-4814-9db9-c719bfc402e3,Coyotes,"comedy, action, bank",2.0,4,0.1492,0.0909,0.0009,0.0,0
+266ea820-efb8-4d45-b459-1c5c2f9bad0e,A Big Bold Beautiful Journey,"school, love, friend",2.5,4,0.1895,0.1111,0.0008,0.0,0
+ed08ee83-916f-4997-9191-e27d19a7a3ec,The Strangers: Chapter 2,"horror, house, home",1.0,4,0.155,0.0833,0.0008,0.0,0
+3bd89b42-2773-4ddc-bb62-f4cb9698725f,One Battle After Another,"war, men, moment",4.0,4,0.1841,0.1111,0.0008,0.0,0
 b1391a64-7aa6-4949-8f88-662b11432f2e,Dead of Winter,"comedy, action, bank",3.0,2,0.1462,0.0909,0.0005,0.0,0
-52eafdf7-4daf-42da-97dd-090e6b481c0f,Plainclothes,"family, father, child",3.0,4,0.1577,0.0909,0.0008,0.0,0
-e8d89b6e-91f5-4160-a9fe-f3cd62f90f3f,Eleanor the Great,"family, father, child",2.5,4,0.1575,0.0909,0.0009,0.0,0
+52eafdf7-4daf-42da-97dd-090e6b481c0f,Plainclothes,"family, father, child",3.0,4,0.1577,0.0909,0.0008,0.0,1
+e8d89b6e-91f5-4160-a9fe-f3cd62f90f3f,Eleanor the Great,"family, father, child",2.5,4,0.1575,0.0909,0.0009,0.0,1
 b6010b96-ce3c-4c2c-9219-a49a0d3e3d99,All the Devils Are Here,"comedy, action, bank",2.5,5,0.1606,0.1,0.001,0.0,1
-62fc0590-a38a-4314-8b9d-19d4b07ef537,The Summer Book,"family, father, child",3.5,6,0.1695,0.0909,0.0013,0.0,0
-669a8fd6-8770-41a9-9da0-3c493c4cfe34,Riefenstahl,"war, men, moment",3.5,4,0.167,0.0909,0.0008,0.0,0
+62fc0590-a38a-4314-8b9d-19d4b07ef537,The Summer Book,"family, father, child",3.5,6,0.1695,0.0909,0.0013,0.0,1
+669a8fd6-8770-41a9-9da0-3c493c4cfe34,Riefenstahl,"war, men, moment",3.5,4,0.167,0.0909,0.0008,0.0,1
 25537994-2016-4b66-9685-16a014ae0ddf,Megalopolis,"war, men, moment",3.0,7,0.1757,0.1111,0.0014,0.0,0
 eb1dd7fc-07cc-4613-9fd6-1c7f4a638c8a,What Keeps You Alive,"horror, house, home",3.0,6,0.1704,0.0909,0.0012,0.0,0
 0a615416-df38-4601-9929-e53a569ad4cf,Licorice Pizza,"comedy, action, bank",4.0,11,0.1836,0.1111,0.0023,0.0,1
-a7c27278-830a-4e82-ae97-f562b9c70b14,American Psycho,"love, friend, young",3.0,4,0.1633,0.0833,0.0008,0.0,0
+a7c27278-830a-4e82-ae97-f562b9c70b14,American Psycho,"love, friend, young",3.0,4,0.1633,0.0833,0.0008,0.0,1
 3e46669e-c9f8-427a-b09b-74e61ab92d1f,"Tales of loneliness, in full flower","love, friend, young",4.0,5,0.1599,0.0833,0.0011,0.0,0
-119c4e86-f9a7-43a4-aec2-7c320f01d276,A magnificent puzzlement,"love, friend, young",2.5,2,0.1535,0.0833,0.0005,0.0,1
+119c4e86-f9a7-43a4-aec2-7c320f01d276,A magnificent puzzlement,"love, friend, young",2.5,2,0.1535,0.0833,0.0005,0.0,0
 0991ffdb-90fc-4622-a3a4-642b9635c45f,Rushmore,"school, love, friend",2.5,6,0.1582,0.0909,0.0013,0.0,0
 23c16c30-f91c-44ab-9b4f-4a55acbd9097,Phantom Thread,"war, men, moment",4.0,5,0.1723,0.1,0.001,0.0,0
-ea956928-9122-47ef-9b74-ef34a81358a8,Black Rabbit,"family, father, child",1.5,4,0.1475,0.0909,0.0009,0.0,0
+ea956928-9122-47ef-9b74-ef34a81358a8,Black Rabbit,"family, father, child",1.5,4,0.1475,0.0909,0.0009,0.0,1
 19e54f54-0e18-4079-9ef0-73a7ab08c2c4,HIM,"horror, house, home",0.5,4,0.1551,0.0769,0.0008,0.0,1
 88b3e24c-e8a7-428d-9004-2846dbf1522c,Bang Bang,"school, love, friend",3.0,4,0.1511,0.1,0.0009,0.0,1
 d9071a41-aa62-4768-8010-3dfefcfdd31c,Mussolini: Son of the Century,"war, men, moment",3.0,4,0.1813,0.1111,0.001,0.0,1
-1a07973e-2fca-426b-97be-b4fcab7ab362,Clemente,"school, love, friend",2.0,6,0.1603,0.1,0.0015,0.0,1
-cb778435-6f9f-4ae8-adf5-77ab7a2acd39,The Wrong Paris,"school, love, friend",1.0,4,0.1598,0.1,0.0009,0.0,1
-73f658a3-dc3e-41a6-b738-d99b42d9cac2,Code 3,"school, love, friend",3.0,5,0.1652,0.1,0.001,0.0,1
-5d7d42d0-97b4-4c71-afbb-58d34c10e202,Happyend,"war, men, moment",3.5,4,0.1917,0.1,0.0008,0.0,1
-03f82afe-6d56-4a4d-9798-f9fdb9d8cdfd,AKA Charlie Sheen,"school, love, friend",2.5,5,0.1588,0.1,0.0011,0.0,1
-93d9fbba-c13f-4ad7-8e37-3cb7168f1554,The Long Walk,"war, men, moment",3.0,5,0.1743,0.0909,0.001,0.0,1
-08e57086-f059-4b95-97f4-971c41a32103,Looking Through Water,"family, father, child",2.5,6,0.1573,0.0833,0.0013,0.0,0
-45ceb0d3-23ea-46b9-968e-0d8f42d37075,Downton Abbey: The Grand Finale,"family, father, child",3.0,6,0.171,0.1,0.0012,0.0,0
+1a07973e-2fca-426b-97be-b4fcab7ab362,Clemente,"school, love, friend",2.0,6,0.1603,0.1,0.0015,0.0,0
+cb778435-6f9f-4ae8-adf5-77ab7a2acd39,The Wrong Paris,"school, love, friend",1.0,4,0.1598,0.1,0.0009,0.0,0
+73f658a3-dc3e-41a6-b738-d99b42d9cac2,Code 3,"school, love, friend",3.0,5,0.1652,0.1,0.001,0.0,0
+5d7d42d0-97b4-4c71-afbb-58d34c10e202,Happyend,"war, men, moment",3.5,4,0.1917,0.1,0.0008,0.0,0
+03f82afe-6d56-4a4d-9798-f9fdb9d8cdfd,AKA Charlie Sheen,"school, love, friend",2.5,5,0.1588,0.1,0.0011,0.0,0
+93d9fbba-c13f-4ad7-8e37-3cb7168f1554,The Long Walk,"war, men, moment",3.0,5,0.1743,0.0909,0.001,0.0,0
+08e57086-f059-4b95-97f4-971c41a32103,Looking Through Water,"family, father, child",2.5,6,0.1573,0.0833,0.0013,0.0,1
+45ceb0d3-23ea-46b9-968e-0d8f42d37075,Downton Abbey: The Grand Finale,"family, father, child",3.0,6,0.171,0.1,0.0012,0.0,1
 d5dab80a-f3a8-4cf9-bb8b-eb317f741b43,Dreams (Sex Love),"war, men, moment",2.0,5,0.1672,0.0909,0.0012,0.0,1
-f288a767-1859-4e77-b7da-dc2315374257,Spinal Tap II: The End Continues,"music, song, musical",2.5,5,0.121,0.0833,0.0011,0.0,0
-0cda5aa3-3ac9-43ff-9364-07e1cb12bee9,Rabbit Trap,"horror, house, home",3.0,7,0.163,0.0833,0.0012,0.0,1
+f288a767-1859-4e77-b7da-dc2315374257,Spinal Tap II: The End Continues,"music, song, musical",2.5,5,0.121,0.0833,0.0011,0.0,1
+0cda5aa3-3ac9-43ff-9364-07e1cb12bee9,Rabbit Trap,"horror, house, home",3.0,7,0.163,0.0833,0.0012,0.0,0
 ba00be5b-760e-47d1-bdd9-3d818f72d300,Sunfish (& Other Stories on Green Lake),"family, father, child",3.5,4,0.1641,0.0909,0.0009,0.0,0
-e07638da-e102-4677-961d-18fd3c6ed279,Adulthood,"horror, house, home",3.0,4,0.1482,0.0833,0.0008,0.0,1
-b27bf0fd-83d2-409d-afe7-e975707b6a3c,Swiped,"school, love, friend",2.0,3,0.1684,0.1,0.0007,0.0,1
+e07638da-e102-4677-961d-18fd3c6ed279,Adulthood,"horror, house, home",3.0,4,0.1482,0.0833,0.0008,0.0,0
+b27bf0fd-83d2-409d-afe7-e975707b6a3c,Swiped,"school, love, friend",2.0,3,0.1684,0.1,0.0007,0.0,0
 5ea6239e-2f47-450e-aee1-958246151f96,Orwell: 2+2=5,"war, men, moment",2.5,5,0.1897,0.1111,0.0011,0.0,0
 e017e4f7-d135-4c8e-8c9f-aae49623eb71,King Richard,"school, love, friend",3.0,8,0.187,0.1111,0.0015,0.0,1
-fca4b16b-e382-4353-ac60-344f6e784c45,Kicks,"love, friend, young",3.5,4,0.1557,0.0909,0.0008,0.0,0
+fca4b16b-e382-4353-ac60-344f6e784c45,Kicks,"love, friend, young",3.5,4,0.1557,0.0909,0.0008,0.0,1
 2af77492-c3d3-4bee-97fc-3a4b2062cc3b,Any Given Sunday,"school, love, friend",3.0,6,0.1674,0.1,0.0013,0.0,1
-6dcba4a9-c7c4-4820-bbe7-239e1806dbb7,Day of the Fight,"school, love, friend",3.0,4,0.1419,0.0909,0.001,0.0,1
+6dcba4a9-c7c4-4820-bbe7-239e1806dbb7,Day of the Fight,"school, love, friend",3.0,4,0.1419,0.0909,0.001,0.0,0
 8395d578-0bdb-438f-b83e-99b9c382b5f4,The Cut,"school, love, friend",2.0,6,0.1563,0.1,0.0014,0.0,1
 b86b593b-55f5-4de4-af84-456ce957b3ce,The Old Guard,"action, hero, creature",3.5,5,0.1655,0.0909,0.0009,0.0,1
-e03ec223-2bf0-4113-b8e0-93e1c1c34804,Bringing Out the Dead,"love, friend, young",4.0,6,0.1409,0.0769,0.0012,0.0,0
+e03ec223-2bf0-4113-b8e0-93e1c1c34804,Bringing Out the Dead,"love, friend, young",4.0,6,0.1409,0.0769,0.0012,0.0,1
 f65e58d8-fe5d-4d6c-95e1-137347a35f29,The Hunger Games: Catching Fire,"school, love, friend",3.0,4,0.1636,0.1,0.0009,0.0,1
 43dc4796-0d56-448c-aa64-ccb7bc46a795,Karate Kid: Legends,"school, love, friend",2.5,5,0.1719,0.1111,0.0011,0.0,1
 88c23789-d8d3-4cf7-8a1e-fa28826ba294,Wall Street,"love, friend, young",3.5,7,0.1694,0.0909,0.0015,0.0,0
 b5e93668-41d1-46a7-bfa7-4cd75fb7ee12,Gosford Park,"love, friend, young",4.0,3,0.1695,0.0909,0.0007,0.0,1
 5b4dff50-5fae-47a6-93aa-db6af843ea45,Love,"war, men, moment",3.0,4,0.1629,0.0909,0.0011,0.0,1
 ae87460f-0d38-4484-9083-f948f5b62e56,Sex,"war, men, moment",2.5,4,0.1624,0.0909,0.001,0.0,1
-b3f0edfb-38ea-4aba-b546-4f2447f5fe8f,This is Spinal Tap,"music, song, musical",4.0,7,0.1307,0.0909,0.0016,0.0,0
-b7c049be-589d-4329-b6a4-82300107eaa6,The Last Waltz,"music, song, musical",3.0,4,0.1366,0.0909,0.0009,0.0,0
-f73e6f03-16bb-478e-8a8a-2db4e2263013,BlackBerry,"school, love, friend",3.5,13,0.1812,0.1111,0.0025,0.0,1
-13f9c40a-8b6a-4891-9ecf-f46776c071db,Tetris,"school, love, friend",2.0,5,0.1733,0.1111,0.001,0.0,1
-787173a4-a3ac-48de-bc13-c192631c68d4,Steve Jobs,"school, love, friend",3.5,4,0.1734,0.1111,0.001,0.0,1
+b3f0edfb-38ea-4aba-b546-4f2447f5fe8f,This is Spinal Tap,"music, song, musical",4.0,7,0.1307,0.0909,0.0016,0.0,1
+b7c049be-589d-4329-b6a4-82300107eaa6,The Last Waltz,"music, song, musical",3.0,4,0.1366,0.0909,0.0009,0.0,1
+f73e6f03-16bb-478e-8a8a-2db4e2263013,BlackBerry,"school, love, friend",3.5,13,0.1812,0.1111,0.0025,0.0,0
+13f9c40a-8b6a-4891-9ecf-f46776c071db,Tetris,"school, love, friend",2.0,5,0.1733,0.1111,0.001,0.0,0
+787173a4-a3ac-48de-bc13-c192631c68d4,Steve Jobs,"school, love, friend",3.5,4,0.1734,0.1111,0.001,0.0,0
 e43c7bb7-a8b3-4f4a-8201-01b394c06990,The Assistant,"love, friend, young",4.0,5,0.1559,0.0833,0.0011,0.0,1
 9b3380b4-8a93-4bfc-9b33-cfc4ac1c7fef,I Am Not Your Negro,"war, men, moment",3.5,5,0.1955,0.125,0.0011,0.0,1
-b3d0ea2e-80d7-45e9-b1a3-08301e0e0f4f,Fences,"war, men, moment",4.0,6,0.1839,0.0909,0.0012,0.0,0
+b3d0ea2e-80d7-45e9-b1a3-08301e0e0f4f,Fences,"war, men, moment",4.0,6,0.1839,0.0909,0.0012,0.0,1
 89bf1699-6a0b-45c9-aba5-3315baa077f1,The Witch,"family, father, child",3.5,8,0.1765,0.1,0.0015,0.0,0
 3708f0d1-6445-4e54-85f0-ea2048c4df4b,Cemetery of Splendour,"war, men, moment",4.0,6,0.1951,0.1111,0.0011,0.0,1
-a21b8894-0fd3-4d1e-ae12-63de089869ae,Krisha,"family, father, child",3.5,11,0.1918,0.1111,0.0022,0.0,1
-e3280a4c-d96c-4dc9-a71b-266c8230f27d,The Fits,"war, men, moment",3.5,5,0.1793,0.0833,0.0012,0.0,0
+a21b8894-0fd3-4d1e-ae12-63de089869ae,Krisha,"family, father, child",3.5,11,0.1918,0.1111,0.0022,0.0,0
+e3280a4c-d96c-4dc9-a71b-266c8230f27d,The Fits,"war, men, moment",3.5,5,0.1793,0.0833,0.0012,0.0,1
 eb225e71-bef8-4490-ae50-ad5d147516e3,Disorder,"war, men, moment",4.0,4,0.1721,0.0909,0.0008,0.0,1
-ce5cfc32-c79c-4e56-b459-04cbb963bea5,Black Panther,"action, hero, creature",4.0,5,0.1658,0.0909,0.001,0.0,1
-4ce9f3bf-0185-4348-9c73-0c464694c27d,"Kinda funny, how the Lord made bees, and the bees made money","family, father, child",3.5,4,0.1554,0.0909,0.001,0.0,0
+ce5cfc32-c79c-4e56-b459-04cbb963bea5,Black Panther,"action, hero, creature",4.0,5,0.1658,0.0909,0.001,0.0,0
+4ce9f3bf-0185-4348-9c73-0c464694c27d,"Kinda funny, how the Lord made bees, and the bees made money","family, father, child",3.5,4,0.1554,0.0909,0.001,0.0,1
 ecd8c95d-e0c0-45bf-a9de-25a4a073c788,Beyond the Lights,"music, song, musical",4.0,5,0.138,0.0909,0.001,0.0,0
-6c636957-d701-46b1-9a79-e90cf4490f76,Avengers: Endgame,"action, hero, creature",3.0,3,0.1619,0.0909,0.0006,0.0,0
-7794a275-a417-4f41-b8f7-6d4842a091c5,When They See Us,"family, father, child",3.5,8,0.175,0.0909,0.0017,0.0,0
-cde75b54-2b48-485c-a89b-b8e279bba87a,A New Testament story in an Old Testament land,"love, friend, young",4.0,10,0.1394,0.0769,0.0021,0.0,0
+6c636957-d701-46b1-9a79-e90cf4490f76,Avengers: Endgame,"action, hero, creature",3.0,3,0.1619,0.0909,0.0006,0.0,1
+7794a275-a417-4f41-b8f7-6d4842a091c5,When They See Us,"family, father, child",3.5,8,0.175,0.0909,0.0017,0.0,1
+cde75b54-2b48-485c-a89b-b8e279bba87a,A New Testament story in an Old Testament land,"love, friend, young",4.0,10,0.1394,0.0769,0.0021,0.0,1
 8192ceb7-e7fd-44e0-9968-898fe097b9d8,Leaving Las Vegas,"love, friend, young",4.0,9,0.1721,0.0833,0.0018,0.0,0
-c4d37e4c-6a4e-45ae-860f-57b37e013949,Gone With the Wind,"war, men, moment",4.0,7,0.1928,0.1111,0.0012,0.0,0
+c4d37e4c-6a4e-45ae-860f-57b37e013949,Gone With the Wind,"war, men, moment",4.0,7,0.1928,0.1111,0.0012,0.0,1
 fd7dc1e5-c2ab-49d5-90e5-310b089d8b13,"When you’re alone and life is making you lonely, you can go downtown","action, hero, creature",3.0,5,0.1574,0.0833,0.0013,0.0,1
 9dcbf6a0-b3a5-4408-824b-ab23f28723a2,"What, and give up show business?","action, hero, creature",3.0,1,0.1386,0.0769,0.0003,0.0,0
 7d9f59db-b986-4ce7-896e-853eb59279c3,"Squeal, slumdog swindler! How are you learning these things?","school, love, friend",4.0,3,0.1524,0.1,0.0007,0.0,0
 7baa3450-ca69-48b5-bc93-607dd3485e13,Sunshine state,"family, father, child",3.5,4,0.1658,0.1,0.0009,0.0,0
-15781f7c-6881-47ab-93e4-bd98bcef430c,Terminator Genisys,"comedy, action, bank",2.0,4,0.1651,0.1,0.0008,0.0,1
-65cddc32-fa5a-48a8-b32f-f077fe98f730,McCabe & Mrs. Miller,"love, friend, young",4.0,7,0.1748,0.0833,0.0016,0.0,1
+15781f7c-6881-47ab-93e4-bd98bcef430c,Terminator Genisys,"comedy, action, bank",2.0,4,0.1651,0.1,0.0008,0.0,0
+65cddc32-fa5a-48a8-b32f-f077fe98f730,McCabe & Mrs. Miller,"love, friend, young",4.0,7,0.1748,0.0833,0.0016,0.0,0
 892842e7-3553-41b7-8ed5-c0ec67b53767,The Player,"love, friend, young",4.0,6,0.1753,0.1,0.0012,0.0,0
-15a1e33b-3ad0-4702-a522-c4e1e70945a2,Cookie’s Fortune,"love, friend, young",4.0,8,0.181,0.0909,0.0016,0.0,1
-898bc5c9-995b-413d-b4f9-2d3cb2e12841,The Sure Thing,"love, friend, young",3.5,6,0.141,0.0769,0.0011,0.0,0
-f3c0d9bd-630d-4ff2-9321-460d7f1ec7e1,The Princess Bride,"school, love, friend",3.5,1,0.1208,0.0833,0.0005,0.0,1
-70f02977-dc04-4dbb-8fd8-71deec594499,Misery,"comedy, action, bank",3.0,0,0.0,0.0,0.0002,1.0,0
-1c7dcbf8-69c4-4a38-8c5e-93fd78d5b630,The American President,"school, love, friend",4.0,6,0.2025,0.1111,0.0013,0.0,1
-f8a5af9e-3f1c-4d0e-921d-c9fd5dff3661,Waiting For Guffman,"music, song, musical",3.0,2,0.1525,0.1,0.0006,0.0,1
+15a1e33b-3ad0-4702-a522-c4e1e70945a2,Cookie’s Fortune,"love, friend, young",4.0,8,0.181,0.0909,0.0016,0.0,0
+898bc5c9-995b-413d-b4f9-2d3cb2e12841,The Sure Thing,"love, friend, young",3.5,6,0.141,0.0769,0.0011,0.0,1
+f3c0d9bd-630d-4ff2-9321-460d7f1ec7e1,The Princess Bride,"school, love, friend",3.5,1,0.1208,0.0833,0.0005,0.0,0
+70f02977-dc04-4dbb-8fd8-71deec594499,Misery,"comedy, action, bank",3.0,0,0.0,0.0,0.0002,1.0,1
+1c7dcbf8-69c4-4a38-8c5e-93fd78d5b630,The American President,"school, love, friend",4.0,6,0.2025,0.1111,0.0013,0.0,0
+f8a5af9e-3f1c-4d0e-921d-c9fd5dff3661,Waiting For Guffman,"music, song, musical",3.0,2,0.1525,0.1,0.0006,0.0,0
 d51e6e19-4848-4508-a696-43cc6211937e,Best In Show,"school, love, friend",3.5,11,0.1878,0.1111,0.0025,0.0,0
 89fc7794-b5f2-47c9-bc2c-4a60ec379e2e,A Hard Day’s Night,"music, song, musical",4.0,6,0.1367,0.0909,0.0011,0.0,0
 0dcb99f4-fc84-4aec-8e5e-f9ba53c5cb12,"Back to the garden, again","music, song, musical",4.0,6,0.1364,0.0909,0.0013,0.0,0
-2ad42da0-fc27-4aa7-b905-c1dce0ac3580,"New York, New York","music, song, musical",3.0,6,0.1232,0.0833,0.0013,0.0,0
-92b610f7-09fa-42cc-8675-c0b3c9803903,Glengarry Glen Ross,"love, friend, young",3.5,5,0.1538,0.0833,0.001,0.0,0
-1bc83734-beeb-49b8-bdf8-5fdabeed1585,Boiler Room,"love, friend, young",3.5,6,0.161,0.0909,0.0012,0.0,0
-eaf20269-5feb-447f-ae97-dc8b32201242,The Wolf of Wall Street,"love, friend, young",3.5,9,0.1669,0.0909,0.0018,0.0,0
-6a7c6ad9-3e64-40ff-b270-d5630772b4fb,Full Metal Jacket,"war, men, moment",2.5,5,0.1633,0.1,0.0011,0.0,1
+2ad42da0-fc27-4aa7-b905-c1dce0ac3580,"New York, New York","music, song, musical",3.0,6,0.1232,0.0833,0.0013,0.0,1
+92b610f7-09fa-42cc-8675-c0b3c9803903,Glengarry Glen Ross,"love, friend, young",3.5,5,0.1538,0.0833,0.001,0.0,1
+1bc83734-beeb-49b8-bdf8-5fdabeed1585,Boiler Room,"love, friend, young",3.5,6,0.161,0.0909,0.0012,0.0,1
+eaf20269-5feb-447f-ae97-dc8b32201242,The Wolf of Wall Street,"love, friend, young",3.5,9,0.1669,0.0909,0.0018,0.0,1
+6a7c6ad9-3e64-40ff-b270-d5630772b4fb,Full Metal Jacket,"war, men, moment",2.5,5,0.1633,0.1,0.0011,0.0,0
 9eb9628b-0982-4678-acae-e112c5730e2e,High Flying Bird,"school, love, friend",3.5,5,0.1621,0.1,0.0011,0.0,1
-c4c2a168-b17a-492d-985d-ba48a16072db,Star Wars (Episode IV: A New Hope),"action, hero, creature",4.0,17,0.179,0.0909,0.0033,0.0,1
-d407682b-8465-4e71-9354-31cdf475eaf5,"Calls him an asshole, makes him a billionaire","love, friend, young",4.0,5,0.1697,0.0909,0.0011,0.0,0
-c22c8c28-3bc8-4531-9011-7927f94b3003,12 Years a Slave,"war, men, moment",3.5,5,0.1761,0.1111,0.001,0.0,1
-79ad1fe4-e4a1-402e-a81e-2281ae852a50,Steve Jobs: The Man in the Machine,"school, love, friend",3.0,5,0.1609,0.1,0.0011,0.0,1
-314cc79f-ce6d-4677-951b-0575bf33f316,Jobs,"school, love, friend",2.0,5,0.1595,0.1,0.0011,0.0,1
+c4c2a168-b17a-492d-985d-ba48a16072db,Star Wars (Episode IV: A New Hope),"action, hero, creature",4.0,17,0.179,0.0909,0.0033,0.0,0
+d407682b-8465-4e71-9354-31cdf475eaf5,"Calls him an asshole, makes him a billionaire","love, friend, young",4.0,5,0.1697,0.0909,0.0011,0.0,1
+c22c8c28-3bc8-4531-9011-7927f94b3003,12 Years a Slave,"war, men, moment",3.5,5,0.1761,0.1111,0.001,0.0,0
+79ad1fe4-e4a1-402e-a81e-2281ae852a50,Steve Jobs: The Man in the Machine,"school, love, friend",3.0,5,0.1609,0.1,0.0011,0.0,0
+314cc79f-ce6d-4677-951b-0575bf33f316,Jobs,"school, love, friend",2.0,5,0.1595,0.1,0.0011,0.0,0
 744e3b7e-be64-4a77-b64e-cff09eda6cc1,Casting JonBenet,"love, friend, young",3.0,8,0.1841,0.0909,0.0017,0.0,1
-11c917c8-2f98-467e-959f-b1e37179339e,The Defiant Ones,"music, song, musical",3.0,4,0.129,0.0909,0.0008,0.0,0
-9a0066b1-8a60-47ad-a20e-e9d02d449a20,Preparation for the Next Life,"war, men, moment",3.0,4,0.1728,0.0909,0.0008,0.0,1
+11c917c8-2f98-467e-959f-b1e37179339e,The Defiant Ones,"music, song, musical",3.0,4,0.129,0.0909,0.0008,0.0,1
+9a0066b1-8a60-47ad-a20e-e9d02d449a20,Preparation for the Next Life,"war, men, moment",3.0,4,0.1728,0.0909,0.0008,0.0,0
 6a04f6b8-177e-498b-9804-d515825a80a6,The Baltimorons,"comedy, action, bank",3.0,5,0.1753,0.1111,0.0011,0.0,1
 91f76b05-5244-458f-86eb-b5bbbef10eef,Twinless,"comedy, action, bank",3.5,5,0.1716,0.1,0.001,0.0,1
-7516798f-92bd-4062-b4eb-0ee4e9113519,"Love, Brooklyn","school, love, friend",3.0,4,0.1578,0.1,0.0009,0.0,1
-84a7f0b4-0526-4293-bde9-361606cc6385,The Lost Bus,"comedy, action, bank",3.0,5,0.1662,0.1,0.0011,0.0,1
+7516798f-92bd-4062-b4eb-0ee4e9113519,"Love, Brooklyn","school, love, friend",3.0,4,0.1578,0.1,0.0009,0.0,0
+84a7f0b4-0526-4293-bde9-361606cc6385,The Lost Bus,"comedy, action, bank",3.0,5,0.1662,0.1,0.0011,0.0,0
 b9de7342-00fd-45e2-ac31-f784b7eb23cd,Everything to Me,"school, love, friend",2.0,4,0.1601,0.1,0.0008,0.0,1
 f2c5b4df-d2c4-48e9-a286-93060653cafe,The Roses,"comedy, action, bank",2.0,5,0.1845,0.1111,0.0011,0.0,1
-704cbe32-69bc-4f2c-923b-b7eeeda6c5ba,The Threesome,"family, father, child",2.0,4,0.1496,0.0833,0.0009,0.0,0
+704cbe32-69bc-4f2c-923b-b7eeeda6c5ba,The Threesome,"family, father, child",2.0,4,0.1496,0.0833,0.0009,0.0,1
 3097ddd8-deba-4cb4-810d-1ddd3a147fc9,The Conjuring: Last Rites,"horror, house, home",3.0,6,0.1581,0.0833,0.0011,0.0,1
 b49aab6a-b2f8-4247-a589-5ea23353fcec,Steve,"school, love, friend",2.5,6,0.1703,0.1,0.0012,0.0,1
-1661ad31-a1d7-44c3-806f-d76ec5341443,John Candy: I Like Me,"school, love, friend",2.5,7,0.1653,0.1,0.0016,0.0,1
-1a8d7a02-c717-4e5c-837b-88052b6c1e0f,Democracy Noir,"war, men, moment",3.0,5,0.1953,0.1111,0.0012,0.0,1
-1f35ca2d-bed0-4fc5-ad5f-b2fcef316355,The Girlfriend,"family, father, child",3.0,3,0.1442,0.0833,0.0007,0.0,0
-739c051b-d720-4266-897b-85938d05e358,Men of War,"war, men, moment",3.0,12,0.1789,0.1,0.0024,0.0,0
-f165c0b0-34d3-4d7a-928b-28b17bc22075,The Toxic Avenger,"comedy, action, bank",3.0,3,0.1513,0.0909,0.0007,0.0,1
-8066ded5-ac19-4949-864b-3dea05f21362,The Man in My Basement,"horror, house, home",2.0,6,0.1644,0.0833,0.001,0.0,1
-ac2802df-eacd-485b-ae86-147186dc24a0,Four Nights of a Dreamer (1971),"school, love, friend",3.5,4,0.1708,0.1111,0.0009,0.0,1
-28ccecd8-2954-45ca-8808-55de578ff743,American Sweatshop,"horror, house, home",2.5,6,0.1579,0.1,0.0012,0.0,1
+1661ad31-a1d7-44c3-806f-d76ec5341443,John Candy: I Like Me,"school, love, friend",2.5,7,0.1653,0.1,0.0016,0.0,0
+1a8d7a02-c717-4e5c-837b-88052b6c1e0f,Democracy Noir,"war, men, moment",3.0,5,0.1953,0.1111,0.0012,0.0,0
+1f35ca2d-bed0-4fc5-ad5f-b2fcef316355,The Girlfriend,"family, father, child",3.0,3,0.1442,0.0833,0.0007,0.0,1
+739c051b-d720-4266-897b-85938d05e358,Men of War,"war, men, moment",3.0,12,0.1789,0.1,0.0024,0.0,1
+f165c0b0-34d3-4d7a-928b-28b17bc22075,The Toxic Avenger,"comedy, action, bank",3.0,3,0.1513,0.0909,0.0007,0.0,0
+8066ded5-ac19-4949-864b-3dea05f21362,The Man in My Basement,"horror, house, home",2.0,6,0.1644,0.0833,0.001,0.0,0
+ac2802df-eacd-485b-ae86-147186dc24a0,Four Nights of a Dreamer (1971),"school, love, friend",3.5,4,0.1708,0.1111,0.0009,0.0,0
+28ccecd8-2954-45ca-8808-55de578ff743,American Sweatshop,"horror, house, home",2.5,6,0.1579,0.1,0.0012,0.0,0
 17d018d6-4a5b-4c07-8214-0d4534100b32,The Ugly,"school, love, friend",1.5,3,0.1721,0.1111,0.0007,0.0,1
-0fc970a9-14ce-4b33-9e8c-1ddf17eb9626,Minding the Gap,"family, father, child",4.0,5,0.1522,0.0833,0.0011,0.0,0
-60feb8f3-2b2a-48f9-93b7-a806b82a23d7,After Hours,"love, friend, young",4.0,9,0.1586,0.0833,0.0016,0.0,0
+0fc970a9-14ce-4b33-9e8c-1ddf17eb9626,Minding the Gap,"family, father, child",4.0,5,0.1522,0.0833,0.0011,0.0,1
+60feb8f3-2b2a-48f9-93b7-a806b82a23d7,After Hours,"love, friend, young",4.0,9,0.1586,0.0833,0.0016,0.0,1
 51976fcb-3c46-4c2d-9af6-b80913a9a06d,The Goodbye Girl,"love, friend, young",3.0,4,0.1583,0.0909,0.0008,0.0,0
 05914864-4a6f-489c-82e4-44cc3ab7cb9f,The Heartbreak Kid,"love, friend, young",3.5,4,0.1588,0.0833,0.0009,0.0,0
-747fdcff-7ede-4709-802d-8bbc814a3ff0,Straight Up,"school, love, friend",3.0,6,0.1717,0.1111,0.0013,0.0,0
+747fdcff-7ede-4709-802d-8bbc814a3ff0,Straight Up,"school, love, friend",3.0,6,0.1717,0.1111,0.0013,0.0,1
 2ee1cf39-1577-487f-9872-a6e0440cd8b0,The Maze Runner,"war, men, moment",2.5,4,0.1619,0.0909,0.0008,0.0,1
-d76fa155-3242-402c-aef1-c127e8fe3c21,Captain Phillips,"comedy, action, bank",3.0,2,0.1412,0.0833,0.0005,0.0,1
-42763591-4ef9-4dec-ab99-1b1a4b5f9684,Task,"horror, house, home",3.0,5,0.1579,0.0833,0.001,0.0,1
+d76fa155-3242-402c-aef1-c127e8fe3c21,Captain Phillips,"comedy, action, bank",3.0,2,0.1412,0.0833,0.0005,0.0,0
+42763591-4ef9-4dec-ab99-1b1a4b5f9684,Task,"horror, house, home",3.0,5,0.1579,0.0833,0.001,0.0,0
 3d394270-c82c-4f2f-90a3-b4cdd5eec4b1,The Conjuring,"horror, house, home",1.0,7,0.181,0.0909,0.0013,0.0,1
-84be38b3-1f3c-4b9f-a232-fe5ab28319aa,The Forgiven,"family, father, child",2.0,4,0.1668,0.1,0.0008,0.0,1
+84be38b3-1f3c-4b9f-a232-fe5ab28319aa,The Forgiven,"family, father, child",2.0,4,0.1668,0.1,0.0008,0.0,0
 1299b1c5-5379-48e1-bbec-228ff7845b09,The Better Sister,"family, father, child",1.5,5,0.1508,0.0833,0.0012,0.0,0
 fda720d5-904a-4ec1-968c-20a31ee43ef7,Sharper,"comedy, action, bank",2.0,3,0.1369,0.0769,0.001,0.0,1
 30d5e3f6-42d9-4826-8c0b-d7c277dfadba,Sirens,"family, father, child",3.0,4,0.1437,0.0769,0.001,0.0,0
 7c23766b-9975-4a66-afaf-30404c83da0a,The Undoing,"school, love, friend",2.0,3,0.1778,0.1,0.0007,0.0,1
-ad0d97fd-10ae-43c0-8a2e-69a713b04821,Nine Queens,"love, friend, young",3.0,3,0.1279,0.0714,0.0011,0.0,1
-a6f07642-c281-4336-be51-3ecdf52915a8,Expats,"family, father, child",3.0,6,0.1547,0.0833,0.0013,0.0,0
+ad0d97fd-10ae-43c0-8a2e-69a713b04821,Nine Queens,"love, friend, young",3.0,3,0.1279,0.0714,0.0011,0.0,0
+a6f07642-c281-4336-be51-3ecdf52915a8,Expats,"family, father, child",3.0,6,0.1547,0.0833,0.0013,0.0,1
 4677e288-67ba-4463-8247-05db0dc12584,Babygirl,"love, friend, young",3.5,7,0.1668,0.0909,0.0015,0.0,0
 0cc73f00-3985-4626-b8c4-eac29ff2ba83,Decision to Leave,"comedy, action, bank",3.0,2,0.1403,0.0909,0.0006,0.0,1
-7bdd9401-aa5a-4512-bc86-da9d823be680,Train to Busan,"school, love, friend",3.0,4,0.154,0.0909,0.0013,0.0,1
-95e13555-9669-44ce-9642-9058dbe03d7f,Diner,"love, friend, young",3.5,4,0.1588,0.0909,0.0009,0.0,0
-f3bc5847-4184-4fed-b2a5-c0bca20b6b2c,Boyz N the Hood,"family, father, child",4.0,6,0.1614,0.0909,0.0013,0.0,0
+7bdd9401-aa5a-4512-bc86-da9d823be680,Train to Busan,"school, love, friend",3.0,4,0.154,0.0909,0.0013,0.0,0
+95e13555-9669-44ce-9642-9058dbe03d7f,Diner,"love, friend, young",3.5,4,0.1588,0.0909,0.0009,0.0,1
+f3bc5847-4184-4fed-b2a5-c0bca20b6b2c,Boyz N the Hood,"family, father, child",4.0,6,0.1614,0.0909,0.0013,0.0,1
 1981d48d-f32e-4837-9724-4c3e939f690b,Hoop Dreams,"school, love, friend",4.0,10,0.1666,0.1,0.002,0.0,1
 012db785-2790-44cc-babe-8679a9f1d11c,Life Itself,"school, love, friend",3.5,10,0.1757,0.1111,0.0021,0.0,0
-3611ef44-488f-4b1f-be5f-007f7e7c834a,The Wizard of Oz,"action, hero, creature",4.0,5,0.1738,0.0909,0.0012,0.0,1
+3611ef44-488f-4b1f-be5f-007f7e7c834a,The Wizard of Oz,"action, hero, creature",4.0,5,0.1738,0.0909,0.0012,0.0,0
 0bad6320-89b0-4b33-aff3-7847efd0294f,The King of Comedy,"love, friend, young",3.0,4,0.1405,0.0833,0.0008,0.0,0
 424ac588-ba61-4383-91d8-91adcd04d4b8,History written in the moment,"action, hero, creature",4.0,4,0.1682,0.0909,0.0012,0.0,0
-1914cf55-76fc-43a2-aae8-a3db43d16926,Bloody Sunday,"war, men, moment",3.5,5,0.174,0.1,0.0011,0.0,1
+1914cf55-76fc-43a2-aae8-a3db43d16926,Bloody Sunday,"war, men, moment",3.5,5,0.174,0.1,0.0011,0.0,0
 84c72e76-4034-499a-83f1-75364fa08815,Apollo 13,"action, hero, creature",4.0,6,0.1887,0.1,0.0012,0.0,1
 20e254e0-77d8-4678-9459-2b8c256b99fe,Saving Private Ryan,"war, men, moment",4.0,8,0.1762,0.1,0.0017,0.0,0
-0ae06e1e-9dc3-4e4a-8793-0246c0c39dc3,Cast Away,"action, hero, creature",3.0,6,0.1684,0.0833,0.0013,0.0,0
+0ae06e1e-9dc3-4e4a-8793-0246c0c39dc3,Cast Away,"action, hero, creature",3.0,6,0.1684,0.0833,0.0013,0.0,1
 d726624b-c403-4fd5-bea2-62fe698a4605,‘Saw’ doesn’t cut it as thriller,"love, friend, young",2.0,5,0.1651,0.0833,0.0011,0.0,0
 a29d08cc-5682-415a-926e-7bbc5993d3a2,I like me a good ol’ Haunted House movie,"horror, house, home",2.5,4,0.1665,0.0909,0.0008,0.0,0
-d9ba4aca-b0eb-440c-a9d2-4cc5186acdf6,"‘Wax’ lacks, but stacks up to its genre","horror, house, home",2.0,2,0.1405,0.0769,0.0005,0.0,0
+d9ba4aca-b0eb-440c-a9d2-4cc5186acdf6,"‘Wax’ lacks, but stacks up to its genre","horror, house, home",2.0,2,0.1405,0.0769,0.0005,0.0,1
 e1b0a767-fede-416b-958d-46b832d2eaa3,"Blood, guts and iambic pentameter","action, hero, creature",3.5,4,0.161,0.0909,0.0008,0.0,0
 c7a66f30-8a7d-4ab3-ad8a-84239adc10ad,Sharp Objects,"horror, house, home",3.5,8,0.1783,0.1,0.0014,0.0,0
 f450bcce-9e10-4b52-8c3b-740a30b3683d,House of Games,"love, friend, young",4.0,4,0.1395,0.0769,0.0015,0.0,1
 9295abb9-7576-431e-bfa3-3396fb687a50,The Spanish Prisoner,"love, friend, young",3.5,2,0.1225,0.0714,0.0008,0.0,1
-93484afb-d1a2-4477-89c0-7fede1b96600,The Night Of,"love, friend, young",4.0,7,0.1857,0.0909,0.0015,0.0,0
+93484afb-d1a2-4477-89c0-7fede1b96600,The Night Of,"love, friend, young",4.0,7,0.1857,0.0909,0.0015,0.0,1
 79fee83a-c6ca-4374-ba32-cf073023bc94,Stolen Summer,"family, father, child",3.0,4,0.1644,0.1,0.0008,0.0,0
-4b6c34af-7456-4219-9847-d22b4b215873,The Farewell,"family, father, child",4.0,6,0.1783,0.0909,0.0012,0.0,1
+4b6c34af-7456-4219-9847-d22b4b215873,The Farewell,"family, father, child",4.0,6,0.1783,0.0909,0.0012,0.0,0
 8bab4c57-1136-4a06-8502-9642f6aeeb51,The Others,"horror, house, home",2.5,9,0.179,0.1,0.0019,0.0,1
 894f2bfd-7eda-418b-a018-7fc3069f4fdb,Fifty Shades of Grey,"school, love, friend",2.0,5,0.1482,0.0909,0.0011,0.0,1
-24ed8402-8aec-4804-b2d1-6d8304d222cf,The Feeling That the Time For Doing Something Has Passed,"school, love, friend",3.5,2,0.1416,0.0909,0.0005,0.0,1
+24ed8402-8aec-4804-b2d1-6d8304d222cf,The Feeling That the Time For Doing Something Has Passed,"school, love, friend",3.5,2,0.1416,0.0909,0.0005,0.0,0
 92b7c4eb-5ebc-4921-9fbb-7f1670a1d7f0,Postcards from London,"war, men, moment",2.0,4,0.1561,0.1,0.0009,0.0,0
 9f29acfc-9e78-442a-831e-f403ef338f76,Matthias & Maxime,"school, love, friend",2.5,4,0.1688,0.1111,0.0008,0.0,1
-81378bcc-45c4-4472-ae68-c3cd2713398f,Scrapper,"family, father, child",3.5,6,0.1672,0.0909,0.0012,0.0,0
+81378bcc-45c4-4472-ae68-c3cd2713398f,Scrapper,"family, father, child",3.5,6,0.1672,0.0909,0.0012,0.0,1
 273d4fa6-f691-451a-a638-af4957b7c9a5,The Handmaiden,"war, men, moment",4.0,7,0.1898,0.1111,0.0014,0.0,0
 7d7929e2-515b-4079-9bc9-dc63ce2c973a,Attention shoppers!  Get eaten during our loading dock sale!,"action, hero, creature",2.0,0,0.0,0.0,0.0002,1.0,0
 c126104c-cc49-44d1-9928-bea52918ae08,World War Z,"action, hero, creature",2.0,5,0.1499,0.0833,0.0018,0.0,1
-c6d0932b-e918-4792-ac25-dcf91cb6b2b4,Eenie Meanie,"comedy, action, bank",1.0,4,0.1685,0.1,0.0008,0.0,1
-9d06baa7-bb09-4322-911b-59216f1331a5,We Strangers,"school, love, friend",2.0,5,0.1549,0.1,0.001,0.0,1
+c6d0932b-e918-4792-ac25-dcf91cb6b2b4,Eenie Meanie,"comedy, action, bank",1.0,4,0.1685,0.1,0.0008,0.0,0
+9d06baa7-bb09-4322-911b-59216f1331a5,We Strangers,"school, love, friend",2.0,5,0.1549,0.1,0.001,0.0,0
 7a6454c0-b181-403f-8854-f807be92b4e4,Honey Don’t!,"comedy, action, bank",2.0,4,0.162,0.1,0.0008,0.0,1
-3145b6da-75d6-4793-b1f4-8fc2cb5d8bb3,Lurker,"school, love, friend",3.5,5,0.1685,0.1,0.001,0.0,0
+3145b6da-75d6-4793-b1f4-8fc2cb5d8bb3,Lurker,"school, love, friend",3.5,5,0.1685,0.1,0.001,0.0,1
 d667f776-533d-4a97-a1f6-19f82fd846e0,East of Wall,"war, men, moment",3.5,2,0.1404,0.0909,0.0008,0.0,1
 bbb56f0a-12f4-4b37-97a8-da941f6898e5,Sanatorium Under the Sign of the Hourglass,"war, men, moment",4.0,5,0.169,0.0909,0.0012,0.0,1
 369a4809-2659-4981-b3a5-f284d560733e,Vice is Broke,"school, love, friend",2.0,7,0.181,0.1111,0.0014,0.0,1
-38458294-c658-4389-b0b8-693033b24128,The Thursday Murder Club,"love, friend, young",3.0,4,0.1748,0.0909,0.0007,0.0,0
-e5660ae2-d619-48fd-a70b-f7477fa4eb68,Eden,"war, men, moment",3.0,4,0.1747,0.0909,0.001,0.0,0
-d87a0d56-576d-46f4-966a-0dda3841af09,My Undesirable Friends: Part I – Last Air in Moscow,"war, men, moment",4.0,8,0.1873,0.1,0.0016,0.0,1
+38458294-c658-4389-b0b8-693033b24128,The Thursday Murder Club,"love, friend, young",3.0,4,0.1748,0.0909,0.0007,0.0,1
+e5660ae2-d619-48fd-a70b-f7477fa4eb68,Eden,"war, men, moment",3.0,4,0.1747,0.0909,0.001,0.0,1
+d87a0d56-576d-46f4-966a-0dda3841af09,My Undesirable Friends: Part I – Last Air in Moscow,"war, men, moment",4.0,8,0.1873,0.1,0.0016,0.0,0
 dc54616f-10ab-4713-a225-3fa3dfbd40d1,Dongji Rescue,"action, hero, creature",2.5,4,0.1621,0.0833,0.0009,0.0,1
-0bf68243-af2b-4d46-bcee-346491081169,Motel Destino,"love, friend, young",3.0,3,0.172,0.0833,0.0009,0.0,0
-b2b5c170-3268-4c71-8705-95c12450d872,What We Hide,"family, father, child",2.0,7,0.1619,0.0909,0.0015,0.0,0
+0bf68243-af2b-4d46-bcee-346491081169,Motel Destino,"love, friend, young",3.0,3,0.172,0.0833,0.0009,0.0,1
+b2b5c170-3268-4c71-8705-95c12450d872,What We Hide,"family, father, child",2.0,7,0.1619,0.0909,0.0015,0.0,1
 64b3b7f4-6f20-4944-946b-23bd1e455ff6,Pools,"school, love, friend",3.0,3,0.1493,0.0909,0.0007,0.0,0
-cdd53845-603e-4bdb-819e-4a3424bb1cb6,A Little Prayer,"family, father, child",4.0,9,0.1741,0.1,0.0018,0.0,1
-a647527d-fc22-4972-be8a-35eb0b47240b,Trust,"school, love, friend",1.5,2,0.165,0.1,0.0005,0.0,1
+cdd53845-603e-4bdb-819e-4a3424bb1cb6,A Little Prayer,"family, father, child",4.0,9,0.1741,0.1,0.0018,0.0,0
+a647527d-fc22-4972-be8a-35eb0b47240b,Trust,"school, love, friend",1.5,2,0.165,0.1,0.0005,0.0,0
 0a353fff-ecea-469a-a3b3-6e1bf92095cc,Caught Stealing,"love, friend, young",3.5,3,0.1622,0.0909,0.0006,0.0,1
-270474b5-7b23-4159-9951-0de58924a7bd,Relay,"school, love, friend",2.5,6,0.1768,0.1111,0.0012,0.0,1
+270474b5-7b23-4159-9951-0de58924a7bd,Relay,"school, love, friend",2.5,6,0.1768,0.1111,0.0012,0.0,0
 81b2e8d1-bfb8-445f-b680-cf92832a64b5,Splitsville,"comedy, action, bank",3.0,7,0.1752,0.1111,0.0015,0.0,1
 4081f8cb-a147-44b2-bad5-db44acc647d9,Baby Driver,"comedy, action, bank",3.5,7,0.1596,0.1,0.0014,0.0,1
 594a7170-244a-4d23-a9d0-b54380da819e,Nanny,"horror, house, home",2.5,5,0.159,0.0833,0.001,0.0,1
-a19bf7e8-e4e4-46fc-8fc1-1af4342422b5,The Power of the Dog,"family, father, child",4.0,6,0.153,0.0909,0.0013,0.0,0
-d65d8e3a-4423-4b9c-a1ec-ad00eab81be7,Drive Away Dolls,"comedy, action, bank",3.5,4,0.1588,0.0909,0.0008,0.0,1
+a19bf7e8-e4e4-46fc-8fc1-1af4342422b5,The Power of the Dog,"family, father, child",4.0,6,0.153,0.0909,0.0013,0.0,1
+d65d8e3a-4423-4b9c-a1ec-ad00eab81be7,Drive Away Dolls,"comedy, action, bank",3.5,4,0.1588,0.0909,0.0008,0.0,0
 0d9dca5a-fbb5-4b59-aa92-76671adc43ac,Materialists,"comedy, action, bank",3.5,6,0.1857,0.1,0.0013,0.0,1
 5c46e4d7-a219-413c-ab39-eff0690c83d1,The Big Lebowski,"love, friend, young",3.0,4,0.1635,0.0909,0.0007,0.0,0
-1ea2c626-acf0-4caa-ba33-38e85562d3c8,Nightcrawler,"love, friend, young",4.0,4,0.1639,0.0909,0.0008,0.0,0
+1ea2c626-acf0-4caa-ba33-38e85562d3c8,Nightcrawler,"love, friend, young",4.0,4,0.1639,0.0909,0.0008,0.0,1
 a22d5a80-1853-4eef-ac26-83956b82a36b,Saltburn,"family, father, child",3.0,5,0.1487,0.0833,0.0011,0.0,0
-948499a3-e7b2-48c1-b812-71985771c4b0,The Bear,"action, hero, creature",3.0,3,0.1387,0.0909,0.0008,0.0,1
+948499a3-e7b2-48c1-b812-71985771c4b0,The Bear,"action, hero, creature",3.0,3,0.1387,0.0909,0.0008,0.0,0
 fea942d3-56ec-470d-9a08-59963cae64c4,Ingrid Goes West,"school, love, friend",3.5,7,0.1645,0.1,0.0015,0.0,1
-33c89b0e-5575-4a17-9fd3-3c5e926cac9e,Mad God,"war, men, moment",4.0,7,0.17,0.0909,0.0014,0.0,1
+33c89b0e-5575-4a17-9fd3-3c5e926cac9e,Mad God,"war, men, moment",4.0,7,0.17,0.0909,0.0014,0.0,0
 6ef92b95-a51b-45a6-ad73-a2ff3a1ecc84,A hard-boiled guy with the inside dope,"school, love, friend",3.0,4,0.1816,0.1111,0.001,0.0,1
-f3db78f3-5f30-43f1-90e5-1e66383fd416,Invisible Life,"family, father, child",4.0,4,0.1651,0.0909,0.0014,0.0,1
-a95b26ae-31ec-4a48-b805-da1ad964b48f,Firebrand,"war, men, moment",2.0,1,0.1418,0.0833,0.0005,0.0,1
+f3db78f3-5f30-43f1-90e5-1e66383fd416,Invisible Life,"family, father, child",4.0,4,0.1651,0.0909,0.0014,0.0,0
+a95b26ae-31ec-4a48-b805-da1ad964b48f,Firebrand,"war, men, moment",2.0,1,0.1418,0.0833,0.0005,0.0,0
 74569cb0-f981-4b1a-9897-9b877839fd87,The Last Black Man in San Francisco,"horror, house, home",4.0,5,0.1814,0.1111,0.001,0.0,1
 f2cdd741-2794-42fc-acdb-5bb37f37a03a,The Climb,"comedy, action, bank",4.0,4,0.1619,0.1,0.0008,0.0,1
-8d55d4da-3596-4564-baec-e259f9b3d0d4,La La Land,"music, song, musical",3.5,7,0.1232,0.0833,0.0015,0.0,0
+8d55d4da-3596-4564-baec-e259f9b3d0d4,La La Land,"music, song, musical",3.5,7,0.1232,0.0833,0.0015,0.0,1
 2578acaa-af0c-4570-aadf-ad81a597df8a,Star Trek Into Darkness,"action, hero, creature",2.5,4,0.1743,0.0909,0.0008,0.0,1
 76e4964c-f61f-46b9-b59e-7daf55d5ff68,An Angel at My Table,"family, father, child",4.0,5,0.1636,0.0909,0.001,0.0,0
 f830d3b8-cc9e-40af-b7ad-8cade40b1ad7,The Piano,"love, friend, young",4.0,4,0.188,0.0909,0.0008,0.0,1
-49428c02-759f-496d-8390-ce73f0f126a1,Sweetie,"family, father, child",3.5,11,0.1839,0.1,0.0022,0.0,0
-b8365187-3cfa-476b-855c-36230b9748c3,Thou still unravish’d bride of quietness: Keats and Fanny Brawne,"school, love, friend",3.5,4,0.1564,0.1,0.0009,0.0,1
-c6ae1cd5-2db0-4d9b-ad7f-42b7ccadefdf,"Plot goes around and around, and comes out here, or there, or…","love, friend, young",3.0,4,0.1542,0.0909,0.0008,0.0,1
+49428c02-759f-496d-8390-ce73f0f126a1,Sweetie,"family, father, child",3.5,11,0.1839,0.1,0.0022,0.0,1
+b8365187-3cfa-476b-855c-36230b9748c3,Thou still unravish’d bride of quietness: Keats and Fanny Brawne,"school, love, friend",3.5,4,0.1564,0.1,0.0009,0.0,0
+c6ae1cd5-2db0-4d9b-ad7f-42b7ccadefdf,"Plot goes around and around, and comes out here, or there, or…","love, friend, young",3.0,4,0.1542,0.0909,0.0008,0.0,0
 7131ba6f-150e-4291-a828-dcbe43595105,Fargo,"love, friend, young",4.0,13,0.1892,0.1,0.0024,0.0,0
-a0bcf31d-9a24-458d-93d2-c3e40ed2858b,Past Lives,"family, father, child",4.0,6,0.159,0.0909,0.0013,0.0,0
+a0bcf31d-9a24-458d-93d2-c3e40ed2858b,Past Lives,"family, father, child",4.0,6,0.159,0.0909,0.0013,0.0,1
 3adfa1a0-e28c-4ea0-9b7c-651bb1e78f01,Henry: Portrait of a Serial Killer,"horror, house, home",3.5,3,0.1517,0.0769,0.0007,0.0,0
 51d46a83-444c-4327-bae3-d82f1daa8d46,Network,"school, love, friend",4.0,4,0.1641,0.0909,0.001,0.0,1
 faa0dd06-b83c-479f-961d-f636fd881d60,To Die For,"love, friend, young",3.5,4,0.1562,0.0833,0.0009,0.0,0
 a6efebcf-e17c-407a-be5b-8d2d9e61be36,The existential getaway driver,"comedy, action, bank",3.5,7,0.1655,0.1,0.0015,0.0,1
-c6b36b20-9d77-4c0c-8576-ecb9afaf5b39,Damon makes ‘Bourne’ a supreme thriller,"action, hero, creature",3.0,9,0.1669,0.0833,0.0018,0.0,1
+c6b36b20-9d77-4c0c-8576-ecb9afaf5b39,Damon makes ‘Bourne’ a supreme thriller,"action, hero, creature",3.0,9,0.1669,0.0833,0.0018,0.0,0
 d3ebcf96-57a2-4c30-8f8a-32c6785802e4,Promising Young Woman,"horror, house, home",3.0,4,0.1574,0.0833,0.0008,0.0,1
-b8396f55-ab3f-4f03-aa99-82d812bc56f4,The Talented Mr. Ripley,"love, friend, young",4.0,8,0.189,0.0909,0.0014,0.0,0
-79167ada-e551-4434-ab49-7b4a8aaab529,The Killing of a Sacred Deer,"family, father, child",3.5,5,0.1736,0.0909,0.001,0.0,0
+b8396f55-ab3f-4f03-aa99-82d812bc56f4,The Talented Mr. Ripley,"love, friend, young",4.0,8,0.189,0.0909,0.0014,0.0,1
+79167ada-e551-4434-ab49-7b4a8aaab529,The Killing of a Sacred Deer,"family, father, child",3.5,5,0.1736,0.0909,0.001,0.0,1
 ad27023e-a07f-41d0-b668-47182f0c862b,Priscilla,"family, father, child",3.5,5,0.1603,0.0909,0.0012,0.0,0
 ebfb7440-76f3-4b0f-9032-b2fb700bee24,Gran Turismo,"school, love, friend",2.5,4,0.172,0.1,0.0008,0.0,1
 9576cab5-6d5d-49f7-a305-fd56ffc601a3,McLovin’ it,"love, friend, young",3.5,7,0.1573,0.0833,0.0014,0.0,0
-71875c16-3c01-4319-9e46-5b4bc601a7d5,Quest for Fire,"action, hero, creature",3.5,3,0.1678,0.1111,0.001,0.0,1
-db6795ad-cc1e-4099-8b0b-b4bc9ec82469,Single White Female,"love, friend, young",3.0,1,0.1392,0.0833,0.0003,0.0,1
+71875c16-3c01-4319-9e46-5b4bc601a7d5,Quest for Fire,"action, hero, creature",3.5,3,0.1678,0.1111,0.001,0.0,0
+db6795ad-cc1e-4099-8b0b-b4bc9ec82469,Single White Female,"love, friend, young",3.0,1,0.1392,0.0833,0.0003,0.0,0
 b58e6b20-8007-42d1-b4c6-9328c1c6b824,A Queen Bitch gets her comeuppance,"love, friend, young",3.5,4,0.1579,0.0833,0.0009,0.0,0
 05a8bd3e-4019-4188-8fab-1e387a11961b,Welcome to Me,"school, love, friend",3.0,7,0.1641,0.1,0.0016,0.0,0
 2fb8ab2d-5f6b-405a-8b48-3ec0f41ccae2,Straight Outta Compton,"music, song, musical",4.0,7,0.1589,0.1,0.0014,0.0,0
 d3112811-3813-4a34-922f-6d63665e39df,La Chimera,"comedy, action, bank",3.0,4,0.1665,0.1,0.0008,0.0,1
 5b9eca86-54f9-4c8e-afa8-5f57273d98e5,Suspended Time,"music, song, musical",4.0,2,0.1098,0.0769,0.0005,0.0,0
-02d0c358-8a46-4d9a-b1d3-dc562e602338,The Map That Leads To You,"love, friend, young",2.0,4,0.158,0.0909,0.0008,0.0,0
-9dedddd1-6996-43b5-a8cd-49161fe45fb3,Witchboard,"horror, house, home",2.5,4,0.157,0.0833,0.0008,0.0,0
+02d0c358-8a46-4d9a-b1d3-dc562e602338,The Map That Leads To You,"love, friend, young",2.0,4,0.158,0.0909,0.0008,0.0,1
+9dedddd1-6996-43b5-a8cd-49161fe45fb3,Witchboard,"horror, house, home",2.5,4,0.157,0.0833,0.0008,0.0,1
 be507b62-e20d-4566-b1c7-ab7ec25eb6a6,Ne Zha 2,"action, hero, creature",3.0,5,0.1553,0.0909,0.0012,0.0,1
 c4565854-996c-4731-9b57-2c8a0d78302c,Night Always Comes,"love, friend, young",3.5,10,0.1861,0.0909,0.0018,0.0,0
 d1bf7097-bc1a-46ff-ba58-0436ed776cd1,Jimmy and Stiggs,"alien, ship, space",2.0,8,0.1359,0.0833,0.0014,0.0,1
-48060ee5-dffe-4784-b531-825901acbe57,The Knife,"family, father, child",2.5,5,0.1824,0.1111,0.001,0.0,0
-9a0e4db2-82ff-4cab-bb7e-6aa4ca245bb3,Devo,"music, song, musical",3.5,11,0.1471,0.1,0.002,0.0,0
+48060ee5-dffe-4784-b531-825901acbe57,The Knife,"family, father, child",2.5,5,0.1824,0.1111,0.001,0.0,1
+9a0e4db2-82ff-4cab-bb7e-6aa4ca245bb3,Devo,"music, song, musical",3.5,11,0.1471,0.1,0.002,0.0,1
 f7b2edcb-d716-4eed-a1a0-8fd87d02422c,Descendent,"alien, ship, space",3.0,4,0.1197,0.0769,0.0007,0.0,1
 aad79da9-d70f-41f9-87fe-f6e6ce68fe7a,America’s Team: The Gambler and His Cowboys,"school, love, friend",3.0,9,0.1845,0.1111,0.0019,0.0,1
 e66f0adc-343a-4c82-8d72-95421a8175f0,War 2,"action, hero, creature",3.0,5,0.1465,0.0833,0.0011,0.0,1
-8b2a6e1f-b44b-4e3c-a875-ad6ee339008b,The Twisted Tale of Amanda Knox,"horror, house, home",2.0,7,0.1704,0.0909,0.0015,0.0,0
-e5cdd8a8-a663-47e3-a43f-9f5cb93dc06f,Went Up the Hill,"horror, house, home",3.5,5,0.1859,0.0909,0.0011,0.0,0
-a8d134ca-d337-4870-94bc-e842637bfc1a,Highest 2 Lowest,"school, love, friend",3.5,4,0.1797,0.1111,0.0008,0.0,1
+8b2a6e1f-b44b-4e3c-a875-ad6ee339008b,The Twisted Tale of Amanda Knox,"horror, house, home",2.0,7,0.1704,0.0909,0.0015,0.0,1
+e5cdd8a8-a663-47e3-a43f-9f5cb93dc06f,Went Up the Hill,"horror, house, home",3.5,5,0.1859,0.0909,0.0011,0.0,1
+a8d134ca-d337-4870-94bc-e842637bfc1a,Highest 2 Lowest,"school, love, friend",3.5,4,0.1797,0.1111,0.0008,0.0,0
 5c37b635-37c3-4e94-b050-40b55e7e714e,Boys Go to Jupiter,"school, love, friend",3.5,8,0.1706,0.1,0.0017,0.0,1
 2a833b80-950b-4984-b065-0ff89400f45a,Americana,"comedy, action, bank",2.0,4,0.166,0.1111,0.0008,0.0,1
 7ce99236-e95c-44ba-a917-ca3009519e4a,Nobody 2,"action, hero, creature",2.0,4,0.165,0.0909,0.0008,0.0,1
-f4e0b2c9-78c2-495d-b8d3-2511e7c191ce,Fixed,"school, love, friend",1.5,4,0.1654,0.1,0.0008,0.0,1
+f4e0b2c9-78c2-495d-b8d3-2511e7c191ce,Fixed,"school, love, friend",1.5,4,0.1654,0.1,0.0008,0.0,0
 e89e05be-acec-40fb-9aba-df6fd82e4021,War of the Worlds,"school, love, friend",3.0,4,0.17,0.1,0.0008,0.0,1
 4e5e86a7-5637-4e30-aef8-549f66119c2a,Non-Fiction,"school, love, friend",4.0,2,0.1469,0.1,0.0005,0.0,0
-dff3a9e5-3031-41d4-8d7d-478cf982ee98,The Mask,"action, hero, creature",3.0,5,0.1504,0.0833,0.0011,0.0,1
+dff3a9e5-3031-41d4-8d7d-478cf982ee98,The Mask,"action, hero, creature",3.0,5,0.1504,0.0833,0.0011,0.0,0
 33b3152b-91f8-40bf-b69e-dea7915fde58,Eraser,"action, hero, creature",3.0,5,0.1478,0.0769,0.001,0.0,1
 2af7f9df-cd6e-4247-a831-cb1964d25c3c,The Scorpion King,"action, hero, creature",3.0,5,0.1524,0.0909,0.0012,0.0,1
 49d4ee8e-1dc1-472c-8526-2734fe20778b,Final Destination,"action, hero, creature",3.0,3,0.1588,0.0833,0.0006,0.0,0
 2b6a0318-7708-4806-b390-663ff55d7115,Creation of the Gods II: Demon Force,"action, hero, creature",3.0,6,0.1534,0.0833,0.0015,0.0,1
 2335e0cc-eb6f-49e6-9fa4-943e19f15450,Christmas Bloody Christmas,"music, song, musical",1.0,1,0.1207,0.0833,0.0003,0.0,0
-e58bee7c-3296-4507-9113-d4b2b0ed2b03,The Mind’s Eye,"horror, house, home",1.0,9,0.1655,0.0833,0.0016,0.0,0
-c62c9176-ec23-4244-889e-35e24de18011,Tiger Zinda Hai,"action, hero, creature",3.0,6,0.1422,0.0769,0.0014,0.0,1
-33f5eb0e-fb05-4999-aaa7-845e5e5dc5d5,War,"action, hero, creature",2.5,5,0.14,0.0769,0.0013,0.0,1
+e58bee7c-3296-4507-9113-d4b2b0ed2b03,The Mind’s Eye,"horror, house, home",1.0,9,0.1655,0.0833,0.0016,0.0,1
+c62c9176-ec23-4244-889e-35e24de18011,Tiger Zinda Hai,"action, hero, creature",3.0,6,0.1422,0.0769,0.0014,0.0,0
+33f5eb0e-fb05-4999-aaa7-845e5e5dc5d5,War,"action, hero, creature",2.5,5,0.14,0.0769,0.0013,0.0,0
 ea34978a-ef4f-42ca-9469-ac3356b17f1f,Fighter,"action, hero, creature",3.0,6,0.1529,0.0833,0.0015,0.0,0
-7acb8b02-f17a-4cdc-94e2-1841ad1c2a00,Amanda Knox,"love, friend, young",3.0,5,0.1721,0.0833,0.0012,0.0,0
-46eeee00-f490-42dd-9c01-46b6643dd020,Bamboozled,"school, love, friend",2.0,5,0.1872,0.1111,0.0012,0.0,1
+7acb8b02-f17a-4cdc-94e2-1841ad1c2a00,Amanda Knox,"love, friend, young",3.0,5,0.1721,0.0833,0.0012,0.0,1
+46eeee00-f490-42dd-9c01-46b6643dd020,Bamboozled,"school, love, friend",2.0,5,0.1872,0.1111,0.0012,0.0,0
 eef47bf7-68ad-4d8b-88de-d5c588ecb11e,A heightened state of mind in the last hours of freedom,"love, friend, young",4.0,4,0.1633,0.0909,0.0009,0.0,0
-ea8aa7a2-f712-4f5b-bda7-1b9fd6ea345b,"Much to hate, plenty to love in ‘She Hate Me’","love, friend, young",3.0,4,0.1748,0.1,0.0008,0.0,0
-d641cf24-6187-4ea6-aaf6-1329b45a80ac,BlacKkKlansman,"school, love, friend",4.0,5,0.1903,0.1111,0.001,0.0,1
-a864919f-362d-4c52-9e02-8663036778e2,David Byrne’s American Utopia,"music, song, musical",4.0,6,0.131,0.0909,0.0012,0.0,0
+ea8aa7a2-f712-4f5b-bda7-1b9fd6ea345b,"Much to hate, plenty to love in ‘She Hate Me’","love, friend, young",3.0,4,0.1748,0.1,0.0008,0.0,1
+d641cf24-6187-4ea6-aaf6-1329b45a80ac,BlacKkKlansman,"school, love, friend",4.0,5,0.1903,0.1111,0.001,0.0,0
+a864919f-362d-4c52-9e02-8663036778e2,David Byrne’s American Utopia,"music, song, musical",4.0,6,0.131,0.0909,0.0012,0.0,1
 1dbc3da0-e7e5-43de-bbe4-8cd756e1940a,Da 5 Bloods,"war, men, moment",4.0,15,0.1988,0.1,0.0028,0.0,1
 958c7e05-8060-460b-bbbc-a3fd9271e07f,Heist School Confidential,"comedy, action, bank",2.5,6,0.1427,0.1,0.0015,0.0,1
-e74b6dbe-7282-4682-a9de-3b8500b82914,Mo’ Better Blues,"love, friend, young",3.0,4,0.1658,0.0833,0.0008,0.0,1
-9e214cf1-bd43-45da-af88-bb222d77aa49,Da Sweet Blood of Jesus,"war, men, moment",3.0,4,0.1361,0.0833,0.0009,0.0,1
+e74b6dbe-7282-4682-a9de-3b8500b82914,Mo’ Better Blues,"love, friend, young",3.0,4,0.1658,0.0833,0.0008,0.0,0
+9e214cf1-bd43-45da-af88-bb222d77aa49,Da Sweet Blood of Jesus,"war, men, moment",3.0,4,0.1361,0.0833,0.0009,0.0,0
 b8e8756e-90c9-430d-8421-9b806a69f673,Oldboy,"love, friend, young",3.0,4,0.1665,0.0909,0.0009,0.0,0
 01479704-5595-480d-ac9d-4ba5b46edae2,"Sorry, Baby","school, love, friend",4.0,7,0.1627,0.1,0.0015,0.0,1
-e60e81f0-b30c-4f9c-ac23-caafbf7c8075,Echo Valley,"family, father, child",2.0,6,0.1546,0.0833,0.0013,0.0,0
+e60e81f0-b30c-4f9c-ac23-caafbf7c8075,Echo Valley,"family, father, child",2.0,6,0.1546,0.0833,0.0013,0.0,1
 a7eadf6d-088b-49e4-a1eb-a12d73b468f6,The Naked Gun,"comedy, action, bank",3.0,9,0.1738,0.1,0.0018,0.0,1
 b87add5e-75f7-41c4-8b60-2ef09962ae0a,The Fantastic Four: First Steps,"action, hero, creature",3.5,8,0.1711,0.0909,0.0016,0.0,0
 38bbec95-54dc-49e2-a69f-ed7f73c07a86,MaXXXine,"horror, house, home",2.0,5,0.1606,0.0833,0.0009,0.0,1
 ae72fd5c-e845-4919-af57-7655503b6a69,The Last Stop in Yuma County,"comedy, action, bank",3.0,6,0.1674,0.1,0.0011,0.0,1
 824024ab-07a1-42fa-b973-07d2849b6170,Unfriended,"horror, house, home",1.0,5,0.1739,0.1,0.001,0.0,1
-df2471cd-e629-4c8b-93e0-85a86d755c5d,Searching,"horror, house, home",3.0,4,0.1674,0.1,0.0008,0.0,1
-699331ea-73d6-45d3-86a9-8b32f2d9c283,Union,"school, love, friend",3.0,4,0.1596,0.1,0.0011,0.0,1
-136d4f02-d4fb-45ba-9bf3-890975941726,Intimations of mortality in the countryside,"family, father, child",3.0,6,0.1684,0.0909,0.0013,0.0,0
-38f54ba0-803b-4f87-87c1-f24bf910b19a,Ace Ventura: Pet Detective,"school, love, friend",1.0,4,0.171,0.1,0.0008,0.0,1
+df2471cd-e629-4c8b-93e0-85a86d755c5d,Searching,"horror, house, home",3.0,4,0.1674,0.1,0.0008,0.0,0
+699331ea-73d6-45d3-86a9-8b32f2d9c283,Union,"school, love, friend",3.0,4,0.1596,0.1,0.0011,0.0,0
+136d4f02-d4fb-45ba-9bf3-890975941726,Intimations of mortality in the countryside,"family, father, child",3.0,6,0.1684,0.0909,0.0013,0.0,1
+38f54ba0-803b-4f87-87c1-f24bf910b19a,Ace Ventura: Pet Detective,"school, love, friend",1.0,4,0.171,0.1,0.0008,0.0,0
 d359e3e5-32ae-4de6-84b1-fa0fe1911ff2,The Mummy Returns,"action, hero, creature",2.0,5,0.1597,0.0833,0.001,0.0,1
 aa1c5ec9-f97b-453a-8fec-aa4080b9fe15,Scream,"horror, house, home",3.0,4,0.1439,0.0769,0.0009,0.0,0
-b391da79-ac76-4eec-a7cf-5541b7c6bb7e,These cops are overage and undercover,"school, love, friend",3.0,6,0.1741,0.1,0.0013,0.0,0
+b391da79-ac76-4eec-a7cf-5541b7c6bb7e,These cops are overage and undercover,"school, love, friend",3.0,6,0.1741,0.1,0.0013,0.0,1
 d2cca3c9-def8-45f8-a2a3-488bc36cdf40,Creation of the Gods I: Kingdom of Storms,"action, hero, creature",2.5,4,0.1418,0.0833,0.001,0.0,1
 bf8791f7-51b5-4c5e-bfd3-7a0e9ca80581,A Christmas Story,"love, friend, young",4.0,6,0.1608,0.0833,0.0013,0.0,0
-0d0eb005-883c-4482-b00e-fdaf6f2206a4,Black Christmas,"horror, house, home",3.0,4,0.1473,0.0833,0.0009,0.0,0
+0d0eb005-883c-4482-b00e-fdaf6f2206a4,Black Christmas,"horror, house, home",3.0,4,0.1473,0.0833,0.0009,0.0,1
 a7608ef9-86d2-4622-ae90-00d591aedec4,Scanners,"horror, house, home",2.0,5,0.1639,0.0833,0.001,0.0,1
-43c9a03a-8bde-465f-b4a3-1ecdc2c17d67,Baahubali 2: The Conclusion,"action, hero, creature",4.0,6,0.1543,0.0833,0.0012,0.0,1
-4757250a-32ae-487d-84d6-90fc50673710,Ocean’s Eleven,"comedy, action, bank",3.0,3,0.1735,0.0909,0.0007,0.0,1
+43c9a03a-8bde-465f-b4a3-1ecdc2c17d67,Baahubali 2: The Conclusion,"action, hero, creature",4.0,6,0.1543,0.0833,0.0012,0.0,0
+4757250a-32ae-487d-84d6-90fc50673710,Ocean’s Eleven,"comedy, action, bank",3.0,3,0.1735,0.0909,0.0007,0.0,0
 88d62c1c-0e80-449e-9734-dad2b353cc82,Wonder Woman,"war, men, moment",3.0,6,0.182,0.1,0.0012,0.0,1
-6d3c4afc-096b-4131-b3a4-182a1d84191e,Top Gun,"action, hero, creature",2.5,4,0.1744,0.0909,0.0011,0.0,0
-63d0b8df-f9c9-4003-9b48-8f510db9e031,Mission: Impossible II,"action, hero, creature",3.0,4,0.1689,0.0909,0.0007,0.0,1
+6d3c4afc-096b-4131-b3a4-182a1d84191e,Top Gun,"action, hero, creature",2.5,4,0.1744,0.0909,0.0011,0.0,1
+63d0b8df-f9c9-4003-9b48-8f510db9e031,Mission: Impossible II,"action, hero, creature",3.0,4,0.1689,0.0909,0.0007,0.0,0
 8941adf9-3166-47ea-adf5-c1db12e7e496,Top Gun: Maverick,"comedy, action, bank",4.0,4,0.1741,0.1,0.0008,0.0,1
 a773f792-b296-474a-bf90-20f6877c1984,Believer,"love, friend, young",2.0,4,0.1424,0.0833,0.0011,0.0,0
-e45bc3f2-ba45-4886-b90f-19c220f80b37,Do the Right Thing,"love, friend, young",4.0,5,0.1741,0.1,0.0011,0.0,0
+e45bc3f2-ba45-4886-b90f-19c220f80b37,Do the Right Thing,"love, friend, young",4.0,5,0.1741,0.1,0.0011,0.0,1
 fc07c2f0-edfb-4436-b720-fc6a28f8dc17,Malcolm X,"war, men, moment",4.0,10,0.1991,0.1111,0.002,0.0,1
-126b7b5b-7524-420c-a4ef-855d5c6c4c39,Stop Making Sense,"music, song, musical",3.5,11,0.1373,0.0909,0.0023,0.0,0
+126b7b5b-7524-420c-a4ef-855d5c6c4c39,Stop Making Sense,"music, song, musical",3.5,11,0.1373,0.0909,0.0023,0.0,1
 bdabc3a9-4512-4490-9221-0753b5802949,“Mick Jagger used to sing with me”,"comedy, action, bank",3.5,1,0.1374,0.0909,0.0004,0.0,0
-f4d494ac-b320-477b-86ab-cd9f581c7a4f,One Fine Day,"love, friend, young",2.0,4,0.1486,0.0769,0.0008,0.0,0
-a6789775-35a8-4447-98dd-ce280636357c,The Green Berets,"war, men, moment",3.0,14,0.1823,0.1,0.0028,0.0,1
-0f7f02d3-46a0-4c82-a59c-53992cc81e57,The Treasure of the Sierra Madre,"love, friend, young",4.0,6,0.181,0.0909,0.0013,0.0,1
+f4d494ac-b320-477b-86ab-cd9f581c7a4f,One Fine Day,"love, friend, young",2.0,4,0.1486,0.0769,0.0008,0.0,1
+a6789775-35a8-4447-98dd-ce280636357c,The Green Berets,"war, men, moment",3.0,14,0.1823,0.1,0.0028,0.0,0
+0f7f02d3-46a0-4c82-a59c-53992cc81e57,The Treasure of the Sierra Madre,"love, friend, young",4.0,6,0.181,0.0909,0.0013,0.0,0
 91288b0f-b921-4913-94f1-04abcc86d8e7,The Irishman,"love, friend, young",3.5,9,0.1445,0.0833,0.0019,0.0,1
-1f0c1bd7-3ae4-4417-aff8-3722f3a07ed1,Mudbound,"family, father, child",4.0,8,0.1919,0.1111,0.0016,0.0,1
-4e12448c-6500-420e-9a91-c1001159277a,Dead Presidents,"love, friend, young",2.5,5,0.1882,0.1111,0.001,0.0,1
+1f0c1bd7-3ae4-4417-aff8-3722f3a07ed1,Mudbound,"family, father, child",4.0,8,0.1919,0.1111,0.0016,0.0,0
+4e12448c-6500-420e-9a91-c1001159277a,Dead Presidents,"love, friend, young",2.5,5,0.1882,0.1111,0.001,0.0,0
 aad0af86-2bc1-40da-b0c9-6344550bcf5a,Long day’s journey into night,"comedy, action, bank",4.0,5,0.1427,0.1,0.0014,0.0,1
 1f8c4432-01ad-41a7-b401-e825a3f630cb,"Come sit by our side if you love us, Do not hasten to bid us adieu","music, song, musical",4.0,5,0.1241,0.0833,0.0011,0.0,0
-0644cb8a-d3ce-4f92-b12b-9204f5f6c9b7,School Daze,"school, love, friend",3.5,5,0.1855,0.1111,0.0013,0.0,0
-fa561092-f5b9-4f2b-826e-8f881408c557,Glory,"war, men, moment",3.5,9,0.1872,0.1111,0.002,0.0,1
-a4ef3dd2-27df-4fc6-9fcf-2f5af206c5cc,Cry Freedom,"war, men, moment",2.5,6,0.1855,0.1111,0.0015,0.0,0
-5918e7ca-0f35-4842-9767-c5b60f7373c1,The Mighty Quinn,"love, friend, young",4.0,5,0.1833,0.0909,0.0009,0.0,1
+0644cb8a-d3ce-4f92-b12b-9204f5f6c9b7,School Daze,"school, love, friend",3.5,5,0.1855,0.1111,0.0013,0.0,1
+fa561092-f5b9-4f2b-826e-8f881408c557,Glory,"war, men, moment",3.5,9,0.1872,0.1111,0.002,0.0,0
+a4ef3dd2-27df-4fc6-9fcf-2f5af206c5cc,Cry Freedom,"war, men, moment",2.5,6,0.1855,0.1111,0.0015,0.0,1
+5918e7ca-0f35-4842-9767-c5b60f7373c1,The Mighty Quinn,"love, friend, young",4.0,5,0.1833,0.0909,0.0009,0.0,0
 41f32f6a-8ca0-49e6-a150-c189b1c25cc3,Jungle Fever,"family, father, child",3.5,6,0.1826,0.1,0.0012,0.0,1
-1d520a84-bbe4-4f87-ac51-5cfe8b71be7b,Throw another prawn on the barbie,"alien, ship, space",3.0,10,0.1324,0.0833,0.002,0.0,1
+1d520a84-bbe4-4f87-ac51-5cfe8b71be7b,Throw another prawn on the barbie,"alien, ship, space",3.0,10,0.1324,0.0833,0.002,0.0,0
 8cfcfd20-e2ec-4f70-8e7d-ceeebae1d636,Unbreakable,"action, hero, creature",3.0,5,0.1563,0.0833,0.0011,0.0,1
-61929c66-1647-442c-aa6f-500f9ed06730,Cape Fear,"love, friend, young",3.0,5,0.1312,0.0769,0.001,0.0,0
+61929c66-1647-442c-aa6f-500f9ed06730,Cape Fear,"love, friend, young",3.0,5,0.1312,0.0769,0.001,0.0,1
 d9ed1c49-abf0-4ae9-82bf-cae1812f27a1,La Femme Nikita,"love, friend, young",3.5,4,0.1433,0.0833,0.0009,0.0,0
 38fdc0f2-bde0-4bb3-9e3f-b6a37d56c61e,Not cruel enough for the room,"love, friend, young",3.5,4,0.1492,0.0833,0.0008,0.0,0
 0cc3b8bd-59a5-44b4-8556-724f5092887c,Airplane!,"comedy, action, bank",3.0,4,0.1731,0.0909,0.001,0.0,1
 217dc555-469d-4d76-a6eb-0ddb89d453c6,Happy Gilmore 2,"school, love, friend",3.0,4,0.1555,0.1,0.0008,0.0,1
-4ce51186-2936-48ce-bf92-7d72a5200862,Popstar: Never Stop Never Stopping,"music, song, musical",2.5,5,0.1241,0.0833,0.0009,0.0,0
-8f9ea8de-ed21-4885-aa5c-91ee7bed981e,Superman,"war, men, moment",2.5,6,0.1861,0.1,0.0012,0.0,0
+4ce51186-2936-48ce-bf92-7d72a5200862,Popstar: Never Stop Never Stopping,"music, song, musical",2.5,5,0.1241,0.0833,0.0009,0.0,1
+8f9ea8de-ed21-4885-aa5c-91ee7bed981e,Superman,"war, men, moment",2.5,6,0.1861,0.1,0.0012,0.0,1
 e3593daa-0e23-4c49-a470-4122307cacea,X,"horror, house, home",3.0,6,0.1636,0.0833,0.0011,0.0,1
-107ea3c4-a501-4974-9592-90acff235a2f,Pearl,"horror, house, home",2.5,7,0.1618,0.0909,0.0013,0.0,0
-b5aac83c-826c-4be6-a088-5664411f2d9d,Good country for dead men,"love, friend, young",4.0,4,0.1634,0.0909,0.0009,0.0,1
-90747497-221e-4780-a6b4-e0c4babad6a0,"Next vacation, how about a nice hotel?","horror, house, home",1.0,6,0.1553,0.0833,0.0012,0.0,0
+107ea3c4-a501-4974-9592-90acff235a2f,Pearl,"horror, house, home",2.5,7,0.1618,0.0909,0.0013,0.0,1
+b5aac83c-826c-4be6-a088-5664411f2d9d,Good country for dead men,"love, friend, young",4.0,4,0.1634,0.0909,0.0009,0.0,0
+90747497-221e-4780-a6b4-e0c4babad6a0,"Next vacation, how about a nice hotel?","horror, house, home",1.0,6,0.1553,0.0833,0.0012,0.0,1
 7edd2443-0ed0-44d5-9c95-01bc1da0c679,Blood Simple (15th Anniversary),"love, friend, young",4.0,4,0.1628,0.0909,0.0009,0.0,0
 a6cb1037-5a8c-437c-b63e-f4823e4c645a,A Simple Plan,"love, friend, young",4.0,10,0.1844,0.1,0.0019,0.0,0
-b7f95a33-01d9-4eae-97ae-238ef45313f3,The Beta Test,"school, love, friend",3.0,7,0.1728,0.1111,0.0014,0.0,1
+b7f95a33-01d9-4eae-97ae-238ef45313f3,The Beta Test,"school, love, friend",3.0,7,0.1728,0.1111,0.0014,0.0,0
 30d8145a-3c8a-45e5-978c-65206ffa4f21,Open Windows,"school, love, friend",3.0,5,0.164,0.1,0.001,0.0,1
-1fa155e8-2809-4ca5-b12b-7b35eb532e2c,Up,"action, hero, creature",4.0,4,0.1735,0.1,0.0008,0.0,0
+1fa155e8-2809-4ca5-b12b-7b35eb532e2c,Up,"action, hero, creature",4.0,4,0.1735,0.1,0.0008,0.0,1
 5f2861c0-efe7-4fe4-b6dc-79baad3b1e0f,An Officer and a Spy,"war, men, moment",4.0,4,0.1656,0.1,0.0008,0.0,0
 2e2a3076-d5f7-4fda-8c54-21ac21030c6f,Strange Harvest,"horror, house, home",2.5,7,0.1734,0.0833,0.0015,0.0,1
-4fd6f769-69d5-4817-9e45-e45ea29bcb7b,She Rides Shotgun,"comedy, action, bank",2.5,4,0.1482,0.0909,0.0008,0.0,1
+4fd6f769-69d5-4817-9e45-e45ea29bcb7b,She Rides Shotgun,"comedy, action, bank",2.5,4,0.1482,0.0909,0.0008,0.0,0
 3ac55aa0-b336-48d6-921e-f08a1b9b6470,My Oxford Year,"school, love, friend",1.5,6,0.1544,0.0909,0.0012,0.0,1
-3f073104-199a-424d-aaa2-ce520c942601,Together,"horror, house, home",3.5,4,0.1552,0.0909,0.0009,0.0,0
-93c56e0a-51a7-4173-bbda-21b7ad514a46,The Pickup,"comedy, action, bank",1.0,10,0.1843,0.1,0.0019,0.0,1
-175346ac-f909-476c-988d-734bc5018f4f,My Mother’s Wedding,"family, father, child",2.5,7,0.1681,0.0909,0.0015,0.0,0
+3f073104-199a-424d-aaa2-ce520c942601,Together,"horror, house, home",3.5,4,0.1552,0.0909,0.0009,0.0,1
+93c56e0a-51a7-4173-bbda-21b7ad514a46,The Pickup,"comedy, action, bank",1.0,10,0.1843,0.1,0.0019,0.0,0
+175346ac-f909-476c-988d-734bc5018f4f,My Mother’s Wedding,"family, father, child",2.5,7,0.1681,0.0909,0.0015,0.0,1
 1df2b7cb-d147-4b71-b6ee-38b65117bd25,"It’s Never Over, Jeff Buckley","music, song, musical",3.0,5,0.1448,0.0909,0.0009,0.0,0
 de8b9540-376c-4e9f-ae15-0048c7d97003,Freakier Friday,"family, father, child",2.0,5,0.177,0.0909,0.0011,0.0,0
 63035e48-66ca-4bd4-a7a9-aa5a846e2bf5,Souleymane’s Story,"war, men, moment",3.5,4,0.1857,0.1111,0.0007,0.0,0
-721d1306-0603-4aa2-bd7f-51095d2f83e8,Sketch,"family, father, child",4.0,4,0.158,0.0909,0.0009,0.0,1
+721d1306-0603-4aa2-bd7f-51095d2f83e8,Sketch,"family, father, child",4.0,4,0.158,0.0909,0.0009,0.0,0
 bddac39c-a114-4f40-b61f-723d1dbcfc7c,To Kill a Wolf,"horror, house, home",3.0,3,0.161,0.0909,0.0006,0.0,1
-cd5c9def-5cef-4e56-947b-af7f4aee4db5,Ebony and Ivory,"music, song, musical",3.0,4,0.1218,0.0833,0.0009,0.0,0
-f31f9573-8029-488b-a89f-00fc39021887,The Occupant,"horror, house, home",2.0,4,0.1546,0.0769,0.0008,0.0,1
+cd5c9def-5cef-4e56-947b-af7f4aee4db5,Ebony and Ivory,"music, song, musical",3.0,4,0.1218,0.0833,0.0009,0.0,1
+f31f9573-8029-488b-a89f-00fc39021887,The Occupant,"horror, house, home",2.0,4,0.1546,0.0769,0.0008,0.0,0
 c37df4b9-a248-42d9-acd5-9903a54940d7,The Bad Guys 2,"comedy, action, bank",2.0,5,0.1669,0.1111,0.0011,0.0,1
 d6af2cd8-d8f9-451a-8699-7d661ed85044,The Sparrow in the Chimney,"family, father, child",2.0,9,0.1712,0.1,0.0018,0.0,0
 ea7d035b-515a-4e56-a2cb-4565c605ac80,Architecton,"war, men, moment",3.5,5,0.1864,0.1,0.001,0.0,1
 e3f6c541-260d-48b9-b15e-7bb50f7ec829,Harvest,"war, men, moment",3.0,4,0.1591,0.0909,0.0008,0.0,0
 bb9f6c5e-96dc-4efe-ac15-b2a1458768c6,The Pianist,"war, men, moment",3.5,7,0.1654,0.0909,0.0015,0.0,1
-0b1f10ff-3728-4343-8ae1-839c29ec7177,Venus in Fur,"war, men, moment",2.0,4,0.1784,0.1,0.0009,0.0,1
+0b1f10ff-3728-4343-8ae1-839c29ec7177,Venus in Fur,"war, men, moment",2.0,4,0.1784,0.1,0.0009,0.0,0
 1eaf52c1-7a7a-477f-aede-48ccb7c59078,Midsommar,"family, father, child",4.0,4,0.1395,0.0769,0.001,0.0,0
-a872ff1a-a5dd-4c1b-801b-bb4ef782d9b1,Fresh,"school, love, friend",3.0,4,0.1569,0.1,0.0009,0.0,1
+a872ff1a-a5dd-4c1b-801b-bb4ef782d9b1,Fresh,"school, love, friend",3.0,4,0.1569,0.1,0.0009,0.0,0
 cccf9152-7470-404c-b5b6-e515f8227f60,"Oh, Hi!","horror, house, home",3.0,8,0.1698,0.1,0.0015,0.0,0
-d3bd4ed1-9cbd-4c24-ad64-43936772bb2f,Freaky Friday,"love, friend, young",3.0,5,0.1818,0.0833,0.001,0.0,0
+d3bd4ed1-9cbd-4c24-ad64-43936772bb2f,Freaky Friday,"love, friend, young",3.0,5,0.1818,0.0833,0.001,0.0,1
 5e00f828-5f26-4a4f-a322-39ca86e0bef3,"Honey, I Shrunk The Kids","action, hero, creature",2.0,5,0.158,0.0909,0.0012,0.0,1
 47d05b5f-af71-4e27-ae01-4f243d1c1270,Jumanji,"action, hero, creature",1.5,5,0.1643,0.0833,0.001,0.0,1
 38c7273b-6308-4ed5-be90-45b57f81af32,Dying for Sex,"school, love, friend",3.5,4,0.1702,0.1111,0.0009,0.0,1
 3e38a6f3-9be8-459b-bed6-26224bf89603,F9,"comedy, action, bank",3.0,7,0.1755,0.1111,0.0014,0.0,1
 a9d7fa64-3a51-41ff-ba45-9472c8ee1e0b,The Bad Guys,"comedy, action, bank",2.5,4,0.1623,0.1,0.0009,0.0,1
 dff4d796-5fd9-496b-a7d1-dec607708126,Poker Face,"comedy, action, bank",2.0,0,0.0,0.0,0.0002,1.0,0
-3054c038-b2d0-4e39-8b4c-7e48fe97cd79,Bread And Roses,"school, love, friend",3.5,4,0.157,0.1,0.001,0.0,1
-6662649b-3b5a-434e-9091-03e3e6cc827c,Schindler’s List,"war, men, moment",4.0,4,0.1588,0.0909,0.001,0.0,0
-eba958c3-c215-464e-85f1-356f3aca2b0e,A choice that cannot be made,"war, men, moment",4.0,6,0.1646,0.0833,0.0013,0.0,0
+3054c038-b2d0-4e39-8b4c-7e48fe97cd79,Bread And Roses,"school, love, friend",3.5,4,0.157,0.1,0.001,0.0,0
+6662649b-3b5a-434e-9091-03e3e6cc827c,Schindler’s List,"war, men, moment",4.0,4,0.1588,0.0909,0.001,0.0,1
+eba958c3-c215-464e-85f1-356f3aca2b0e,A choice that cannot be made,"war, men, moment",4.0,6,0.1646,0.0833,0.0013,0.0,1
 5ec3ffa8-e995-47a3-8353-5368611b5bcc,Annals of the Upper Muddle Class,"love, friend, young",3.0,3,0.1639,0.0833,0.0007,0.0,0
-758a348d-ef13-4b1b-9242-b16e207e2a99,12 Angry Men,"love, friend, young",4.0,5,0.1694,0.1,0.0011,0.0,0
-7fe44cee-9126-4ff5-9e44-fd264699a6ec,Hereditary,"horror, house, home",4.0,7,0.1643,0.0833,0.0013,0.0,1
+758a348d-ef13-4b1b-9242-b16e207e2a99,12 Angry Men,"love, friend, young",4.0,5,0.1694,0.1,0.0011,0.0,1
+7fe44cee-9126-4ff5-9e44-fd264699a6ec,Hereditary,"horror, house, home",4.0,7,0.1643,0.0833,0.0013,0.0,0
 b845c8e6-2c42-4647-8afe-7f3216a2efdf,mother!,"horror, house, home",3.5,9,0.1692,0.0833,0.0017,0.0,1
 7c81943e-bf00-49c6-b84b-52bb9c141cad,Dogville,"love, friend, young",2.0,4,0.16,0.0833,0.0009,0.0,0
-fd78763f-aeb5-4567-b08f-9f56fe7fed2d,Drive My Car,"war, men, moment",4.0,2,0.1682,0.0909,0.0005,0.0,1
-bf23e75c-4a65-450b-a970-9bb4afe6852e,Obsession,"love, friend, young",3.0,4,0.1582,0.0833,0.0007,0.0,0
+fd78763f-aeb5-4567-b08f-9f56fe7fed2d,Drive My Car,"war, men, moment",4.0,2,0.1682,0.0909,0.0005,0.0,0
+bf23e75c-4a65-450b-a970-9bb4afe6852e,Obsession,"love, friend, young",3.0,4,0.1582,0.0833,0.0007,0.0,1
 f91af0ff-c3a5-4533-9317-b157c214a20a,Who Framed Roger Rabbit,"action, hero, creature",4.0,7,0.1733,0.1,0.0015,0.0,1
-7f933ddb-f872-4941-80cc-2d72eb8f5cda,Jaws,"war, men, moment",4.0,1,0.1363,0.0909,0.0007,0.0,0
-96a1e74d-3112-4425-8c74-7efb0f3f1980,Indiana Jones and the Temple of Doom,"action, hero, creature",4.0,5,0.1694,0.0833,0.0009,0.0,1
+7f933ddb-f872-4941-80cc-2d72eb8f5cda,Jaws,"war, men, moment",4.0,1,0.1363,0.0909,0.0007,0.0,1
+96a1e74d-3112-4425-8c74-7efb0f3f1980,Indiana Jones and the Temple of Doom,"action, hero, creature",4.0,5,0.1694,0.0833,0.0009,0.0,0
 3ede901e-6492-43e3-9eab-0135d96ff5e6,Moonraker,"action, hero, creature",3.0,4,0.165,0.0909,0.0009,0.0,1
 26528cc2-0e78-44ed-95fc-cc7155e86b46,The Fate of the Furious,"comedy, action, bank",2.5,9,0.1762,0.1,0.002,0.0,1
-183a90c8-c2ee-4a81-9590-90aa036e58d7,"Slow, Speed Racer, Slow","action, hero, creature",1.5,5,0.1726,0.1,0.0011,0.0,0
+183a90c8-c2ee-4a81-9590-90aa036e58d7,"Slow, Speed Racer, Slow","action, hero, creature",1.5,5,0.1726,0.1,0.0011,0.0,1
 cf961bd5-a164-4e08-9b53-cd1905973d25,So she shared a good laugh with a randy giraffe,"action, hero, creature",3.0,3,0.1371,0.0909,0.0009,0.0,1
 b22b44db-80d4-45ce-bcdf-71bb19a54070,Diciannove,"family, father, child",2.5,4,0.1629,0.0909,0.0008,0.0,1
 530e2132-c001-475c-a398-63d1f3bfc5b3,KPop Demon Hunters,"music, song, musical",3.0,4,0.1162,0.0833,0.0008,0.0,0
 45c0ad63-8965-4b7c-9a22-55bf755e8306,2000 Meters to Andriivka,"war, men, moment",2.0,7,0.1684,0.1,0.0013,0.0,0
 b8b30de2-4b34-4113-b3cb-d20382a24acc,Shoshana,"war, men, moment",2.5,4,0.1714,0.1,0.0008,0.0,0
 4bf80ec2-1595-45d4-bf18-1552b5a11fd0,AJ Goes to the Dog Park,"school, love, friend",1.5,5,0.1844,0.1111,0.0011,0.0,1
-d6fc38f1-aecf-45df-aeb2-db1190f166f7,Ick,"music, song, musical",2.0,3,0.1462,0.1,0.0006,0.0,0
-3f8e5f9b-ff60-4017-9666-fd55719e2e71,Saint Clare,"horror, house, home",1.0,5,0.164,0.0769,0.001,0.0,1
-ea33c049-2875-428b-928b-6816ab6c9a10,Four Letters of Love,"family, father, child",1.0,1,0.1384,0.0833,0.0003,0.0,0
+d6fc38f1-aecf-45df-aeb2-db1190f166f7,Ick,"music, song, musical",2.0,3,0.1462,0.1,0.0006,0.0,1
+3f8e5f9b-ff60-4017-9666-fd55719e2e71,Saint Clare,"horror, house, home",1.0,5,0.164,0.0769,0.001,0.0,0
+ea33c049-2875-428b-928b-6816ab6c9a10,Four Letters of Love,"family, father, child",1.0,1,0.1384,0.0833,0.0003,0.0,1
 e73882c2-6967-4de8-b32e-6dd7d12ad5b1,Monster Island,"action, hero, creature",2.0,5,0.171,0.0909,0.0012,0.0,1
 230666d4-e053-4b51-b7f5-4e7a8831bcc4,Osiris,"alien, ship, space",2.5,5,0.1358,0.0833,0.0009,0.0,1
 e7741c91-eb2c-4683-8f15-c1fa72e2af3c,The Home,"horror, house, home",0.5,4,0.1655,0.0833,0.0009,0.0,1
 1e2ce2fa-b2dc-4eb1-bae2-de6deb78107e,Life After,"war, men, moment",3.0,3,0.1583,0.0909,0.0006,0.0,0
-93e733ae-d0b6-4274-9a0e-a6d93ebc0eb8,Drowning Dry,"horror, house, home",3.5,4,0.1578,0.0909,0.0007,0.0,0
-a6fdc30a-f881-4c87-aac6-7b6b2371e045,Unicorns,"family, father, child",3.0,4,0.1632,0.1,0.0009,0.0,0
+93e733ae-d0b6-4274-9a0e-a6d93ebc0eb8,Drowning Dry,"horror, house, home",3.5,4,0.1578,0.0909,0.0007,0.0,1
+a6fdc30a-f881-4c87-aac6-7b6b2371e045,Unicorns,"family, father, child",3.0,4,0.1632,0.1,0.0009,0.0,1
 831f432d-a238-4be8-aee0-06fe9f425e61,No Sleep Till,"war, men, moment",3.0,3,0.1491,0.0909,0.0007,0.0,0
 2ed410ad-8226-4e22-b31d-1186f109d4f6,Cloud,"horror, house, home",3.5,8,0.1691,0.1,0.0019,0.0,1
-2d7bfdaa-3bee-4540-8614-37b6ec230ef9,FOLKTALES,"school, love, friend",3.5,6,0.1629,0.1,0.0014,0.0,0
+2d7bfdaa-3bee-4540-8614-37b6ec230ef9,FOLKTALES,"school, love, friend",3.5,6,0.1629,0.1,0.0014,0.0,1
 77a74461-7fe8-4604-affb-6caa1307168f,Bodied,"school, love, friend",3.5,5,0.1803,0.1,0.001,0.0,0
-cb51d45f-d564-45e6-801a-cc2ba6ab8648,Saint Maud,"horror, house, home",3.5,5,0.1667,0.0909,0.0009,0.0,1
+cb51d45f-d564-45e6-801a-cc2ba6ab8648,Saint Maud,"horror, house, home",3.5,5,0.1667,0.0909,0.0009,0.0,0
 a468b8f4-561d-4c1f-a210-bbb54e6bc7d6,Assassination Nation,"school, love, friend",1.5,6,0.1699,0.1111,0.0014,0.0,1
