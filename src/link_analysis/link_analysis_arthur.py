@@ -66,14 +66,9 @@ def laplacian_matrix(A: np.ndarray) -> np.ndarray:
     return L
 
 def laplacian_pseudoinverse(A: np.ndarray) -> np.ndarray:
-    print("   ⏳ Processing L+ (Pseudo-Inverse)...")
+    print("   ⏳ Processing L+ (Pseudo-Inverse via Moore-Penrose)...")
     L = laplacian_matrix(A)
-    n = A.shape[0]
-    e = np.ones((n, 1))
-    E = (e @ e.T)/n
-    M = L - E
-    M_inv = np.linalg.inv(M)
-    L_plus = M_inv + E
+    L_plus = np.linalg.pinv(L)
     return L_plus
 
 def information_centrality(L_plus: np.ndarray) -> np.ndarray:
