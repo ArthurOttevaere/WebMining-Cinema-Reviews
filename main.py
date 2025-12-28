@@ -11,8 +11,9 @@ from src.text_mining.Code_final_Visuels import run_text_mining
 from src.link_analysis.graph_builder_arthur import main as build_graph
 from src.link_analysis.link_analysis_arthur import main as run_link_analysis
 
-# --- CONFIGURATION ---
-RUN_SCRAPER = False      # True to scrape new reviews
+# --- FORBIDDEN TO CHANGE ANYTHING IN CONFIGURATION ---
+RUN_SCRAPER = False      # IMPORTANT : False allows to have the same results as report, using the data scraped at the beginning
+                        # IMPORTANT bis : Selecting True, will change all the results because it scrapes new reviews.
 SHOW_PLOTS = True       # True to see all the graphs
 LIMIT_SCRAPING = 900
 DATA_PATH = "data/processed/reviews_final_900.csv"
