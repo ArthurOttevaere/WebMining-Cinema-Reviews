@@ -30,8 +30,8 @@ MIN_SIM_INTRA = 0.30
 MIN_SIM_INTER = 0.50     
 
 INPUT_FILE = "data/processed/reviews_final_900.csv"
-NODES_OUTPUT = "data/raw/nodes_tfidf.csv"
-EDGES_OUTPUT = "data/raw/edges_tfidf.csv"
+NODES_OUTPUT = "data/processed/nodes_tfidf.csv"
+EDGES_OUTPUT = "data/processed/edges_tfidf.csv"
 
 # ==========================================
 # 2. NLP PREPROCESSING
