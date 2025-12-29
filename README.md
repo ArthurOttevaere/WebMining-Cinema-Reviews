@@ -70,9 +70,9 @@ L'ensemble du pipeline (Scraping, Text mining et Link analysis) est orchestrée 
 python main.py
 ```
 
-Ce script exécute, en arrière plan, les étapes suivantes : 
+Ce script exécute, en arrière plan, les étapes suivantes :
 
-* **Chargement des données :** Par défaut, le script charge le dataset fourni `data/processed/reviews_final_900.csv` pour éviter une nouvelle collecte longue des données. Cela permet également d'obtenir les mêmes résultats que ceux illustrés dans le rapport et dans l'ensemble de l'analyse. 
+* **Chargement des données :** Par défaut, le script charge le dataset fourni `data/processed/reviews_final_900.csv` pour éviter une nouvelle collecte longue des données. Cela permet également d'obtenir les mêmes résultats que ceux illustrés dans le rapport et dans l'ensemble de l'analyse.
 
 * **Text mining :** Nettoyage, vectorisation TF-IDF et clustering des critiques cinématographiques. `python src/text_mining/generate_gephi_linked.py` (Génère les nœuds et les arêtes).
 
