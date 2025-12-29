@@ -32,6 +32,7 @@ def run_text_mining(df, show_plots=False):
 
     total_docs = len(df)
     df["article_text_full"] = df["article_text_full"].astype(str)  # ensure text is string
+    df['film_title'] = df['film_title'] + " (" + df['film_year'].fillna(0).astype(int).astype(str) + ")"  # append year to title
     total_docs = len(df)  # number of documents
     # -------------------------------------------------------------------
     # NLTK setup
