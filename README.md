@@ -57,8 +57,8 @@ L'architecture respecte la séparation entre code source, données brutes et ré
 Assurez-vous d'avoir Python 3.9+ installé. Clonez le repo et installez les dépendances :
 
 ```Bash
-git clone https://github.com/votre-compte/votre-repo.git
-cd votre-repo
+git clone https://github.com/ArthurOttevaere/WebMining-Cinema-Reviews.git
+cd WebMining-Cinema-Reviews
 pip install -r requirements.txt
 ```
 
