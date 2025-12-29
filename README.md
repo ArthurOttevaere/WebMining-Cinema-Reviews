@@ -34,8 +34,8 @@ L'architecture respecte la séparation entre code source, données brutes et ré
 .
 ├── src/                    # Code source Python
 │   ├── scraping            # Scripts de collecte des données (RogerEbert)
-│   ├── text-mining         # Scripts de transformation et d'analyse du contenu textuel des critiques
-│   ├── link-analysis       # Scripts de construction du graph et d'analyses des liens
+│   ├── text_mining         # Scripts de transformation et d'analyse du contenu textuel des critiques
+│   ├── link_analysis       # Scripts de construction du graph et d'analyses des liens
 │
 ├── data/
 │   ├── raw/                # Données brutes issues du scraping, text-mining et link-analysis (.csv/.xlsx)
@@ -64,13 +64,21 @@ pip install -r requirements.txt
 
 ### 2. Exécution des analyses
 
-Pour répliquer l'analyse complète, exécutez les scripts dans l'ordre suivant :
+L'ensemble du pipeline (Scraping, Text mining et Link analysis) est orchestrée par un scrpit unique afin d'assurer une meilleure réplicabilité. Alors, pour lancer l'analyse complète, il suffit d'entrer la commande suivante dans votre terminal :
 
-* **Collecte :** `python src/scraping/scraper.py` (Génère le fichier brut).
+```Bash
+python main.py
+```
 
-* **Traitement & Graphe :** `python src/text_mining/generate_gephi_linked.py` (Génère les nœuds et les arêtes).
+Ce script exécute, en arrière plan, les étapes suivantes : 
 
-* **Analyse des métriques :** `python src/link_analysis/link_analysis_numpy.py` (Calcule les centralités matricielles).
+* **Chargement des données :** Par défaut, le script charge le dataset fourni `data/processed/reviews_final_900.csv` pour éviter une nouvelle collecte longue des données. Cela permet également d'obtenir les mêmes résultats que ceux illustrés dans le rapport et dans l'ensemble de l'analyse. 
+
+* **Text mining :** Nettoyage, vectorisation TF-IDF et clustering des critiques cinématographiques. `python src/text_mining/generate_gephi_linked.py` (Génère les nœuds et les arêtes).
+
+* **Construction du graphe :** Génère des noeuds et des arrêtes sur base de la similarité cosinus. Ces "Nodes" et "Edges" sont directement calculées via le corpus de données scrapé (`data/processed/reviews_final_900.csv)`.
+
+* **Link analysis :** Calcul des métriques avancées (Centralité, PareRank, etc.).
 
 ---
 
