@@ -74,7 +74,7 @@ Ce script exécute, en arrière plan, les étapes suivantes :
 
 * **Chargement des données :** Par défaut, le script charge le dataset fourni `data/processed/reviews_final_900.csv` pour éviter une nouvelle collecte longue des données. Cela permet également d'obtenir les mêmes résultats que ceux illustrés dans le rapport et dans l'ensemble de l'analyse.
 
-* **Text mining :** Nettoyage, vectorisation TF-IDF et clustering des critiques cinématographiques. `python src/text_mining/generate_gephi_linked.py` (Génère les nœuds et les arêtes).
+* **Text mining :** Nettoyage, vectorisation TF-IDF et clustering des critiques cinématographiques. Des visuels relatifs à l'analyse sémantique apparaitront au lancement du code.
 
 * **Construction du graphe :** Génère des noeuds et des arrêtes sur base de la similarité cosinus. Ces "Nodes" et "Edges" sont directement calculées via le corpus de données scrapé (`data/processed/reviews_final_900.csv)`.
 
@@ -98,13 +98,13 @@ Le code de scraping est inclus dans le projet à des fins de démonstration mét
 
 ### Text Mining
 
-Nous utilisons une approche hybride combinant TF-IDF et Truncated SVD (Latent Semantic Analysis) pour regrouper les films par thématiques sémantiques de leur critique. Un nettoyage strict (suppression des noms propres et lemmatisation) garantit la pertinence des thèmes.
+La phase de text mining repose sur un pipeline complet de traitement linguistique et de modélisation vectorielle appliqué aux critiques collectées. Après un nettoyage systématique du texte, les critiques ont été tokenisées, lemmatisées et filtrées à l’aide de critères linguistiques et statistiques (stopwords, noms propres, fréquence documentaire). Le corpus ainsi normalisé a été représenté sous forme de vecteurs TF-IDF intégrant unigrams et bigrams, puis soumis à une réduction dimensionnelle par SVD et à une normalisation L2. Cette représentation permet de mesurer efficacement la similarité sémantique entre critiques via la similarité cosinus.
 
 ### Link Analysis (Approche Matricielle)
 
-Contrairement aux approches classiques utilisant des librairies haut niveau, nous avons implémenté les mesures de centralité via l'algèbre linéaire :
+Contrairement aux approches classiques utilisant des librairies haut niveau, nous avons implémenté les mesures de centralité via les concepts d'algèbre linéaire et de calcul matriciel, tout deux abordés lors des cours théoriques :
 
-* **Centralité de Degré :** Calculée via la matrice d'adjacence binaire.
+* **Centralité de Degré :** Calculée via la matrice d'adjacence.
 
 * **PageRank :** Implémenté par la méthode des puissances (Power Iteration).
 
@@ -112,14 +112,17 @@ Contrairement aux approches classiques utilisant des librairies haut niveau, nou
 
 * **Closeness, Eccentricity & Shortest Path :** Basés sur l'algorithme de Floyd-Warshall.
 
+* **Diamètre et rayon du graphe :** Calculés sur base de ..., ils nous renseigne sur la santé globale du graphe.
+
+* **Partitionnement spectral :** Grâce à une coupe du graphe en deux, il renseigne sur la cohésion interne des groupes, relativement à leur dissociation les uns des autres.
+
 ---
 
 ## 📊 Aperçu des Résultats
 
 ### Visualisation Gephi
 
-Mettre une image du graphe Gephi Final
-
+![/Users/arthurottevaere/Downloads/605446336_1517578152628690_6745418421955372632_n.png]
 *Légende* : Les couleurs représentent les thèmes (Clusters) identifiés par TF-IDF.
 
 ### Top Films (Link Analysis)
