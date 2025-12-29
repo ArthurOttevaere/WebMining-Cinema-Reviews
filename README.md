@@ -80,15 +80,15 @@ Ce script exécute, en arrière plan, les étapes suivantes :
 
 * **Link analysis :** Calcul des métriques avancées (Centralité, PareRank, etc.).
 
-**⚠️ Note importante concernant le Scraping (`RUN_SCRAPER = False`)**
+### **⚠️ Note importante concernant le Scraping (`RUN_SCRAPER = False`)**
 
 Par défaut, la collecte de nouvelles données est désactivée pour garantir la **stricte réplicabilité des résultats** présentés dans notre rapport.
 
 Bien que le module de scraping soit complet et fonctionnel (importé via `src.scraping`), nous vous recommandons vivement de **ne pas passer cette variable à `True`**, car :
 
-1.**Cohérence :** Le site *RogerEbert.com* étant dynamique, une nouvelle collecte modifierait le corpus. Les clusters et métriques de graphe divergeraient alors de ceux analysés dans le PDF rendu.
+1. **Cohérence :** Le site *RogerEbert.com* étant dynamique, une nouvelle collecte modifierait le corpus. Les clusters et métriques de graphe divergeraient alors de ceux analysés dans le PDF rendu.
 
-2.**Performance :** L'analyse s'exécute ici instantanément sur le jeu de données figé (`reviews_final_900.csv`), alors qu'un nouveau scraping prendrait un temps plus conséquent.
+2. **Performance :** L'analyse s'exécute ici instantanément sur le jeu de données figé (`reviews_final_900.csv`), alors qu'un nouveau scraping prendrait un temps plus conséquent.
 
 Le code de scraping est inclus dans le projet à des fins de démonstration méthodologique et de vérification technique uniquement.
 
