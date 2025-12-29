@@ -15,3 +15,4 @@ data/*.json
 
 # Mais garder les fichiers .gitkeep !
 !data/**/.gitkeep
+src/text-mining/Code Lenny + Amine.py
