@@ -94,7 +94,7 @@ def get_smart_label(texts, n_top=3):
             'point', 'effect', 'woman', 'end', 'scene', 'plot',
             'man', 'good', 'bad', 'story', 'film', 'movie', 'something',
             'another', 'well', 'set', 'sequence', 'show', 'play', 'still',
-            'seems', 'made', 'white', 'find', 'often', 'tell', 'whose'
+            'seems', 'made', 'white', 'find', 'often', 'tell', 'whose', 'might'
         ]
         
         # We combine our blacklist with the stopwords. 
