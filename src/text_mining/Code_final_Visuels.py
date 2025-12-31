@@ -23,6 +23,7 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import warnings
 
 warnings.filterwarnings("ignore", category=FutureWarning)
+warnings.filterwarnings("ignore", category=RuntimeWarning)
 
 
 def run_text_mining(df, show_plots=False):
