@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import os
+import warnings
 import re
 import nltk
 from nltk.corpus import stopwords
@@ -16,12 +17,13 @@ from sklearn.preprocessing import Normalizer
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.cluster import KMeans
 
+warnings.filterwarnings("ignore", category=RuntimeWarning)
 
 # ==========================================
 # 1. CONFIGURATION
 # ==========================================
 
-NUM_THEMES = 9 # Based on the results of the text-mining code      
+NUM_THEMES = 12     # Based on the results of the text-mining code      
 INTRA_LINKS = 4          
 INTER_LINKS = 1          
 
