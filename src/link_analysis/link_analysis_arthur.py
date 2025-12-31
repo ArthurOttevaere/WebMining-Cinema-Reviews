@@ -338,7 +338,7 @@ def main():
             print(f"   - {theme} ({count} films)")
 
     # --- NEW FEATURE 4: CLUSTER HEATMAP ---
-    plot_cluster_distance_heatmap(final_df, SP, id_map) # <--- AJOUTER ICI
+    plot_cluster_distance_heatmap(final_df, SP, id_map)
     
     print("\n" + "═"*80)
 
