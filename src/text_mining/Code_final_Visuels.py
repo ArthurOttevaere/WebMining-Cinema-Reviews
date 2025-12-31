@@ -239,7 +239,7 @@ def run_text_mining(df, show_plots=False):
         print(f"\nCluster {i} ({(df['cluster'] == i).sum()} documents)")  # print cluster size
         print("Dominant words:", ", ".join(top_terms))  # print dominant words
 
-    sil_final = silhouette_score(X_tfidf_final, df["cluster"])  # final silhouette
+    sil_final = silhouette_score(X_tfidf_final, df["cluster"], metric="cosine")  # final silhouette
     print(f"\nFinal silhouette score: {sil_final:.4f}")  # print final silhouette
 
     # -------------------------------------------------------------------
