@@ -2,6 +2,8 @@ import pandas as pd
 import numpy as np
 import os
 from tabulate import tabulate 
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 # ==========================================
 # 1. NUMPY FUNCTIONS (MATRICIAL)
@@ -108,6 +110,65 @@ def pagerank_power_iteration(A: np.ndarray, alpha: float = 0.85, max_iter: int =
         if np.linalg.norm(pr - prev_pr) < 1e-6:
             break
     return pr.flatten()
+
+def plot_cluster_distance_heatmap(df_nodes, SP, id_map):
+    """
+    Display the average number of jumps needed between themes.
+    """
+    print("\n   🎨 Generating Cluster Distance Heatmap...")
+    
+    # 1. Extarct the themes
+    themes = df_nodes['Theme'].unique()
+    themes = sorted([t for t in themes if pd.notna(t)])
+    
+    n_themes = len(themes)
+    dist_matrix = np.zeros((n_themes, n_themes))
+    
+    # 2. Fill in the matrix
+    for i, theme_a in enumerate(themes):
+        # Ids of the fils from the cluster "A".
+        ids_a = df_nodes[df_nodes['Theme'] == theme_a]['Id']
+        indices_a = [id_map[x] for x in ids_a if x in id_map]
+        
+        for j, theme_b in enumerate(themes):
+            if i == j:
+                dist_matrix[i, j] = 0 # Distance from itself
+                continue
+                
+            # Ids of the fils from the cluster "B".
+            ids_b = df_nodes[df_nodes['Theme'] == theme_b]['Id']
+            indices_b = [id_map[x] for x in ids_b if x in id_map]
+            
+            # We take the distances between those 2 groups.
+            # We use np.ix_ to extract the sub matrix. 
+            sub_sp = SP[np.ix_(indices_a, indices_b)]
+            
+            # We only keep valid ways (< 90000).
+            valid_paths = sub_sp[sub_sp < 90000]
+            
+            if len(valid_paths) > 0:
+                dist_matrix[i, j] = valid_paths.mean()
+            else:
+                dist_matrix[i, j] = np.nan # No connection 
+    
+    # 3. Display
+    plt.figure(figsize=(12, 10))
+    # We shorten the names, only for display reasons 
+    short_labels = [f"{t.split(',')[0]}..." for t in themes]
+    
+    sns.heatmap(
+        dist_matrix, 
+        annot=True, 
+        fmt=".1f", 
+        cmap="viridis_r", # Short distance = good -> inverted
+        xticklabels=short_labels, 
+        yticklabels=short_labels,
+        cbar_kws={'label': 'Average Jumps (Shortest Path)'}
+    )
+    plt.title("Average Distance Between the Clusters")
+    plt.xticks(rotation=45, ha='right')
+    plt.tight_layout()
+    plt.show()
 
 # ==========================================
 # 2. MAIN PIPELINE
@@ -275,6 +336,11 @@ def main():
         print(f"\n🔵 GROUP {group_id} ({len(subset)} films) is dominated by:")
         for theme, count in top_themes.items():
             print(f"   - {theme} ({count} films)")
+
+    # --- NEW FEATURE 4: CLUSTER HEATMAP ---
+    plot_cluster_distance_heatmap(final_df, SP, id_map) # <--- AJOUTER ICI
+    
+    print("\n" + "═"*80)
 
 if __name__ == "__main__":
     main()
