@@ -16,13 +16,13 @@
 
 ## 📖 Contexte et Objectifs
 
-Ce projet a pour but d'analyser les critiques cinématographiques se trouvant sur des blogs en ligne. Dans ce projet, nous collectons et analysons de nombreuses critiques provenant de trois blogs cinématographiques anglophones distincts afin d'identifier des tendances sémantiques et structurelles.
+Ce projet a pour but d'analyser les critiques cinématographiques se trouvant sur des blogs en ligne. Dans ce projet, nous collectons et analysons un total de 900 critiques provenant d'un des blogs cinématographiques anglophones de référence : `https://www.rogerebert.com`. L'objectif est d'y déceler des tendances sémantiques et structurelles. 
 
 Le projet suit le même cheminement que le cours de Web Mining, à savoir :
 
 1. **Collecte de données (Scraping) :** Récupération automatique de corpus massifs (textes, notes, métadonnées, casting).
-2. **Text Mining :** A compléter quand nous arriverons à cette étape.
-3. **Link Analysis :** A compléter quand nous arriverons à cette étape.
+2. **Text Mining :** Prétraitement linguistique (NLP/Lemmatisation), analyse de sentiments (VADER), vectorisation (TF-IDF) et identification de thématiques latentes (Clustering K-Means).
+3. **Link Analysis :** Modélisation d'un graphe sémantique non orienté, analyse de la topologie réseau (détection d'îlots, Small World) et identification des œuvres influentes via mesures de centralité (PageRank, Information Centrality).
 
 ---
 
@@ -32,6 +32,7 @@ L'architecture respecte la séparation entre code source, données brutes et ré
 
 ```text
 .
+├── main.py                 # Fonction de lancement du projet (pipeline)
 ├── src/                    # Code source Python
 │   ├── scraping            # Scripts de collecte des données (RogerEbert)
 │   ├── text_mining         # Scripts de transformation et d'analyse du contenu textuel des critiques
@@ -42,7 +43,7 @@ L'architecture respecte la séparation entre code source, données brutes et ré
 │   │                       # Note : Ces fichiers ne sont pas versionnés sur GitHub (via .gitignore)
 │   └── processed/          # Données nettoyées prêtes pour l'analyse
 │
-├── results/                # Graphiques, visualisations et rapports
+├── results/                # Graphiques, visualisations et rapports (A SUPPRIMER)
 ├── .gitignore              # Configuration des fichiers exclus (env, données lourdes)
 ├── requirements.txt        # Liste des dépendances Python nécessaires
 └── README.md               # Documentation du projet
@@ -64,7 +65,7 @@ pip install -r requirements.txt
 
 ### 2. Exécution des analyses
 
-L'ensemble du pipeline (Scraping, Text mining et Link analysis) est orchestrée par un scrpit unique afin d'assurer une meilleure réplicabilité. Alors, pour lancer l'analyse complète, il suffit d'entrer la commande suivante dans votre terminal :
+L'ensemble du pipeline (Scraping, Text mining et Link analysis) est orchestrée par un scrpit unique (`main.py`) afin d'assurer une meilleure réplicabilité. Alors, pour lancer l'analyse complète du projet, il suffit d'entrer la commande suivante dans votre terminal :
 
 ```Bash
 python main.py
@@ -74,11 +75,11 @@ Ce script exécute, en arrière plan, les étapes suivantes :
 
 * **Chargement des données :** Par défaut, le script charge le dataset fourni `data/processed/reviews_final_900.csv` pour éviter une nouvelle collecte longue des données. Cela permet également d'obtenir les mêmes résultats que ceux illustrés dans le rapport et dans l'ensemble de l'analyse.
 
-* **Text mining :** Nettoyage, vectorisation TF-IDF et clustering des critiques cinématographiques. Des visuels relatifs à l'analyse sémantique apparaitront au lancement du code.
+* **Text mining :** Nettoyage, vectorisation TF-IDF et clustering des critiques cinématographiques. Des visuels relatifs à l'analyse sémantique et de sentiement apparaitront au lancement du code.
 
-* **Construction du graphe :** Génère des noeuds et des arrêtes sur base de la similarité cosinus. Ces "Nodes" et "Edges" sont directement calculées via le corpus de données scrapé (`data/processed/reviews_final_900.csv)`.
+* **Construction du graphe :** Génère des noeuds et des arrêtes sur base de la similarité cosinus. Ces "Nodes" et "Edges" sont directement calculées via le corpus de données scrapé (`data/processed/reviews_final_900.csv`).
 
-* **Link analysis :** Calcul des métriques avancées (Centralité, PareRank, etc.).
+* **Link analysis :** Analyse structurelle via calcul matriciel. Le script génère les métriques de centralité clés (*PageRank*, *Information Centrality*, *Closeness*), analyse la topologie globale (Diamètre, Rayon) et visualise les distances moyennes entre les thèmes via une *Heatmap*.
 
 ### **⚠️ Note importante concernant le Scraping (`RUN_SCRAPER = False`)**
 
@@ -88,7 +89,7 @@ Bien que le module de scraping soit complet et fonctionnel (importé via `src.sc
 
 1. **Cohérence :** Le site *RogerEbert.com* étant dynamique, une nouvelle collecte modifierait le corpus. Les clusters et métriques de graphe divergeraient alors de ceux analysés dans le PDF rendu.
 
-2. **Performance :** L'analyse s'exécute ici instantanément sur le jeu de données figé (`reviews_final_900.csv`), alors qu'un nouveau scraping prendrait un temps plus conséquent.
+2. **Performance :** L'analyse s'exécute ici instantanément sur le jeu de données figé (`data/processed/reviews_final_900.csv`), alors qu'un nouveau scraping prendrait un temps plus conséquent.
 
 Le code de scraping est inclus dans le projet à des fins de démonstration méthodologique et de vérification technique uniquement.
 
@@ -96,25 +97,57 @@ Le code de scraping est inclus dans le projet à des fins de démonstration mét
 
 ## 🧠 Méthodologie et Concepts Clés
 
+### Scraping
+
+La constitution du corpus repose sur une stratégie de navigation *Breadth-First Search (BFS)* ciblée sur le site `https://www.rogerebert.com`.
+
+* **Approche :** : Utilisation d'un système de file d'attente (Queue) initialisé par des critiques récentes (Seeds). Le script ne collecte pas au hasard mais suit les citations entre critiques pour garantir une cohérence sémantique.
+
+* **Outils :** `BeautifulSoup` pour le parsing HTML et extraction structurée (Titre, Score, Métadonnées, Texte).
+
+* **Volume :** Corpus final de 900 critiques structurées.
+
 ### Text Mining
 
-La phase de text mining repose sur un pipeline complet de traitement linguistique et de modélisation vectorielle appliqué aux critiques collectées. Après un nettoyage systématique du texte, les critiques ont été tokenisées, lemmatisées et filtrées à l’aide de critères linguistiques et statistiques (stopwords, noms propres, fréquence documentaire). Le corpus ainsi normalisé a été représenté sous forme de vecteurs TF-IDF intégrant unigrams et bigrams, puis soumis à une réduction dimensionnelle par SVD et à une normalisation L2. Cette représentation permet de mesurer efficacement la similarité sémantique entre critiques via la similarité cosinus.
+Le pipeline de traitement du langage naturel vise à transformer le texte brut en indicateurs quantitatifs et sémantiques.
+
+* **Prétraitement Avancé :** Nettoyage *Regex* suivi d'un *POS-Tagging* (via NLTK) pour identifier et exclure les entités nommées (Noms propres) et lemmatiser conditionnellement les verbes.
+
+* **Vectorisation :** Modèle TF-IDF (Unigrams & Bigrams) avec filtrage fréquentiel (`min_df=2, max_df=0.5`).
+
+* **Réduction de Dimension :** Application d'une SVD (Singular Value Decomposition) à 150 composantes suivie d'une normalisation L2.
+
+* **Clustering :** Algorithme K-Means (K=12, validé par score Silhouette) pour identifier les thématiques latentes (ex: Horreur, Musical, Guerre).
+
+* **Analyse de Sentiment :** Utilisation de *VADER* pour l'analyse de polarité et la segmentation des trajectoires narratives.
 
 ### Link Analysis (Approche Matricielle)
 
-Contrairement aux approches classiques utilisant des librairies haut niveau, nous avons implémenté les mesures de centralité via les concepts d'algèbre linéaire et de calcul matriciel, tout deux abordés lors des cours théoriques :
+La modélisation du réseau dépasse l'utilisation de librairies "boîte noire". Nous avons implémenté les algorithmes via Numpy et l'algèbre linéaire pure.
 
-* **Centralité de Degré :** Calculée via la matrice d'adjacence.
+#### 🚧 Construction du Graphe
 
-* **PageRank :** Implémenté par la méthode des puissances (Power Iteration).
+Stratégie hybride "Cluster-First" basée sur la similarité cosinus :
 
-* **Information Centrality :** Calculée à partir de la Pseudo-Inverse du Laplacien (L +) pour identifier les nœuds ponts.
+* **Liens Intra-Cluster :** Densification locale (4 voisins, seuil > 0.30).
 
-* **Closeness, Eccentricity & Shortest Path :** Basés sur l'algorithme de Floyd-Warshall.
+* **Liens Inter-Cluster :** Ponts sémantiques (1 voisin, seuil strict > 0.50).
 
-* **Diamètre et rayon du graphe :** Calculés sur base de ..., ils nous renseigne sur la santé globale du graphe.
+* **Filtre Sémantique :** Application d'une Custom Stop-list (termes génériques du cinéma) pour forcer des connexions basées sur le fond thématique.
 
-* **Partitionnement spectral :** Grâce à une coupe du graphe en deux, il renseigne sur la cohésion interne des groupes, relativement à leur dissociation les uns des autres.
+#### 📊 Métriques & Algorithmes Implémentés
+
+* **PageRank :** Calculé via la méthode des puissances (Power Iteration) sur le graphe non orienté. Forte corrélation observée avec le Degré (0.93).
+
+* **Information Centrality :** Utilisation de la Pseudo-Inverse du Laplacien pour identifier les "nœuds ponts" (films charnières).
+
+* **Topologie (Floyd-Warshall) :** Calcul de la matrice des plus courts chemins pour dériver :
+
+    * Closeness Centrality & Excentricité.
+    * Diamètre (15) et Rayon (1), révélant la présence d'îlots déconnectés.
+    * Heatmap inter-clusters : Visualisation des distances moyennes (sauts) entre les thèmes.
+
+* **Partitionnement Spectral :** Calcul du Vecteur de Fiedler (valeurs propres du Laplacien) pour couper le graphe en deux communautés structurelles équilibrées.
 
 ---
 
@@ -123,8 +156,8 @@ Contrairement aux approches classiques utilisant des librairies haut niveau, nou
 ### Visualisation Gephi
 
 ![/Users/arthurottevaere/Downloads/605446336_1517578152628690_6745418421955372632_n.png]
-*Légende* : Les couleurs représentent les thèmes (Clusters) identifiés par TF-IDF.
+*Légende* : Les couleurs représentent les thèmes (Clusters) identifiés par TF-IDF dans la partie de l'analyse de liens (`src/link_analysis/`).
 
-### Top Films (Link Analysis)
+### Ajout potentiel d'un autre visuel pertinent
 
-Voici un extrait des films les plus influents identifiés par nos algorithmes : Mettre ici une capture d'écran ou un petit tableau du rendu Tabulate.
+Peut-être mettre le graphe avec Climax etc. Ou la matrice de distance entre les clusters (Arthur- voir rapport).
