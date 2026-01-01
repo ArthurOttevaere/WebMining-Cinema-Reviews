@@ -155,11 +155,13 @@ Stratégie hybride "Cluster-First" basée sur la similarité cosinus :
 
 ### Visualisation Gephi
 
-![results/link_analysis_graph.png]
-*Légende* : Les couleurs représentent les thèmes (Clusters) identifiés par TF-IDF dans la partie de l'analyse de liens (`src/link_analysis/`).
+![Graphe Gephi](results/link_analysis_graph.png)
+*Légende : Les couleurs représentent les thèmes (Clusters) identifiés par TF-IDF dans la partie de l'analyse de liens.*
 
-![results/link_analysis_matrix.png]
-*Légende* : Matrice de distance moyenne (sauts) entre les thèmes. On observe une proximité structurelle entre la plupart des clusters, tandis que le cluster "Musical" apparaît isolé.
+### Distances Inter-Clusters (Topologie)
+
+![Matrice Heatmap](results/link_analysis_matrix.png)
+*Légende : Matrice de distance moyenne (sauts) entre les thèmes. On observe une proximité structurelle entre la plupart des clusters, tandis que le cluster "Musical" apparaît isolé.*
 
 ### Ajout potentiel d'un autre visuel pertinent
 
