@@ -65,17 +65,17 @@ pip install -r requirements.txt
 
 ### 2. Exécution des analyses
 
-L'ensemble du pipeline (Scraping, Text mining et Link analysis) est orchestrée par un scrpit unique (`main.py`) afin d'assurer une meilleure réplicabilité. Alors, pour lancer l'analyse complète du projet, il suffit d'entrer la commande suivante dans votre terminal :
+L'ensemble du pipeline (Scraping, Text mining et Link analysis) est orchestrée par un script unique (`main.py`) afin d'assurer une meilleure réplicabilité. Alors, pour lancer l'analyse complète du projet, il suffit d'entrer la commande suivante dans votre terminal :
 
 ```Bash
 python main.py
 ```
 
-Ce script exécute, en arrière plan, les étapes suivantes :
+Ce script exécute, en arrière-plan, les étapes suivantes :
 
 * **Chargement des données :** Par défaut, le script charge le dataset fourni `data/processed/reviews_final_900.csv` pour éviter une nouvelle collecte longue des données. Cela permet également d'obtenir les mêmes résultats que ceux illustrés dans le rapport et dans l'ensemble de l'analyse.
 
-* **Text mining :** Nettoyage, vectorisation TF-IDF et clustering des critiques cinématographiques. Des visuels relatifs à l'analyse sémantique et de sentiement apparaitront au lancement du code.
+* **Text mining :** Nettoyage, vectorisation TF-IDF et clustering des critiques cinématographiques. Des visuels relatifs à l'analyse sémantique et de sentiment apparaitront au lancement du code.
 
 * **Construction du graphe :** Génère des noeuds et des arrêtes sur base de la similarité cosinus. Ces "Nodes" et "Edges" sont directement calculées via le corpus de données scrapé (`data/processed/reviews_final_900.csv`).
 
@@ -155,8 +155,11 @@ Stratégie hybride "Cluster-First" basée sur la similarité cosinus :
 
 ### Visualisation Gephi
 
-![/Users/arthurottevaere/Downloads/605446336_1517578152628690_6745418421955372632_n.png]
+![results/link_analysis_graph.png]
 *Légende* : Les couleurs représentent les thèmes (Clusters) identifiés par TF-IDF dans la partie de l'analyse de liens (`src/link_analysis/`).
+
+![results/link_analysis_matrix.png]
+*Légende* : Matrice de distance moyenne (sauts) entre les thèmes. On observe une proximité structurelle entre la plupart des clusters, tandis que le cluster "Musical" apparaît isolé.
 
 ### Ajout potentiel d'un autre visuel pertinent
 
