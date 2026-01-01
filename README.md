@@ -165,4 +165,4 @@ Stratégie hybride "Cluster-First" basée sur la similarité cosinus :
 
 ### Ajout potentiel d'un autre visuel pertinent
 
-Peut-être mettre le graphe avec Climax etc. Ou la matrice de distance entre les clusters (Arthur- voir rapport).
+Peut-être mettre le graphe avec Climax etc.
