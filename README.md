@@ -65,7 +65,7 @@ pip install -r requirements.txt
 
 ### 2. Exécution des analyses
 
-L'ensemble du pipeline (Scraping, Text mining et Link analysis) est orchestrée par un script unique (`main.py`) afin d'assurer une meilleure réplicabilité. Alors, pour lancer l'analyse complète du projet, il suffit d'entrer la commande suivante dans votre terminal :
+L'ensemble du pipeline (Scraping, Text mining et Link analysis) est orchestré par un script unique (`main.py`) afin d'assurer une meilleure réplicabilité. Alors, pour lancer l'analyse complète du projet, il suffit d'entrer la commande suivante dans votre terminal :
 
 ```Bash
 python main.py
@@ -77,7 +77,7 @@ Ce script exécute, en arrière-plan, les étapes suivantes :
 
 * **Text mining :** Nettoyage, vectorisation TF-IDF et clustering des critiques cinématographiques. Des visuels relatifs à l'analyse sémantique et de sentiment apparaitront au lancement du code.
 
-* **Construction du graphe :** Génère des noeuds et des arrêtes sur base de la similarité cosinus. Ces "Nodes" et "Edges" sont directement calculées via le corpus de données scrapé (`data/processed/reviews_final_900.csv`).
+* **Construction du graphe :** Génère des noeuds et des arêtes sur base de la similarité cosinus. Ces "Nodes" et "Edges" sont directement calculées via le corpus de données scrapé (`data/processed/reviews_final_900.csv`).
 
 * **Link analysis :** Analyse structurelle via calcul matriciel. Le script génère les métriques de centralité clés (*PageRank*, *Information Centrality*, *Closeness*), analyse la topologie globale (Diamètre, Rayon) et visualise les distances moyennes entre les thèmes via une *Heatmap*.
 
@@ -101,7 +101,7 @@ Le code de scraping est inclus dans le projet à des fins de démonstration mét
 
 La constitution du corpus repose sur une stratégie de navigation *Breadth-First Search (BFS)* ciblée sur le site `https://www.rogerebert.com`.
 
-* **Approche :** : Utilisation d'un système de file d'attente (Queue) initialisé par des critiques récentes (Seeds). Le script ne collecte pas au hasard mais suit les citations entre critiques pour garantir une cohérence sémantique.
+* **Approche :** : Utilisation d'un système de file d'attente (Queue) initialisé par des critiques récentes (Seeds). Le script ne collecte pas au hasard mais suit les citations entre critiques pour garantir une cohérence sémantique. Une contrainte de profondeur (depth < 2) limite l'exploration aux voisins immédiats et secondaires, garantissant un corpus centré sur les citations directes sans divergence exponentielle.
 
 * **Outils :** `BeautifulSoup` pour le parsing HTML et extraction structurée (Titre, Score, Métadonnées, Texte).
 
