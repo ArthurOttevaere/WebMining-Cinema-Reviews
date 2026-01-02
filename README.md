@@ -16,19 +16,19 @@
 
 ## 📖 Contexte et Objectifs
 
-Ce projet a pour but d'analyser les critiques cinématographiques se trouvant sur des blogs en ligne. Dans ce projet, nous collectons et analysons un total de 900 critiques provenant d'un des blogs cinématographiques anglophones de référence : `https://www.rogerebert.com`. L'objectif est d'y déceler des tendances sémantiques et structurelles. 
+Ce projet a pour but d'analyser les critiques cinématographiques se trouvant sur des blogs en ligne. Dans ce projet, nous collectons et analysons un total de 900 critiques provenant d'un des blogs cinématographiques anglophones de référence : `https://www.rogerebert.com`. L'objectif est d'y déceler des tendances sémantiques et structurelles.
 
-Le projet suit le même cheminement que le cours de Web Mining, à savoir :
+Le projet suit une démarche classique du web mining, à savoir :
 
 1. **Collecte de données (Scraping) :** Récupération automatique de corpus massifs (textes, notes, métadonnées, casting).
-2. **Text Mining :** Prétraitement linguistique (NLP/Lemmatisation), analyse de sentiments (VADER), vectorisation (TF-IDF) et identification de thématiques latentes (Clustering K-Means).
-3. **Link Analysis :** Modélisation d'un graphe sémantique non orienté, analyse de la topologie réseau (détection d'îlots, Small World) et identification des œuvres influentes via mesures de centralité (PageRank, Information Centrality).
+2. **Text Mining :** Prétraitement linguistique (NLP/Lemmatisation), vectorisation (TF-IDF), analyse de lexicographique et sémantique et identification de thématiques latentes (Clustering K-Means).
+3. **Link Analysis :** Modélisation d'un graphe sémantique non orienté, analyse de la topologie réseau (détection d'îlots, Small World) et identification des œuvres influentes via mesures de centralité et de prestige (PageRank, Information Centrality).
 
 ---
 
 ## 📂 Structure du Projet
 
-L'architecture respecte la séparation entre code source, données brutes et résultats. Dans le but de faciliter la réplication des analyses.
+L'architecture respecte la séparation entre code source, données brutes et résultats dans le but de faciliter la réplication des analyses.
 
 ```text
 .
@@ -36,14 +36,14 @@ L'architecture respecte la séparation entre code source, données brutes et ré
 ├── src/                    # Code source Python
 │   ├── scraping            # Scripts de collecte des données (RogerEbert)
 │   ├── text_mining         # Scripts de transformation et d'analyse du contenu textuel des critiques
-│   ├── link_analysis       # Scripts de construction du graph et d'analyses des liens
+│   ├── link_analysis       # Scripts de construction du graphe et d'analyse des liens
 │
 ├── data/
 │   ├── raw/                # Données brutes issues du scraping, text-mining et link-analysis (.csv/.xlsx)
 │   │                       # Note : Ces fichiers ne sont pas versionnés sur GitHub (via .gitignore)
 │   └── processed/          # Données nettoyées prêtes pour l'analyse
 │
-├── results/                # Graphiques, visualisations et rapports (A SUPPRIMER)
+├── results/                # Graphiques et visualisations
 ├── .gitignore              # Configuration des fichiers exclus (env, données lourdes)
 ├── requirements.txt        # Liste des dépendances Python nécessaires
 └── README.md               # Documentation du projet
@@ -75,11 +75,11 @@ Ce script exécute, en arrière-plan, les étapes suivantes :
 
 * **Chargement des données :** Par défaut, le script charge le dataset fourni `data/processed/reviews_final_900.csv` pour éviter une nouvelle collecte longue des données. Cela permet également d'obtenir les mêmes résultats que ceux illustrés dans le rapport et dans l'ensemble de l'analyse.
 
-* **Text mining :** Nettoyage, vectorisation TF-IDF et clustering des critiques cinématographiques. Des visuels relatifs à l'analyse sémantique et de sentiment apparaitront au lancement du code.
+* **Text mining :** Nettoyage, vectorisation TF-IDF et clustering des critiques cinématographiques. Des visuels relatifs à l'analyse descriptive et sémantique apparaitront au lancement du code.
 
 * **Construction du graphe :** Génère des noeuds et des arêtes sur base de la similarité cosinus. Ces "Nodes" et "Edges" sont directement calculées via le corpus de données scrapé (`data/processed/reviews_final_900.csv`).
 
-* **Link analysis :** Analyse structurelle via calcul matriciel. Le script génère les métriques de centralité clés (*PageRank*, *Information Centrality*, *Closeness*), analyse la topologie globale (Diamètre, Rayon) et visualise les distances moyennes entre les thèmes via une *Heatmap*.
+* **Link analysis :** Analyse structurelle via calcul matriciel. Le script génère les métriques de centralité et de prestige clés (*PageRank*, *Information Centrality*, *Closeness*), analyse la topologie globale (Diamètre, Rayon) et visualise les distances moyennes entre les thèmes via une *Heatmap*.
 
 ### **⚠️ Note importante concernant le Scraping (`RUN_SCRAPER = False`)**
 
@@ -101,7 +101,7 @@ Le code de scraping est inclus dans le projet à des fins de démonstration mét
 
 La constitution du corpus repose sur une stratégie de navigation *Breadth-First Search (BFS)* ciblée sur le site `https://www.rogerebert.com`.
 
-* **Approche :** : Utilisation d'un système de file d'attente (Queue) initialisé par des critiques récentes (Seeds). Le script ne collecte pas au hasard mais suit les citations entre critiques pour garantir une cohérence sémantique. Une contrainte de profondeur (depth < 2) limite l'exploration aux voisins immédiats et secondaires, garantissant un corpus centré sur les citations directes sans divergence exponentielle.
+* **Approche :** Utilisation d'un système de file d'attente (Queue) initialisé par des critiques récentes (Seeds). Le script ne collecte pas au hasard mais suit les citations entre critiques pour garantir une cohérence sémantique. Une contrainte de profondeur (depth < 2) limite l'exploration aux voisins immédiats et secondaires, garantissant un corpus centré sur les citations directes sans divergence exponentielle.
 
 * **Outils :** `BeautifulSoup` pour le parsing HTML et extraction structurée (Titre, Score, Métadonnées, Texte).
 
@@ -117,9 +117,9 @@ Le pipeline de traitement du langage naturel vise à transformer le texte brut e
 
 * **Réduction de Dimension :** Application d'une SVD (Singular Value Decomposition) à 150 composantes suivie d'une normalisation L2.
 
-* **Clustering :** Algorithme K-Means (K=12, validé par score Silhouette) pour identifier les thématiques latentes (ex: Horreur, Musical, Guerre).
-
 * **Analyse de Sentiment :** Utilisation de *VADER* pour l'analyse de polarité et la segmentation des trajectoires narratives.
+
+* **Clustering :** Algorithme K-Means (K=12, validé par score Silhouette) pour identifier les thématiques latentes (ex: Horreur, Musical, Guerre).
 
 ### Link Analysis (Approche Matricielle)
 
@@ -141,11 +141,13 @@ Stratégie hybride "Cluster-First" basée sur la similarité cosinus :
 
 * **Information Centrality :** Utilisation de la Pseudo-Inverse du Laplacien pour identifier les "nœuds ponts" (films charnières).
 
+* **Betweenness Centrality :** Utilise l'algorithme de Freeman afin de déceler les noeuds qui agissent comme des goulots d'étranglements.
+
 * **Topologie (Floyd-Warshall) :** Calcul de la matrice des plus courts chemins pour dériver :
 
-    * Closeness Centrality & Excentricité.
-    * Diamètre (15) et Rayon (1), révélant la présence d'îlots déconnectés.
-    * Heatmap inter-clusters : Visualisation des distances moyennes (sauts) entre les thèmes.
+    *Closeness Centrality & Excentricité.
+    *Diamètre (15) et Rayon (1), révélant la présence d'îlots déconnectés.
+    *Heatmap inter-clusters : Visualisation des distances moyennes (sauts) entre les thèmes.
 
 * **Partitionnement Spectral :** Calcul du Vecteur de Fiedler (valeurs propres du Laplacien) pour couper le graphe en deux communautés structurelles équilibrées.
 
@@ -161,8 +163,4 @@ Stratégie hybride "Cluster-First" basée sur la similarité cosinus :
 ### Distances Inter-Clusters (Topologie)
 
 ![Matrice Heatmap](results/link_analysis_matrix.png)
-*Légende : Matrice de distance moyenne (sauts) entre les thèmes. On observe une proximité structurelle entre la plupart des clusters, tandis que le cluster "Musical" apparaît isolé.*
-
-### Ajout potentiel d'un autre visuel pertinent
-
-Peut-être mettre le graphe avec Climax etc.
+*Légende : Matrice de distance moyenne (sauts) entre les thèmes. On observe une proximité structurelle entre la plupart des clusters, tandis que le cluster "Musical" apparaît plus isolé.*
