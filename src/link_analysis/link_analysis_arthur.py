@@ -4,6 +4,8 @@ import os
 from tabulate import tabulate 
 import seaborn as sns
 import matplotlib.pyplot as plt
+import networkx as nx
+
 
 # ==========================================
 # 1. NUMPY FUNCTIONS (MATRICIAL)
@@ -48,7 +50,24 @@ def closeness_centrality(SP: np.ndarray) -> np.ndarray:
         if len(valid_dists) > 1:
             dist_sum = valid_dists.sum()
             CC[i] = (len(valid_dists) - 1) / dist_sum
-    return CC  
+    return CC
+
+def betweenness_centrality(A: np.ndarray) -> np.ndarray:
+    print("   ⏳ Processing Betweenness Centrality (NetworkX)...")
+    # 1. Matrix Conversion -> Graph NetworkX
+    G = nx.from_numpy_array(A)
+    
+    # 2. Computing
+    bc_dict = nx.betweenness_centrality(G, weight=None, normalized=True)
+    
+    # 3. Converting into a numpy array (sorted) 
+    n = A.shape[0]
+    bc_values = np.zeros(n)
+    for i in range(n):
+        bc_values[i] = bc_dict.get(i, 0.0)
+        
+    return bc_values
+
 
 def eccentricity_centrality(SP: np.ndarray) -> np.ndarray:
     n = SP.shape[0]
@@ -220,6 +239,9 @@ def main():
     print("3️⃣ PageRank (Power Iteration)...")
     pagerank = pagerank_power_iteration(A, alpha=0.85)
 
+    print("4️⃣-bis Betweenness Centrality (Freeman)...")
+    betweenness = betweenness_centrality(A)
+
     print("4️⃣ Information Centrality (via Laplacian L+)...")
     L_plus = laplacian_pseudoinverse(A)
     info_centrality = information_centrality(L_plus)
@@ -238,6 +260,7 @@ def main():
         'Closeness': closeness,
         'Eccentricity': eccentricity,
         'PageRank': pagerank,
+        'Betweenness': betweenness,
         'InfoCent': info_centrality,
         'SpectralGroup': communities
     })
@@ -245,7 +268,7 @@ def main():
     final_df = pd.merge(df_nodes, results, on='Id')
     
     # We round up for a better readability
-    cols_float = ['Closeness', 'Eccentricity', 'PageRank', 'InfoCent']
+    cols_float = ['Closeness', 'Eccentricity', 'PageRank', 'Betweenness', 'InfoCent']
     final_df[cols_float] = final_df[cols_float].round(4)
     
     # CSV Export
@@ -259,7 +282,7 @@ def main():
     print("═"*80)
     
     # Spearman correlation on the ranks, not the values.
-    corr_matrix = final_df[['Degree', 'Closeness', 'PageRank', 'InfoCent']].corr(method='spearman')
+    corr_matrix = final_df[['Degree', 'Closeness', 'PageRank', 'Betweenness', 'InfoCent']].corr(method='spearman')
     print(tabulate(corr_matrix, headers='keys', tablefmt='fancy_grid', floatfmt=".2f"))
     
     # --- TABULATE DISPLAY (TOP N PER METRIC) ---
@@ -272,6 +295,7 @@ def main():
         ('Degree', 'Local influence (Number of direct connections)'),
         ('Closeness', 'Closeness (Ability to reach quickly the network.)'),
         ('Eccentricity', 'Graphic centrality (Distance to the farest point)'),
+        ('Betweenness', 'Bridges (Shortest path bottlenecks)'),
         ('InfoCent', 'Strategic points (Bridges and information traffic)'),
         ('PageRank', 'Global Influence (Importance of neighbours)')
 
