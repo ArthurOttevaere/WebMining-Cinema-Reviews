@@ -60,13 +60,15 @@ def run_text_mining(df, show_plots=False):
         tokens = word_tokenize(text)  # split text into tokens
         tagged_tokens = pos_tag(tokens)  # part-of-speech tagging
 
-        processed_tokens = []
+        processed_tokens = [] # List to store the processed (normalized) tokens
         for token, tag in tagged_tokens:
-            token = token.lower()
+            token = token.lower() # Convert token to lowercase for normalization
 
+            # If the POS tag indicates a verb, apply verb-specific lemmatization
             if tag.startswith("V"):
                 token = lemmatizer.lemmatize(token, wordnet.VERB)
             else:
+                # Otherwise, apply default lemmatization (noun by default)
                 token = lemmatizer.lemmatize(token)
 
             if (
@@ -512,6 +514,7 @@ def run_text_mining(df, show_plots=False):
         plt.xlabel("Review Score")
         plt.ylabel("Type-Token Ratio")
         plt.tight_layout()
+        plt.axhline(y=0.8, color="gray", linestyle="--", linewidth=1)
         if show_plots:
             plt.show()
         else:
