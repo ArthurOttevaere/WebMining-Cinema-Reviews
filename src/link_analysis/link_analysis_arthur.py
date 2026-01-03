@@ -246,7 +246,7 @@ def main():
     L_plus = laplacian_pseudoinverse(A)
     info_centrality = information_centrality(L_plus)
 
-    # --- NEW FEATURE 1: SPECTRAL CLUSTERING ---
+    # --- SPECTRAL CLUSTERING ---
     print("5️⃣ Spectral Clustering (Fiedler Partition)...")
     L = laplacian_matrix(A) # On recalcule L ou on le récupère
     communities = get_spectral_partition(L)
@@ -275,7 +275,7 @@ def main():
     final_df.to_csv(OUTPUT_FILE, index=False)
     print(f"✅ CSV exported : {OUTPUT_FILE}")
 
-    # --- NEW FEATURE 2: CORRELATION MATRIX ---
+    # --- CORRELATION MATRIX ---
     print("\n" + "═"*80)
     print("      🧩 META-ANALYSIS : CORRELATION BETWEEN METRICS")
     print("      (Does popularity mean influence ?)")
@@ -361,7 +361,7 @@ def main():
         for theme, count in top_themes.items():
             print(f"   - {theme} ({count} films)")
 
-    # --- NEW FEATURE 4: CLUSTER HEATMAP ---
+    # --- CLUSTER HEATMAP ---
     plot_cluster_distance_heatmap(final_df, SP, id_map)
     
     print("\n" + "═"*80)
