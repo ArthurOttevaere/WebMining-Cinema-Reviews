@@ -18,11 +18,11 @@
 
 Ce projet a pour but d'analyser les critiques cinématographiques se trouvant sur des blogs en ligne. Dans ce projet, nous collectons et analysons un total de 900 critiques provenant d'un des blogs cinématographiques anglophones de référence : `https://www.rogerebert.com`. L'objectif est d'y déceler des tendances sémantiques et structurelles.
 
-Le projet suit une démarche classique du web mining, à savoir :
+Le projet suit une démarche classique de web mining, à savoir :
 
 1. **Collecte de données (Scraping) :** Récupération automatique de corpus massifs (textes, notes, métadonnées, casting).
-2. **Text Mining :** Prétraitement linguistique (NLP/Lemmatisation), vectorisation (TF-IDF), analyse de lexicographique et sémantique et identification de thématiques latentes (Clustering K-Means).
-3. **Link Analysis :** Modélisation d'un graphe sémantique non orienté, analyse de la topologie réseau (détection d'îlots, Small World) et identification des œuvres influentes via mesures de centralité et de prestige (PageRank, Information Centrality).
+2. **Text Mining :** Prétraitement linguistique (NLP/Lemmatisation), vectorisation (TF-IDF), analyse lexicographique et sémantique, et identification de thématiques latentes (Clustering K-Means).
+3. **Link Analysis :** Modélisation d'un graphe sémantique non orienté, analyse de la topologie réseau (détection d'îlots, Small World) et identification des œuvres influentes via des mesures de centralité et de prestige (PageRank, Information Centrality).
 
 ---
 
@@ -79,7 +79,7 @@ Ce script exécute, en arrière-plan, les étapes suivantes :
 
 * **Construction du graphe :** Génère des noeuds et des arêtes sur base de la similarité cosinus. Ces "Nodes" et "Edges" sont directement calculées via le corpus de données scrapé (`data/processed/reviews_final_900.csv`).
 
-* **Link analysis :** Analyse structurelle via calcul matriciel. Le script génère les métriques de centralité et de prestige clés (*PageRank*, *Information Centrality*, *Closeness*), analyse la topologie globale (Diamètre, Rayon) et visualise les distances moyennes entre les thèmes via une *Heatmap*.
+* **Link analysis :** Analyse structurelle via calcul matriciel. Le script génère les métriques de centralité et de prestige clés (*PageRank*, *Information Centrality*, *Closeness*, *Betweenness*), analyse la topologie globale (Diamètre, Rayon) et visualise les distances moyennes entre les thèmes via une *Heatmap*.
 
 ### **⚠️ Note importante concernant le Scraping (`RUN_SCRAPER = False`)**
 
