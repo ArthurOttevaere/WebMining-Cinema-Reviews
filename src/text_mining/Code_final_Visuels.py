@@ -402,7 +402,7 @@ def run_text_mining(df, show_plots=False):
     # -------------------------------------------------------------------
 
     if "review_score" in df.columns:
-        df["word_count"] = df["tokens"].apply(len)  # count words per review
+        df["word_count_raw"] = df["word_count"]  # count words per review
         plt.figure(figsize=(12, 6))
         sns.boxplot(
             data=df,
@@ -422,39 +422,17 @@ def run_text_mining(df, show_plots=False):
         print("⚠ 'review_score' or 'word_count' not found. Skipping boxplot.")  # skip if missing
 
     # -------------------------------------------------------------------
-    # N-grams analysis 
+    # Bigrams analysis 
     # -------------------------------------------------------------------
 
     all_tokens = [t for sublist in df["tokens"] for t in sublist]  # flatten token list
-    for n in [2, 3]:
-        counter = Counter(ngrams(all_tokens, n)).most_common(10)  # top n-grams
-        labels = [" ".join(ng) for ng, _ in counter]  # convert tuple to string
-        values = [freq for _, freq in counter]
-        plt.figure(figsize=(10, 6))
-        sns.barplot(x=values, y=labels)
-        plt.title(f"Top 10 {n}-grams")
-        plt.tight_layout()
-        if show_plots:
-            plt.show()
-        else:
-            plt.close()
-
-    # -------------------------------------------------------------------
-    # Co-occurrence matrix
-    # -------------------------------------------------------------------
-
-    top_words = [w for w, _ in token_counter.most_common(30)]  # select top 30 words
-    cooc = pd.DataFrame(0, index=top_words, columns=top_words)  # initialize co-occurrence matrix
-    for tokens in df["tokens"]:
-        tokens = set(tokens)  # unique tokens
-        for w1, w2 in combinations(top_words, 2):
-            if w1 in tokens and w2 in tokens:
-                cooc.loc[w1, w2] += 1  # increment co-occurrence
-                cooc.loc[w2, w1] += 1  # symmetric entry
-
-    plt.figure(figsize=(12, 10))
-    sns.heatmap(cooc, cmap="YlGnBu", annot=True, fmt="d")  # heatmap with counts
-    plt.title("Co-occurrence Matrix of Top 30 Words")
+    n = 2  # bigrams
+    counter = Counter(ngrams(all_tokens, n)).most_common(10)  # top bigrams
+    labels = [" ".join(ng) for ng, _ in counter]  # convert tuple to string
+    values = [freq for _, freq in counter]
+    plt.figure(figsize=(10, 6))
+    sns.barplot(x=values, y=labels)
+    plt.title(f"Top 10 {n}-grams")
     plt.tight_layout()
     if show_plots:
         plt.show()
@@ -539,17 +517,6 @@ def run_text_mining(df, show_plots=False):
         else:
             plt.close()
 
-    if "compound" in df.columns:
-        plt.figure(figsize=(8, 6))
-        sns.regplot(x=df["compound"], y=df["ttr"], scatter_kws={"alpha": 0.6})
-        plt.title("TTR vs Compound Sentiment")
-        plt.xlabel("Compound Sentiment")
-        plt.ylabel("Type-Token Ratio")
-        plt.tight_layout()
-        if show_plots:
-            plt.show()
-        else:
-            plt.close()
 
     # -------------------------------------------------------------------
     # Sentiment trajectory analysis (narrative progression)
