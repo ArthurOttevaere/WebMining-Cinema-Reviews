@@ -71,7 +71,7 @@ def launch_scraping_roger_ebert(limit=100):
 
     while len(results) < limit:
         
-        # --- QUEUE LOGIQUE ---
+        # --- QUEUE LOGIC ---
         # If the queue is empty, we take new seeds
         if not to_scrape:
             print(f"\n--- 🚜 Empty queue. Collecting new seeds (Page {current_seed_page})... ---")
