@@ -6,10 +6,10 @@ import pandas as pd
 import os
 
 # Functions importation
-from src.scraping.bfs_arthur import launch_scraping_roger_ebert
-from src.text_mining.Code_final_Visuels import run_text_mining
-from src.link_analysis.graph_builder_arthur import main as build_graph
-from src.link_analysis.link_analysis_arthur import main as run_link_analysis
+from scraping.scraping_bfs import launch_scraping_roger_ebert
+from text_mining.text_mining_visuals import run_text_mining
+from link_analysis.graph_builder import main as build_graph
+from link_analysis.link_analysis import main as run_link_analysis
 
 # --- FORBIDDEN TO CHANGE ANYTHING IN CONFIGURATION ---
 RUN_SCRAPER = False      # IMPORTANT : False allows to have the same results as report, using the data scraped at the beginning
