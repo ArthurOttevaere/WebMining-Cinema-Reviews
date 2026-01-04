@@ -9,7 +9,7 @@
 ## 👥 L'Équipe
 
 * **Arthur Ottevaere**
-* **Mohamed Amine El Mohicine**
+* **Mohamed Amine El Mohcine**
 * **Lenny Andry**
 
 ---
@@ -55,7 +55,7 @@ L'architecture respecte la séparation entre code source, données brutes et ré
 
 ### 1. Installation
 
-Assurez-vous d'avoir Python 3.9+ installé. Clonez le repo et installez les dépendances :
+Assurez-vous d'avoir Python 3.9+ installé. Clonez le repo et installez les dépendances (`requirements.txt`) :
 
 ```Bash
 git clone https://github.com/ArthurOttevaere/WebMining-Cinema-Reviews.git
