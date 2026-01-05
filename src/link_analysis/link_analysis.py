@@ -69,17 +69,26 @@ def betweenness_centrality(A: np.ndarray) -> np.ndarray:
     return bc_values
 
 
-def eccentricity_centrality(SP: np.ndarray) -> np.ndarray:
+def get_eccentricity_metrics(SP: np.ndarray):
+    """
+    Compute at the same time, raw eccentricity (max dist) and eccentricity centrality (1/dist)
+    """
     n = SP.shape[0]
-    ecc_cent = np.zeros(n, dtype=float)
+    raw_eccentricity = np.zeros(n, dtype=float) 
+    ecc_centrality = np.zeros(n, dtype=float)
+    
     for i in range(n):
         dists = SP[i, :]
-        valid_dists = dists[dists < 90000] # We ignore the "infinite"
+        # We only keep valid pathes (<∞)
+        valid_dists = dists[dists < 90000]
+        
         if len(valid_dists) > 0:
-            max_dist = valid_dists.max() # Distance to the farest node. 
+            max_dist = valid_dists.max() # Eccentricity (# of jumps)
             if max_dist > 0:
-                ecc_cent[i] = 1.0 / max_dist
-    return ecc_cent  
+                raw_eccentricity[i] = max_dist
+                ecc_centrality[i] = 1.0 / max_dist
+                
+    return raw_eccentricity, ecc_centrality
     
 def laplacian_matrix(A: np.ndarray) -> np.ndarray:
     D = degree_matrix(A, "out")
@@ -230,8 +239,8 @@ def main():
     print("2️⃣ Shortest Path & Closeness...")
     SP = shortest_path_matrix(A_binary) 
     closeness = closeness_centrality(SP)
-    eccentricity = eccentricity_centrality(SP)
-    
+    raw_ecc, eccentricity = get_eccentricity_metrics(SP)    
+
     real_dists = SP[SP < 90000]
     avg_path = real_dists.mean() if len(real_dists) > 0 else 0
     print(f"   👉 Average distance (jumps) : {avg_path:.2f}")
@@ -321,18 +330,18 @@ def main():
     print("      🌍 NETWORK'S GLOBAL HEALTH")
     print("═"*80)
     
-    # 1. We filter to avoid "0" values
-    valid_scores = eccentricity[eccentricity > 0]
+    # Wi filter to avoir zeros
+    valid_raw_ecc = raw_ecc[raw_ecc > 0]
     
-    if len(valid_scores) > 0:
-        # Radius 
-        min_eccentricity_value = 1.0 / valid_scores.max()
+    if len(valid_raw_ecc) > 0:
+        # Diameter = max(dist max)
+        diameter = int(valid_raw_ecc.max())
         
-        # Diameter
-        max_eccentricity_value = 1.0 / valid_scores.min()
+        # Radius = min(dist max)
+        radius = int(valid_raw_ecc.min())
         
-        print(f"📏 Graph diameter : {int(max_eccentricity_value)} jumps (Max eccentricity)")
-        print(f"🎯 Graph radius   : {int(min_eccentricity_value)} jumps (Min eccentricity / Center)")
+        print(f"📏 Graph diameter : {diameter} jumps (Max eccentricity)")
+        print(f"🎯 Graph radius   : {radius} jumps (Min eccentricity / Center)")
     else:
         print("⚠️ Graph appears to be fully disconnected.")
 
